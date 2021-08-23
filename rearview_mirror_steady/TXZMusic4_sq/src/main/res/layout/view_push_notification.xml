@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/rl_root"
+              android:layout_width="match_parent"
+              android:layout_height="80dp"
+              android:layout_gravity="center_horizontal"
+              android:background="@drawable/push_notification_bg"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/ic_launcher"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="新闻快报"
+            android:textColor="@color/white"
+            android:textSize="?attr/text_size_h1"/>
+
+
+        <TextView
+            android:id="@+id/tv_sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXX有更新拉"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="?attr/text_size_h3"/>
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/v_divider"
+        style="@style/divider_line_vertical"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"/>
+
+
+    <com.txznet.music.widget.ResourceButton
+        android:id="@+id/btn_listen"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:resbtn_padding_horizontal="16dp"
+        app:resbtn_size_icon="28dp"
+        app:resbtn_size_text="?attr/text_size_h1"
+        app:resbtn_src_icon_normal="@drawable/ic_voice_normal"
+        app:resbtn_src_icon_pressed="@drawable/ic_voice_pressed"
+        app:resbtn_str_text="@string/text_listen_detail"/>
+
+    <View
+        android:id="@+id/v_divider2"
+        style="@style/divider_line_vertical"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"/>
+
+    <com.txznet.music.widget.ResourceButton
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:resbtn_padding_horizontal="16dp"
+        app:resbtn_size_icon="28dp"
+        app:resbtn_size_text="?attr/text_size_h1"
+        app:resbtn_src_icon_normal="@drawable/ic_voice_normal"
+        app:resbtn_src_icon_pressed="@drawable/ic_voice_pressed"
+        app:resbtn_str_text="@string/text_close"/>
+</LinearLayout>

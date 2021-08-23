@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_color"
+    android:orientation="vertical" >
+    
+ 	<RelativeLayout   	    
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/x30"
+        android:paddingRight="@dimen/x60">
+        
+   	    <RelativeLayout 
+			android:id="@+id/back"
+   	     	android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_centerVertical="true">
+	   	   <ImageView
+	   	       android:id="@+id/iv_back"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/y16"
+	            android:scaleType="fitEnd"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginRight="@dimen/x20"
+	            android:src="@drawable/button_back" />
+	        <TextView 
+	         	android:layout_height="wrap_content"
+	         	android:layout_width="wrap_content"
+	         	android:layout_centerVertical="true"
+	            android:layout_toRightOf="@id/iv_back"
+	         	android:textColor="#FFF"
+	            android:textColorHint="#40454b"
+	            android:textSize="31px" 
+	            android:text="返回"/>   	        
+   	    </RelativeLayout>
+
+        <TextView 
+            android:id="@+id/title"
+         	android:layout_height="@dimen/y80"
+         	android:layout_width="wrap_content"
+         	android:layout_centerInParent="true"
+         	android:gravity="center"
+         	android:textColor="#FFF"
+            android:textColorHint="#40454b"
+            android:textSize="37px" 
+            android:text="修改关键字"/>	    
+	</RelativeLayout>
+     
+    <com.txznet.txz.ui.widget.LinearLayoutEx
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/x60"
+        android:paddingRight="@dimen/x60"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/etDest"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y90"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:background="#202326"
+            android:hint="@string/activity_home_str_dest_hint"
+            android:maxLength="20"
+            android:imeOptions="flagNoExtractUi"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="0dp"
+            android:singleLine="true"
+            android:textColor="#FFF"
+            android:textColorHint="#40454b"
+            android:textCursorDrawable="@null"
+            android:textSize="38px" />
+
+        <com.txznet.txz.ui.widget.ButtonImageText
+            android:id="@+id/btnSearch"
+            android:layout_width="@dimen/x150"
+            android:layout_height="@dimen/y90"
+            android:background="@drawable/activity_home_search_bg"
+            android:gravity="center"
+            android:scaleType="center"
+            android:textSize="36px"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/activity_home_search_draw" />
+    </com.txznet.txz.ui.widget.LinearLayoutEx>
+    
+
+</LinearLayout>

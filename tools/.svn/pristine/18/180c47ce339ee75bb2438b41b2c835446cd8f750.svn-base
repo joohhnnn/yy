@@ -1,0 +1,8 @@
+﻿#签名key文件绝对路径  
+key.store=txz.keystore
+#签名文件密码  
+key.store.password=android
+#签名别称，中文的话需要转成utf-8编码，可以使用JDK自带的native2ascii工具  
+key.alias=androiddebugkey
+#签名别称密码  
+key.alias.password=android

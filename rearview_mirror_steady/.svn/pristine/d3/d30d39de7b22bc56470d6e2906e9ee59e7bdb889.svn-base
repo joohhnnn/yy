@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:test="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/bar_title_width_size"
+    android:paddingLeft="?attr/bar_player_view_padding"
+    android:paddingRight="?attr/bar_player_view_padding"
+
+    >
+
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="?attr/bar_player_view_cd_size"
+        android:layout_height="?attr/bar_player_view_cd_size"
+        android:layout_centerVertical="true"
+        android:src="@drawable/fm_bottom_playing_default"
+        test:src="@drawable/fm_bottom_playing_default" />
+
+    <ImageView
+        android:id="@+id/iv_cd"
+        android:layout_height="?attr/bar_player_view_cd_size"
+        android:layout_alignTop="@+id/iv_cover"
+        android:layout_toEndOf="@+id/iv_cover"
+        android:layout_toRightOf="@+id/iv_cover"
+        android:src="@drawable/fm_bottom_playing_default_cd"
+        app:layout_aspectRatio="45%" />
+
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="?attr/bar_title_width_size"
+        android:layout_height="?attr/bar_title_height_size"
+        android:layout_marginLeft="?attr/bar_player_view_cd_margin"
+        android:layout_toRightOf="@id/iv_cd"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_marginTopPercent="5%">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="?attr/text_size_h1" />
+
+
+        <TextView
+            android:id="@+id/tv_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="?attr/text_size_h3"
+            android:textColor="@color/artist_name"
+            test:text="cedofhaofopapofh" />
+    </LinearLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="?attr/bar_player_view_cd_margin"
+        android:layout_marginTop="@dimen/m6"
+        android:layout_toRightOf="@id/ll_info"
+        app:layout_marginBottomPercent="7.6%">
+        <!--
+                <com.txznet.music.widget.ShadeImageView
+                    android:id="@+id/iv_prev"
+                    android:layout_width="?attr/bar_player_view_icon_size"
+                    android:layout_height="?attr/bar_player_view_icon_size"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/fm_player_prev" />-->
+
+        <FrameLayout
+            android:id="@+id/fl_play"
+            android:layout_width="?attr/bar_player_view_icon_size"
+            android:layout_height="?attr/bar_player_view_icon_size"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            app:layout_marginLeftPercent="4%"
+            app:layout_marginRightPercent="4%">
+
+            <com.txznet.music.widget.ShadeImageView
+                android:id="@+id/iv_play"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/fm_player_play1"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_round"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/fm_player_loading1"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_buffer_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/fm_player_loading1_1"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+    <com.txznet.music.widget.ShadeImageView
+        android:id="@+id/iv_play_list"
+        android:layout_width="?attr/bar_player_view_icon_size"
+        android:layout_height="?attr/bar_player_view_icon_size"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_playlist_v41" />
+</android.support.percent.PercentRelativeLayout>

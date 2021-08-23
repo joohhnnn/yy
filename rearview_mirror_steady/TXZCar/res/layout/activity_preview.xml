@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_color"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/navFrame"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/mapview_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnStartNav"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y70"
+            android:layout_gravity="bottom"
+            android:background="@drawable/activity_preview_start_button_bg"
+            android:textColor="#ffffff"
+            android:textSize="35px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="@dimen/x1"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/split_line" />
+
+    <RadioGroup
+        android:id="@+id/path_select"
+        android:layout_width="@dimen/x115"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="0dp" >
+
+        <RadioButton
+            android:id="@+id/recommend"
+            style="@style/activity_preview_rb_select_path"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/activity_preview_rb_select_path_recommend"
+            android:text="@string/activity_preview_rb_recommand_text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/split_line" />
+
+        <RadioButton
+            android:id="@+id/toll"
+            style="@style/activity_preview_rb_select_path"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/activity_preview_rb_select_path_min_toll"
+            android:text="@string/activity_preview_rb_toll_text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/split_line" />
+
+        <RadioButton
+            android:id="@+id/distance"
+            style="@style/activity_preview_rb_select_path"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/activity_preview_rb_select_path_min_dist"
+            android:text="@string/activity_preview_rb_dist_text" />
+    </RadioGroup>
+
+</LinearLayout>

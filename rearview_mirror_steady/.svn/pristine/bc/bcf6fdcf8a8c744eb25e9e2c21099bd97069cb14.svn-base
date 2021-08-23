@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#FF313845"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提示"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFFFF"/>
+
+    <TextView
+        android:layout_marginTop="75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="创建声纹，为你提供专属的语音服务！"
+        android:textColor="#FFFFFFFF"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"/>
+
+    <View
+        android:layout_marginTop="145dp"
+        android:background="#28FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="146dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/bt_create"
+            android:textSize="20sp"
+            android:text="创建"
+            android:background="#FF313845"
+            android:textColor="#FFFFFFFF"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="#28FFFFFF"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/bt_cancel"
+            android:textSize="20sp"
+            android:text="取消"
+            android:background="#FF313845"
+            android:layout_weight="1"
+            android:textColor="#FFFFFFFF"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

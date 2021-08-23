@@ -1,0 +1,86 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <style name="SlideDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+
+    <style name="Record_Loading" parent="@android:style/Widget.ProgressBar.Large">
+        <item name="android:indeterminateDrawable">@drawable/record_widget_progress_large</item>
+        <item name="android:indeterminateDuration">500</item>
+    </style>
+
+    <style name="Font_Style_To_Sys_Text">
+        <item name="android:textSize">@dimen/y27</item>
+        <item name="android:textColor">#E8B33A</item>
+        <item name="android:background">@drawable/chat_bg_to_sys</item>
+        <item name="android:layout_marginTop">@dimen/y20</item>
+        <item name="android:layout_marginBottom">@dimen/y20</item>
+    </style>
+
+    <style name="Font_Style_From_Sys_Text">
+        <item name="android:textSize">@dimen/y27</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@drawable/chat_bg_from_sys</item>
+        <item name="android:layout_marginTop">@dimen/y20</item>
+        <item name="android:layout_marginBottom">@dimen/y20</item>
+    </style>
+
+    <style name="Font_Style_From_Sys_Text_No_Margin">
+        <item name="android:textSize">@dimen/y27</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@drawable/chat_bg_from_sys</item>
+    </style>
+
+    <style name="TXZ_Dialog_Style_No_FullScreen" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+		 <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+ 		<!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+ 		<!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+ 		<!-- 无标题 -->
+        <item name="android:windowBackground">@color/transparent</item>
+ 		<!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+ 		<!-- 模糊 -->
+    </style>
+
+    <style name="TXZ_Dialog_Style_Yidong" parent="@android:style/Theme.Dialog">
+
+        <!--&lt;!&ndash; 是否没标题 &ndash;&gt;-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <!--&lt;!&ndash; 去黑边 &ndash;&gt;-->
+        <!--<item name="android:windowBackground">@drawable/transparent_background</item>-->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否没标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否背景阴影 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimAmount">0.1</item>
+        <!-- 去黑边 -->
+        <item name="android:windowBackground">@drawable/transparent_background</item>
+        <!-- 全屏 -->
+        <item name="android:windowFullscreen">true</item>
+
+        <!-- 是否背景阴影 -->
+        <!-- 全屏 -->
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:clipToPadding">true</item>
+
+
+
+    </style>
+
+</resources>

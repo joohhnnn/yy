@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="?attr/list_item_height">
+
+
+    <ImageView
+        android:id="@+id/iv_left_list"
+        android:layout_width="@dimen/m22"
+        android:layout_height="@dimen/m22"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/fm_muti_choice_no" />
+
+    <ImageView
+        android:id="@+id/iv_favour"
+        android:layout_width="?attr/list_item_height"
+        android:layout_height="?attr/list_item_height"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="center"
+        android:src="@drawable/ic_not_favorite_small" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/list_text"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/list_item_height"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/iv_favour"
+        android:layout_toRightOf="@id/iv_left_list"
+        android:paddingLeft="@dimen/x12"
+        android:paddingRight="@dimen/x12"
+        android:text="我和我的小伙伴们都惊呆了我和我的小伙伴们都惊呆了" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_alignParentBottom="true"
+        android:background="#4cFFFFFF" />
+</RelativeLayout>

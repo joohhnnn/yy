@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_color"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/btnHelp_Close"
+        android:layout_width="@dimen/x50"
+        android:layout_height="@dimen/y50"
+        android:layout_marginLeft="@dimen/x16"
+        android:layout_marginTop="@dimen/y16"
+        android:scaleType="center"
+        android:src="@drawable/win_help_close" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <LinearLayout
+            android:id="@+id/help_brief"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/text_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/y8"
+                android:text="您可以这样问我" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+               <LinearLayout
+                    android:id="@+id/help_brief_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/help_local_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/text_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/y8"
+                android:text="可能是以下原因" />
+
+            <TextView
+                style="@style/text_24"
+                android:singleLine="false"
+                android:id="@+id/txtHelpMsg_local_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/y8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/help_local_proc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/text_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/y8"
+                android:text="可能是以下原因" />
+
+            <TextView
+                style="@style/text_24"
+                android:singleLine="false"
+                android:id="@+id/txtHelpMsg_local_proc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/y8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/help_local_abort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/text_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/y8"
+                android:text="可能是以下原因" />
+
+            <TextView
+                style="@style/text_24"
+                android:singleLine="false"
+                android:id="@+id/txtHelpMsg_local_abort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/y8" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/btnHelp_Detail"
+        android:layout_width="@dimen/x50"
+        android:layout_height="@dimen/y50"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/y16"
+        android:layout_marginLeft="@dimen/x16"
+        android:scaleType="center"
+        android:src="@drawable/win_help_help" />
+
+</RelativeLayout>

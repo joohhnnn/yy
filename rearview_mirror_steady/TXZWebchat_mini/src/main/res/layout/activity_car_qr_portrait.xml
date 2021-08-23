@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                               android:layout_width="match_parent"
+                                               android:layout_height="match_parent"
+                                               xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.txznet.webchat.ui.rearview_mirror.widget.ViewPagerEx
+        android:id="@+id/vp_car_qr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_activity_background_login"/>
+
+    <com.txznet.webchat.ui.car.widget.TabView
+        android:id="@+id/view_car_qr_tab"
+        android:layout_centerHorizontal="true"
+        app:layout_widthPercent="52%"
+        app:layout_aspectRatio="625%"/>
+
+</android.support.percent.PercentRelativeLayout>

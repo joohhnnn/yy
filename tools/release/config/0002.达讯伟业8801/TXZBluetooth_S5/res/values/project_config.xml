@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="txz_prj_cfg_bluetooth_device_impl">com.txznet.bluetooth.device.dxwy_8801_device_impl</string>
+    <string name="txz_prj_cfg_bluetooth_analyze_impl">com.txznet.bluetooth.analysis.dxwy_8801_analyze_impl</string>
+    <string name="txz_prj_cfg_bluetooth_serial_port">/dev/ttyS5</string>
+    <string name="txz_prj_cfg_bluetooth_max_contact">2000</string>
+    <string name="txz_prj_cfg_bluetooth_baudrate">9600</string>
+
+</resources>

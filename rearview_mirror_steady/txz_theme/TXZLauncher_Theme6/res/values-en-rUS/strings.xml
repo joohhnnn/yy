@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ResidentAppNamePhone">phone</string>
+    <string name="ResidentAppNameMusic">Music</string>
+    <string name="ResidentAppNameNavi">Navi</string>
+    <string name="ResidentAppNameDrivingRecord">DrivingRecord</string>
+    <string name="ResidentAppNameSetting">Setting</string>
+    <string name="ResidentAppNameFm">Fm</string>
+    <string name="ResidentAppNameCarData">CarData</string>
+    <string name="ResidentAppNameVoice">Voice</string>
+    <string name="ResidentAppNameFolder">Folder</string>
+    <string name="ResidentAppNameMusicKw">MusicKw</string>
+    <string name="ResidentAppNameNavBD">NavBD</string>
+    <string name="ResidentAppNameBrowser">Browser</string>
+    <string name="ResidentAppNameApps">Apps</string>
+    <string name="ResidentAppNameBlueTooth">BlueToothTelephone</string>
+    <string name="ResidentAppNameQQ">QQ</string>
+    <string name="ResidentAppNameHotPoint">wifihost</string>
+    <string name="ResidentAppNameWeather">Weather</string>
+    <string name="ResidentAppNameWechat">Wechat</string>
+</resources>

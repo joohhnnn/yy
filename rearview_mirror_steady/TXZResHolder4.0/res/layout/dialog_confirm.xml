@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="@dimen/dialog_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/xml_dialog_bg">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ydp30"
+            android:layout_marginLeft="@dimen/xdp10"
+            android:layout_marginRight="@dimen/xdp10"
+            android:text="温馨提示"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/sp24"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ydp20"
+            android:layout_marginBottom="27dp"
+            android:layout_marginLeft="@dimen/xdp10"
+            android:layout_marginRight="@dimen/xdp10"
+            android:text="确定要取消订单码？"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/sp24"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/listDividerColor"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mdp60"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp24"
+                android:textColor="#00AAFF"
+                android:background="@drawable/xml_dialog_btn_done"
+                android:text="确定"/>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/listDividerColor"/>
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="取消"
+                android:textSize="@dimen/sp24"
+                android:textColor="@color/textColorSecondary"
+                android:background="@drawable/xml_dialog_btn_cancel"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

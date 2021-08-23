@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_item_chat_session_bg">
+
+    <FrameLayout
+        android:id="@+id/fl_image"
+        android:layout_width="@dimen/y90"
+        android:layout_height="@dimen/y90"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x7">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/view_chat_session_usericon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/y9"
+            tools:src="@drawable/default_headimage"
+            app:riv_corner_radius="@dimen/y90"/>
+
+        <com.txznet.webchat.ui.rearview_mirror.widget.BadgeView
+            android:id="@+id/view_chat_session_badge"
+            android:layout_gravity="right|top"
+            android:layout_width="@dimen/y36"
+            android:layout_height="@dimen/y36"
+            android:layout_marginTop="@dimen/y4"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textSize="@dimen/y14"
+            tools:text="..."/>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_chat_session_notify"
+        android:visibility="invisible"
+        android:layout_width="@dimen/x90"
+        android:layout_height="@dimen/y90"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/wx_notification_deny"/>
+
+    <TextView
+        android:id="@+id/tv_chat_session_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/fl_image"
+        android:layout_toLeftOf="@id/iv_chat_session_notify"
+        android:layout_marginLeft="@dimen/x16"
+        android:layout_marginRight="@dimen/x16"
+        android:maxLines="1"
+        android:ellipsize="marquee"
+        android:textSize="@dimen/y30"
+        android:textColor="@color/color_session_item_text"
+        tools:text="User Name"/>
+
+    <ImageView
+        android:id="@+id/iv_chat_session_indicator"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:scaleType="fitXY"
+        android:src="@drawable/shape_item_car_session_back_selected"/>
+
+
+
+</RelativeLayout>

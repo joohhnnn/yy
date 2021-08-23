@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                style="@style/car_chat_msg_root_left">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_car_chat_msg_avatar"
+        style="@style/car_chat_avatar_left"
+        tools:src="@drawable/default_headimage"/>
+
+    <com.txznet.webchat.ui.rearview_mirror.widget.BubbleRelativeLayout
+        android:id="@+id/view_car_chat_msg_bubble"
+        android:layout_width="@dimen/y320"
+        android:layout_toRightOf="@id/iv_car_chat_msg_avatar"
+        style="@style/car_chat_bubble_left">
+
+        <ImageView
+            android:id="@+id/iv_car_chat_msg_file_icon"
+            android:layout_width="@dimen/y80"
+            android:layout_height="@dimen/y80"
+            android:layout_marginLeft="@dimen/y10"
+            android:layout_marginTop="@dimen/y10"
+            android:src="@drawable/ic_file_icon_word"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_car_chat_msg_file_stat_container"
+            android:layout_width="@dimen/y80"
+            android:layout_height="@dimen/y80"
+            android:layout_marginLeft="@dimen/y10"
+            android:layout_marginTop="@dimen/y10"
+            android:background="@drawable/shape_car_message_file_icon_mask">
+
+            <ImageView
+                android:id="@+id/iv_car_chat_msg_file_stat_icon"
+                android:layout_width="@dimen/y40"
+                android:layout_height="@dimen/y40"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_file_download_waiting"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_car_chat_msg_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_car_chat_msg_file_icon"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginRight="@dimen/y10"
+            android:layout_toRightOf="@id/iv_car_chat_msg_file_icon"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#000000"
+            android:textSize="@dimen/y20"
+            tools:text="文件名"/>
+
+        <TextView
+            android:id="@+id/tv_car_chat_msg_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_car_chat_msg_file_icon"
+            android:layout_alignLeft="@id/tv_car_chat_msg_file_name"
+            android:textColor="#666666"
+            android:textSize="@dimen/y18"
+            tools:text="1208KB"/>
+
+        <TextView
+            android:id="@+id/tv_car_chat_msg_file_size_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_car_chat_msg_file_size"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_toRightOf="@id/tv_car_chat_msg_file_size"
+            android:text="大小超出限制"
+            android:textColor="#ff0000"
+            android:textSize="@dimen/y17"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_car_chat_msg_file_icon"
+            android:layout_marginTop="@dimen/y10"
+            android:background="@drawable/shape_car_message_file_bottom">
+
+            <View
+                style="@style/car_chat_divider_line_horizontal"
+                android:layout_width="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/y10"
+                android:paddingBottom="@dimen/y3"
+                android:paddingTop="@dimen/y3"
+                android:text="微信车载版"
+                android:textColor="#666666"
+                android:textSize="@dimen/y18"/>
+        </FrameLayout>
+
+    </com.txznet.webchat.ui.rearview_mirror.widget.BubbleRelativeLayout>
+
+</RelativeLayout>

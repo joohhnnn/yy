@@ -1,0 +1,106 @@
+package com.txz.data_manager;
+
+//基础指令枚举
+enum SubCommand
+{
+	SUBCMD_UPLOAD_CREATE = 1;	//大数据上传建立
+	SUBCMD_UPLOAD_DATA = 2;		//大数据上传数据
+	SUBCMD_DOWNLOAD_DATA = 3;		//大数据下载数据
+	
+	SUBCMD_REPORT_LOCATION = 0x101; //位置上报，携带ui.map.LocationInfo
+}
+
+
+//错误码
+enum ErrorCode
+{
+	EC_UPLOAD_CREATE_ERR 				= 3001;  //...
+	EC_UPLOAD_NOT_CREATE				= 3002;	//没创建，需要重新创建
+	EC_UPLOAD_PIECE_DATA_ERR			= 3003;	//上传文件片错误
+	EC_UPLOAD_INDEX_FORMAT_ERR	= 3004;	//上传文件的索引格式错误
+}
+
+
+message UploadUserFileInfo
+{
+	optional string str_user_file_category = 1; //资源分类
+	optional string str_user_file_name = 2; //文件名 
+}
+
+//上传业务会话信息（可以做进度）
+message UploadSession
+{
+	optional uint64 uint64_uid = 1;			//设备ID
+	optional uint32 uint32_cmd = 2;			//cmd
+	optional uint32 uint32_subcmd = 3;			//subcmd	
+	optional uint32 uint32_seq = 4;			//业务请求序列化
+	optional uint64 uint64_push_mid = 5;	//推送消息ID
+}
+
+//上传数据的索引协议(请求包)
+message Req_UploadCreate
+{
+	optional bytes str_data_md5 = 1;				//唯一标识：所有碎片数据md5的合起来计算的md5
+	optional uint32 uint32_data_size = 2;		//数据大小
+	optional uint32 uint32_data_piece_cnt = 3;	//数据分片数量
+	repeated bytes rpt_str_piece_md5 = 4;		//每片数据的md5
+	optional bool b_gzip_flag = 5;				//内容是否压缩（true:压缩，false:没压缩）
+	optional bytes str_bitmap = 6;				//下载进度表(服务器使用)
+	optional uint32 uint32_timeout = 7; //设置超时时间，为0表示永久
+	optional bool bool_private = 8; //是否用户私有，私有数据只有本ID用户可以通过资源ID获取
+	optional UploadUserFileInfo msg_user_file_info = 9; //用户文件信息，设置该参数后自动存储到用户文件目录下，并且删除资源缓存
+	optional UploadSession msg_session_info = 10;		//上传业务会话信息（可以做进度）
+}
+
+
+//上传数据的索引协议(回应包)  
+message Resp_UploadCreate
+{
+	optional bytes str_data_md5 = 1;				//唯一标识：每片数据md5的md5
+	optional bytes str_bitmap = 2;				//上传进度表(服务器使用)
+	optional bytes str_data_uri = 3;				//当上传完成时有效，服务器资源唯一标识
+}
+
+
+//上传数据协议(请求包)
+message Req_UploadData
+{
+	optional bytes str_data_md5 = 1;				//唯一标识：每片数据md5的md5
+	optional uint32 uint32_piece_id = 2;		//数据片索引ID(id从1开始)
+	optional bytes str_piece_md5 = 4;					//数据md5
+	optional bytes  str_piece_data = 5;				//数据内容
+	optional UploadSession msg_session_info = 6;		//上传业务会话信息（可以做进度）
+}
+
+
+//上传数据协议(回应包)  
+message Resp_UploadData
+{
+	optional bytes str_data_md5 = 1;				//唯一标识：每片数据md5的md5
+	optional uint32 uint32_piece_id	 = 2;			//数据片索引ID(id从1开始)
+	optional bytes str_piece_md5 = 3;				//数据md5
+	optional bytes str_bitmap = 4;					//上传进度表	
+	optional bytes str_data_uri = 5;				//当上传完成时有效，服务器资源唯一标识
+}
+
+
+//下载数据协议(请求包)
+message Req_DownloadData
+{
+	optional bytes str_data_id = 1;	//唯一标识：所有碎片数据md5的合起来计算的md5
+	optional uint32 uint32_offset = 2; //数据偏移量
+	optional uint32 uint32_size = 3; //需要获取的文件大小
+}
+
+//下载数据协议(响应包)，数据通道不管压缩，由业务通道自己协商压缩
+message Resp_DownloadData
+{
+	optional bytes str_data_id = 1;	//唯一标识：所有碎片数据md5的合起来计算的md5
+	optional uint32 uint32_offset = 2; //数据偏移量
+	optional uint32 uint32_size = 3; //需要获取的文件大小
+	optional uint32 uint32_total_size = 4; //文件总大小(超过32位的大文件另外考虑下载协议)，当uint32_total_size<=uint32_offset+uint32_size，表示文件下载结束
+	optional bytes str_data = 5; //文件数据
+}
+
+
+

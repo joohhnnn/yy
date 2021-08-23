@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/txt_command"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:clickable="true"
+        android:background="@drawable/bgcolor_change"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x28"
+        android:paddingRight="@dimen/x10"
+        android:text="你好啊小题"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/y26" />
+
+    <ImageView
+        android:id="@+id/imgbnt_openOperate"
+        android:layout_width="@dimen/y24"
+        android:layout_height="@dimen/y24"
+        android:layout_alignBottom="@id/txt_command"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/txt_command"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/txz_item_down" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_below="@id/txt_command"
+        android:background="#454545" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/y1"
+        android:id="@+id/layout_operate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_command"
+        android:background="#000000"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="2" >
+
+        <FrameLayout
+            android:id="@+id/bnt_edit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y90"
+            android:background="@drawable/bgcolor_change"
+            android:layout_weight="1" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:clickable="false"
+                android:drawableLeft="@drawable/ic_command_edit"
+                android:drawablePadding="@dimen/x24"
+                android:gravity="center_vertical"
+                android:text="@string/label_edit"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/y28" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="@dimen/y1"
+            android:layout_height="match_parent"
+            android:background="#454545" />
+
+        <FrameLayout
+            android:id="@+id/bnt_delete"
+            android:layout_width="0dp"
+            android:background="@drawable/bgcolor_change"
+            android:layout_height="@dimen/y90"
+            android:layout_weight="1" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:clickable="false"
+                android:drawableLeft="@drawable/ic_command_delete"
+                android:drawablePadding="@dimen/x24"
+                android:gravity="center_vertical"
+                android:text="@string/label_delete"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/y28" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_below="@+id/layout_operate"
+        android:background="#454545" />
+
+</RelativeLayout>

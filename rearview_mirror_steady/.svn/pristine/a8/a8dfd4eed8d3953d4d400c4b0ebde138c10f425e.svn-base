@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Widget_Inner_Background"
+        android:drawable="@drawable/appwidget_pic_inner_bg_rc" />
+    <item
+        android:id="@+id/Widget_Inner_Mask"
+        android:drawable="@drawable/appwidget_pic_inner_mask_rc" />
+</layer-list>

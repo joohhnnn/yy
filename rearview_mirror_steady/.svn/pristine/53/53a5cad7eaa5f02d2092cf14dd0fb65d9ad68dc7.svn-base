@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout-config>
+    <!--
+    @顺序不能变
+    布局类型
+    1 : 标准网格(8格)
+    2: 三角形布局
+    -->
+    <type>2</type>
+</layout-config>

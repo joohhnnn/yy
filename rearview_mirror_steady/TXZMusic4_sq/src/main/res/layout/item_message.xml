@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x26"
+        android:layout_marginTop="20dp"
+        android:textColor="#7FFFFFFF"
+        android:textSize="?attr/text_size_h2"
+        tools:text="2017-10-31"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y70"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/item_message_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <CheckBox
+            android:id="@+id/cb_select"
+            android:layout_width="@dimen/m24"
+            android:layout_height="@dimen/m24"
+            android:layout_marginLeft="@dimen/x26"
+            android:background="@drawable/message_selector"
+            android:button="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x26"
+            android:textColor="@color/white"
+            android:textSize="?attr/text_size_h2"
+            tools:text="收到来自手机的音频《爱情保卫战》"/>
+
+    </LinearLayout>
+
+</LinearLayout>

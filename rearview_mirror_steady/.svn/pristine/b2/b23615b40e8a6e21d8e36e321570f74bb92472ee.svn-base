@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_upgrade"
+    android:layout_width="@dimen/m100"
+    android:layout_height="@dimen/m100"
+    android:background="@drawable/shape_upgrade_circle_bg"
+    android:orientation="vertical">
+
+    <com.txznet.txz.ui.widget.CircleProgressView
+        android:id="@+id/v_upgrade_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/m4"
+        app:max="100"
+        app:progress="0"
+        app:backgroundColor="#FF565656"
+        app:frontgroundColor="#FF168FFF"
+        app:strokeWidth="@dimen/m4"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_upgrade_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#FF178FFF"
+                android:textSize="@dimen/m22"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="%"
+                android:textColor="#FF178FFF"
+                android:textSize="@dimen/m14"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_upgrade_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="语音升级"
+            android:textColor="#FF666666"
+            android:textSize="@dimen/m18"/>
+    </LinearLayout>
+</FrameLayout>

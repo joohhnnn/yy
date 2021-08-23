@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="style_horizontal">
+        <item name="record_win_circle_ly_width">@dimen/y120</item>
+        <item name="record_win_circle_ly_height">@dimen/y120</item>
+        <item name="record_win_voice_view_width">@dimen/y42</item>
+        <item name="record_win_voice_view_height">@dimen/y60</item>
+    </style>
+    <style name="style_vertical">
+        <item name="record_win_circle_ly_width">@dimen/y80</item>
+        <item name="record_win_circle_ly_height">@dimen/y80</item>
+        <item name="record_win_voice_view_width">@dimen/y35</item>
+        <item name="record_win_voice_view_height">@dimen/y50</item>
+    </style>
+    
+    
+    <style name="style_car">
+
+        <!-- car -->
+        <item name="list_item_txtNum_marginLeft">@dimen/x10</item>
+        <item name="list_item_txtNum_width">@dimen/y44</item>
+        <item name="list_item_txtNum_height">@dimen/y44</item>
+        <item name="list_item_txtNum_textSize">@dimen/y28</item>
+        <item name="list_item_txtContent_textSize">@dimen/y20</item>
+        <item name="list_item_txtDesc_textSize">@dimen/y16</item>
+        <item name="list_item_wx_head_width">@dimen/y56</item>
+        <item name="list_item_wx_head_height">@dimen/y56</item>
+
+        <!-- poi -->
+        <item name="list_item_content_marginTop">@dimen/y2</item>
+        <item name="list_item_content_marginBottom">@dimen/y2</item>
+        <item name="list_item_divider_height">@dimen/y1</item>
+        <item name="list_item_layout_content_marginLeft">@dimen/x16</item>
+        <item name="list_item_txtContent_marginLeft">@dimen/x6</item>
+
+        <!-- help -->
+        <item name="list_item_help_icon_width">@dimen/y44</item>
+        <item name="list_item_help_icon_height">@dimen/y44</item>
+        <item name="help_icon_width">@dimen/y48</item>
+        <item name="help_icon_height">@dimen/y48</item>
+        <!--help_new_tag_width = ((1 - 1/Math.sqrt(2))*help_icon_width-->
+        <item name="help_new_tag_width">@dimen/y14</item>
+        <item name="help_new_tag_height">@dimen/y14</item>
+
+        <!-- chat -->
+        <item name="list_item_txtChat_minHeight">@dimen/y56</item>
+        <item name="list_item_txtChat_textSize">@dimen/y20</item>
+        
+        <!-- stock -->
+        <item name="stock_pic_width">@dimen/x352</item>
+        <item name="stock_pic_height">@dimen/y220</item>
+        <item name="stock_info_ly_width">@dimen/x187</item>
+        
+        <item name="stock_maxWidth">1000px</item>
+        <item name="weather_maxWidth">1000px</item>
+    </style>
+
+    <style name="style_little">
+
+        <!-- little -->
+        <item name="list_item_txtNum_marginLeft">@dimen/x10</item>
+        <item name="list_item_txtNum_width">@dimen/y48</item>
+        <item name="list_item_txtNum_height">@dimen/y48</item>
+        <item name="list_item_txtNum_textSize">@dimen/y30</item>
+        <item name="list_item_txtContent_textSize">@dimen/y24</item>
+        <item name="list_item_txtDesc_textSize">@dimen/y20</item>
+        <item name="list_item_wx_head_width">@dimen/x56</item>
+        <item name="list_item_wx_head_height">@dimen/y56</item>
+
+        <!-- poi -->
+        <item name="list_item_content_marginTop">@dimen/y2</item>
+        <item name="list_item_content_marginBottom">@dimen/y2</item>
+        <item name="list_item_divider_height">@dimen/y1</item>
+        <item name="list_item_layout_content_marginLeft">@dimen/x16</item>
+        <item name="list_item_txtContent_marginLeft">@dimen/x6</item>
+
+        <!-- help -->
+        <item name="list_item_help_icon_width">@dimen/y56</item>
+        <item name="list_item_help_icon_height">@dimen/y56</item>
+        <item name="help_icon_width">@dimen/y48</item>
+        <item name="help_icon_height">@dimen/y48</item>
+        <item name="help_new_tag_width">@dimen/y14</item>
+        <item name="help_new_tag_height">@dimen/y14</item>
+
+        <!-- chat -->
+        <item name="list_item_txtChat_minHeight">@dimen/y56</item>
+        <item name="list_item_txtChat_textSize">@dimen/y24</item>
+        
+        <!-- stock -->
+        <item name="stock_pic_width">@dimen/x210</item>
+        <item name="stock_pic_height">@dimen/y210</item>
+        <item name="stock_info_ly_width">@dimen/x130</item>
+        <item name="stock_maxWidth">800px</item>
+        <item name="weather_maxWidth">800px</item>
+    </style>
+
+    <style name="style_large">
+
+        <!-- large -->
+        <item name="list_item_txtNum_marginLeft">@dimen/x10</item>
+        <item name="list_item_txtNum_width">@dimen/y44</item>
+        <item name="list_item_txtNum_height">@dimen/y44</item>
+        <item name="list_item_txtNum_textSize">@dimen/y28</item>
+        <item name="list_item_txtContent_textSize">@dimen/y20</item>
+        <item name="list_item_txtDesc_textSize">@dimen/y16</item>
+        <item name="list_item_wx_head_width">@dimen/y56</item>
+        <item name="list_item_wx_head_height">@dimen/y56</item>
+
+        <!-- poi -->
+        <item name="list_item_content_marginTop">@dimen/y2</item>
+        <item name="list_item_content_marginBottom">@dimen/y2</item>
+        <item name="list_item_divider_height">@dimen/y1</item>
+        <item name="list_item_layout_content_marginLeft">@dimen/x16</item>
+        <item name="list_item_txtContent_marginLeft">@dimen/x6</item>
+
+        <!-- help -->
+        <item name="list_item_help_icon_width">@dimen/y56</item>
+        <item name="list_item_help_icon_height">@dimen/y56</item>
+        <item name="help_icon_width">@dimen/y48</item>
+        <item name="help_icon_height">@dimen/y48</item>
+        <item name="help_new_tag_width">@dimen/y14</item>
+        <item name="help_new_tag_height">@dimen/y14</item>
+
+        <!-- chat -->
+        <item name="list_item_txtChat_minHeight">@dimen/y56</item>
+        <item name="list_item_txtChat_textSize">@dimen/y20</item>
+        
+        <!-- stock -->
+        <item name="stock_pic_width">@dimen/x332</item>
+        <item name="stock_pic_height">@dimen/y230</item>
+        <item name="stock_info_ly_width">@dimen/x187</item>
+        <item name="stock_maxWidth">1000px</item>
+        <item name="weather_maxWidth">800px</item>
+    </style>
+
+</resources>

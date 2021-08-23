@@ -1,0 +1,33 @@
+﻿激活失败问题
+(init (sdk|tts|asr|wakeup))|(txz app init ready)|CEquipmentManager|程序第\d+次启动
+初始化调用时机..............初始化成功...........lisence校验问题...是否出现过异常
+
+
+查找位置上报问题
+(sendEvent.+272\|0)|(switch to android gps location system)|doReportTrace|程序第\d+次启动
+定位到了.............切换为系统定位.........................上报日志......是否出现过异常
+
+
+
+音频焦点/静音问题
+
+
+
+语音识别结果不对
+onNet|onFix
+
+唤醒不了问题
+
+
+adb logcat -v threadtime 跟踪一个进程号
+
+adb pull /sdcard/txz/log ./Desktop/txz/
+
+
+
+
+
+
+
+
+

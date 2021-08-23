@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/wxcontact_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y44"
+        android:gravity="left"
+        android:layout_marginLeft="@dimen/x20"
+        android:text="为你找到以下对话列表，请选择第几个或者取消"
+        android:singleLine="true"
+        android:textColor="#aaa"
+        android:textSize="@dimen/y20" />
+
+    <ListView
+        android:id="@+id/wxcontact_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/y24"
+        android:divider="#0000"
+        android:dividerHeight="@dimen/y6" >
+    </ListView>
+
+</LinearLayout>

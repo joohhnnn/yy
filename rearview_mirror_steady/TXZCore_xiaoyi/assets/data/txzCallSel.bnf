@@ -1,0 +1,66 @@
+#BNF+IAT 1.0 UTF-8;
+
+!grammar %GRAMMAR_ID%;
+
+!slot <preActive>;
+!slot <prePassive>;
+!slot <prePlease>;
+
+!slot <selCmd>;
+!slot <selOk>;
+!slot <selCancel>;
+
+
+!slot <selPrefix>;
+!slot <selSuffix>;
+
+!slot <selIdx1>;
+!slot <selIdx2>;
+!slot <selIdx3>;
+!slot <selIdx4>;
+!slot <selIdx5>;
+!slot <selIdx6>;
+!slot <selIdx7>;
+!slot <selIdx8>;
+!slot <selIdx9>;
+!slot <selIdx10>;
+
+!start <txzStart>;
+
+//////////////////////////////////////命令开始//////////////////////////////////////
+
+<txzStart>:<selStart>;
+
+//////////////////////////////////////前缀相关//////////////////////////////////////
+
+<preAll>:<preActive>|<preAllPls>;
+<preAllPls>:[<prePlease>]<prePassive>;
+
+<preActive>:我要|我想|我想要;
+<prePassive>:帮我|替我|给我|帮|帮忙|你给我|你替我|你;
+<prePlease>:请|麻烦;
+
+//////////////////////////////////////选择相关//////////////////////////////////////
+
+<selStart>:[<preAll>]<selTar>;
+
+<selTar>:<selOk>|<selCancel>|<selIdxTar>;
+<selIdxTar>:[<selCmd>][<selPrefix>]<selIdx>[<selSuffix>];
+<selCmd>:选|选择|打电话给|打个电话给|拨号给|呼叫|打给|电话给|联系;
+
+<selOk>:确定|确定呼叫|确定拨打;
+<selCancel>:取消|取消呼叫|取消拨打|挂掉|挂断|掐断|掐掉;
+
+<selPrefix>:第;
+<selSuffix>:个|条;
+<selIdx>:<selIdx1>|<selIdx2>|<selIdx3>|<selIdx4>|<selIdx5>|<selIdx6>|<selIdx7>|<selIdx8>|<selIdx9>|<selIdx10>;
+<selIdx1>:一;
+<selIdx2>:二;
+<selIdx3>:三;
+<selIdx4>:四;
+<selIdx5>:五;
+<selIdx6>:六;
+<selIdx7>:七;
+<selIdx8>:八;
+<selIdx9>:九;
+<selIdx10>:十;

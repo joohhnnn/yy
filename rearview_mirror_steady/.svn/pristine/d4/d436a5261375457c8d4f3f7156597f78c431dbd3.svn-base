@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="ResidentAppNameNavi">导航</string>
+    <string name="ResidentAppNamePhone">电话</string>
+    <string name="ResidentAppNameMusic">音乐</string>
+    <string name="ResidentAppNameFM">调频</string>
+    <string name="ResidentAppNameDrivingRecord">行车记录仪</string>
+    <string name="ResidentAppNameVedio">视频</string>
+    <string name="ResidentAppNameWechatHelper">微信助手</string>
+    <string name="ResidentAppNameApps">应用</string>
+    <string name="ResidentAppNameSettings">设置</string>
+</resources>

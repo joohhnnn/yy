@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ResidentAppNamePhone">电话</string>
+    <string name="ResidentAppNameMusic">音乐</string>
+    <string name="ResidentAppNameNavi">导航</string>
+    <string name="ResidentAppNameDrivingRecord">记录仪</string>
+    <string name="ResidentAppNameSetting">设置</string>
+    <string name="ResidentAppNameFm">FM发射</string>
+    <string name="ResidentAppNameCarData">车况数据</string>
+    <string name="ResidentAppNameVoice">语音助手</string>
+    <string name="ResidentAppNameFolder">文件管理</string>
+    <string name="ResidentAppNameMusicKw">酷狗音乐</string>
+    <string name="ResidentAppNameNavBD">百度地图</string>
+    <string name="ResidentAppNameBrowser">浏览器</string>
+    <string name="ResidentAppNameApps">更多应用</string>
+    <string name="ResidentAppNameBlueTooth">蓝牙通话</string>
+    <string name="ResidentAppNameQQ">QQ</string>
+    <string name="ResidentAppNameHotPoint">热点</string>
+    <string name="ResidentAppNameWeather">天气</string>
+    <string name="ResidentAppNameWechat">微信</string>
+</resources>

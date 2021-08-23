@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_help_bg"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y80">
+
+        <!--<ImageView
+            android:layout_width="@dimen/y80"
+            android:layout_height="@dimen/y50"
+            android:layout_centerVertical="true"
+            android:src="@drawable/win_weixin_reason_back"
+            android:scaleType="centerInside"/>-->
+
+        <ImageButton
+            android:id="@+id/btn_session_list_back"
+            android:layout_width="@dimen/y80"
+            android:layout_height="@dimen/y80"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/src_arrow_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/lb_session_list_title"
+            android:textColor="@color/color_session_tab_text"
+            android:textSize="@dimen/y34"/>
+
+    </RelativeLayout>
+
+    <com.txznet.webchat.ui.rearview_mirror.widget.PagedRecyclerView
+        android:id="@+id/rv_session_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/x5"
+        android:paddingRight="@dimen/x5"
+        android:layout_marginRight="@dimen/x5"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarTrackVertical="@drawable/src_session_list_vertical_scrollbar_track"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="vertical"
+        android:scrollbarThumbVertical="@drawable/shape_session_list_scrollbar_vertical"
+        android:scrollbarSize="8dp"/>
+
+</LinearLayout>

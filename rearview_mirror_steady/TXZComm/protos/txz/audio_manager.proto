@@ -1,0 +1,94 @@
+package com.txz.audio_manager;
+
+import "ui_music.proto";
+
+//基础指令枚举
+enum SubCommand
+{
+	SUBCMD_DATA_INTERFACE = 1;				//数据通道接口
+	SUBCMD_SEARCH = 3;							//搜索
+	SUBCMD_PREPROCESSING_URL = 4;		//通过预处理获取下载URL
+
+}
+
+
+//错误码
+enum ErrorCode
+{
+	EC_NEED_INSTALL_FM_OR_MUSIC_APP 				= 11001;  //需要安装音乐或FM应用
+}
+
+
+
+message AudioRecord{
+	optional uint32 uint32_app_id = 1;				//数据来源的app id
+	optional uint64 uint64_audio_id = 2;			//音频ID
+	optional string str_audio_name = 3;				//音频名称
+	optional uint64 uint64_album_id = 4;			//专辑ID
+	optional string str_album_name = 5;				//专辑名称	
+	repeated string rpt_str_artist = 6;				//歌手列表
+	repeated string rpt_str_tags = 7;					//标签列表
+	optional uint32 uint32_download_type = 8;	//下载方式（0：直接下载; 1：需要预处理）
+	optional string str_download_url = 9;			//下载url
+	optional uint32 uint32_download_url_exp_time = 10;			//下载链接有效期（0：永久有效）
+	optional string str_preprocessing_url	= 11;		//预处理
+	optional uint32 uint32_duration = 12;				//时间长度（单位：秒）
+	optional uint32 uint32_file_size = 13;				//文件大小（单位：字节）
+}
+
+message Preprocessing{
+	optional string str_preprocessing_url = 1;				//预处理url
+	optional string str_preprocessing_content = 2;		//预处理url内容信息
+	optional uint32 uint32_time = 3;							//获取时间
+}
+
+message SearchFilter{
+	optional string str_text = 1;					//原始内容
+	optional string str_audio_name = 2;	
+	optional string str_album_name = 3;
+	repeated string rpt_str_artist = 4;
+	optional string str_keyword = 5;	//搜索关键字
+}
+
+//搜索(请求包)
+message Req_Search
+{
+	optional SearchFilter msg_search_filter = 1;  //搜索过滤器
+	repeated Preprocessing rpt_msg_preprocessing_list = 2;			//预处理内容
+	repeated string rpt_str_app_list = 3;											//安装的音乐或电台列表
+}
+//搜索(回应包)  
+message Resp_Search
+{
+	optional bool b_ok = 1;										//成功与否
+	repeated AudioRecord rpt_audio_list = 2;				//搜索结果的audio列表
+	optional SearchFilter msg_search_filter = 3; 		//搜索过滤器
+}
+
+////////////////////获取预处理后的url////////////////////////
+//获取预处理后的url(请求包)
+message Req_PreprocessingURL
+{
+	repeated Preprocessing rpt_msg_preprocessing_list = 2;			//预处理内容
+	repeated AudioRecord rpt_str_audio_list = 3;							//搜索结果的audio列表
+}
+//获取预处理后的url(回应包)  
+message Resp_PreprocessingURL
+{
+	repeated AudioRecord rpt_audio_list = 1;				//搜索结果的audio列表
+}
+
+
+////////////////////数据通道接口////////////////////////
+//数据通道接口(请求包)
+message Req_DataInterface
+{
+	optional string str_cmd = 1;			//命令字
+	optional bytes str_data = 2;			//数据内容
+}
+//数据通道接口(回应包)  
+message Resp_DataInterface
+{
+	optional string str_cmd = 1;			//命令字
+	optional bytes str_data = 2;			//数据内容
+}

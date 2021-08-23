@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--圆角--><!--编剧-->
+
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/m160"
+    android:layout_height="@dimen/m160"
+    android:gravity="center">
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_item_content"
+    android:layout_width="@dimen/m160"
+    android:layout_height="@dimen/m160"
+    tools:background="@drawable/base_bg">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <com.txznet.music.widget.PlayingStateView
+        android:id="@+id/animation_view"
+        android:layout_width="@dimen/m22"
+        android:layout_height="@dimen/m22"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/m5"
+        android:layout_marginRight="@dimen/m5"
+        android:visibility="gone" />
+
+
+    <com.txznet.music.widget.AlphaImageView
+        android:id="@+id/iv_subscribe"
+        android:layout_width="@dimen/m60"
+        android:layout_height="@dimen/m60"
+        android:paddingLeft="@dimen/m8"
+        android:paddingTop="@dimen/m8"
+        android:paddingRight="@dimen/m28"
+        android:paddingBottom="@dimen/m28"
+        android:src="@drawable/subscribe_sub_btn_selected" />
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m24"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/home_page_item_text_bg"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/m8"
+        android:paddingRight="@dimen/m8"
+        android:paddingBottom="@dimen/m4"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/base_tv_h6"
+        tools:text="专辑名称专辑名称专辑名称专辑名称" />
+
+</RelativeLayout><!--
+</LinearLayout>-->

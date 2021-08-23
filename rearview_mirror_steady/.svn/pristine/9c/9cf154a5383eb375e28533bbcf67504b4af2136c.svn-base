@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.txznet.txz"
+    android:installLocation="internalOnly"
+    android:versionCode="5"
+    android:versionName="@string/app_version" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+
+    <!-- ====================用户权限定义==================== -->
+
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- baidu permission -->
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    
+    <!-- ====================系统权限定义，如果是系统应用==================== -->
+
+    <!-- ====================应用定义==================== -->
+    <application
+        android:name="com.txznet.loader.MyApplication"
+        android:allowBackup="true"
+        android:description="@string/app_desc"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:theme="@style/AppTransparentTheme" >
+
+        <!-- ====================第三方sdk定义==================== -->
+        <!-- 高德相关 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="1399f8cbca580896994500c1fd348d5c" />
+        
+		<!-- 百度相关 -->
+		<meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="6DUZmjcdDkCbPLxHu9i38YVj" />
+        <service
+            android:name="com.baidu.navi.location.f"
+            android:enabled="true" />
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+
+        <!-- ====================全局静态广播监控==================== -->
+        <!-- 开机启动监控 -->
+		<!-- 
+		<receiver android:name="com.txznet.txz.module.launch.BootCompletedReceiver" >
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <!-- 诺威达休眠唤醒监听，这是个坑 -->
+        <!-- 
+        <receiver
+            android:name="com.txznet.txz.module.launch.BootCompletedReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter android:priority="2147483647">
+                <action android:name="com.nwd.action.ACTION_MCU_STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+        -->
+        
+        <!-- ====================框架服务定义==================== -->
+        <!-- 同行者框架核心服务 -->
+        <service
+            android:name="com.txznet.txz.service.TXZService"
+            android:exported="true" >
+            <intent-filter android:priority="2147483647">
+                <action android:name="com.txznet.txz.service.TXZService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <!-- 同行者服务唤醒广播 -->
+        <receiver android:name="com.txznet.comm.base.BaseApplication$TXZBroadcastReciver" >
+            <intent-filter android:priority="2147483647">
+                <action android:name="com.txznet.txz.startTXZService" />
+            </intent-filter>
+        </receiver>
+        
+        <!-- ====================框架预留服务==================== -->
+        
+        <!-- ====================框架预留界面==================== -->
+
+        <!-- ====================内部服务定义==================== -->
+        <service
+            android:name="com.txznet.txz.component.wakeup.yunzhishengremote.WakeupService"
+            android:process=":wakeup" />
+        <service
+            android:name="com.txznet.txz.component.asr.ifly.BuildGrammarService"
+            android:process=":buildGrammar" />
+        <service
+            android:name="com.txznet.txz.module.location.LocationServiceOfBaidu"
+            android:process=":locationService" />
+        
+        <!-- ====================内部界面定义==================== -->
+        <activity
+            android:name="com.txznet.txz.ui.win.nav.SearchActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.txznet.txz.ui.win.nav.PoiSearchActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+    </application>
+
+</manifest>

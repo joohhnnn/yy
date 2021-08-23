@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="nav_tab_call">电话</string>
+    <string name="nav_tab_music">电台</string>
+    <string name="nav_tab_drive">导航</string>
+    <string name="nav_tab_home">主页</string>
+    <string name="nav_tab_me">我的</string>
+    <string name="nav_tab_drive_together">多车同行</string>
+    <string name="nav_tab_guide">位置分享</string>
+    <string name="call_mode_open">外放模式</string>
+    <string name="call_mode_close">听筒模式</string>
+    <string name="call_refuse">挂断</string>
+    <string name="call_accept">接听</string>
+    <string name="call_calling">正在呼叫 ...</string>
+    <string name="call_hangup">挂断</string>
+    <string name="music_prev">上一首</string>
+    <string name="music_next">下一首</string>
+    <string name="music_single">单曲循环</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_ok">确定</string>
+    <string name="should_read">是否播报？</string>
+    <string name="msg_tolist">列表</string>
+    <string name="msg_tonext">下一条</string>
+    <string name="no_contact">陌生人</string>
+    <string name="register_title">注册</string>
+    <string name="login_title">登录</string>
+    <string name="login_right_text">注册</string>
+    <string name="login_button_text">登录</string>
+    <string name="login_forget_password">忘记密码</string>
+    <string name="input_phone_hint">请输入手机号码</string>
+    <string name="input_code_hint">请输入验证码</string>
+    <string name="get_code">获取</string>
+    <string name="input_pass_hint">请输入密码</string>
+    <string name="personal_info_save">保存</string>
+    <string name="personal_info_confirm">确定</string>
+    <string name="personal_info_show_password">显示密码</string>
+    <string name="personal_info_title">个人信息</string>
+    <string name="personal_info_ID">ID</string>
+    <string name="personal_info_nickname">昵称</string>
+    <string name="personal_info_sex">性别</string>
+    <string name="personal_info_change_password">修改密码</string>
+    <string name="friends_title">好友</string>
+    <string name="setting_title">设置</string>
+    <string name="feedback_right_text">发送</string>
+    <string name="feedback_title_text">反馈</string>
+    <string name="history_title_text">历史记录</string>
+    <string name="offline_title_text">离线地图</string>
+    <string name="tx_history">同行历史</string>
+    <string name="login_tips">请先登录</string>
+    <string name="no_network_tips">当前网络不给力…</string>
+
+    <!-- 重构 -->
+    <string name="action_settings">设置</string>
+    <string name="nav_name">导航</string>
+    <string name="music_name">音乐</string>
+
+    <!-- win_main -->
+    <string name="win_main_str_call">电话</string>
+    <string name="win_main_str_nav">导航</string>
+    <string name="win_main_str_music">音乐</string>
+    <string name="win_main_str_setting">设置</string>
+
+    <!-- activity_search -->
+    <string name="activity_search_map_text">切换地图</string>
+    <string name="activity_search_null_text">抱歉，未能找到结果!</string>
+    <string name="activity_searching_text">搜索中</string>
+    <string name="activity_search_start_planing_text">出发</string>
+    <string name="activity_search_commit">到这里去</string>
+    <string name="activity_search_set_up_success_text">设置成功!</string>
+    <string name="activity_search_set_text">设置</string>
+    <string name="activity_home_str_dest_hint">请输入您的目的地</string>
+    <string name="activity_poi_use_gz">你可以通过公众号,</string>
+    <string name="activity_poi_focus_gz">你可以关注公众号,</string>
+    <string name="activity_poi_send_text">使用手机发送目的地至设备，快速发起导航</string>
+    
+    <!-- 录音失败界面 -->
+    <string name="label_record_fail_title">启动录音失败，可按如下方式解决:</string>
+    <string name="label_record_fail_1_1">原因1.被手机安全软件限定了权限。</string>
+    <string name="label_record_fail_1_2">请设同行者为信任程序:在手机安全设置下选择同行者应用程序,</string>
+    <string name="label_record_fail_1_3">并将其设为信任程序</string>
+    <string name="label_record_fail_2_1">原因2.被其他应用占了麦克风</string>
+    <string name="label_record_fail_2_2">请关掉其他应用的录音功能</string>
+
+    <!-- win_help_detail -->
+    <string name="label_win_help_title">帮助</string>
+    <string-array name="win_help_title">
+        <item>导航</item>
+        <item>生活周边</item>
+        <item>音乐</item>
+        <item>电话</item>
+        <item>日历</item>
+        <item>百科</item>
+        <item>股票</item>
+        <item>天气</item>
+        <item>微信</item>
+        <item>位置</item>
+        <item>本地控制</item>
+        <item>笑话</item>
+        <item>屏幕控制</item>
+        <item>查看帮助</item>
+        <item>设备号查询</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="win_help_intro">
+        <item>我要去世界之窗，我要回家/公司，查看导航历史，我要返航</item>
+        <item>附近的肯德基，欢乐谷附近的川菜，我饿了</item>
+        <item>我要听歌，来一首刘德华的忘情水，下一首</item>
+        <item>打电话给张三，呼叫134XXXXX494</item>
+        <item>现在是几点，今年除夕是几号，上周三是几号</item>
+        <item>刘德华是谁</item>
+        <item>腾讯的股价，上证指数</item>
+        <item>明天的天气怎么样，今天适合洗车吗</item>
+        <item>发微信给张三，关闭微信播报，退出微信</item>
+        <item>我现在在哪儿</item>
+        <item>打开蓝牙，降低音量，增加亮度</item>
+        <item>讲个笑话</item>
+        <item>打开屏幕，关闭屏幕</item>
+        <item>打开帮助</item>
+        <item>查找设备号</item>
+        <item>返回导航，返回桌面</item>
+    </string-array>
+    <string-array name="win_help_desps">
+        <item>北京怎么走/我要去北京\n我要回家/我要去公司</item>
+        <item>欢乐谷附近的川菜\n我想上网\n我要健身\n附近的肯德基\n我要吃烧烤</item>
+        <item>我要听歌\n听忘情水\n我要听刘德华的忘情水</item>
+        <item>打电话给张三\n呼叫134XXXXX494/打电话给134XXXXX494</item>
+        <item>现在是几点\n今年除夕是几号\n圣诞节是农历几号\n上周三是几号</item>
+        <item>刘德华是谁</item>
+        <item>腾讯的股票是多少\n查一下上证指数</item>
+        <item>明天的天气怎么样\n空气质量怎么样\n深圳的天气</item>
+        <item>发微信/发微信给张三（联系人）\n关闭微信播报/关闭自动播报\n退出微信/退出车载微信</item>
+        <item>我现在在哪儿</item>
+        <item>打开蓝牙\n降低音量\n增加亮度</item>
+        <item>讲个笑话</item>
+        <item>打开屏幕\n关闭屏幕</item>
+        <item>打开帮助</item>
+        <item>查找设备号</item>
+        <item>返回导航\n返回桌面</item>
+    </string-array>
+    
+    <string-array name="win_delp_icon">
+        <item>@drawable/win_help_daohang</item>
+        <item>@drawable/win_help_zhoubian</item>
+        <item>@drawable/win_help_diantai</item>
+        <item>@drawable/win_help_music</item>
+        <item>@drawable/win_help_rili</item>
+        <item>@drawable/win_help_baike</item>
+        <item>@drawable/win_help_gupiao</item>
+        <item>@drawable/win_help_tianqi</item>
+        <item>@drawable/win_help_wechat</item>
+        <item>@drawable/win_help_location</item>
+        <item>@drawable/win_help_control</item>
+        <item>@drawable/win_help_joke</item>
+        <item>@drawable/win_help_screen</item>
+        <item>@drawable/win_help_helptip</item>
+        <item>@drawable/win_help_uid</item>
+        <item>@drawable/win_help_other</item>
+        <item>@drawable/win_help_chaolengfan</item>
+    </string-array>
+    
+    <string-array name="win_delp_icon_name">
+        <item>win_help_daohang</item>
+        <item>win_help_zhoubian</item>
+        <item>win_help_diantai</item>
+        <item>win_help_music</item>
+        <item>win_help_dianhua</item>
+        <item>win_help_rili</item>
+        <item>win_help_baike</item>
+        <item>win_help_gupiao</item>
+        <item>win_help_tianqi</item>
+        <item>win_help_wechat</item>
+        <item>win_help_location</item>
+        <item>win_help_control</item>
+        <item>win_help_joke</item>
+        <item>win_help_screen</item>
+        <item>win_help_helptip</item>
+        <item>win_help_uid</item>
+        <item>win_help_other</item>
+        <item>@drawable/win_help_chaolengfan</item>
+    </string-array>
+	<!--音乐控制唤醒词-->
+    <string-array name="asr_cmd_player_pause">
+        <item>暂停暂停</item>
+        <item>暂停播放</item>
+    </string-array>
+    <string-array name="asr_cmd_player_play">
+        <item>播放播放</item>
+        <item>继续播放</item>
+    </string-array>
+    <string-array name="asr_cmd_player_next">
+        <item>下一首</item>
+    </string-array>
+    <string-array name="asr_cmd_player_previous">
+        <item>上一首</item>
+    </string-array>
+    <!-- sim卡文本 -->
+    <string name="string_no_sim">没有检测到SIM卡，请插入！</string>
+    <string name="string_sim_done">检测到SIM卡</string>
+    <string name="string_net_check">正在检测网络环境...</string>
+    <string name="string_net_well">网络环境良好！</string>
+    <string name="string_net_error">网络环境故障！</string>
+    <string name="string_open_wifi">连接WiFi</string>
+
+    <!-- 登录文本 -->
+    <string name="string_login_notice_txt">登录账号您就可以开启智能车旅啦</string>
+    <string name="string_login_voice">语音控制车载设备</string>
+    <string name="string_login_capture">自动抓拍行车路况</string>
+    <string name="string_login_nav">智能导航</string>
+    <string name="string_phone_name">手机号</string>
+    <string name="string_id_code">验证码</string>
+    <string name="string_plate_num">车牌号</string>
+    <string name="string_get_code">获取验证码</string>
+    <string name="string_login">确认登录</string>
+    <string name="string_saoma">扫码登录</string>
+    <string name="string_input_correct_phone">请输入正确的手机号</string>
+    <string name="string_input_correct_code">请输入验证码</string>
+    <string name="string_accept_login">点击登录，即表示你同意</string>
+    <string name="string_back">返回</string>
+    <string name="string_txz">同行者服务条款</string>
+    <string name="string_txz_disclaimer">《同行者服务条款》</string>
+
+    <string name="string_help_float_cmd_tip">您可以先唤醒我，然后说：</string>
+    <string name="string_help_float_wp_tip">您可以直接说：</string>
+</resources>

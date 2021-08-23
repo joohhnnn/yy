@@ -1,0 +1,13 @@
+云知声离线语法构建基本概念。
+1、jsgf+vocab可以编译出grammar.dat + jsgf_clg.dat。
+2、jsgf是离线识别各种说法的集成。类似于正则表达式，可以包含变量。
+3、vocab文件是jsgf中变量的具体值(0个或者部分或者全部)。
+4、grammar.dat是离线识别引擎用来识别的语法文件。不可以动态修改。
+5、jsgf_clg.dat是离线识别引擎在程序运行过程中，用来编译grammar文件的模型文件。
+6、引擎可以加载不同的grammar文件以支持具体场景下的各种说法，提高识别率和识别速度。
+
+云知声编译离线语法数据的步骤：
+1、jsgf + vocab打包成jsgf.zip文件。
+2、将jsgf.zip放到云知声的构建服务器上构建。(服务器地址http://211.102.192.44:9090/login?from=%2F)
+3、生成grammar.dat和jsgf_clg.dat。
+4、jsgf_clg.dat是引擎用来动态编译离线模型的文件。

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.txznet.comm.ui.view.RippleView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height_large"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp24"
+                android:textColor="@color/textColorPrimary"
+                android:layout_marginLeft="@dimen/xdp20"
+                android:layout_marginRight="@dimen/xdp20"
+                android:text="T1. 深圳国际会展中心"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tvDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="@dimen/xdp20"
+                android:layout_marginRight="@dimen/xdp20"
+                android:paddingTop="2dp"
+                android:textSize="@dimen/sp18"
+                android:textColor="@color/textColorSecondary"
+                android:text="T3.2km | Test深圳市福田区中心四路深圳会展中心内"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1.2"/>
+
+            <LinearLayout
+                android:id="@+id/businessWrap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/xdp20"
+                android:layout_marginRight="@dimen/xdp20"
+                android:layout_marginTop="@dimen/y1">
+
+                <ImageView
+                    android:id="@+id/ivJuan"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/dz_juan"/>
+
+                <ImageView
+                    android:id="@+id/ivTuan"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/dz_tuan"
+                    android:layout_marginLeft="4dp"/>
+
+                <ImageView
+                    android:id="@+id/ivHui"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/dz_hui"
+                    android:layout_marginLeft="4dp"/>
+
+                <ImageView
+                    android:id="@+id/ivScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/mdp20"
+                    android:src="@drawable/dz_icon_star8"
+                    android:layout_marginLeft="4dp"
+                    android:adjustViewBounds="true"/>
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="￥87/人"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/sp18"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/listDividerColor"/>
+
+    </LinearLayout>
+
+</com.txznet.comm.ui.view.RippleView>

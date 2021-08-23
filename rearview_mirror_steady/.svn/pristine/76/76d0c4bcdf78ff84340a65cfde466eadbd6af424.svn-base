@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rl_care_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#dd000000">
+
+    <FrameLayout
+        android:id="@+id/fl_care_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/y16">
+
+        <TextView
+            android:id="@+id/tv_care_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lb_care_reason"
+            android:textColor="@color/color_dialog_care_reason"
+            android:textSize="@dimen/y24"/>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_care_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fl_care_reason"
+        android:layout_centerHorizontal="true"
+        android:text="@string/lb_care_tip"
+        android:textColor="@color/color_dialog_care_tip"
+        android:textSize="@dimen/y30"/>
+
+    <com.txznet.webchat.ui.rearview_mirror.widget.SquaredFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_care_tip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/y16"
+        android:layout_marginTop="@dimen/y16">
+
+        <ImageView
+            android:id="@+id/iv_care_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_qrcode_back"
+            android:scaleType="fitXY"/>
+
+    </com.txznet.webchat.ui.rearview_mirror.widget.SquaredFrameLayout>
+
+
+</RelativeLayout>

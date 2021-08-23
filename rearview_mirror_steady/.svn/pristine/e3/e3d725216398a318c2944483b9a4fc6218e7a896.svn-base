@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_left_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/x30"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_left_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x20"
+                android:src="@drawable/ic_player_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:clickable="false"
+                android:text="返回"
+                android:textSize="?attr/text_size_h1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x30"
+            android:text="取消"
+            android:textSize="?attr/text_size_h1"
+            android:visibility="gone" />
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/prl_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="@dimen/x13"
+                android:paddingRight="@dimen/x13"
+                android:text="历史音乐" />
+
+            <TextView
+                android:id="@+id/tv_title_2"
+                style="@style/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/tv_title"
+                android:gravity="center"
+                android:paddingLeft="@dimen/x13"
+                android:paddingRight="@dimen/x13"
+                android:text="历史电台"
+                android:visibility="gone" />
+        </android.support.percent.PercentRelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/fm_delete_ope"
+            app:layout_heightPercent="60%"
+            app:layout_widthPercent="9.8%" />
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/ll_delete_rage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            app:layout_heightPercent="60%"
+            app:layout_widthPercent="20.6%">
+
+
+            <TextView
+                android:id="@+id/tv_choice_all"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/tv_delete"
+                android:gravity="center"
+                android:text="全选"
+                android:textColor="@color/favour_delete_bg"
+                app:layout_widthPercent="47.5%" />
+
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/favour_delete_bg"
+                android:gravity="center"
+                android:text="删除"
+                app:layout_widthPercent="47.5%" />
+
+        </android.support.percent.PercentRelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+</android.support.percent.PercentFrameLayout>

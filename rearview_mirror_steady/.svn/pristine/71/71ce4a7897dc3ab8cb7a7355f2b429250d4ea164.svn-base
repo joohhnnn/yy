@@ -1,0 +1,9 @@
+arm表示arm平台项目。
+x86表示x86平台项目。
+release表示正式SDK版本。
+非release表示测试SDK版本。
+merge_proc表示唤醒和离线识别在同一个进程。
+
+具体项目名称说明:
+1、arm_v3_debug(仅供测试SDK使用)  使用的74以及74以上版本的云知声引擎。
+2、arm_v3_release  使用的低于74版本的云知声引擎。

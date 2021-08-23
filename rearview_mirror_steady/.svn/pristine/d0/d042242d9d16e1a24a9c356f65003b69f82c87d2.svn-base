@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y80"
+        android:padding="@dimen/x8" >
+
+        <ImageView
+            android:id="@+id/help_back"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/y35"
+            android:layout_centerVertical="true"
+            android:src="@drawable/widget_button_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/label_win_help_title"
+            android:textColor="#fff"
+            android:textSize="@dimen/y34" />
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/list_help_detail"
+        android:divider="@null"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:groupIndicator="@null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

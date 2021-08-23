@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wheelview_item_day_ll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/day_blank_tv"
+        style="@style/widget_wheelview_item_name"
+        android:layout_width="wrap_content"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/day_tv"
+        style="@style/widget_wheelview_item_name"
+        android:layout_width="wrap_content"
+        android:gravity="left|center_vertical"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/week_tv"
+        style="@style/widget_wheelview_item_name"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/x5"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:textColor="#7a3f00" />
+
+</LinearLayout>

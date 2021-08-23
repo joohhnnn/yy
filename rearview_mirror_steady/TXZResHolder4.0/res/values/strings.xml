@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ResHolder</string>
+    <!-- 用于TXZCore进行版本兼容，不要修改！ -->
+    <string name="version">1.3</string>
+    <string name="theme_code">1</string>
+    <!-- 可选：auto(根据实际分辨率自动适配),vertical(垂直布局),horizontal（水平布局） -->
+    <string name="orientation">auto</string>
+    <!-- 可选：每一页最大的显示数量 -->
+    <!-- <string name="max_visible_count">4</string> -->
+    <!-- &lt;!&ndash; 可选：每一个条目的最大高度 &ndash;&gt; -->
+    <!-- <string name="max_item_height">120</string> -->
+    <!-- &lt;!&ndash; 可选：每一个条目的高度 &ndash;&gt; -->
+    <!-- <string name="list_item_height">104</string> -->
+    <!-- 可选：电影列表显示个数 -->
+    <!-- <string name="cinema_visible_count">4</string> -->
+    <!--
+         可选：界面显示高度
+    <string name="win_height">544</string>
+    -->
+    <!-- 是否延迟注册唤醒词以优化性能(ListView进入时) -->
+    <!-- <string name="config_delay_addwkWords">true</string> -->
+    <!-- 会根据该配置来构造具体的View、Config类 -->
+    <string name="theme_package">com.txznet.comm.ui.theme.test</string>
+    <string name="config_use_external_help">true</string>
+    <!-- 是否需要获取场景信息 -->
+    <string name="config_use_scene_info">true</string>
+    <string name="dialog_background"></string>
+
+    <!--是否同步语音更多的状态-->
+    <string name="support_more_record_state">true</string>
+    <!--不强制设置2.0的全屏flag，解决界面被状态栏遮挡的问题-->
+    <string name="use_fullscreen_flag">false</string>
+
+    <!-- 优先使用皮肤包中的dimens  -->
+    <string name="priority_ResHolder_res">true</string>
+    <!-- 是否使用core里面的齐悟火车票/飞机票乘客信息、出票界面 -->
+    <string name="use_core_qiwu_ticket_ui">false</string>
+    <!-- 是否合并帮助三级列表 -->
+    <string name="merge_help_detail_third">true</string>
+
+    <!-- 通用 -->
+    <string name="label_commit">确定</string>
+    <string name="label_cancel">取消</string>
+    <string name="label_edit">编辑</string>
+    <string name="label_delete">删除</string>
+    <string name="activity_search_start_planing_text">出发</string>
+    <string name="activity_search_start_set">设置</string>
+    <string name="activity_search_null_text">抱歉，未能找到结果!</string>
+    <string name="activity_poi_use_gz">你可以通过公众号,</string>
+    <string name="activity_poi_focus_gz">你可以关注公众号,</string>
+    <string name="activity_poi_send_text">使用手机发送目的地至设备，快速发起导航</string>
+
+    <!-- 天气信息 -->
+    <string name="label_weather_today">今天</string>
+    <string name="label_weather_tommorow">明天</string>
+    <string name="label_weather_day_after_tommorow">后天</string>
+    <string name="label_weather_day_more">大后天</string>
+    <string name="label_weather_air_quality">空气质量</string>
+
+    <!-- 股票信息 -->
+    <string name="label_stock_change_amount">涨跌值</string>
+    <string name="label_stock_change_rate">涨跌幅</string>
+    <string name="label_stock_yesterday_close_price">昨收</string>
+    <string name="label_stock_today_open_price">今开</string>
+    <string name="label_stock_highest_price">最高</string>
+    <string name="label_stock_lowest_price">最低</string>
+    <string name="label_stock_trading_volume">成交量</string>
+
+    <!-- 设置页面 -->
+    <string name="label_setting_title">设置</string>
+    <string name="label_setting_tts_wakeup">语音唤醒</string>
+    <string name="label_setting_floating_button">悬浮窗</string>
+    <string name="label_setting_wakeup_command">唤醒词</string>
+    <string name="label_setting_wakeup_sensitivity">语音唤醒灵敏度</string>
+    <string name="label_setting_tts_speed">语音播报速度</string>
+    <string name="label_setting_reset">重置参数</string>
+
+    <!-- 唤醒词设置页面 -->
+    <string name="label_asrcmd_title">唤醒词</string>
+    <string name="label_asrcmd_add">添加唤醒词</string>
+    <!-- 是否可使用打字效果 -->
+    <string name="use_typing_effect">true</string>
+
+    <!-- 是否需要显示声控界面帮助Tips -->
+    <string name="show_help_tips">true</string>
+
+    <!-- 颜色 -->
+    <!-- 主色调，突出颜色，可点击选色 -->
+    <string name="color_main_select">#16CFFF</string>
+    <!-- 主标题颜色 -->
+    <string name="color_main_title">#FFFFFF</string>
+    <!-- 提示语颜色 -->
+    <string name="color_remind">#B2FFFFFF</string>
+    <!-- 副标题颜色 -->
+    <string name="color_vice_title">#99FFFFFF</string>
+    <!-- 航班价格颜色 -->
+    <string name="color_flight_price">#FF8205</string>
+    <!-- 股票上涨颜色 -->
+    <string name="color_shock_up">#F54545</string>
+
+    <!-- 股票下跌颜色 -->
+    <string name="color_shock_down">#00CF4A</string>
+    <!-- 列表背景颜色 -->
+    <string name="color_item_bg">#21FFFFFF</string>
+    <!-- 电影列表背景颜色 -->
+    <string name="color_movie_bg">#0CFFFFFF</string>
+    <!-- 电影列表评分背景颜色 -->
+    <string name="color_movie_score_bg">#80000000</string>
+    <!-- 修改poi查询地址页面背景 -->
+    <string name="color_search_bg">#FF2D2F3B</string>
+    <!-- 修改poi查询地址页面编辑框边框线颜色 -->
+    <string name="color_search_edit_stroke">#80FFFFFF</string>
+    <!-- 修改城市列表标题背景颜色 -->
+    <string name="color_city_list_title">#4D4D53</string>
+    <!-- 修改城市列表内容背景颜色 -->
+    <string name="color_city_list_content">#43444A</string>
+
+    <color name="color_main_select_test">#00FF7F</color>
+
+</resources>

@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:padding="@dimen/win_layout_card_padding">
+
+        <LinearLayout
+            android:id="@+id/bgView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/xml_weather_background_default">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/mdp10"
+                android:paddingRight="@dimen/mdp10"
+                android:paddingTop="@dimen/mdp10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTemperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_main_title"
+                        android:text="T 28°C / 33°C"
+                        android:textSize="@dimen/sp28"/>
+
+                    <TextView
+                        android:id="@+id/tvWeather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_main_title"
+                        android:text="T 晴"
+                        android:textSize="@dimen/sp20"
+                        android:layout_marginTop="@dimen/mdp10"/>
+
+                    <TextView
+                        android:id="@+id/tvWind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_main_title"
+                        android:text="T 3-4级东南风"
+                        android:textSize="@dimen/sp20"
+                        android:layout_marginTop="@dimen/mdp10"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivWeatherIcon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/weather_baoyu" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="bottom"
+                android:paddingLeft="@dimen/mdp10"
+                android:paddingRight="@dimen/mdp10"
+                android:layout_marginTop="@dimen/mdp10"
+                android:layout_marginBottom="@dimen/mdp10">
+
+                <TextView
+                    android:id="@+id/tvCity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_main_title"
+                    android:text="T 深圳市"
+                    android:textSize="@dimen/sp20"/>
+
+                <TextView
+                    android:id="@+id/tvAirQuality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="T 19 优"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp20" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containerWeather"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

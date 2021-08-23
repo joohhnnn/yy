@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRecord_Chat_Msg_Content_interrupt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+	
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:textSize="@dimen/y25"
+		android:textColor="#CCFFFFFF"
+		android:id="@+id/tv_chat_interrupt_tips"
+		android:text="文本太长？试试“停止播报”"
+		android:layout_marginBottom="@dimen/y5"
+		android:layout_marginTop="@dimen/y40"
+		android:lineSpacingMultiplier="1.2"
+        />
+    <TextView
+        android:id="@+id/tv_chat_msg_interrupt"
+        style="@style/Font_Style_From_Sys_Text_No_Margin"
+        android:layout_width="wrap_content"
+        android:maxWidth="@dimen/x500"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:minHeight="?attr/list_item_txtChat_minHeight"
+        android:lineSpacingMultiplier="1.2"
+        android:layout_marginBottom="@dimen/y20"
+        android:text="" />
+
+</LinearLayout>

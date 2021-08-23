@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attrValue="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="99dip"
+    android:orientation="horizontal" >
+
+    <com.txznet.feedback.ui.widget.IconTextView
+        android:id="@+id/id_indicator_one"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        attrValue:color_nor="#adb6cc"
+        attrValue:color_sel="#FFFFFF"
+        attrValue:nor_background="#2d3135"
+        attrValue:sel_background="#34bfff"
+        attrValue:text="常见问题" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#000000" />
+
+    <com.txznet.feedback.ui.widget.IconTextView
+        android:id="@+id/id_indicator_two"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        attrValue:color_nor="#adb6cc"
+        attrValue:color_sel="#FFFFFF"
+        attrValue:nor_background="#2d3135"
+        attrValue:sel_background="#34bfff"
+        attrValue:text="反馈意见" />
+
+</LinearLayout>

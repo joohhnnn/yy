@@ -1,0 +1,79 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.txznet.plugin.resolution'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['pbsrc', 'src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+    }
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+}
+
+dependencies {
+    // gradle编译时如果有同一个库的多个版本会抛mutipleDexDefinedError, 所以要注意所有依赖support包的库要与
+    // 项目引入的support包版本相同或者单独设置exclude, 此处为方便support包的版本控制按gradle依赖的方式显示
+    // 指定版本号
+    api fileTree(include: ['*.jar'], dir: 'libs', excludes: [
+            'android-support-v4.jar',
+            'android-support-v7-appcompat.jar',
+            'universal-image-loader-1.9.5.jar'
+    ])
+    api "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion"
+    api "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    api 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+}
+
+task txzPreBuild(type:Exec) {
+    //println "${workingDir}";
+    commandLine "python", "./tools/pre_java.py"
+    ext.output = {
+        return standardOutput.toString()
+    }
+}
+
+project.afterEvaluate {
+    preBuild.dependsOn("txzPreBuild")
+}
+
+resolution {
+    // 设计稿分辨率
+    designSize "800x480"
+    // 资源路径
+    resDir "res"
+    // 分辨率资源路径
+    resDirName {w, h ->
+        "values-w${100000 + w}dp-h${100000 + h}dp"
+    }
+
+    // 需要支持的分辨率按如下格式添加
+    supportResolution "715x445"
+    supportResolution "768x785"
+    supportResolution "1250x720"
+    supportResolution "2560x720"
+}

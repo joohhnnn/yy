@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 应用程序名 -->
+    <string name="app_name">WeChat Assistant</string>
+    <!-- 版本描述 -->
+    <string name="app_desc"></string>
+
+</resources>

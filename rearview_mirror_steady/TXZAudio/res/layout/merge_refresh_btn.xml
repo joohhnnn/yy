@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <TextView
+        android:id="@+id/refreshTv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y80"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="@string/scan_btn"
+        android:textColor="@color/press_tv"
+        android:textSize="@dimen/y36"
+        android:visibility="visible" />
+
+</merge>

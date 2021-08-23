@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="anim_list_bofang">
+        <item>@drawable/bofang_00000</item>
+        <item>@drawable/bofang_00001</item>
+        <item>@drawable/bofang_00002</item>
+        <item>@drawable/bofang_00003</item>
+        <item>@drawable/bofang_00004</item>
+        <item>@drawable/bofang_00005</item>
+        <item>@drawable/bofang_00006</item>
+        <item>@drawable/bofang_00007</item>
+        <item>@drawable/bofang_00008</item>
+        <item>@drawable/bofang_00009</item>
+        <item>@drawable/bofang_00010</item>
+        <item>@drawable/bofang_00011</item>
+        <item>@drawable/bofang_00012</item>
+        <item>@drawable/bofang_00013</item>
+        <item>@drawable/bofang_00014</item>
+        <item>@drawable/bofang_00015</item>
+        <item>@drawable/bofang_00016</item>
+        <item>@drawable/bofang_00017</item>
+        <item>@drawable/bofang_00018</item>
+        <item>@drawable/bofang_00019</item>
+    </array>
+
+    <array name="anim_list_chongfubofang">
+        <item>@drawable/congfubofang_00004</item>
+        <item>@drawable/congfubofang_00005</item>
+        <item>@drawable/congfubofang_00006</item>
+        <item>@drawable/congfubofang_00007</item>
+        <item>@drawable/congfubofang_00008</item>
+        <item>@drawable/congfubofang_00009</item>
+        <item>@drawable/congfubofang_00010</item>
+        <item>@drawable/congfubofang_00011</item>
+        <item>@drawable/congfubofang_00012</item>
+        <item>@drawable/congfubofang_00013</item>
+        <item>@drawable/congfubofang_00014</item>
+        <item>@drawable/congfubofang_00015</item>
+        <item>@drawable/congfubofang_00016</item>
+        <item>@drawable/congfubofang_00017</item>
+        <item>@drawable/congfubofang_00018</item>
+        <item>@drawable/congfubofang_00019</item>
+        <item>@drawable/congfubofang_00020</item>
+        <item>@drawable/congfubofang_00021</item>
+        <item>@drawable/congfubofang_00022</item>
+        <item>@drawable/congfubofang_00023</item>
+    </array>
+
+    <array name="anim_list_jiazai">
+        <item>@drawable/jiazai_00000</item>
+        <item>@drawable/jiazai_00001</item>
+        <item>@drawable/jiazai_00002</item>
+        <item>@drawable/jiazai_00003</item>
+        <item>@drawable/jiazai_00004</item>
+        <item>@drawable/jiazai_00005</item>
+        <item>@drawable/jiazai_00006</item>
+        <item>@drawable/jiazai_00007</item>
+        <item>@drawable/jiazai_00008</item>
+        <item>@drawable/jiazai_00009</item>
+    </array>
+
+    <array name="anim_list_shengbochongfu">
+        <item>@drawable/shengbocongfu_00003</item>
+        <item>@drawable/shengbocongfu_00004</item>
+        <item>@drawable/shengbocongfu_00005</item>
+        <item>@drawable/shengbocongfu_00006</item>
+        <item>@drawable/shengbocongfu_00007</item>
+        <item>@drawable/shengbocongfu_00008</item>
+        <item>@drawable/shengbocongfu_00009</item>
+        <item>@drawable/shengbocongfu_00010</item>
+        <item>@drawable/shengbocongfu_00011</item>
+        <item>@drawable/shengbocongfu_00012</item>
+        <item>@drawable/shengbocongfu_00013</item>
+        <item>@drawable/shengbocongfu_00014</item>
+        <item>@drawable/shengbocongfu_00015</item>
+        <item>@drawable/shengbocongfu_00016</item>
+        <item>@drawable/shengbocongfu_00017</item>
+        <item>@drawable/shengbocongfu_00018</item>
+        <item>@drawable/shengbocongfu_00019</item>
+        <item>@drawable/shengbocongfu_00020</item>
+        <item>@drawable/shengbocongfu_00021</item>
+        <item>@drawable/shengbocongfu_00022</item>
+        <item>@drawable/shengbocongfu_00023</item>
+        <item>@drawable/shengbocongfu_00024</item>
+        <item>@drawable/shengbocongfu_00025</item>
+        <item>@drawable/shengbocongfu_00026</item>
+    </array>
+
+
+    <array name="anim_list_shengbochuxian">
+        <item>@drawable/shengbochuxian_00000</item>
+        <item>@drawable/shengbochuxian_00001</item>
+        <item>@drawable/shengbochuxian_00002</item>
+    </array>
+
+    <array name="anim_list_shengboxiaoshi">
+        <item>@drawable/shengboxiaoshi_00027</item>
+        <item>@drawable/shengboxiaoshi_00028</item>
+        <item>@drawable/shengboxiaoshi_00029</item>
+    </array>
+</resources>

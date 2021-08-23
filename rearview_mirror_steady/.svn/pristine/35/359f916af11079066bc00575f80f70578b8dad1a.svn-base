@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRecord_Chat_Msg_Content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.txznet.record.view.PrinterTextView
+        android:id="@+id/txtChat_Msg_Text"
+        style="@style/Font_Style_To_Sys_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="left|center_vertical"
+        android:maxWidth="@dimen/x500"
+        android:minHeight="?attr/list_item_txtChat_minHeight"
+        android:lineSpacingMultiplier="1.2"
+        android:text="" />
+
+</LinearLayout>

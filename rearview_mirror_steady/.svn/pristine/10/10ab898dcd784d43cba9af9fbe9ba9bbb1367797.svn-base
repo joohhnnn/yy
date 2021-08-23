@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.txznet.comm.ui.theme.test.anim.AnimNoneView
+        android:id="@+id/anmView"
+        android:layout_width="@dimen/talk_logo_size"
+        android:layout_height="@dimen/talk_logo_size"
+        android:scaleType="fitCenter" />
+
+</RelativeLayout>

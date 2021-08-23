@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools">
+
+    <!--推送登录界面-->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_car_qr_wechat_pick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <android.support.percent.PercentFrameLayout
+            android:id="@+id/fl_push_avatar"
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="29.2%"
+            app:layout_aspectRatio="100%"
+            app:layout_marginTopPercent="29.2%">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_car_qr_wechat_picker_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/default_headimage"
+                app:riv_corner_radius="@dimen/y8"
+                app:layout_marginPercent="7.1%"/>
+
+            <ImageView
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="@drawable/ic_push_login_arrow_down"
+                app:layout_heightPercent="17.1%"
+                app:layout_aspectRatio="100%"/>
+
+        </android.support.percent.PercentFrameLayout>
+
+        <com.txznet.webchat.ui.common.widget.ThemedTextView
+            android:id="@+id/tv_car_qr_wechat_picker_confirm_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/fl_push_avatar"
+            android:textSize="@dimen/y19"
+            android:text="@string/lb_push_login_tip"
+            app:layout_marginTopPercent="3.3%"
+            app:theme_color="primary"/>
+
+        <FrameLayout
+            android:id="@+id/btn_car_qr_wechat_picker_confirm"
+            android:layout_width="@dimen/x156"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv_car_qr_wechat_picker_confirm_title"
+            android:background="@drawable/selector_car_btn"
+            app:layout_marginTopPercent="3.3%">
+
+            <com.txznet.webchat.ui.common.widget.ThemedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/y6"
+                android:paddingBottom="@dimen/y6"
+                android:layout_gravity="center"
+                android:textSize="@dimen/y16"
+                android:text="@string/lb_push_login_confirm_btn_text"
+                app:theme_color="primary"/>
+
+        </FrameLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <!--二维码页面-->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_car_qr_wechat_scan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <android.support.percent.PercentFrameLayout
+            android:id="@+id/fl_car_qr"
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="37.5%"
+            app:layout_aspectRatio="100%"
+            app:layout_marginTopPercent="25%">
+
+            <ImageView
+                android:id="@+id/iv_car_qr_wechat_qrcode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/qr_landscape"
+                app:layout_marginPercent="5.6%"
+                tools:src="#a1a1a1"/>
+
+            <com.pnikosis.materialishprogress.ProgressWheel
+                android:id="@+id/pb_car_qr_wechat_progress"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                app:matProg_barColor="@color/color_accent"
+                app:matProg_progressIndeterminate="true"
+                app:matProg_barWidth="@dimen/y3"
+                app:layout_heightPercent="18.8%"
+                app:layout_aspectRatio="100%"/>
+
+            <ImageView
+                android:id="@+id/view_car_qr_wechat_click_hint"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="@drawable/ic_push_login_arrow_down"
+                app:layout_heightPercent="13.3%"
+                app:layout_aspectRatio="100%"/>
+
+        </android.support.percent.PercentFrameLayout>
+
+
+        <com.txznet.webchat.ui.common.widget.ThemedTextView
+            android:id="@+id/tv_car_qr_wechat_scan_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/fl_car_qr"
+            android:textSize="@dimen/y19"
+            android:text="@string/lb_login_wechat_tip"
+            app:layout_marginTopPercent="3.3%"
+            app:theme_color="primary"/>
+
+        <FrameLayout
+            android:id="@+id/btn_car_qr_wechat_refresh"
+            android:layout_width="@dimen/x156"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv_car_qr_wechat_scan_title"
+            android:background="@drawable/selector_car_btn"
+            app:layout_marginTopPercent="3.3%">
+
+            <com.txznet.webchat.ui.common.widget.ThemedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/y6"
+                android:paddingBottom="@dimen/y6"
+                android:layout_gravity="center"
+                android:textSize="@dimen/y16"
+                android:text="@string/lb_login_wechat_refresh"
+                app:theme_color="primary"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_car_qr_wechat_qr_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_car_qr_wechat_refresh"
+            android:layout_centerHorizontal="true"
+            android:text="@string/lb_login_wechat_error"
+            android:textColor="@color/color_wechat_text_error"
+            android:textSize="@dimen/y20"
+            android:visibility="visible"
+            app:layout_marginTopPercent="1.7%"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <!--登录确认页面-->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_car_qr_wechat_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_car_qr_wechat_avatar"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_headimage"
+            app:riv_corner_radius="@dimen/y8"
+            app:layout_heightPercent="29.2%"
+            app:layout_aspectRatio="100%"
+            app:layout_marginTopPercent="29.2%"/>
+
+        <com.txznet.webchat.ui.common.widget.ThemedTextView
+            android:id="@+id/tv_car_qr_wechat_confirm_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/iv_car_qr_wechat_avatar"
+            android:textSize="@dimen/y19"
+            android:text="@string/lb_login_wechat_scan_success"
+            app:layout_marginTopPercent="3.3%"
+            app:theme_color="primary"/>
+
+        <com.txznet.webchat.ui.common.widget.ThemedTextView
+            android:id="@+id/tv_car_qr_wechat_confirm_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv_car_qr_wechat_confirm_title"
+            android:textSize="@dimen/y16"
+            android:text="@string/lb_login_wechat_scan_success2"
+            app:layout_marginTopPercent="1.5%"
+            app:theme_color="primary_dark"/>
+
+        <Button
+            android:id="@+id/btn_car_qr_confirm_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv_car_qr_wechat_confirm_subtitle"
+            android:background="@color/transparent"
+            android:text="@string/lb_login_wechat_return"
+            android:textColor="@color/color_accent"
+            android:textSize="@dimen/y20"
+            app:layout_marginTopPercent="6.6%"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</FrameLayout>

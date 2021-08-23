@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">同听</string>
+    <string name="str_close_push_msg_init">点火智能播放</string>
+    <string name="str_open_asr_cmd">免唤醒设置</string>
+
+    <!-- local music module -->
+    <string name="local_title">本地音乐</string>
+    <string name="local_start_scan">开始扫描</string>
+    <string name="local_scan_result">已同步%1$s首歌曲</string>
+    <string name="local_sort_type">排序方式</string>
+    <string name="local_delete_mgr">删除管理</string>
+
+    <!-- favour -->
+    <string name="favour_tips">已收藏</string>
+    <string name="favour_cancel_tips">已取消收藏</string>
+
+    <!-- wx_push -->
+    <string name="wx_push_empty_str">你还没有推送内容</string>
+    <string name="wx_push_empty_qrcode_str">扫码绑定微信，推送内容到车机端收听</string>
+    <string name="wx_push_empty_qrcode_str_compat">请前往微信助手-远程控制\n扫码绑定设备即可使用该功能</string>
+    <string name="wx_push_qrcode_retry_str">点击重试</string>
+
+    <!-- subscribe -->
+    <string name="subscribe_tips">已订阅</string>
+    <string name="subscribe_cancel_tips">已取消订阅</string>
+
+    <string name="favour_empty_str">你还没有收藏内容哦</string>
+    <string name="history_music_empty_str">你还没有播放记录</string>
+    <string name="album_category_error_no_net_str">无网络，请检查网络是否可用</string>
+    <string name="album_category_error_poor_net_str">当前网络较差</string>
+
+    <string name="default_hint">No Lyrics</string>
+
+    <!--音乐控制唤醒词-->
+    <string-array name="asr_cmd_player_pause">
+        <!--<item>暂停暂停</item>-->
+        <item>暂停播放</item>
+    </string-array>
+    <string-array name="asr_cmd_player_play">
+        <!--<item>播放播放</item>-->
+        <item>继续播放</item>
+    </string-array>
+    <string-array name="asr_cmd_player_next">
+        <item>下一首</item>
+    </string-array>
+    <string-array name="asr_cmd_player_previous">
+        <item>上一首</item>
+    </string-array>
+    <string-array name="asr_cmd_player_forward">
+        <item>快进快进</item>
+    </string-array>
+    <string-array name="asr_cmd_player_backward">
+        <item>后退后退</item>
+    </string-array>
+    <string-array name="asr_cmd_player_like">
+        <item>加入收藏</item>
+        <item>加入订阅</item>
+    </string-array>
+
+    <string-array name="asr_cmd_player_like_cancel">
+        <item>取消收藏</item>
+        <item>取消订阅</item>
+    </string-array>
+    <string-array name="asr_cmd_open_super_radio">
+        <item>打开车主超级电台</item>
+        <item>我要听车主超级电台</item>
+    </string-array>
+    <string-array name="asr_cmd_play_local_music">
+        <item>播放本地音乐</item>
+    </string-array>
+    <string-array name="asr_cmd_play_history_music">
+        <item>播放历史音乐</item>
+    </string-array>
+
+
+</resources>

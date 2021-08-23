@@ -1,0 +1,6 @@
+{
+	'path' : '../../../projects/rearview_mirror/txz_theme/TXZLauncher',
+	'apk' : True,
+	'zip' : False
+}
+

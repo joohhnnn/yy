@@ -1,0 +1,1363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/layout_top_phone_portrait" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/x28"
+        android:paddingLeft="?attr/bar_player_view_padding"
+        android:paddingRight="?attr/bar_player_view_padding">
+
+        <ScrollView
+            android:id="@+id/v_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_detail_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x26"
+                    android:text="控制播放器的说法"
+                    android:textColor="#FFFFFF"
+                    android:textSize="?attr/text_size_h3" />
+
+                <TextView
+                    android:id="@+id/tv_detail_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y15"
+                    android:background="@drawable/bg_help_item"
+                    android:ellipsize="end"
+                    android:lineSpacingMultiplier="1.5"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/y20"
+                    android:paddingLeft="@dimen/x26"
+                    android:paddingRight="@dimen/x31"
+                    android:paddingTop="@dimen/y20"
+                    android:text="播放音乐/听音乐/播音乐/播放歌曲/听歌曲/播歌曲/播歌/听歌/我要听音乐"
+                    android:textColor="#FFFFFF"
+                    android:textSize="?attr/text_size_h2" />
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/v_setting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="true"
+            android:scrollbarSize="@dimen/m5"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbarThumbVertical="@drawable/playlist_scrollbar_thumb"
+            android:scrollbarTrackVertical="@drawable/playlist_scrollbar_bg"
+            android:scrollbars="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/setting_item_height"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="如何用语音点播音乐（需唤醒声控）"
+                    android:textColor="#7FFFFFFF"
+                    android:textSize="?attr/text_size_h3" />
+
+
+                <LinearLayout
+                    android:id="@+id/v_music_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="播放音乐"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="播放音乐"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="全部说法"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="点播歌手"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="我要听刘德华的歌"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/x10"-->
+                    <!--android:text="全部说法"-->
+                    <!--android:textColor="#7FFFFFFF"-->
+                    <!--android:textSize="?attr/text_size_h2"/>-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="@dimen/m24"-->
+                    <!--android:layout_height="@dimen/m24"-->
+                    <!--android:layout_marginRight="@dimen/x20"-->
+                    <!--android:src="@drawable/setting_right"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="点播特定歌曲"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="我要听刘德华的冰雨"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/x10"-->
+                    <!--android:text="全部说法"-->
+                    <!--android:textColor="#7FFFFFFF"-->
+                    <!--android:textSize="?attr/text_size_h2"/>-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="@dimen/m24"-->
+                    <!--android:layout_height="@dimen/m24"-->
+                    <!--android:layout_marginRight="@dimen/x20"-->
+                    <!--android:src="@drawable/setting_right"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="点播歌曲名称"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="我要听冰雨"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/x10"-->
+                    <!--android:text="全部说法"-->
+                    <!--android:textColor="#7FFFFFFF"-->
+                    <!--android:textSize="?attr/text_size_h2"/>-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="@dimen/m24"-->
+                    <!--android:layout_height="@dimen/m24"-->
+                    <!--android:layout_marginRight="@dimen/x20"-->
+                    <!--android:src="@drawable/setting_right"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/v_music_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="点播类型歌曲"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="我要听粤语歌"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="全部说法"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/v_music_control"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="控制播放器"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="播放/暂停/上一首/下一首"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="全部说法"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/v_music_close"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="关闭音乐"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="关闭音乐"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="全部说法"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/v_music_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="切换播放模式"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="顺序播放/随机播放/单曲循环"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="全部说法"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/v_music_play_favor"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="播放收藏的音乐"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="播放收藏"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="全部说法"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/v_music_favor"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="收藏音乐"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="收藏"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="全部说法"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y10"
+                    android:text="如何用语音点播电台节目（需唤醒声控）"
+                    android:textColor="#7FFFFFFF"
+                    android:textSize="?attr/text_size_h3" />
+
+                <LinearLayout
+                    android:id="@+id/v_radio_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="播放电台"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="播放电台"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="全部说法"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/v_novel_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="点播小说"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="我要听小说/言情小说"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="全部说法"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/v_news_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="点播新闻"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="我要听新闻/财经新闻"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="全部说法"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/v_radio_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="点播其他类型"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="我要听相声"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="全部说法"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="点播节目名称"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="我要听罗辑思维"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/x10"-->
+                    <!--android:text="全部说法"-->
+                    <!--android:textColor="#7FFFFFFF"-->
+                    <!--android:textSize="?attr/text_size_h2"/>-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="@dimen/m24"-->
+                    <!--android:layout_height="@dimen/m24"-->
+                    <!--android:layout_marginRight="@dimen/x20"-->
+                    <!--android:src="@drawable/setting_right"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/v_radio_control"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="控制播放器"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="播放/暂停/上一个/下一个"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="全部说法"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/v_radio_close"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="关闭电台"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="关闭电台"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="全部说法"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="播放模式"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="只支持顺序播放"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/x10"-->
+                    <!--android:text="全部说法"-->
+                    <!--android:textColor="#7FFFFFFF"-->
+                    <!--android:textSize="?attr/text_size_h2"/>-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="@dimen/m24"-->
+                    <!--android:layout_height="@dimen/m24"-->
+                    <!--android:layout_marginRight="@dimen/x20"-->
+                    <!--android:src="@drawable/setting_right"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/v_radio_play_favor"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="播放订阅的节目"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="播放订阅"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="全部说法"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/v_radio_favor"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="订阅节目"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="订阅"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/x10"
+                        android:text="全部说法"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h3" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y10"
+                    android:text="支持免唤醒声控的快速操作（需开启免唤醒功能）"
+                    android:textColor="#7FFFFFFF"
+                    android:textSize="?attr/text_size_h3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="切换上一首的说法"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="上一首"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/x10"-->
+                    <!--android:text="全部说法"-->
+                    <!--android:textColor="#7FFFFFFF"-->
+                    <!--android:textSize="?attr/text_size_h2"/>-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="@dimen/m24"-->
+                    <!--android:layout_height="@dimen/m24"-->
+                    <!--android:layout_marginRight="@dimen/x20"-->
+                    <!--android:src="@drawable/setting_right"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="切换下一首的说法"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="下一首"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/x10"-->
+                    <!--android:text="全部说法"-->
+                    <!--android:textColor="#7FFFFFFF"-->
+                    <!--android:textSize="?attr/text_size_h2"/>-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="@dimen/m24"-->
+                    <!--android:layout_height="@dimen/m24"-->
+                    <!--android:layout_marginRight="@dimen/x20"-->
+                    <!--android:src="@drawable/setting_right"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="播放暂停的说法"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="暂停播放"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/x10"-->
+                    <!--android:text="全部说法"-->
+                    <!--android:textColor="#7FFFFFFF"-->
+                    <!--android:textSize="?attr/text_size_h2"/>-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="@dimen/m24"-->
+                    <!--android:layout_height="@dimen/m24"-->
+                    <!--android:layout_marginRight="@dimen/x20"-->
+                    <!--android:src="@drawable/setting_right"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="播放继续的说法"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="继续播放"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/x10"-->
+                    <!--android:text="全部说法"-->
+                    <!--android:textColor="#7FFFFFFF"-->
+                    <!--android:textSize="?attr/text_size_h2"/>-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="@dimen/m24"-->
+                    <!--android:layout_height="@dimen/m24"-->
+                    <!--android:layout_marginRight="@dimen/x20"-->
+                    <!--android:src="@drawable/setting_right"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="收藏音乐的说法"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="加入收藏"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/x10"-->
+                    <!--android:text="全部说法"-->
+                    <!--android:textColor="#7FFFFFFF"-->
+                    <!--android:textSize="?attr/text_size_h2"/>-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="@dimen/m24"-->
+                    <!--android:layout_height="@dimen/m24"-->
+                    <!--android:layout_marginRight="@dimen/x20"-->
+                    <!--android:src="@drawable/setting_right"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/list_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="取消收藏音乐的说法"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="取消收藏"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/x10"-->
+                    <!--android:text="全部说法"-->
+                    <!--android:textColor="#7FFFFFFF"-->
+                    <!--android:textSize="?attr/text_size_h2"/>-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="@dimen/m24"-->
+                    <!--android:layout_height="@dimen/m24"-->
+                    <!--android:layout_marginRight="@dimen/x20"-->
+                    <!--android:src="@drawable/setting_right"/>-->
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="订阅节目的说法"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="加入订阅"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/x10"-->
+                    <!--android:text="全部说法"-->
+                    <!--android:textColor="#7FFFFFFF"-->
+                    <!--android:textSize="?attr/text_size_h2"/>-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="@dimen/m24"-->
+                    <!--android:layout_height="@dimen/m24"-->
+                    <!--android:layout_marginRight="@dimen/x20"-->
+                    <!--android:src="@drawable/setting_right"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/list_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="取消订阅节目的说法"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text="取消订阅"
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/x10"-->
+                    <!--android:text="全部说法"-->
+                    <!--android:textColor="#7FFFFFFF"-->
+                    <!--android:textSize="?attr/text_size_h2"/>-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="@dimen/m24"-->
+                    <!--android:layout_height="@dimen/m24"-->
+                    <!--android:layout_marginRight="@dimen/x20"-->
+                    <!--android:src="@drawable/setting_right"/>-->
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y10"
+                    android:text="设置相关"
+                    android:textColor="#7FFFFFFF"
+                    android:textSize="?attr/text_size_h3" />
+
+                <LinearLayout
+                    android:id="@+id/v_push"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="@string/str_close_push_msg"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/x10"-->
+                    <!--android:text="全部说法"-->
+                    <!--android:textColor="#7FFFFFFF"-->
+                    <!--android:textSize="?attr/text_size_h2"/>-->
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/v_wakeup"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/setting_item_height"
+                    android:layout_marginTop="@dimen/y8"
+                    android:background="@drawable/bg_help_item"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:text="关闭免唤醒语音指令的效果？"
+                        android:textColor="#FFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="#7FFFFFFF"
+                        android:textSize="?attr/text_size_h2" />
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginRight="@dimen/x10"-->
+                    <!--android:text="全部说法"-->
+                    <!--android:textColor="#7FFFFFFF"-->
+                    <!--android:textSize="?attr/text_size_h2"/>-->
+
+                    <ImageView
+                        android:layout_width="@dimen/m24"
+                        android:layout_height="@dimen/m24"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@drawable/setting_right" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y96"
+    android:background="#0000"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y6"
+        android:background="#0000" />
+
+    <FrameLayout
+        android:id="@+id/help_group_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:background="@drawable/shape_help_group_back"
+        android:minHeight="@dimen/y90" >
+
+        <ImageView
+            android:id="@+id/help_group_icon"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/y60"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x16"
+            android:src="@drawable/win_help_wechat" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x104"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/help_group_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="left|center_vertical"
+                android:text="本地生活"
+                android:textColor="#fff"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/help_group_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text=" - 欢乐谷附近的川菜"
+                android:textColor="#abd6cc"
+                android:textSize="24px" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/help_group_arrow"
+            android:layout_width="@dimen/y28"
+            android:layout_height="@dimen/y28"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/x24"
+            android:src="@drawable/arrow_down" />
+
+        <View
+            android:id="@+id/help_group_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y2"
+            android:layout_gravity="bottom"
+            android:background="#4c4c4c" />
+    </FrameLayout>
+
+</LinearLayout>

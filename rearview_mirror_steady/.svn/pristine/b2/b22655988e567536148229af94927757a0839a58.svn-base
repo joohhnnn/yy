@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_file_notification_cancel_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/y6"
+        android:layout_centerInParent="true">
+
+        <View
+            android:layout_width="@dimen/y196"
+            android:layout_height="@dimen/y68"
+            android:background="@drawable/shape_file_download_notification_bg"/>
+
+        <View
+            android:id="@+id/view_cancel"
+            android:layout_width="@dimen/y20"
+            android:layout_height="@dimen/y20"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/y98"
+            android:background="@drawable/emoji_165"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/view_cancel"
+            android:layout_marginLeft="@dimen/y4"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20px"
+            android:text="取消"/>
+
+    </RelativeLayout>
+
+
+    <com.github.lzyzsd.circleprogress.DonutProgress
+        android:id="@+id/view_file_notification_progress"
+        android:layout_width="@dimen/y88"
+        android:layout_height="@dimen/y88"
+        app:donut_background_color="#191b22"
+        app:donut_finished_color="#00c5ff"
+        app:donut_finished_stroke_width="@dimen/y6"
+        app:donut_unfinished_color="#575960"
+        app:donut_unfinished_stroke_width="@dimen/y6"
+        app:donut_circle_starting_degree="-90"
+        app:donut_suffix_text="%"
+        app:donut_text_color="#ffffff"
+        app:donut_text_size="@dimen/y24"/>
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_wechat_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2px"
+        android:drawableLeft="@drawable/ic_wechat"
+        android:drawablePadding="3px"
+        android:singleLine="true"
+        android:text="车载微信"
+        android:textColor="#FFFFFFFF"
+        android:textSize="@dimen/dimen_text_size_wechat_title"/>
+
+    <com.txznet.launcher.widget.CornerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6px"
+        android:background="#00000000">
+
+        <include
+            layout="@layout/layout_wechat_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.txznet.launcher.widget.CornerFrameLayout>
+
+</LinearLayout>

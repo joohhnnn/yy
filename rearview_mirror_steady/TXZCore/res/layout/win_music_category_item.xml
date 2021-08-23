@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="@dimen/y145"
+    android:minWidth="@dimen/x105"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlCategoryBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginTop="@dimen/y10"
+        android:minHeight="@dimen/y135"
+        android:minWidth="@dimen/x95"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtCategoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/music_category_item_text"
+            android:textSize="@dimen/y20" />
+
+        <TextView
+            android:id="@+id/txtCategoryNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="@dimen/y5"
+            android:textColor="@color/music_category_item_text"
+            android:textSize="@dimen/y15" />
+    </RelativeLayout>
+
+</LinearLayout>

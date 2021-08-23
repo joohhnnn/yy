@@ -1,0 +1,4 @@
+1、执行cloneCore脚本，拷贝最新的TXZCore的稳定版本。
+2、进入favorProducts目录的特定项目的目录。
+3、执行mergeCore脚本，合并项目的代码。
+4、执行主目录的release脚本。

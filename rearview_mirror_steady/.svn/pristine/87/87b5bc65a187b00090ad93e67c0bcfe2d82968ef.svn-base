@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_push_login_notification_root"
+        android:layout_width="@dimen/x496"
+        android:layout_height="@dimen/y80"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/src_car_top_dialog_bg">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/view_push_login_notification_avatar"
+            android:layout_width="@dimen/y48"
+            android:layout_height="@dimen/y48"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x16"
+            android:src="@drawable/default_headimage"
+            app:riv_corner_radius="@dimen/y8"/>
+
+        <TextView
+            android:id="@+id/tv_push_login_notification_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x48"
+            android:layout_toRightOf="@id/view_push_login_notification_avatar"
+            android:maxLines="1"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/y19"
+            tools:text="你大爷"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

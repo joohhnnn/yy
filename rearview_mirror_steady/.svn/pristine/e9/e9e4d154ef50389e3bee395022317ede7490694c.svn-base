@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--免唤醒的命令词不要超过25个..命令字至少4个字-->
+<VoiceCommandList>
+	<SendBroadcast command="切换下一首,切换下一曲" keyword="next" action="com.nwd.action.ACTION_KEY_VALUE" extra="extra_key_value" type="byte" value="5"/>
+	<SendBroadcast command="切换上一首,切换上一曲" keyword="previous" action="com.nwd.action.ACTION_KEY_VALUE" extra="extra_key_value" type="byte" value="6"/>
+	<SendBroadcast command="播放音乐,开始播放" keyword="play_music" action="com.nwd.action.ACTION_KEY_VALUE" extra="extra_key_value" type="byte" value="7"/>
+	<SendBroadcast command="暂停音乐,暂停播放" keyword="play_music_pause" action="com.nwd.action.ACTION_KEY_VALUE" extra="extra_key_value" type="byte" value="7"/>
+	<SendBroadcast command="关闭屏幕" keyword="close_display" action="com.nwd.action.ACTION_SET_BACKLIGHT_SWITCH" extra="extra_backlight_switch" type="boolean" value="false"/> 
+    <SendBroadcast command="打开屏幕" keyword="open_display" action="com.nwd.action.ACTION_SET_BACKLIGHT_SWITCH" extra="extra_backlight_switch" type="boolean" value="true"/>
+</VoiceCommandList> 

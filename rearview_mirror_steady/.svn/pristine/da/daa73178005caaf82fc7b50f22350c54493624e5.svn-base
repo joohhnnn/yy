@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/y90"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y6"/>
+
+    <FrameLayout
+        android:id="@+id/fl_group_root"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y84"
+        android:layout_marginLeft="@dimen/x16"
+        android:layout_marginRight="@dimen/x16"
+        android:background="@drawable/shape_help_group_back">
+
+        <View
+            android:id="@+id/view_group_focus_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_item_car_session_back_selected"/>
+
+        <TextView
+            android:id="@+id/tv_group_index"
+            android:layout_width="@dimen/y48"
+            android:layout_height="@dimen/y48"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x16"
+            android:background="@drawable/shape_help_index_back"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/color_help_group_text_index"
+            android:textSize="@dimen/y30"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_group_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y90"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x80"
+            android:gravity="center"
+            android:text="如何发微信"
+            android:textColor="@color/color_help_group_text_content"
+            android:textSize="@dimen/y30"/>
+
+        <ImageView
+            android:id="@+id/iv_group_indicator"
+            android:layout_width="@dimen/y48"
+            android:layout_height="@dimen/y48"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/x24"
+            android:src="@drawable/src_arrow_down"/>
+
+        <View
+            android:id="@+id/view_group_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y2"
+            android:layout_gravity="bottom"
+            android:background="@color/color_help_group_divider"/>
+
+        <ImageView
+            android:id="@+id/iv_group_select_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y84"
+            android:scaleType="fitXY"
+            android:src="@drawable/shape_item_car_session_back_selected"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+
+</LinearLayout>

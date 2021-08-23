@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="310px"
+    android:layout_height="70px"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/shape_music_bg" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/layout_plate"
+        android:layout_width="0dp"
+        app:layout_aspectRatio="100%"
+        app:layout_heightPercent="100%">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_cd_plate" />
+
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_music_play_failed_cover"
+            app:layout_heightPercent="50%"
+            app:layout_widthPercent="50%" />
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_music_sign"
+        app:layout_marginRightPercent="5%"
+        app:layout_marginTopPercent="14%" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/layout_plate"
+        android:layout_toLeftOf="@id/iv_sign"
+        android:layout_toRightOf="@id/layout_plate"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:textSize="@dimen/dimen_text_size_music_title"
+        app:layout_marginRightPercent="3%"
+        app:layout_marginTopPercent="23%"
+        tools:text="他来听我的演唱会他来听我的演唱会" />
+
+    <TextView
+        android:id="@+id/tv_artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_toEndOf="@+id/layout_plate"
+        android:layout_toRightOf="@+id/layout_plate"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:layout_toLeftOf="@+id/wave_anim"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:textSize="@dimen/dimen_text_size_music_artist"
+        app:layout_marginRightPercent="4%"
+        app:layout_marginTopPercent="10%"
+        tools:text="张学友" />
+
+    <TextView
+        android:id="@+id/tv_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/layout_plate"
+        android:layout_toRightOf="@+id/layout_plate"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:textColor="#FFFFFF"
+        android:text="加载中"
+        android:textSize="16px"
+        app:layout_marginRightPercent="4%" />
+
+    <com.txznet.launcher.widget.RandomWave
+        android:id="@+id/wave_anim"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:layout_marginRightPercent="3%"
+        app:layout_marginBottomPercent="6%"
+        android:layout_width="32px"
+        android:layout_height="24px"/>
+
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:background="@drawable/base_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="精选"
+        android:textSize="@dimen/base_tv_h5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/btn_choice_switch"
+        android:layout_width="@dimen/m72"
+        android:layout_height="@dimen/m24"
+        android:background="@null"
+        android:src="@drawable/home_next_page_btn"
+        android:textColor="@color/white"
+        android:textSize="@dimen/base_tv_h6"
+        app:layout_constraintRight_toRightOf="@+id/rv_choice"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/listen_list"
+        layout="@layout/home_include_listen_list"
+        android:layout_width="?attr/radio_listen_list_width"
+        android:layout_height="0dp"
+        android:layout_marginRight="@dimen/m12"
+        android:maxWidth="?attr/radio_listen_list_max_width"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/rv_choice"
+        app:layout_constraintTop_toTopOf="@+id/rv_choice"
+        app:layout_constraintWidth_percent="0.55" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/m12"
+        android:minWidth="@dimen/m400"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/listen_list" />
+</android.support.constraint.ConstraintLayout>

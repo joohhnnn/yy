@@ -1,0 +1,107 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="text_singleline_marquee">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:scrollHorizontally">true</item>
+    </style>
+
+    <style name="text_15" parent="text_singleline_marquee">
+        <item name="android:textSize">15px</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_18" parent="text_singleline_marquee">
+        <item name="android:textSize">18px</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_20" parent="text_singleline_marquee">
+        <item name="android:textSize">20px</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_24" parent="text_singleline_marquee">
+        <item name="android:textSize">24px</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_25" parent="text_singleline_marquee">
+        <item name="android:textSize">25px</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_26" parent="text_singleline_marquee">
+        <item name="android:textSize">26px</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_28" parent="text_singleline_marquee">
+        <item name="android:textSize">28px</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_30" parent="text_singleline_marquee">
+        <item name="android:textSize">30px</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_32" parent="text_singleline_marquee">
+        <item name="android:textSize">32px</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_34" parent="text_singleline_marquee">
+        <item name="android:textSize">34px</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_35" parent="text_singleline_marquee">
+        <item name="android:textSize">35px</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_38" parent="text_singleline_marquee">
+        <item name="android:textSize">38px</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_40" parent="text_singleline_marquee">
+        <item name="android:textSize">40px</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_45" parent="text_singleline_marquee">
+        <item name="android:textSize">45px</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="activity_preview_rb_select_path">
+        <item name="android:textSize">@dimen/y22</item>
+        <item name="android:textColor">@color/activity_preview_rb_select_path_text_color</item>
+        <item name="android:drawablePadding">-20dp</item>
+        <item name="android:background">@color/activity_preview_rb_select_path_bg_color</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingTop">@dimen/y15</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
+</resources>

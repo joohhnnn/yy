@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/rotate_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/widget_wait_loading"
+        android:visibility="gone" />
+    <com.txznet.txz.ui.widget.RippleBackground
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/scale_view"
+        android:layout_width="@dimen/x150"
+        android:layout_height="@dimen/y150"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:rb_color="#34bfff"
+        app:rb_duration="1000"
+        app:rb_radius="@dimen/x16"
+        app:rb_rippleAmount="1"
+        app:rb_scale="4"
+        app:rb_strokeWidth="@dimen/x2"
+        app:rb_type="strokeRipple" />
+
+    <com.txznet.txz.ui.widget.VoiceImageView
+        android:id="@+id/voice_monitor_viv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/voice_icon" />
+
+</FrameLayout>

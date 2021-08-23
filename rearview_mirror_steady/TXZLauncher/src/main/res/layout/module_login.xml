@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2px"
+        android:singleLine="true"
+        android:text="登录设备"
+        android:textColor="#FFFFFFFF"
+        android:textSize="@dimen/dimen_text_size_h4"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/list_item_range_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="120px"
+            android:layout_height="120px">
+
+            <ImageView
+                android:id="@+id/iv_login_qrcode"
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:id="@+id/iv_login_refresh_qrcode"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_gravity="center"
+                android:background="#0F000000"
+                android:src="@drawable/ic_wechat_refresh_qrcode"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/iv_login_state"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_login_failed"
+                android:background="@color/color_anjixing_login_status_mask"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_login_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9px"
+            android:text="使用安吉星应用内扫一扫功能扫描二维码登录设备"
+            android:textColor="#FFFFFFFF"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/dimen_text_size_login_tips"/>
+
+    </LinearLayout>
+</LinearLayout>

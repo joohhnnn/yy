@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="nav_tab_bg_select">#202020</drawable>
+    <drawable name="nav_tab_bg">#797979</drawable>
+    <drawable name="transparent_background">#00000000</drawable>
+    <drawable name="nav_button_back_pressed">#0e0f11</drawable>
+    <drawable name="nav_button_back_normal">#272930</drawable>
+    <drawable name="progress_color">#213966</drawable>
+    <drawable name="list_click">#1b1c25</drawable>
+    <drawable name="call_list_normal">#32373b</drawable>
+    <drawable name="nav_home_click">#1b1c25</drawable>
+    <drawable name="music_catogory_bg_click">#1b1c25</drawable>
+    <drawable name="music_catogory_bg_normal">#0f1019</drawable>
+    <drawable name="msg_list_click">#1b1c25</drawable>
+
+    <color name="register_hint_strong">#ff0000</color>
+    <color name="text_color_select">#0888d1</color>
+    <color name="cat_select_color">#0f1019</color>
+
+    <drawable name="tick_btn">#e0000000</drawable>
+    <drawable name="cato_bg_down">#0888d1</drawable>
+    <drawable name="title_back_bt_bg_normal">#1b1c25</drawable>
+    <drawable name="friend_tab_click">#1e202e</drawable>
+
+    <color name="map_border_mine">#ff6000</color>
+    <color name="map_border_theirs">#0090ff</color>
+
+    <drawable name="new_bg_normal">#32373b</drawable>
+    <drawable name="new_bg_down">#0c0d0e</drawable>
+
+    <color name="txz_bg">#32373b</color>
+    <color name="call_cancel_click">#1f5d7b</color>
+    <color name="call_cancel_normal">#34bfff</color>
+
+    <!-- 音乐播放 -->
+    <color name="music_time">#ffffffff</color>
+    <color name="music_category_item_text">#ffffffff</color>
+    <!-- 音乐 -->
+    <color name="music_title">#7d8292</color>
+    <color name="textSelected">#ffffff</color>
+    <color name="music_move">#34bfff</color>
+    <color name="music_item_pressed_bg">#1a8ec4</color>
+
+    <drawable name="title_bar_bg">#272930</drawable>
+
+    <!-- 重构 -->
+    <!-- win_menu -->
+    <color name="win_menu_color_bg">#1b1d23</color>
+
+    <!-- 文字颜色 -->
+    <color name="text_color">#adb6cc</color>
+    <!-- 分割线 -->
+    <color name="split_line">#000000</color>
+    <!-- 光标线 -->
+    <color name="text_cursor_color">#ffffff</color>
+    <!-- 按下颜色 -->
+    <color name="widget_color_pressed">#282c2f</color>
+    <color name="widget_color_normal">#32373b</color>
+    <!-- 列表第二行文字颜色 -->
+    <color name="list_second_text_color">#8f97a9</color>
+
+    <!-- win_music -->
+    <color name="win_music_category_color_1_normal">#4693bf</color>
+    <color name="win_music_category_color_1_pressed">#31678f</color>
+    <color name="win_music_category_color_2_normal">#4ea38f</color>
+    <color name="win_music_category_color_2_pressed">#367165</color>
+    <color name="win_music_category_color_3_normal">#6e9943</color>
+    <color name="win_music_category_color_3_pressed">#4c6c2d</color>
+    <color name="win_music_category_color_4_normal">#b19c46</color>
+    <color name="win_music_category_color_4_pressed">#7c6d3e</color>
+    <color name="win_music_item_pressed_bg">#1a8ec4</color>
+
+    <!-- win_messagebox
+    <color name="win_messagebox_sure_normal">#34bfff</color>
+    <color name="win_messagebox_sure_pressed">#2485b3</color>
+    <color name="win_messagebox_cancel_normal">#ee4545</color>
+    <color name="win_messagebox_cancel_pressed">#bf3737</color> -->
+
+    <!-- activity_search -->
+    <color name="activity_search_title_text_color">#676b78</color>
+    <color name="activity_search_open_map_text_color">#30befe</color>
+    <color name="activity_search_title_bar_bg">#262930</color>
+    <color name="activity_search_start_button_bg_normal">#00baff</color>
+    <color name="activity_search_start_button_bg_press">#007099</color>
+    <color name="poi_call_nor">#15bd50</color>
+    <color name="poi_call_press">#0d712f</color>
+    <color name="poi_nav_nor">#34bfff</color>
+    <color name="poi_nav_press">#1f7399</color>
+    <!-- 地图选择页索引按钮颜色值 -->
+    <color name="poi_index_check">#1b8cc6</color>
+    <color name="poi_index_normal">#00000000</color>
+    <color name="poi_index_tv_check">#fff</color>
+    <color name="poi_index_tv_normal">#aeb6cb</color>
+
+</resources>

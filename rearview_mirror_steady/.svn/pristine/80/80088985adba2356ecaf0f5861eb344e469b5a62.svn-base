@@ -1,0 +1,278 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+//增加lamda  --- https://blog.csdn.net/chengliang0315/article/details/77679135
+//apply plugin: 'me.tatarka.retrolambda'
+//apply plugin: 'com.ceabie.dexnkife'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    useLibrary 'org.apache.http.legacy'
+
+
+    defaultConfig {
+        applicationId "com.txznet.music"
+        minSdkVersion 17
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 450
+        versionName "4.5.0"
+        multiDexEnabled true
+//        multiDexKeepFile file('dexKnife.txt')
+        multiDexKeepProguard file('dexKnife.txt')
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('../../tools/txz.keystore')
+            storePassword 'android'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            debuggable true
+
+            buildConfigField "String", "CODE_VERSION", "\"${getSvnRevision()}\""
+            buildConfigField "String", "BUILD_TIME", "\"${getTime()}\""
+        }
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            shrinkResources true
+            debuggable false
+            jniDebuggable false
+            zipAlignEnabled true
+            proguardFiles 'proguard-project.txt'
+//            multiDexKeepFile 'dexknife.txt'
+
+            buildConfigField "String", "CODE_VERSION", "\"${getSvnRevision()}\""
+            buildConfigField "String", "BUILD_TIME", "\"${getTime()}\""
+        }
+
+        applicationVariants.all { variant ->
+            // 只copy开启了混淆的版本至输出目录
+            if (variant.buildType.isMinifyEnabled()) {
+                def name = "TXZMusic" + "_${variant.buildType.name}_${defaultConfig.versionName}(${getSvnRevision()})_${getTime()}"
+                variant.outputs.each { output ->
+                    if (null != output.outputFile && output.outputFile.name.endsWith('.apk')) {
+                        variant.assemble.doLast {
+                            copy {
+                                from(output.outputFile, variant.mappingFile.path)
+                                into "${projectDir}/outputs"
+
+                                rename { String fileName ->
+                                    if (fileName.endsWith('.apk')) {
+                                        "${name}.apk"
+                                    } else {
+                                        "${name}.txt"
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['pbsrc', 'src']
+
+            aidl.srcDirs = ['src']
+
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+
+            resources.srcDirs = ['src']
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+
+        }
+//        instrumentTest.setRoot('testsrc')
+
+        androidTest {
+            java.srcDir('testsrc')
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+greendao {
+    schemaVersion 17
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // Required -- JUnit 4 framework
+    testImplementation 'junit:junit:4.12'
+    // Optional -- Mockito framework
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+
+    implementation 'com.google.code.gson:gson:2.7'
+
+    implementation 'com.github.Aspsine:SwipeToLoadLayout:1.0.4'
+
+    implementation 'org.greenrobot:greendao:3.2.0'
+//    room   realm
+
+    implementation 'com.dinuscxj:recycleritemdecoration:1.0.0'
+    implementation project(':TXZComm')
+
+    //高斯模糊
+    implementation 'jp.wasabeef:glide-transformations:3.0.1'
+    implementation 'com.github.bumptech.glide:glide:4.1.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.github.gabrielemariotti.recyclerview:recyclerview-animators:0.3.0-SNAPSHOT@aar'
+/*
+   implementation 'com.squareup.picasso:picasso:2.5.2'
+
+   implementation 'com.facebook.fresco:fresco:1.5.0'
+    // 仅支持 WebP 静态图，需要添加
+   implementation 'com.facebook.fresco:webpsupport:0.12.0'*/
+    implementation "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
+
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.ext.RxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.ext.RxAndroidVersion"
+
+    implementation 'com.android.support:multidex:1.0.1'
+//   implementation "io.reactivex:rxjava-computation-expressions:0.21.0"
+
+//   implementation 'com.hyman:flowlayout-lib:1.1.2'
+
+    implementation googleSupport()
+//   implementation 'junit:junit:4.12'
+
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+//    testCompile 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+//    androidTestCompile 'com.android.support.test:runner:1.0.2'
+//   implementation project(':TXZComm')
+
+    androidTestImplementation "com.android.support:support-annotations:$rootProject.ext.supportLibraryVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:3.0.2"
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation "com.android.support.test.espresso:espresso-intents:3.0.2"
+
+}
+
+def googleSupport() {
+    [
+            "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:support-v13:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:support-annotations:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:design:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:cardview-v7:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:percent:$rootProject.ext.supportLibraryVersion",
+    ]
+}
+def getSvnRevision() {
+    new ByteArrayOutputStream().withStream { os ->
+        def result = exec {
+            executable = "$project.rootDir\\..\\tools\\sliksvn\\svn.exe"
+            args = ['info']
+            standardOutput = os
+        }
+        def outputAsString = os.toString()
+        def matchLastChangedRev = outputAsString =~ /Last Changed Rev: (\d+)/
+
+        ext.svnRev = "${matchLastChangedRev[0][1]}".toInteger()
+    }
+    return svnRev
+}
+
+def getTime() {
+    return new Date().format("yyyyMMddHHmm")
+}
+
+import java.util.HashMap;
+
+clean << {
+    println("com.txznet.test::time is :$rootDir")
+}
+
+task(yugangshuo).doLast {
+    println "start execute yuangshuo"
+    havefun()
+}
+project.task("havefun") {
+//def havefun() {
+//    def file = new File("test.txt")
+//    if (!file)
+//        file.createNewFile()
+//    file.write("goodjob\r\njobgood")
+//    file.eachLine { first, second -> println "${second} ${first}" }
+
+    //gradle的可执行目录
+    gradle.println "gradleHomeDir:${gradle.gradleHomeDir}"
+//gradle的用户目录,用于缓存一些下载好的资源,编译好的构建脚本等
+    gradle.println "gradleUserHomeDir:${gradle.gradleUserHomeDir}"
+//gradle的版本号
+    gradle.println "gradleVersion:${gradle.gradleVersion}"
+//gralde当前构建的启动参数
+    gradle.println "startParameter:${gradle.startParameter}"
+
+}
+
+afterEvaluate {
+
+    tasks.matching {
+
+        it.name.startsWith('dex')
+
+    }.each { dx ->
+
+        if (dx.additionalParameters == null) {
+
+            dx.additionalParameters = ['--multi-dex']
+
+        } else {
+
+            dx.additionalParameters += '--multi-dex'
+
+        }
+
+    }
+
+
+}

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="?attr/bar_player_view_padding"
+    android:paddingRight="?attr/bar_player_view_padding">
+
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_favour"
+        style="@style/mine_main"
+        app:layout_heightPercent="38.8%"
+        app:layout_marginTopPercent="10%"
+        app:layout_widthPercent="32%"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_favour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/fm_mine_favour_icon" />
+
+        <TextView
+            android:id="@+id/tv_favour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_favour"
+            android:layout_centerInParent="true"
+            android:textSize="?attr/text_size_h4"
+            android:text="@string/collect_music" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_subscribe"
+        style="@style/mine_main"
+        android:layout_toRightOf="@+id/rl_favour"
+        app:layout_heightPercent="38.8%"
+        app:layout_marginLeftPercent="2%"
+        app:layout_marginRightPercent="2%"
+        app:layout_marginTopPercent="10%"
+        app:layout_widthPercent="32%"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_subscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/fm_mine_subscribe_icon" />
+
+        <TextView
+            android:id="@+id/tv_subscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_subscribe"
+            android:layout_centerInParent="true"
+            android:textSize="?attr/text_size_h4"
+            android:text="@string/subscibe_radio" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_history"
+        style="@style/mine_main"
+        android:layout_toRightOf="@+id/rl_subscribe"
+        app:layout_heightPercent="38.8%"
+        app:layout_marginTopPercent="10%"
+        app:layout_widthPercent="32%">
+
+
+        <ImageView
+            android:id="@+id/iv_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/fm_mine_history" />
+
+        <TextView
+            android:id="@+id/tv_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_history"
+            android:layout_centerInParent="true"
+            android:textSize="?attr/text_size_h4"
+            android:text="播放历史" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_message"
+        style="@style/mine_main"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rl_favour"
+        android:background="@color/setting_btn_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_heightPercent="19.5%"
+        app:layout_marginTopPercent="2.83%">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/m20"
+                android:src="@drawable/fm_mine_message" />
+
+
+            <View
+                android:id="@+id/red_dot"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_toRightOf="@id/iv_message"
+                android:background="@drawable/red_dot"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_weight="1"
+            android:text="消息"
+            android:textSize="?attr/text_size_h4"
+            app:layout_marginLeftPercent="2%" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/m20"
+            android:src="@drawable/setting_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_setting"
+        style="@style/mine_main"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/ll_message"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_heightPercent="19.5%"
+        app:layout_marginTopPercent="2.83%">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/m20"
+            android:src="@drawable/fm_mine_setting" />
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_weight="1"
+            android:textSize="?attr/text_size_h4"
+            android:text="设置" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/m20"
+            android:src="@drawable/setting_right" />
+    </LinearLayout>
+
+    <!--</android.support.percent.PercentRelativeLayout>-->
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#b3000000">
+
+    <LinearLayout
+        android:layout_width="@dimen/x500"
+        android:layout_height="@dimen/y250"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_exit_dialog_back"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y160">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/lb_exit_dialog_title"
+                android:textColor="@color/color_dialog_exit_text_content"
+                android:textSize="@dimen/y36"/>
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y2"
+            android:background="@color/color_dialog_exit_divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_exit_commit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_car_dialog_button_bg_left"
+                android:gravity="center"
+                android:text="@string/lb_exit_dialog_commit"
+                android:textColor="@color/color_text_accent"
+                android:textSize="@dimen/y36"/>
+
+            <View
+                android:layout_width="@dimen/x2"
+                android:layout_height="match_parent"
+                android:background="@color/color_dialog_exit_divider"/>
+
+            <TextView
+                android:id="@+id/tv_exit_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_car_dialog_button_bg_right"
+                android:gravity="center"
+                android:text="@string/lb_exit_dialog_cancel"
+                android:textColor="@color/color_dialog_exit_cancel"
+                android:textSize="@dimen/y36"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

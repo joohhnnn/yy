@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_include" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/m62"
+        android:paddingRight="@dimen/m62">
+
+        <ImageView
+            android:id="@+id/iv_about_logo"
+            android:layout_width="@dimen/m92"
+            android:layout_height="@dimen/m92"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y14"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_about_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/m16"
+            android:gravity="center"
+            android:textColor="@color/white_60"
+            android:textSize="@dimen/base_tv_h4"
+            tools:text="版本号:" />
+
+        <TextView
+            android:id="@+id/tv_describe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_version"
+            android:layout_marginTop="@dimen/m32"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="@dimen/m8"
+            android:text="\u3000\u3000同听是一款与语音深度结合、专注车载场景的音频软件，汇集QQ音乐、喜马拉雅FM、考拉FM、乐听头条等多家知名音频平台的优质精品内容。根据车主喜好和行车场景推荐个性化内容，为车主提供全新的车载音频服务。"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_tv_h4" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/m64"
+        android:gravity="center"
+        android:text="©深圳市同行者科技有限公司 版权所有"
+        android:textColor="@color/white_60"
+        android:textSize="@dimen/base_tv_h4" />
+</LinearLayout>

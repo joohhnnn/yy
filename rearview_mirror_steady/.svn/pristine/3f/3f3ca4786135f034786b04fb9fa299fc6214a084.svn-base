@@ -1,0 +1,106 @@
+<resources>
+    <!--推送登录用户选择页面-->
+    <string name="lb_push_login_tip">点击头像可切换用户</string>
+    <string name="lb_push_login_confirm_btn_text">登录微信</string>
+
+    <!--扫描二维码登录微信页面-->
+    <string name="lb_login_wechat_title">微信助手</string>
+    <string name="lb_login_wechat_tip">请使用微信扫二维码登录</string>
+    <string name="lb_login_wechat_error">二维码已失效，请检查网络连接！</string>
+    <string name="lb_login_wechat_refresh">更新二维码</string>
+    <string name="lb_login_wechat_scan_success">扫描成功</string>
+    <string name="lb_login_wechat_push_login_tip_title">微信自动登录</string>
+    <string name="lb_login_wechat_scan_success2">请在手机确认登录</string>
+    <string name="lb_login_wechat_push_login_tip">正在推送登录请求</string>
+    <string name="lb_login_wechat_return">返回二维码登录</string>
+
+    <!--扫二维码登录远程控制页面-->
+    <string name="lb_login_control_title">远程控制</string>
+    <string name="lb_login_control_unbind">打开微信扫描二维码，通过微信远程控制你的设备~</string>
+    <string name="lb_login_control_failed">获取绑定信息失败，点击二维码刷新！</string>
+    <string name="lb_login_control_bound">设备已绑定微信号—%s，如需解绑，请前往公众号操作。</string>
+    <string name="lb_login_control_help">远程控制能做什么</string>
+    <string name="tip_login_control_get_bind_info">正在获取微信绑定信息</string>
+    <string name="tip_login_control_get_bind_info_failed">获取绑定信息失败</string>
+
+    <!--主界面菜单-->
+    <string name="lb_main_recent">最近会话</string>
+    <string name="lb_main_help">新手指南</string>
+    <string name="lb_main_notify">自动播报</string>
+    <string name="lb_main_care">关注设备</string>
+    <string name="lb_main_exit">退出微信</string>
+    <string name="lb_main_setting">设置</string>
+
+    <!--设置界面-->
+    <string name="lb_setting_title">设置</string>
+    <string name="lb_setting_auto_broad">自动播报</string>
+    <string name="lb_setting_auto_login">开机自动登录</string>
+    <string name="lb_setting_clear_cache">清除登录记录</string>
+    <string name="lb_setting_help_expand_all">全部展开</string>
+    <string name="lb_setting_help_collapse_all">全部收起</string>
+
+    <!--清除缓存确认Dialog-->
+    <string name="lb_clear_cache_dialog_title">确定要清空登录记录吗？</string>
+    <string name="lb_clear_cache_dialog_commit">确定</string>
+    <string name="lb_clear_cache_dialog_cancel">取消</string>
+
+    <!--第一次进入主界面帮助Dialog-->
+    <string name="lb_main_help_dialog_content">您可以打开语音界面，说：“发微信”、“发微信给张三” 等命令发送语音消息给好友。</string>
+    <string name="lb_main_help_dialog_tts_content">您可以打开语音界面，说，发微信，发微信给张三，等命令发送语音消息给好友</string>
+    <string name="lb_main_help_dialog_commit">我知道了</string>
+
+    <!--退出确认Dialog-->
+    <string name="lb_exit_dialog_title">确定退出微信助手吗？</string>
+    <string name="lb_exit_dialog_commit">确定</string>
+    <string name="lb_exit_dialog_cancel">取消</string>
+
+    <!--推送登录提示Dialog-->
+    <string name="lb_push_login_dialog_pushing">正在推送登录请求</string>
+    <string name="lb_push_login_dialog_success">请在手机端确认登录</string>
+
+    <!--会话列表页面-->
+    <string name="lb_session_list_title">最近会话</string>
+
+    <!--聊天页面-->
+    <string name="lb_chat_reply">回复微信</string>
+
+    <!--扫码关注设备页面-->
+    <string name="lb_care_reason">关注本设备能做什么？</string>
+    <string name="lb_care_tip">请使用微信扫二维码以关注本设备</string>
+
+    <!--绑定远程控制介绍页面-->
+    <string name="lb_care_reason_title">远程控制能做什么</string>
+
+    <!--语音提示-->
+    <string name="tip_reply">您可以说“回复微信”进行回复</string>
+    <string name="tip_repeat">如需再发一条，请说“继续发送”</string>
+    <string name="tip_nav">您可以说“导航过去”进行导航</string>
+    <string name="tip_mask">此联系人消息过多，您可以说“屏蔽消息”进行屏蔽</string>
+    <string name="tip_push_login_failed">登录态已失效, 您可以重新扫码登录</string>
+    <string name="tip_loc_share_disabled">当前设备不支持位置分享功能</string>
+
+    <!--车机版主题左侧菜单项-->
+    <string name="lb_car_main_menu_title">设置选项</string>
+    <string name="lb_car_main_menu_auto_login">开机自动登录</string>
+    <string name="lb_car_main_menu_notify">自动播报</string>
+    <string name="lb_car_main_menu_help">新手指南</string>
+    <string name="lb_car_main_menu_bind">关注设备</string>
+    <string name="lb_car_main_menu_clear_cache">清除登录记录</string>
+    <string name="lb_car_main_menu_exit">退出微信</string>
+    <string name="lb_car_main_menu_toggle">设置</string>
+    <string name="lb_car_main_menu_toggle_back">返回</string>
+
+    <!--车机版录音窗口-->
+    <string name="lb_car_record_win_end">完毕完毕</string>
+
+    <!--文件打开窗口-->
+    <string name="lb_file_download_success">文件下载成功, 确定现在打开吗?</string>
+    <string name="lb_file_download_failed">文件下载失败, 要重新下载吗?</string>
+    <!--文件消息不支持的提示-->
+    <string name="lb_file_msg_indicator_oversize">大小超出限制</string>
+    <string name="lb_file_msg_indicator_maltype">文件类型不支持</string>
+
+    <!--微信Toast提示-->
+    <string name="lb_toast_tts_disable_reverse">倒车中，微信消息播报暂停使用</string>
+    <string name="lb_toast_record_disable_reverse">倒车中，微信录音暂停使用</string>
+</resources>

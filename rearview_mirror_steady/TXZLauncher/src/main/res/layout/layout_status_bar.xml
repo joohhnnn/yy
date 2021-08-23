@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="20px"
+    android:gravity="center_vertical|end"
+    android:orientation="horizontal"
+    android:paddingRight="15px">
+
+    <ImageView
+        android:id="@+id/iv_status_ap"
+        android:layout_width="12px"
+        android:layout_height="11px"
+        android:layout_marginLeft="13px"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:src="@drawable/ic_status_ap"/>
+
+    <ImageView
+        android:id="@+id/iv_status_fm"
+        android:layout_width="14px"
+        android:layout_height="11px"
+        android:layout_marginLeft="13px"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        android:src="@drawable/ic_status_fm"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|end"
+        >
+        <ImageView
+            android:id="@+id/iv_status_signal"
+            android:layout_width="11px"
+            android:layout_height="11px"
+            android:layout_marginLeft="13px"
+            android:visibility="gone"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_status_signal_1"/>
+
+        <TextView
+            android:id="@+id/tv_status_signal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6px"
+            android:gravity="center_vertical"
+            android:text="4G"
+            android:visibility="gone"
+            android:textColor="#FFFFFFFF"
+            android:textSize="10px"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_status_location"
+        android:layout_width="9px"
+        android:layout_height="11px"
+        android:layout_marginLeft="13px"
+        android:scaleType="centerInside"
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:src="@drawable/ic_status_location"/>
+
+</LinearLayout>

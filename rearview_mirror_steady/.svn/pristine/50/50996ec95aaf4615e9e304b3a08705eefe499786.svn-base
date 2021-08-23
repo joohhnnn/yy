@@ -1,0 +1,108 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTransparentTheme" parent="@android:style/Theme.Translucent">
+        <item name="android:windowNoTitle">true</item>
+
+　</style>
+
+    <!-- widget_ProgressBar -->
+    <style name="win_progress_large" parent="@android:style/Widget.ProgressBar.Large">
+        <item name="android:indeterminateDrawable">@drawable/widget_progress_large</item>
+        <item name="android:indeterminateDuration">1000</item>
+    </style>
+
+    <style name="TXZ_Dialog_Style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否没标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否背景阴影 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimAmount">0.1</item>
+        <!-- 去黑边 -->
+        <item name="android:windowBackground">@drawable/transparent_background</item>
+    </style>
+    
+    <style name="TXZ_Dialog_Style_Full" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否没标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否背景阴影 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimAmount">0.1</item>
+        <!-- 去黑边 -->
+        <item name="android:windowBackground">@drawable/transparent_background</item>
+        <!-- 全屏 -->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="text_singleline_marquee">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:scrollHorizontally">true</item>
+    </style>
+
+    <style name="text_15" parent="text_singleline_marquee">
+        <item name="android:textSize">@dimen/y15</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_18" parent="text_singleline_marquee">
+        <item name="android:textSize">@dimen/y18</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_20" parent="text_singleline_marquee">
+        <item name="android:textSize">@dimen/y20</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_24" parent="text_singleline_marquee">
+        <item name="android:textSize">@dimen/y24</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_25" parent="text_singleline_marquee">
+        <item name="android:textSize">@dimen/y25</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_26" parent="text_singleline_marquee">
+        <item name="android:textSize">@dimen/y26</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="text_28" parent="text_singleline_marquee">
+        <item name="android:textSize">@dimen/y28</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_30" parent="text_singleline_marquee">
+        <item name="android:textSize">@dimen/y30</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_32" parent="text_singleline_marquee">
+        <item name="android:textSize">@dimen/y32</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_35" parent="text_singleline_marquee">
+        <item name="android:textSize">@dimen/y35</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_40" parent="text_singleline_marquee">
+        <item name="android:textSize">@dimen/y40</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="text_45" parent="text_singleline_marquee">
+        <item name="android:textSize">@dimen/y45</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+</resources>

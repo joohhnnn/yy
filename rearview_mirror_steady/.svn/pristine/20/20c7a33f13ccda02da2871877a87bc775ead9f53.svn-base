@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.txznet.record.view.WaveformViewDefImpl
+        android:id="@+id/viewRecord_Wave"
+        android:layout_width="@dimen/x140"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/x16"
+        android:layout_marginRight="@dimen/x16"
+        attr:wvAnimationStatus="true"
+        attr:wvEmptyVal="@drawable/record_voice_val_empty"
+        attr:wvIcon="@drawable/ic_voice_blue"
+        attr:wvIconHeight="@dimen/y40"
+        attr:wvIconWidth="@dimen/y28"
+        attr:wvIsDrawVoice="false"
+        attr:wvRange="6"
+        attr:wvRealVal="@drawable/record_voice_val"
+        attr:wvValOffset="@dimen/x10" />
+
+    <FrameLayout
+        android:id="@+id/record_loading_ly"
+        android:layout_width="@dimen/x140"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" >
+
+        <ProgressBar
+            android:id="@+id/prgRecord_ProgressBar"
+            style="@style/Record_Loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/imgRecord_Icon"
+            android:layout_width="@dimen/y28"
+            android:layout_height="@dimen/y40"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_voice_blue" />
+    </FrameLayout>
+
+</FrameLayout>

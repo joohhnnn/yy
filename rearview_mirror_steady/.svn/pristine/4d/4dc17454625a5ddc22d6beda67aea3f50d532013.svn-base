@@ -1,0 +1,121 @@
+package com.txz.log_manager;
+
+//基础指令枚举
+enum SubCommand
+{
+	SUBCMD_LOG_STREAM = 1; //携带xxx_LogStream (废弃)
+	SUBCMD_LOG_FILE = 2;	//携带xxx_LogFile
+	SUBCMD_LOG_INDEX = 3;	//获取本地日志索引信息，携带xxx_LogIndex
+	SUPCMD_UPLOAD_VOICE_FILE = 4; //携带xxx_UploadVoiceFile
+}
+
+
+//错误码
+enum ErrorCode
+{
+	EC_LOG_NULL 								=5001;  //...
+	EC_LOG_GET_DATA_FAIL				= 5002;	//获取数据失败
+	EC_LOG_DATA_TOO_LARGE 		= 5003;	//日志数据太了
+	EC_LOG_UPLOADING					= 5004;	//上传日志中
+	EC_LOG_SEQ_ERROR					= 5005;	//seq错误
+	EC_LOG_READ_FILE_ERR				= 5006;	//读取文件失败
+	EC_LOG_FILE_NO_EXIST				= 5007;	//文件不存在
+	
+}
+
+message Log{
+	optional uint64 uint64_id = 1;			//日志id
+	optional uint64 uint64_time = 2;		//写入日志时间，单位：微秒
+	optional uint32 uint32_level = 3;		//日志级别
+	optional string str_tag = 4;			//tag
+	optional string str_data = 5;			//日志内容
+	optional string str_file = 6;			//所在代码文件名
+	optional uint32 uint32_line = 7;		//所在代码文件行
+	optional string str_module = 8;		//日志模块
+}
+ 
+////////////////日志文件上报////////////////
+//请求包
+message Req_LogFile
+{
+	optional uint32 uint32_level = 1;				//日志级别
+	optional uint64 uint64_begin_time = 2;	//日志起始时间（单位秒）
+	optional uint64 uint64_end_time = 3;		//日志结束时间（单位秒）
+	optional uint64 uint64_file_size = 4;			//日志文件大小
+	optional bool b_gzip = 5;							//日志文件内容是否压缩
+	optional bytes str_file_data = 6;				//日志数据
+	optional uint64 uint64_begin_seq = 7;		//日志起始的文件ID
+	optional uint64 uint64_end_seq = 8;			//日志结束的文件ID
+	optional uint32 uint32_err_code = 9;		//错误码（非0：错误）
+	optional string str_err_msg = 10;				//错误信息
+	optional uint32 uint32_index_type = 11;			//类型（0：按时间查询， 1：按序号查询）
+}
+//回应包
+message Resp_LogFile
+{
+
+}
+
+////////////////日志索引信息获取协议////////////////
+message LogIndex
+{
+	optional uint32 uint32_begin_time = 1;			//日志起始时间（单位秒）
+	optional uint64 uint64_begin_seq = 2;				//日志起始的文件ID
+	optional uint32 uint32_end_time = 3;				//日志结束时间（单位秒）
+	optional uint64 uint64_end_seq = 4;					//日志结束的文件ID
+	optional uint32 uint32_debug_level_size = 5; 	//该时间段内debug日志的大小
+	optional uint32 uint32_info_level_size = 6; 		//该时间段内info日志的大小
+	optional uint32 uint32_warn_level_size = 7; 		//该时间段内warn日志的大小
+	optional uint32 uint32_error_level_size = 8; 		//该时间段内error日志的大小
+	optional uint32 uint32_fail_level_size = 9; 		//该时间段内fail日志的大小
+	optional bool b_start_flag = 10;						//开始标识
+}
+
+
+//请求包
+message Req_LogIndex
+{
+	repeated LogIndex rpt_msg_index_list = 1;	//按时间索引的列表
+}
+
+//回应包
+message Resp_LogIndex
+{
+
+}
+
+//请求包
+message Req_UploadVoiceFile
+{
+	optional uint64 uint64_voice_file_id = 1;			// voice file id
+	optional string str_voice_file_data = 2;				//voice pcm数据
+	optional bool b_gzip = 3;									//文件内容是否压缩
+	optional uint32 uint32_err_code = 4;		//错误码（非0：错误）
+	optional string str_err_msg = 5;				//错误信息
+}
+//回应包
+message Resp_UploadVoiceFile
+{
+}
+
+
+
+//////logfile/////////////
+message File_LogIndexRecord{
+	optional uint64 uint64_time 		= 1;			//时间索引（以10分钟为一个节点，单位为微妙）
+	optional uint32 uint32_file_index	= 2;		//所在文件索引
+	optional uint64 uint64_offset 		= 3;		//文件存储位置
+	optional uint64 uint64_seq = 4;				//日志序号
+	optional uint32 uint32_debug_level_size = 5; 	//该时间段内debug日志的大小
+	optional uint32 uint32_info_level_size = 6; 		//该时间段内info日志的大小
+	optional uint32 uint32_warn_level_size = 7; 		//该时间段内warn日志的大小
+	optional uint32 uint32_error_level_size = 8; 		//该时间段内error日志的大小
+	optional uint32 uint32_fail_level_size = 9; 		//该时间段内fail日志的大小
+	optional bool b_start_flag = 10;						//开始标识
+}
+
+message File_LogIndex{
+	repeated File_LogIndexRecord rpt_msg_record_All = 1;		//
+	optional uint64 uint64_cur_seq = 3;		//当前seq；
+}
+

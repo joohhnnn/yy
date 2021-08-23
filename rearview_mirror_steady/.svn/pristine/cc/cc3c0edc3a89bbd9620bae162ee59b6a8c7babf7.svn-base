@@ -1,0 +1,63 @@
+package com.txz.report_manager;
+
+import "ui_map.proto";
+
+//基础指令枚举
+enum SubCommand
+{
+	SUBCMD_USER_ACTION = 1; //携带xxx_ReportUserAction
+	SUBCMD_REPORT_CRASH = 2;	//携带xxx_ReportCrash
+}
+
+
+enum UserActionType
+{
+	UAT_VOICE = 1;			//声控行为结果类型
+}
+
+//声控处理结果信息
+message UserAction{
+	optional uint32 uint32_type = 1;						//类型UserActionType
+	optional bool b_login = 2;									//是否登录
+	optional uint32 uint32_network_status = 3;		//网络状态
+	optional uint32 uint32_time = 4;						//时间
+	optional string str_json_data = 5;						//json格式的用户行为
+	optional uint64 uint64_voice_file_id = 6;			//声控文件ID
+	optional uint32 uint32_recognition_type = 7;	//语音识别方式
+	optional int32 int32_err_code1 = 8;					//错误1（引擎内部错误）错误码
+	optional string str_err_msg1	= 9;						//错误1（引擎内部错误）描述
+	optional int32 int32_err_code2 = 10;				//错误2（业务错误）错误码
+	optional com.txz.ui.map.GpsInfo  msg_gps = 11;	//gps信息(用户最近的位置信息）
+}
+ 
+////////////////日志流水////////////////
+//请求包
+message Req_ReportUserAction
+{
+	repeated UserAction rpt_msg_user_action_list = 1;				//用户行为结果信息列表
+}
+//回应包
+message Resp_ReportUserAction
+{
+}
+
+
+////////////////上报crash信息////////////////
+message CrashInfo
+{
+	optional uint32 uint32_type = 1;		//crash数据类型(0:java; 1:jni)
+	optional string str_data = 2;				//crash数据内容
+}
+
+//请求包
+message Req_ReportCrash
+{
+	repeated CrashInfo rpt_msg_crash_list = 1;			// crash list
+}
+//回应包
+message Resp_ReportCrash
+{
+}
+
+
+

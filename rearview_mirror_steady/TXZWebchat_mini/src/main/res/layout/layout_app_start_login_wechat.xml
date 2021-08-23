@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@drawable/bgcolor_change">
+
+    <TextView
+        android:id="@+id/tv_control_close_tip"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/x24"
+        android:layout_marginRight="@dimen/x24"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/lb_login_wechat_ban"
+        android:textColor="@color/color_wechat_text_hint"
+        android:textSize="@dimen/y28" />
+
+</RelativeLayout>

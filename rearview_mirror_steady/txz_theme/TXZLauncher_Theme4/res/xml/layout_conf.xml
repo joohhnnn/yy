@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout-config>
+    <!--
+    @顺序不能变
+    布局类型
+    1 : 标准网格(8格)
+    -->
+    <type>1</type>
+    <plugins>
+        <plugin name="digital_clock" start="0" end="1" />
+        <plugin name="weather" start="2" end="3" />
+    </plugins>
+    
+</layout-config>

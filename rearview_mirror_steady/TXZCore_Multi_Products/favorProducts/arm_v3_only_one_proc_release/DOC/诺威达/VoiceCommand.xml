@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VoiceCommandList>
+	<OpenApp command="打开收音机" keyword="Openradio" packageName="com.nwd.radio"/>
+	<OpenApp command="打开音乐" keyword="OpenMusic" packageName="com.nwd.android.music.ui"/>
+	<OpenApp command="打开视频" keyword="OpenVideo" packageName="com.nwd.android.video.ui"/>
+	<OpenApp command="打开浏览器" keyword="OpenBrowser" packageName="com.android.browser"/>
+	<OpenApp command="打开壁纸" keyword="OpenBizhi" packageName="com.android.launcher" className="com.android.launcher2.WallpaperChooser"/>
+	
+	<OpenApp command="打开车载设置" keyword="OpenCarSetting" packageName="com.android.car.setting"/>
+	<OpenApp command="打开蓝牙音乐" keyword="OpenBtMusic" packageName="com.nwd.bt.music"/>
+	<OpenApp command="打开蓝牙,打开电话" keyword="OpenBt" packageName="com.nwd.android.phone"/>
+	<OpenApp command="打开设置" keyword="OpenSystemSetting" packageName="com.android.settings"/>
+	<OpenApp command="打开文件浏览器" keyword="OpenFileMgr" packageName="com.nwd.filemanager" className="com.nwd.filemanager.FileManager"/>
+	<OpenApp command="打开行车记录仪,打开DVR" keyword="OpenDvr" packageName="com.nwd.dvr.nomal"/>
+	<OpenApp command="打开原车功能" keyword="OpenYCgongneng" packageName="com.nwd.can.setting" className="com.nwd.can.setting.ui.canconfig.ConfigSettingActivity"/>
+	<OpenApp command="打开原车信息" keyword="OpenYCxinxi" packageName="com.nwd.can.setting" className="com.nwd.can.setting.ui.MainActivity"/>
+	<OpenApp command="打开导航" keyword="OpenNavi" packageName="com.nwd.gps"/>
+	
+	<OpenApp command="打开下载" keyword="OpenXiazai" packageName="com.android.providers.downloads.ui"/>
+	<OpenApp command="打开工具箱" keyword="OpenNwdTools" packageName="com.nwd.android.toolsmanager" className="com.nwd.android.toolsmanager.ToolsManagerActivity"/>
+	<OpenApp command="打开手机互联" keyword="OpenXiazai" packageName="net.easyconn"/>
+	<OpenApp command="打开说明书" keyword="OpenNwdShuoming" packageName="com.nwd.guidebookskin" className="com.nwd.guidebookskin.home_horizontalActivity"/>
+	<OpenApp command="打开重启" keyword="OpenNwdReboot" packageName="com.nwd.tools.reboot" className="com.nwd.tools.reboot.RebootActivity"/>
+	
+	
+	<OpenApp command="打开AUX" keyword="OpenNwdAux" packageName="com.nwd.auxin" />
+	<OpenApp command="打开TV" keyword="OpenNwdTV" packageName="com.nwd.tv" />
+	<OpenApp command="打开屏保" keyword="OpenNwdPingbao" packageName="com.nwd.android.lock.screen.ui" />
+	
+	<OpenApp command="打开即时行乐,启动即时行乐" keyword="OpenJiShiXingLe" packageName="com.incarmedia" />
+	<OpenApp command="打开车悦宝" keyword="OpenHongFan" packageName="com.hongfans.rearview" className="com.hongfans.rearview.SplashActivity"/>
+	
+	
+	
+	<CloseApp command="关闭收音机,退出收音机" keyword="CloseRadio" appid="8" packageName="com.nwd.radio"/>
+	<CloseApp command="关闭视频,退出视频" keyword="CloseVideo" appid="3" packageName="com.nwd.android.video.ui"/>
+	<CloseApp command="关闭音乐,退出音乐" keyword="CloseMusic" appid="2" packageName="com.nwd.android.music.ui"/>
+	
+	<CloseApp command="关闭浏览器,退出浏览器" keyword="CloseBrowser" appid="10000" packageName="com.android.browser"/>
+	<CloseApp command="退出下载,关闭下载" keyword="CloseDownload" appid="10000" packageName="com.android.providers.downloads.ui"/>
+	
+	<CloseApp command="关闭车载设置,退出车载设置" keyword="CloseCarSetting" appid="10000" packageName="com.android.car.setting"/>
+	<CloseApp command="关闭蓝牙音乐,退出蓝牙音乐" keyword="CloseBtMusic" appid="15" packageName="com.nwd.bt.music"/>
+	<CloseApp command="退出蓝牙,关闭蓝牙,关闭电话,退出电话" keyword="CloseBt" appid="10000" packageName="com.nwd.android.phone"/>
+	<CloseApp command="退出设置,关闭设置" keyword="CloseSystemSetting" appid="10000" packageName="com.android.settings"/>
+	<CloseApp command="关闭手机互联,退出手机互联" keyword="CloseEasyConnect" appid="15" packageName="net.easyconn"/>
+	<CloseApp command="退出文件浏览器,关闭文件浏览器" keyword="CloseFileMgr" appid="10000" packageName="com.nwd.filemanager"/>
+	<CloseApp command="关闭行车记录仪,退出行车记录仪" keyword="CloseDvr" appid="10000" packageName="com.nwd.dvr.nomal"/>
+	<CloseApp command="退出原车功能,关闭原车功能" keyword="CloseYCgongneng" appid="10000" packageName="com.nwd.can.setting"/>
+	<CloseApp command="关闭原车信息,退出原车信息" keyword="CloseYCxinxi" appid="10000" packageName="com.nwd.can.setting"/>
+	<CloseApp command="关闭AUX,退出AUX" keyword="CloseAUX" appid="9" packageName="com.nwd.auxin"/>
+	<CloseApp command="关闭TV,退出TV" keyword="CloseTV" appid="11" packageName="com.nwd.tv"/>
+	<CloseApp command="退出导航,关闭导航" keyword="CloseNavi" appid="1" packageName="com.nwd.gps"/>
+	
+	<CloseApp command="关闭壁纸,退出壁纸" keyword="CloseBiZhi" appid="10000" packageName="com.android.launcher"/>
+	<CloseApp command="关闭工具箱,退出工具箱" keyword="CloseNwdTool" appid="10000" packageName="com.nwd.android.toolsmanager"/>
+	<CloseApp command="关闭屏保,退出屏保" keyword="CloseNwdPingbao" appid="10000" packageName="com.nwd.android.lock.screen.ui"/>
+	<CloseApp command="关闭重启,退出重启" keyword="CloseNwdReboot" appid="10000" packageName="com.nwd.tools.reboot"/>
+	
+    <CloseApp command="关闭说明书,退出说明书" keyword="CloseShuoming" appid="10000" packageName="com.nwd.guidebookskin"/>
+	
+	<CloseApp command="退出车悦宝,关闭车悦宝" keyword="CloseHongFan" appid="10000" packageName="com.hongfans.rearview"/>
+	
+	<CloseApp command="关闭即时行乐,退出即时行乐" keyword="CloseJiShiXingLe" appid="10000" packageName="com.incarmedia" />
+	
+	
+	<SendBroadcast command="打开屏幕,打开背光,开背光" keyword="open_display" action="com.nwd.action.ACTION_SET_BACKLIGHT_SWITCH" extra="extra_backlight_switch" type="boolean" value="true"/>
+	<SendBroadcast command="关闭屏幕,关闭背光,关背光" keyword="close_display" action="com.nwd.action.ACTION_SET_BACKLIGHT_SWITCH" extra="extra_backlight_switch" type="boolean" value="false"/>
+    <SendBroadcast command="下一曲,下一首" keyword="next" action="com.nwd.action.ACTION_KEY_VALUE" extra="extra_key_value" type="byte" value="5"/>
+	<SendBroadcast command="上一曲,上一首" keyword="previous" action="com.nwd.action.ACTION_KEY_VALUE" extra="extra_key_value" type="byte" value="6"/>
+    <SendBroadcast command="开始播放,执行播放,暂停播放" keyword="play_pause" action="com.nwd.action.ACTION_KEY_VALUE" extra="extra_key_value" type="byte" value="7"/>
+	<SendBroadcast command="一键清理,清理内存" keyword="memory_clean" action="com.nwd.ACTION_MEMORY_CLEAN" extra="" type="" value=""/>
+	
+	<SetVolume command="加大音量,音量加大,增加音量" keyword="IncreaseVolume" setVolumeValue="7" setVolumeAction="1"/>
+	<SetVolume command="减小音量,降低音量" keyword="DecreaseVolume" setVolumeValue="7" setVolumeAction="2"/>
+	<SetVolume command="关闭声音" keyword="MuteVolume" setVolumeValue="4" setVolumeAction="3"/>
+	<SetVolume command="关闭静音,打开声音" keyword="UnmuteVolume" setVolumeValue="4" setVolumeAction="4"/>
+	
+</VoiceCommandList> 

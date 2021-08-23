@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--480x272的y120，不是60px，而是68px。是这套的话没办法按设计图绘制界面，这里直接用px了-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60px"
+    android:background="#FF333D55"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_width="28px"
+        android:layout_height="28px"
+        android:layout_marginBottom="16px"
+        android:layout_marginLeft="15px"
+        android:layout_marginTop="16px"
+        tools:src="@drawable/icon_navigation_type" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:layout_marginBottom="12px"
+        android:layout_marginLeft="10px"
+        android:layout_marginTop="12px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_command_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFFFF"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/dimen_text_size_list_help_title"
+            tools:text="导航" />
+
+        <TextView
+            android:id="@+id/tv_command_detail"
+            android:layout_width="match_parent"
+            android:includeFontPadding="false"
+            android:layout_height="wrap_content"
+            android:textColor="#B2FFFFFF"
+            android:textSize="@dimen/dimen_text_size_list_help_single"
+            tools:text="导航到东方明珠、我要回家／公司" />
+    </LinearLayout>
+
+</RelativeLayout>

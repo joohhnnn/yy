@@ -1,0 +1,4 @@
+和代码规则：
+1、将arm_v3_debug(仅供测试SDK使用)工程的代码和yzs_res下的资源文件同步到本工程。
+2、txzlibs和yzslibs下的so必须使用x86架构的so。
+3、云知声必须使用V3引擎。

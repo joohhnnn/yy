@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRecord_Chat_Msg_Content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_help_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y70" >
+
+        <TextView
+            android:id="@+id/txtChat_Msg_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="您好，有什么可以帮您"
+            android:textColor="#fff"
+            android:textSize="@dimen/y30" />
+
+        <com.txznet.record.view.HelpIconButton
+            android:id="@+id/imgChat_Msg_Icon"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_toRightOf="@id/txtChat_Msg_Text"
+            android:src="@drawable/question_mark"
+            android:background="@null"
+            android:visibility="gone"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/imgChat_Msg_Settings_Icon"
+            android:layout_width="@dimen/y60"
+            android:layout_height="@dimen/y60"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x30"
+            android:background="@drawable/icon_setting"
+            android:visibility="gone"
+            android:scaleType="fitCenter" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textChat_help_desp_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_help_title"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/y32"
+        android:layout_marginTop="@dimen/y32"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="发微信给张三    播放陈奕迅的歌   导航去海岸城"
+        android:textColor="#fff"
+        android:textSize="@dimen/y30" />
+
+    <TextView
+        android:id="@+id/textChat_help_desp_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textChat_help_desp_one"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/y32"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="打电话给张三   附近的加油站"
+        android:textColor="#fff"
+        android:textSize="@dimen/y30" />
+
+</LinearLayout>

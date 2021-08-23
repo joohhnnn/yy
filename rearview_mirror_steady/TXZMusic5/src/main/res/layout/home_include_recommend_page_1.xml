@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    tools:background="@drawable/base_bg">
+
+    <include
+        android:id="@+id/include_ai"
+        layout="@layout/home_recycle_item_rec_large"
+        android:layout_width="?attr/rec_page_large_item_width"
+        android:layout_height="?attr/rec_page_large_item_height"
+        android:layout_marginTop="@dimen/m12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.txznet.music.widget.AlphaLinearLayout
+        android:id="@+id/btn_local"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="@dimen/m12"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/btn_user"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/fl_daily_rec"
+        app:layout_constraintTop_toTopOf="@id/fl_daily_rec"
+        tools:background="@drawable/home_local_btn_bg">
+
+        <com.txznet.music.widget.AlphaImageView
+            android:id="@+id/btn_local_play"
+            style="@style/Base_Small_Icon_Size"
+            android:src="@drawable/home_local_play_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/m9"
+            android:background="@null"
+            android:text="本地音乐"
+            android:textSize="@dimen/base_tv_h5" />
+    </com.txznet.music.widget.AlphaLinearLayout>
+
+    <com.txznet.music.widget.AlphaLinearLayout
+        android:id="@+id/btn_user"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/m12"
+        android:layout_marginRight="@dimen/m12"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/fl_daily_rec"
+        app:layout_constraintTop_toBottomOf="@id/btn_local"
+        tools:background="@drawable/home_user_btn_bg"
+        tools:layout_editor_absoluteX="372dp">
+
+        <ImageView
+            style="@style/Base_Small_Icon_Size"
+            android:src="@drawable/home_user_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/m9"
+            android:background="@null"
+            android:text="个人中心"
+            android:textSize="@dimen/base_tv_h5" />
+    </com.txznet.music.widget.AlphaLinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_data"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/m12"
+        android:minWidth="@dimen/m320"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/include_ai"
+        app:layout_constraintTop_toTopOf="@id/include_ai" />
+
+    <include
+        android:id="@+id/fl_daily_rec"
+        layout="@layout/home_recycle_item_daily"
+        android:layout_width="?attr/rec_page_item_size"
+        android:layout_height="?attr/rec_page_item_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/include_ai" />
+</android.support.constraint.ConstraintLayout>

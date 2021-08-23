@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="good">
+        <item>@drawable/zan_1</item>
+        <item>@drawable/zan_2</item>
+        <item>@drawable/zan_3</item>
+        <item>@drawable/zan_4</item>
+        <item>@drawable/zan_5</item>
+        <item>@drawable/zan_6</item>
+        <item>@drawable/zan_7</item>
+        <item>@drawable/zan_8</item>
+        <item>@drawable/zan_9</item>
+        <item>@drawable/zan_10</item>
+        <item>@drawable/zan_11</item>
+        <item>@drawable/zan_12</item>
+        <item>@drawable/zan_13</item>
+        <item>@drawable/zan_14</item>
+        <item>@drawable/zan_15</item>
+        <item>@drawable/zan_16</item>
+        <item>@drawable/zan_17</item>
+        <item>@drawable/zan_18</item>
+        <item>@drawable/zan_19</item>
+        <item>@drawable/zan_20</item>
+        <item>@drawable/zan_21</item>
+        <item>@drawable/zan_22</item>
+        <item>@drawable/zan_23</item>
+        <item>@drawable/zan_24</item>
+        <item>@drawable/zan_25</item>
+        <item>@drawable/zan_26</item>
+        <item>@drawable/zan_27</item>
+        <item>@drawable/zan_28</item>
+        <item>@drawable/zan_29</item>
+        <item>@drawable/zan_30</item>
+        <item>@drawable/zan_31</item>
+        <item>@drawable/zan_32</item>
+        <item>@drawable/zan_33</item>
+        <item>@drawable/zan_34</item>
+        <item>@drawable/zan_35</item>
+        <item>@drawable/zan_36</item>
+        <item>@drawable/zan_37</item>
+        <item>@drawable/zan_38</item>
+        <item>@drawable/zan_39</item>
+        <item>@drawable/zan_40</item>
+        <item>@drawable/zan_41</item>
+        <item>@drawable/zan_42</item>
+        <item>@drawable/zan_43</item>
+        <item>@drawable/zan_44</item>
+        <item>@drawable/zan_45</item>
+        <item>@drawable/zan_46</item>
+        <item>@drawable/zan_47</item>
+        <item>@drawable/zan_48</item>
+    </array>
+</resources>

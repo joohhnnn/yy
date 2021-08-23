@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.txznet.music"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y96"
+    android:background="@drawable/widget_color"
+    android:descendantFocusability="blocksDescendants"
+    android:minHeight="@dimen/y96"
+    android:orientation="horizontal" >
+
+    <FrameLayout
+        android:id="@+id/flMusicIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x24"
+        android:layout_marginRight="@dimen/x24" >
+
+        <ImageView
+            android:id="@+id/musicEarphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/activity_music_earphone" />
+
+        <com.txznet.music.ui.MusicMoveView
+            android:id="@+id/musicMoveView"
+            android:layout_width="@dimen/x31"
+            android:layout_height="@dimen/y25"
+            custom:MusicMoveColor="@android:color/white" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/x400"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/flMusicIcon"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtName"
+            style="@style/text_26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/txtSinger"
+            style="@style/text_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cbCollection"
+        style="@style/music_cbCollection"
+        android:layout_width="@dimen/x67"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x70"
+        android:layout_marginRight="0dp"
+        android:minHeight="@dimen/y90"
+        android:paddingLeft="@dimen/x50"
+        android:paddingRight="0dp" />
+
+    <LinearLayout
+        android:layout_width="@dimen/x30"
+        android:layout_height="@dimen/y30"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/cbCollection"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/btnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:src="@drawable/activity_music_play" />
+    </LinearLayout>
+
+</RelativeLayout>

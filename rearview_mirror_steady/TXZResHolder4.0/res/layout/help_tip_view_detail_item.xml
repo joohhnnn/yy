@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/mdp10"
+    android:paddingBottom="@dimen/mdp10">
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mdp20"
+        android:layout_marginRight="@dimen/mdp20"
+        android:text="我要听刘德华的歌"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp22"
+        android:maxLines="2"
+        android:ellipsize="end" />
+
+
+</LinearLayout>

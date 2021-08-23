@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:background="@drawable/base_bg">
+
+    <ImageView
+        android:layout_width="@dimen/m128"
+        android:layout_height="@dimen/m128"
+        android:src="@drawable/local_scan_icon"
+        app:layout_constraintBottom_toBottomOf="@id/iv_scan_mask"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_scan_mask" />
+
+    <ImageView
+        android:id="@+id/iv_scan_mask"
+        android:layout_width="@dimen/m128"
+        android:layout_height="@dimen/m128"
+        android:src="@drawable/local_scan_mask"
+        app:layout_constraintBottom_toTopOf="@id/tv_scan_count"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_scan_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m16"
+        android:textColor="@color/white_50"
+        android:textSize="@dimen/base_tv_h4"
+        app:layout_constraintBottom_toTopOf="@id/btn_cancel_scan"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_scan_mask"
+        tools:text="已扫描到1个音频" />
+
+    <com.txznet.music.widget.AlphaButton
+        android:id="@+id/btn_cancel_scan"
+        android:layout_width="@dimen/m160"
+        android:layout_height="@dimen/m48"
+        android:layout_marginTop="@dimen/m16"
+        android:background="@drawable/base_btn_bg"
+        android:text="停止扫描"
+        android:textSize="@dimen/base_tv_h4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_scan_count" />
+</android.support.constraint.ConstraintLayout>

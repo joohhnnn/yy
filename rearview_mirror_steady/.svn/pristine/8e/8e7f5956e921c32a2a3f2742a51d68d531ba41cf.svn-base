@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">@dimen/x16</dimen>
+    <dimen name="activity_vertical_margin">@dimen/y16</dimen>
+
+    <dimen name="popup_width">@dimen/x360</dimen>
+    <dimen name="popup_height">@dimen/y150</dimen>
+    
+    <dimen name="home_frag_bubble_width">@dimen/x386</dimen>
+    <dimen name="home_frag_bubble_height">@dimen/y271</dimen>
+    
+    <dimen name="float_width">@dimen/x180</dimen>
+    <dimen name="float_height">@dimen/y180</dimen>
+    
+    <dimen name="float_margin">@dimen/x8</dimen>
+    <dimen name="float_click_distance">@dimen/x4</dimen>
+    
+    
+    <dimen name="viewpage_indicator_margin">@dimen/x6</dimen>
+    <dimen name="msg_dialog_width">@dimen/x375</dimen>
+    <dimen name="msg_dialog_height">@dimen/y245</dimen>
+    <dimen name="cd_size">@dimen/y150</dimen>
+    
+    <dimen name="map_view_head_width">@dimen/x45</dimen>
+    <dimen name="map_view_head_height">@dimen/y45</dimen>
+    
+    <dimen name="mine_head_height">@dimen/y90</dimen>
+    <dimen name="mine_head_width">@dimen/x90</dimen>
+    
+    <dimen name="ball_size">@dimen/y12</dimen>
+    <dimen name="ball_margin">@dimen/x11</dimen>
+    
+    <dimen name="index6_min_height">@dimen/y35</dimen>
+    <dimen name="index6_max_height">@dimen/y86</dimen>    
+    <dimen name="index3_min_height">@dimen/y28</dimen>
+    <dimen name="index3_max_height">@dimen/y70</dimen>  
+    <dimen name="index0_min_height">@dimen/y12</dimen>
+    <dimen name="index0_max_height">@dimen/y20</dimen>
+    
+    <dimen name="operation_width">@dimen/x95</dimen>
+    
+    <!-- 重构 -->
+    <!-- win_main-->
+    <dimen name="win_home_width">@dimen/x95</dimen>
+
+    
+</resources>

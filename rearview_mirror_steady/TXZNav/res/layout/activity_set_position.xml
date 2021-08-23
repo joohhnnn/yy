@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/etDest"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y110"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:background="@color/activity_home_color_dest_bg"
+            android:hint="@string/activity_home_str_dest_hint"
+            android:imeOptions="flagNoExtractUi"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="0dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/activity_home_color_dest_text_color_hint"
+            android:textCursorDrawable="@null"
+            android:textSize="38px" />
+
+        <com.txznet.nav.ui.widget.ButtonImageText
+            android:id="@+id/btnSearch"
+            android:layout_width="@dimen/x150"
+            android:layout_height="@dimen/y110"
+            android:background="@drawable/activity_home_search_bg"
+            android:gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/activity_home_search_draw" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:background="@color/split_line" />
+
+    <Button
+        android:id="@+id/btnMapChoosePosition"
+        style="@style/text_34"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/widget_color"
+        android:drawablePadding="@dimen/x15"
+        android:drawableStart="@drawable/activity_set_position_ic_choose_map"
+        android:gravity="start|center_vertical"
+        android:padding="@dimen/x20"
+        android:text="@string/activity_set_position_choose_map_text" />
+
+</LinearLayout>

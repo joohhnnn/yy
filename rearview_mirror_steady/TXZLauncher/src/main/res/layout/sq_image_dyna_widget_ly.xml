@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.txznet.launcher.widget.image.SQCharacter
+        android:id="@+id/image_iv"
+        android:layout_width="@dimen/dimen_full_image_w"
+        android:layout_height="@dimen/dimen_full_image_h"
+        android:scaleType="fitEnd"
+        android:src="@drawable/image_normal" />
+
+    <TextView
+        android:id="@+id/tts_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:maxLines="2"
+        android:minLines="2"
+        android:textColor="#FFFFFF"
+        android:textSize="24px"
+        tools:text="早上好" />
+
+</LinearLayout>

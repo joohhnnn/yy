@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <ImageView
+            android:id="@+id/iv_itsb_icon"
+            android:layout_width="@dimen/y104"
+            android:layout_height="@dimen/y104"
+            android:layout_centerHorizontal="true"
+            tools:src="@drawable/wx_home_icon_weixin" />
+
+        <TextView
+            android:id="@+id/tv_itsb_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_itsb_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/y30"
+            android:textColor="@color/color_main_btn_text"
+            android:textSize="@dimen/y30"
+            tools:text="按钮文字"/>
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

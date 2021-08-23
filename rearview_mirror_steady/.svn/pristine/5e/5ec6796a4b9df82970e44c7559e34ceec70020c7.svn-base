@@ -1,0 +1,133 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    useLibrary 'org.apache.http.legacy'
+
+	defaultConfig {
+        applicationId "com.txznet.txz"
+        minSdkVersion 16
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 30203
+        versionName "3.2.3"
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+	
+	sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+	dexOptions {
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('../../tools/txz.keystore')
+            storePassword 'android'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles 'proguard-project-gradle.txt'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+
+    applicationVariants.all { variant ->
+        variant.javaCompile.classpath += files('txz_libs/txz_gen.jar')
+
+        // 只输出release variant的编译结果
+        if (variant.buildType.name == "release") {
+            def buildTime = new Date().format("yyyyMMddHHmm")
+            def fileNamePrefix = "${project.name}_${variant.buildType.name}" +
+                    "_${defaultConfig.versionName}(${getSvnRevision()})"
+
+            variant.outputs.each { output ->
+                if (null != output.outputFile && output.outputFile.name.endsWith('.apk')) {
+                    variant.assemble.doLast {
+                        copy {
+                            from (output.outputFile, variant.mappingFile.path)
+                            into "${projectDir}/output/${defaultConfig.versionName}_${buildTime}"
+                            rename {fileName ->
+                                if (fileName.endsWith('.apk')) {
+                                    "${fileNamePrefix}.apk"
+                                } else {
+                                    "${fileNamePrefix}.txt"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation project(':TXZRecordLib')
+    compileOnly files('txz_libs/txz_gen.jar')
+}
+
+task txzClean(type: Exec) {
+    commandLine "python", "./tools/compile/clean_java.py"
+    ext.output = {
+        return standardOutput.toString()
+    }
+}
+
+task txzPreBuild(type:Exec) {
+    commandLine "python", "./tools/compile/pre_java.py"
+    ext.output = {
+        return standardOutput.toString()
+    }
+}
+project.afterEvaluate {
+    preBuild.dependsOn("txzPreBuild")
+    clean.dependsOn("txzClean")
+}
+
+def getSvnRevision() {
+    new ByteArrayOutputStream().withStream { os ->
+        exec {
+            executable = "$project.rootDir\\..\\tools\\sliksvn\\svn.exe"
+            args = ['info']
+            standardOutput = os
+        }
+        def outputAsString = os.toString()
+        def matchLastChangedRev = outputAsString =~ /Last Changed Rev: (\d+)/
+
+        "${matchLastChangedRev[0][1]}".toInteger()
+    }
+}
+

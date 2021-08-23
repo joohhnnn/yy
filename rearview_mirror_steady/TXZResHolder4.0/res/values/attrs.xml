@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="VoiceWaveView">
+        <attr name="voice_lines" format="integer" />
+        <attr name="voice_line_max_length" format="dimension" />
+        <attr name="voice_line_min_length" format="dimension" />
+        <attr name="voice_line_interval" format="dimension" />
+        <attr name="voice_line_width" format="dimension" />
+        <attr name="voice_line_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="WordPoolLayout">
+        <!--最多显示多少行-->
+        <attr name="max_lines" format="integer"/>
+        <!--子布局-->
+        <attr name="item_layout" format="reference"/>
+        <!--子布局里TextView的ID-->
+        <attr name="item_text_view_id" format="reference"/>
+        <!--子布局之间水平间距-->
+        <attr name="item_padding_hor" format="dimension"/>
+        <!--子布局之间垂直间距-->
+        <attr name="item_padding_ver" format="dimension"/>
+    </declare-styleable>
+</resources>

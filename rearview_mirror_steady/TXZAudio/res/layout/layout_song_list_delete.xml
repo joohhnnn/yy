@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.txznet.music.widget.DrawableCenterTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_clear_history"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y90"
+    android:layout_gravity="center|fill"
+    android:background="@null"
+    android:drawableLeft="@drawable/fm_me_play_history_deleteall"
+    android:drawablePadding="@dimen/x1"
+    android:gravity="center|fill"
+    android:text="清除播放记录"
+    android:textColor="@color/text_click_color"
+    android:textSize="@dimen/y30" />

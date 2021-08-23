@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_wechat_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2px"
+        android:singleLine="true"
+        android:textColor="#FFFFFFFF"
+        android:textSize="@dimen/dimen_text_size_wechat_title"
+        tools:drawableLeft="@drawable/ic_wechat"
+        tools:text="正在发微信给"/>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/list_item_range_bg">
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/rl_wechat_user"
+            android:layout_width="match_parent"
+            android:layout_height="40px"
+            app:layout_marginTopPercent="6.8%">
+
+            <ImageView
+                android:id="@+id/iv_wechat_user_icon"
+                android:layout_width="40px"
+                android:layout_height="40px"
+                app:layout_marginLeftPercent="4.6%"/>
+
+            <TextView
+
+                android:id="@+id/tv_wechat_user_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/dimen_text_size_record_wechat_user_nick"
+                app:layout_marginLeftPercent="23.4%"
+                android:singleLine="true"
+                app:layout_marginRightPercent="7%"
+                tools:text="张三丰来了"/>
+
+            <ImageView
+                android:id="@+id/iv_wechat_icon"
+                android:layout_width="12px"
+                android:layout_height="12px"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_wechat"
+                app:layout_marginRightPercent="4.7%"/>
+
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <FrameLayout
+            android:layout_width="77px"
+            android:layout_height="77px"
+            android:layout_centerHorizontal="true"
+            app:layout_marginTopPercent="35.2%">
+
+            <LinearLayout
+                android:id="@+id/ll_wechat_record"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_wechat_mic"/>
+                <View
+                    android:layout_width="3px"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_gravity="bottom"
+                    android:id="@+id/iv_wechat_record"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_wechat_record_1"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_wechat_send_state"
+                android:layout_width="77px"
+                android:layout_height="77px"
+                android:visibility="gone"
+                android:src="@drawable/ic_wechat_send_success"/>
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_wechat_send_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/dimen_text_size_record_wechat_send_tip"
+            app:layout_marginTopPercent="77.8%"
+            tools:text="完毕完毕"/>
+
+        <TextView
+            android:id="@+id/tv_wechat_send_tip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/dimen_text_size_record_wechat_send_tip2"
+            app:layout_marginTopPercent="86.3%"
+            tools:text="（录音将在3s自动发送）"/>
+
+    </android.support.percent.PercentRelativeLayout>
+</LinearLayout>

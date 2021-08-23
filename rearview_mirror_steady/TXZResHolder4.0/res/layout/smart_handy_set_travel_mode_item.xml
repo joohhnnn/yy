@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.txznet.comm.ui.view.RippleView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <LinearLayout
+        android:id="@+id/wrap"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:text="智能开启空调和设定温度"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:text="@null"
+            android:button="@null"
+            android:background="@drawable/smart_handy_checkbox_bg" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/wrap"
+        android:layout_marginLeft="20dp"
+        android:background="@color/listDividerColor"/>
+
+</com.txznet.comm.ui.view.RippleView>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--座位-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/wrapLayoutStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/xml_bg_form_ticket_seat"
+        android:padding="@dimen/win_layout_card_padding"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvSeatTypeStart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp18"
+                android:text="商务座"
+                android:textColor="@color/textColorPrimary"/>
+
+            <TextView
+                android:id="@+id/tvTicketCountStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp18"
+                android:text="118张"
+                android:textColor="@color/textColorSecondary"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPriceStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp10"
+            android:textSize="@dimen/sp22"
+            android:text="¥534"
+            android:textColor="#FFFF8205"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wrapLayoutEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/xml_bg_form_ticket_seat"
+        android:padding="@dimen/win_layout_card_padding"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvSeatTypeEnd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp18"
+                android:text="商务座"
+                android:textColor="@color/textColorPrimary"/>
+
+            <TextView
+                android:id="@+id/tvTicketCountEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp18"
+                android:text="118张"
+                android:textColor="@color/textColorSecondary"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPriceEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp10"
+            android:textSize="@dimen/sp22"
+            android:text="¥534"
+            android:textColor="#FFFF8205"/>
+
+    </LinearLayout>
+
+</LinearLayout>

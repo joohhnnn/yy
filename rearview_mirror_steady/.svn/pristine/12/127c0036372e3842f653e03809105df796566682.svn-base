@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:background="@drawable/base_bg">
+
+    <FrameLayout
+        android:layout_width="@dimen/m176"
+        android:layout_height="@dimen/m176"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_qrcode"
+            android:layout_width="@dimen/m152"
+            android:layout_height="@dimen/m152"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:text="@string/wx_push_qrcode_retry_str"
+            android:textColor="@color/black_40"
+            android:textSize="@dimen/base_tv_h4" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m16"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/m6"
+        android:text="@string/wx_push_empty_qrcode_str_compat"
+        android:textColor="@color/white_50"
+        android:textSize="@dimen/base_tv_h3" />
+</LinearLayout>

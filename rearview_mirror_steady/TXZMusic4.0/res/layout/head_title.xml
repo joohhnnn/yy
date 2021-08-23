@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flag_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y80"
+    android:visibility="gone"
+    android:layout_gravity="center_vertical"
+    android:background="@color/title_header"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/frag_type"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y48"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/y24"
+        android:layout_marginRight="@dimen/y36"
+        android:text="热门"
+        android:textColor="@color/green"
+        android:textSize="@dimen/y24"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/frag_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y48"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:text="@string/app_name"
+        android:textColor="@color/title_text_color"
+        android:textSize="@dimen/title_text_size" />
+
+    <LinearLayout
+        android:id="@+id/ll_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x20"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_filter_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_filter"
+            android:gravity="center_vertical|right"
+            android:maxEms="4"
+            android:layout_alignParentRight="true"
+            android:singleLine="true"
+            android:text="筛选"
+            android:textColor="@color/filter_name_text_color"
+            android:textSize="@dimen/filter_name_text_size" />
+
+        <ImageView
+            android:id="@+id/iv_filter"
+            android:layout_width="@dimen/y24"
+            android:layout_height="@dimen/y24"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x6"
+            android:background="@drawable/fm_item_screening_down_1" />
+    </LinearLayout>
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/type_filter" -->
+    <!-- android:layout_width="@dimen/x75" -->
+    <!-- android:layout_height="match_parent" -->
+
+
+    <!-- android:layout_marginLeft="0px" -->
+    <!-- android:layout_marginRight="@dimen/x20" -->
+    <!-- android:drawableRight="@drawable/fm_item_screening_down" -->
+    <!-- android:gravity="center" -->
+    <!-- android:singleLine="true" -->
+    <!-- android:text="筛选筛选筛选" -->
+    <!-- android:textColor="@color/green" -->
+    <!-- android:textSize="@dimen/y24" /> -->
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="@dimen/x125"
+                android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_audio_fenlei"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y48"
+        android:layout_centerInParent="true"
+        android:background="@drawable/music_title_btn_bg"
+        android:gravity="center"
+        android:text="推荐"
+        android:maxLines="1"
+        style="@style/title_text"/>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/iv_select"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:scaleType="center"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:src="@drawable/type_select"-->
+        <!--android:layout_alignParentBottom="true"/>-->
+
+
+</RelativeLayout>

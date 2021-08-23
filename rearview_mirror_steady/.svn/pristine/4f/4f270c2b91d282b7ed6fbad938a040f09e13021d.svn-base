@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <ListView xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!-- android:id="@+id/listview" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="match_parent" -->
+<!-- android:background="@color/player_list_bg" -->
+<!-- android:divider="#00000000" -->
+<!-- android:dividerHeight="0dip" -->
+<!-- android:listSelector="@android:color/transparent" -->
+<!-- android:paddingTop="@dimen/y5" /> -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- The PullToRefreshListView replaces a standard ListView widget. -->
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/player_list_bg"
+        android:divider="#00000000"
+        android:dividerHeight="0dip"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@android:color/transparent"
+        android:paddingTop="@dimen/y5"
+        android:smoothScrollbar="true" />
+
+</LinearLayout>

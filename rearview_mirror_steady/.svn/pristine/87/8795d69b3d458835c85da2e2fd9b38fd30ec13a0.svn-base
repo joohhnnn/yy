@@ -1,0 +1,4 @@
+和代码规则：
+1、将arm_v3_debug(仅供测试SDK使用)工程的代码同步到本工程。
+2、yzslibs下面的libaec.so和libasrfix.so不要替换掉，因为x86项目必须使用x86架构的so，
+     不然唤醒和离线识别CPU占用会很高。

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andexert.library.RippleView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y80"
+    android:descendantFocusability="blocksDescendants"
+    android:minHeight="@dimen/y80"
+    android:orientation="vertical"
+    ripple:rv_rippleDuration="300"
+    ripple:rv_type="rectangle" >
+
+    <com.txznet.record.view.GradientProgressBar
+        android:id="@+id/my_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/txtNum"
+        android:layout_width="?attr/list_item_txtNum_width"
+        android:layout_height="?attr/list_item_txtNum_height"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="?attr/list_item_txtNum_marginLeft"
+        android:background="@drawable/poi_item_circle_bg"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:textColor="@android:color/white" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/txtNum" />
+    
+     <TextView
+         android:layout_marginLeft="@dimen/x16"
+		 android:layout_marginStart="@dimen/x16"
+		android:layout_marginEnd="@dimen/x16"
+		android:layout_marginRight="@dimen/x16"
+         android:id="@+id/txtContentDel"
+         style="@style/text_20"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerVertical="true"
+         android:layout_gravity="center_vertical"
+         android:layout_toRightOf="@id/txtNum"
+         android:visibility="gone" 
+         android:ellipsize="end"
+         android:singleLine="true" />
+    <FrameLayout 
+        android:id="@+id/flDistanceDel"
+        android:layout_width="wrap_content"
+		android:layout_marginEnd="@dimen/x16"
+		android:layout_marginRight="@dimen/x16"
+		android:layout_marginStart="@dimen/x8"
+		android:layout_marginLeft="@dimen/x8"
+		 android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone" 
+       	android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/star_grade_iv_in_del"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y20"
+            android:scaleType="fitEnd"
+            android:src="@drawable/dz_icon_star0"
+            android:visibility="gone" />
+    	<TextView
+			android:id="@+id/txtDistance_del"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="right"
+			android:textColor="#80FFFFFF" />
+    </FrameLayout>
+    
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/x16"
+		android:layout_marginStart="@dimen/x16"
+		android:layout_marginEnd="@dimen/x16"
+		android:layout_marginRight="@dimen/x16"
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/line"
+        android:layout_toRightOf="@id/txtNum" >
+
+        <ImageView
+            android:id="@+id/star_grade_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x16"
+            android:layout_marginRight="@dimen/x16"
+            android:scaleType="fitEnd"
+            android:src="@drawable/dz_icon_star0"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/mark_icon_ly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@id/star_grade_iv"
+            android:layout_marginRight="@dimen/x5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/juan_iv"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/y20"
+                android:layout_marginEnd="@dimen/x2"
+                android:layout_marginRight="@dimen/x2"
+                android:src="@drawable/dz_juan"
+                android:scaleType="fitEnd"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/hui_iv"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/y20"
+                android:layout_marginEnd="@dimen/x2"
+                android:layout_marginRight="@dimen/x2"
+                android:src="@drawable/dz_hui"
+                android:scaleType="fitEnd"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/tuan_iv"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/y20"
+                android:layout_marginEnd="@dimen/x2"
+                android:layout_marginRight="@dimen/x2"
+                android:src="@drawable/dz_tuan"
+                android:scaleType="fitEnd"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtContent"
+            style="@style/text_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@id/mark_icon_ly"
+            android:ellipsize="end"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <FrameLayout 
+        android:id="@+id/flDistance"
+        android:layout_width="wrap_content"
+		android:layout_marginEnd="@dimen/x16"
+		android:layout_marginRight="@dimen/x16"
+		android:layout_marginStart="@dimen/x8"
+		android:layout_marginLeft="@dimen/x8"
+        android:layout_alignParentRight="true"
+		android:layout_below="@id/line"
+       	android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/star_grade_iv_in"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y20"
+            android:scaleType="fitEnd"
+            android:src="@drawable/dz_icon_star0"
+            android:visibility="gone" />
+    	<TextView
+			android:id="@+id/txtDistance"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="right"
+			android:textColor="#80FFFFFF" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/cost_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_marginEnd="@dimen/x7"
+        android:layout_marginRight="@dimen/x7"
+        android:layout_toLeftOf="@id/flDistance"
+        android:gravity="center_vertical|end"
+        android:singleLine="true"
+        android:textColor="#80FFFFFF"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/x16"
+		android:layout_marginStart="@dimen/x16"
+        android:layout_toLeftOf="@id/cost_tv"
+        android:layout_toRightOf="@id/txtNum"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#80FFFFFF" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/list_item_divider_height"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#4c4c4c"
+        android:visibility="gone" />
+
+</com.andexert.library.RippleView>

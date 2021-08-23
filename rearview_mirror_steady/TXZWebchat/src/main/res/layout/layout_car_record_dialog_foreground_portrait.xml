@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout android:id="@+id/rl_car_record_inner_root"
+                                               xmlns:android="http://schemas.android.com/apk/res/android"
+                                               android:layout_width="match_parent"
+                                               android:layout_height="match_parent"
+                                               android:background="#b3000000"
+                                               xmlns:tools="http://schemas.android.com/tools"
+                                               xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/ll_car_record_inner_dialog_container"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:background="@drawable/shape_car_dialog_bg"
+        app:layout_widthPercent="45.6%"
+        app:layout_aspectRatio="129%">
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="12">
+
+            <com.txznet.webchat.ui.common.widget.VoiceView
+                android:id="@+id/view_car_record_inner_sound"
+                android:layout_centerHorizontal="true"
+                app:vv_bar_height_min="@dimen/y3"
+                app:vv_bar_height_max="@dimen/y40"
+                app:vv_bar_count="7"
+                app:vv_bar_width="@dimen/x8"
+                app:vv_bar_src="@drawable/shape_car_record_sound_item"
+                app:layout_heightPercent="32%"
+                app:layout_aspectRatio="180%"
+                app:layout_marginTopPercent="26%"/>
+
+            <com.txznet.webchat.ui.common.widget.ThemedTextView
+                android:id="@+id/tv_car_record_inner_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_car_record_inner_sound"
+                android:textColor="@color/color_primary_dark"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/x20"
+                app:layout_marginTopPercent="16%"
+                tools:text="停止说话， 3秒后自动发送"
+                app:theme_color="primary_dark"/>
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <View
+            style="@style/divider_line_horizontal"/>
+
+        <FrameLayout
+            android:id="@+id/fl_car_record_inner_end"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@drawable/selector_car_dialog_button_bg">
+
+            <com.txznet.webchat.ui.common.widget.ThemedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/x24"
+                android:text="@string/lb_car_record_win_end"
+                app:theme_color="primary"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="导航目的地"
+            android:textColor="#FFFFFF"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/poi_from_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5px"
+            android:drawableLeft="@drawable/shape_white_point"
+            android:drawablePadding="5px"
+            android:text="来自安吉星客户端"
+            android:textColor="#FFFFFF"
+            android:textSize="12px" />
+
+    </LinearLayout>
+
+    <com.txznet.launcher.widget.CornerFrameLayout
+        android:id="@+id/poi_map_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="#00000000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/map_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/addr_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#99000000"
+                    android:orientation="horizontal"
+                    android:paddingBottom="9px"
+                    android:paddingLeft="15px"
+                    android:paddingRight="15px"
+                    android:paddingTop="9px">
+
+                    <TextView
+                        android:id="@+id/distance_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1.5KM"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12px" />
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5px"
+                        android:layout_marginRight="5px"
+                        android:background="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/address_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="深圳市南山区粤海街道XXX路"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12px" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/wakeup_kws_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/poiissued_prev_bg"
+                android:paddingBottom="@dimen/y8"
+                android:paddingLeft="@dimen/x15"
+                android:paddingRight="@dimen/x15"
+                android:paddingTop="@dimen/y8"
+                android:text="@string/tip_nav"
+                android:textColor="#B3FFFFFF"
+                android:textSize="11px" />
+
+        </LinearLayout>
+    </com.txznet.launcher.widget.CornerFrameLayout>
+
+    <LinearLayout
+        android:id="@+id/page_info_ly"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y50"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/prev_page_iv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y5"
+            android:scaleX="0.9"
+            android:src="@drawable/poiissued_prev_bg" />
+
+        <LinearLayout
+            android:layout_marginTop="2px"
+            android:layout_marginBottom="2px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/point_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4px"
+                android:src="@drawable/artboard_adown" />
+
+            <TextView
+                android:id="@+id/help_tip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="说“下一页”查看"
+                android:textColor="#FFF"
+                android:textSize="@dimen/y13" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/map_review_iv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y24"
+            android:src="@drawable/poiissued_prev_bg" />
+    </LinearLayout>
+</LinearLayout>

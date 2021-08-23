@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/Base_Title_Range"
+        android:gravity="center">
+
+        <com.txznet.music.widget.AlphaLinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/m10"
+                android:layout_height="@dimen/m24"
+                android:layout_marginLeft="@dimen/m40"
+                android:src="@drawable/base_back_btn" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/m12"
+                android:includeFontPadding="true"
+                android:text="返回"
+                android:textColor="@color/base_title_tv_color"
+                android:textSize="@dimen/base_tv_h1" />
+        </com.txznet.music.widget.AlphaLinearLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:includeFontPadding="true"
+            app:tabBackground="@android:color/transparent"
+            app:tabGravity="center"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="@dimen/m20"
+            app:tabPaddingStart="@dimen/m20"
+            app:tabTextAppearance="@style/Base_TabLayoutTextStyle" />
+
+        <com.txznet.music.widget.AlphaImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/m40"
+            android:layout_height="@dimen/m40"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/m46"
+            android:src="@drawable/base_close_btn" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

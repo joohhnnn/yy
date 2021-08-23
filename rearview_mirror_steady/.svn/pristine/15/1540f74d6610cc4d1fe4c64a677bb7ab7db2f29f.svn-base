@@ -1,0 +1,62 @@
+package com.txz.ui.user;
+
+
+enum SubEvent
+{
+	SUBEVENT_USER_REGISTER_REQ = 0x101;	//用户注册请求，携带UserOperateInfo
+	SUBEVENT_USER_REGISTER_RESP = 0x102;	//用户注册返回UserResponse
+	SUBEVENT_USER_VERIFY_CODE_REQ = 0x103;		//获取短信验证码请求，携带UserOperateInfo
+	SUBEVENT_USER_VERIFY_CODE_RESP = 0x104;	//获取短信验证码返回UserResponse
+	
+	SUBEVENT_USER_LOGIN_REQ 		= 0x201;		//登录操作，携带UserOperateInfo
+	SUBEVENT_USER_LOGIN_RESP	= 0x202;		//登录操作回调UserResponse
+	SUBEVENT_USER_LOGOUT_REQ = 0x203;				//登出操作（请求），携带UserOperateInfo
+	SUBEVENT_USER_LOGOUT_RESP = 0x204;				//登出操作（回应）UserResponse
+
+	SUBEVENT_USER_CHANGE_PASSWD_REQ = 0x301;		//修改密码（请求），携带UserOperateInfo
+	SUBEVENT_USER_CHANGE_PASSWD_RESP = 0x302;		//修改密码（返回）UserResponse
+	SUBEVENT_USER_MODIFY_USER_INFO_REQ = 0x303; //修改用户信息，携带com.txz.ui.contact.UserInfo
+	SUBEVENT_USER_MODIFY_USER_INFO_RESP = 0x304; //返回UserResponse
+	SUBEVENT_USER_FORGET_PASSWD_REQ = 0x305;		//忘记密码（请求），携带UserOperateInfo
+	SUBEVENT_USER_FORGET_PASSWD_RESP = 0x306;		//忘记密码（返回）UserResponse
+	
+	SUBEVENT_USER_FEEDBACK_REQ = 0x1001; //用户反馈（请求），携带UserFeedback
+	SUBEVENT_USER_FEEDBACK_RESP = 0x1002; //用户反馈（返回）UserResponse
+	SUBEVENT_USER_ACTIVE_DEVICE_REQ = 0x1003; //激活设备（请求），携带空数据
+	SUBEVENT_USER_ACTIVE_DEVICE_RESP = 0x1004; //激活设备（返回）UserResponse
+	
+	SUBEVENT_USER_UPDATED_SELF_INFO = 0x10001; //自己的信息发生更新，携带com.txz.ui.contact.UserInfo
+}
+
+
+message UserOperateInfo
+{
+	optional uint32 uint32_phone_area	= 1;	//手机国家(地区)区号
+	optional uint64 uint64_phone_num	= 2;	//手机号码
+	optional string  str_nick 					= 3;	//用户昵称
+	optional string  str_passwd 				= 4;	//用户密码原文
+	optional uint32 uint32_verify_code   = 5; //验证码
+	optional string str_new_passwd             = 6; //新密码原文，修改密码或忘记密码使用
+}
+
+
+//回应
+message UserResponse
+{
+	optional bool	b_ok = 1;			//返回成功与否(true:ok, false:fail)
+	optional string	str_reason = 2;		//返回失败信息ID
+}
+
+//用户反馈
+message UserFeedback
+{
+	optional uint64 uint64_uid = 1; //提交反馈使用的用户ID，native填充
+	optional string str_os_info = 2; //操作系统信息，ui填充
+	optional string str_machine = 3; //手机信息，品牌机型，ui填充
+	optional string str_rom_name = 4; //ROM包名，ui填充
+	optional string str_ui_version = 5; //UI版本号，从TXZVersion读取，ui填充
+	optional string str_native_version = 6; //native版本号，native填充
+	optional string str_contact_way = 7; //联系方式，默认填充当前用户手机号，由用户填写
+	optional string str_content = 8; //反馈内容，由用户填写
+}
+

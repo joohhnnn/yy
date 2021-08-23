@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/m144"
+    android:layout_height="@dimen/m144"
+    tools:background="@drawable/base_bg">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/m144"
+        android:layout_height="@dimen/m144"
+        tools:src="@drawable/home_default_cover_icon_normal" />
+
+    <ImageView
+        android:id="@+id/iv_fm"
+        android:layout_width="@dimen/m22"
+        android:layout_height="@dimen/m14"
+        android:layout_marginLeft="@dimen/m8"
+        android:layout_marginTop="@dimen/m8"
+        android:src="@drawable/base_cover_fm_icon"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m24"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/home_page_item_text_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/m8"
+        android:paddingRight="@dimen/m8"
+        android:singleLine="true"
+        android:textSize="@dimen/base_tv_h6"
+        android:visibility="invisible"
+        tools:text="电子浪潮"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_flag"
+        android:layout_width="@dimen/m20"
+        android:layout_height="@dimen/m20"
+        android:layout_above="@id/tv_name"
+        android:layout_marginLeft="@dimen/m8"
+        android:layout_marginTop="@dimen/m8" />
+
+    <com.txznet.music.widget.PlayingStateView
+        android:id="@+id/iv_playing"
+        android:layout_width="@dimen/m22"
+        android:layout_height="@dimen/m22"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/m5"
+        android:layout_marginRight="@dimen/m5"
+        android:visibility="gone" />
+</RelativeLayout>

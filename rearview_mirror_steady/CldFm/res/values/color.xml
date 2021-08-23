@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_gray">#5B5F62</color>
+    <color name="color_fm_background">#32373b</color>
+    
+    <!-- WheelView 相关颜色 -->
+	<color name="widget_wheel_datepicker_currentitem_textcolor">#2A6FE2</color>
+</resources>

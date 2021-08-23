@@ -1,0 +1,24 @@
+﻿[
+{
+"description":"声控的常用说法有哪些？",
+"answer":
+	[
+		{
+			"description":"语音唤醒",
+			"answer":["你好，小T"]
+		},
+		{
+			"description":"打电话",
+			"answer":["你好，小T"]
+		}
+	]
+},
+{
+"description":"如何添加问题？",
+"answer" : "将SD卡中的txz/feedback/question.txt文件导出，并按照格式描述问题，再把文件覆盖即可。"
+},
+{
+"description":"同行者是一家什么公司？",
+"answer" : "同行者是一家专业的车联网公司"
+}
+]

@@ -1,0 +1,24 @@
+<resources>
+
+    <string name="app_name">TXZComm</string>
+    
+    <!-- 通用 -->
+	<string name="label_commit">确定</string>
+	<string name="label_cancel">取消</string>
+	<string name="label_edit">编辑</string>
+	<string name="label_delete">删除</string>
+    
+	<!-- 设置页面 -->
+    <string name="label_setting_title">设置</string>
+    <string name="label_setting_back">返回</string>
+    <string name="label_setting_tts_wakeup">语音唤醒</string>
+    <string name="label_setting_floating_button">悬浮窗</string>
+    <string name="label_setting_wakeup_command">唤醒词</string>
+    <string name="label_setting_wakeup_sensitivity">语音唤醒灵敏度</string>
+    <string name="label_setting_tts_speed">语音播报速度</string>
+    <string name="label_setting_reset">重置参数</string>
+    
+    <!-- 唤醒词设置页面 -->
+    <string name="label_asrcmd_title">唤醒词</string>
+    <string name="label_asrcmd_add">添加唤醒词</string>
+</resources>

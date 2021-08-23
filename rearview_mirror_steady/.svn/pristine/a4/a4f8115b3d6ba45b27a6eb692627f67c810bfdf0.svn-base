@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="acitivty_music_category_color_1_normal">#4693bf</color>
+    <color name="acitivty_music_category_color_1_pressed">#31678f</color>
+    <color name="acitivty_music_category_color_2_normal">#4ea38f</color>
+    <color name="acitivty_music_category_color_2_pressed">#367165</color>
+    <color name="acitivty_music_category_color_3_normal">#6e9943</color>
+    <color name="acitivty_music_category_color_3_pressed">#4c6c2d</color>
+    <color name="acitivty_music_category_color_4_normal">#b19c46</color>
+    <color name="acitivty_music_category_color_4_pressed">#7c6d3e</color>
+    <color name="acitivty_music_item_pressed_bg">#1a8ec4</color>
+
+</resources>

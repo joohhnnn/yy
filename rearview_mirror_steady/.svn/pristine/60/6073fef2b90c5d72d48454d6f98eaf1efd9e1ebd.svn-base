@@ -1,0 +1,8 @@
+试图增加新属性 “svn:ignore”，但是它已经存在。
+<<<<<<< (��������ֵ)
+bin
+||||||| (incoming 'changed from' value)
+=======
+bin
+gen
+>>>>>>> (incoming 'changed to' value)

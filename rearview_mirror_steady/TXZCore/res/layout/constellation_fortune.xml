@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@drawable/constellation_background"
+    android:layout_height="@dimen/y80">
+
+    <ImageView
+        android:layout_marginLeft="@dimen/x16"
+        android:id="@+id/iv_name"
+        android:layout_width="@dimen/m64"
+        android:layout_height="@dimen/m64" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_marginLeft="@dimen/x16"
+        android:textSize="@dimen/m21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <ImageView
+        android:id="@+id/iv_score_1"
+        android:layout_marginLeft="@dimen/x8"
+        android:layout_width="@dimen/m32"
+        android:layout_height="@dimen/m32" />
+
+    <ImageView
+        android:id="@+id/iv_score_2"
+        android:layout_marginLeft="@dimen/x8"
+        android:layout_width="@dimen/m32"
+        android:layout_height="@dimen/m32" />
+
+    <ImageView
+        android:id="@+id/iv_score_3"
+        android:layout_marginLeft="@dimen/x8"
+        android:layout_width="@dimen/m32"
+        android:layout_height="@dimen/m32" />
+
+    <ImageView
+        android:id="@+id/iv_score_4"
+        android:layout_marginLeft="@dimen/x8"
+        android:layout_width="@dimen/m32"
+        android:layout_height="@dimen/m32" />
+
+    <ImageView
+        android:id="@+id/iv_score_5"
+        android:layout_marginLeft="@dimen/x8"
+        android:layout_width="@dimen/m32"
+        android:layout_height="@dimen/m32" />
+    
+    <View
+        android:layout_marginLeft="@dimen/x73"
+        android:background="#FFFFFFFF"
+        android:layout_width="@dimen/x1"
+        android:layout_height="@dimen/m48"/>
+
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_marginRight="@dimen/x24"
+        android:layout_marginLeft="@dimen/x24"
+        android:textColor="#FFFFFFFF"
+        android:drawableLeft="@drawable/tmc_start_nav_sel"
+        android:drawablePadding="@dimen/x8"
+        android:textSize="@dimen/m19"
+        android:gravity="center_vertical"
+        android:text="关闭"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

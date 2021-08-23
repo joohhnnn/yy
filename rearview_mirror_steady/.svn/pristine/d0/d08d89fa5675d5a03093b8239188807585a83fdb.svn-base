@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/icon_type_tv"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/y106"
+            android:background="#303441"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="20px" />
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y60"
+                android:background="#3c404b"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/road_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_marginStart="@dimen/x20"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="#cbcdd9"
+                    android:textSize="28px" />
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/x24"
+                    android:layout_marginRight="@dimen/x24"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="距离终点："
+                        android:textColor="#cbcdd9"
+                        android:textSize="20px" />
+
+                    <TextView
+                        android:id="@+id/remain_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="#cbcdd9"
+                        android:textSize="24px" />
+
+                    <TextView
+                        android:id="@+id/remain_distance_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="#cbcdd9"
+                        android:textSize="24px" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/direction_iv"
+                android:layout_width="@dimen/x76"
+                android:layout_height="@dimen/y76"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginTop="@dimen/y10"
+                android:src="@drawable/map_direction"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingEnd="@dimen/x12"
+        android:paddingLeft="@dimen/x10"
+        android:paddingRight="@dimen/x12"
+        android:paddingStart="@dimen/x10"
+        android:paddingTop="@dimen/y60" >
+
+        <ImageButton
+            android:id="@+id/friend_ib"
+            android:layout_width="@dimen/x76"
+            android:layout_height="@dimen/y76"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/y16"
+            android:background="@null"
+            android:src="@drawable/nav_view_friend" />
+
+        <CheckBox
+            android:id="@+id/trac_cb"
+            android:layout_width="@dimen/x76"
+            android:layout_height="@dimen/y76"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/nav_view_trac"
+            android:button="@null" />
+
+        <LinearLayout
+            android:id="@+id/zoom_layout"
+            android:layout_width="@dimen/x76"
+            android:layout_height="@dimen/y224"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/y16"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/zoom_out_ib"
+                android:layout_width="@dimen/x76"
+                android:layout_height="@dimen/y69"
+                android:background="@null"
+                android:src="@drawable/nav_view_zoom_in" />
+
+            <ImageButton
+                android:id="@+id/override_cb"
+                android:layout_width="@dimen/x76"
+                android:layout_height="@dimen/y86"
+                android:background="@null"
+                android:button="@null"
+                android:src="@drawable/nav_view_route" />
+
+            <ImageButton
+                android:id="@+id/zoom_in_ib"
+                android:layout_width="@dimen/x76"
+                android:layout_height="@dimen/y69"
+                android:background="@null"
+                android:src="@drawable/nav_view_zoom_out" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/footer_ly"
+            android:layout_width="@dimen/x320"
+            android:layout_height="@dimen/y64"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#3c404b"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/exit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:drawableTop="@drawable/map_exit"
+                android:paddingEnd="@dimen/x1"
+                android:paddingLeft="@dimen/x20"
+                android:paddingRight="@dimen/x1"
+                android:paddingStart="@dimen/x20"
+                android:text="退出"
+                android:textColor="#cbcdd9"
+                android:textSize="18px" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="@dimen/y48"
+                android:layout_marginEnd="@dimen/x10"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_marginStart="@dimen/x20"
+                android:background="#595d68" />
+
+            <TextView
+                android:id="@+id/nav_tv"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/map_navigation"
+                android:drawableStart="@drawable/map_navigation"
+                android:gravity="center"
+                android:paddingEnd="@dimen/x40"
+                android:paddingLeft="@dimen/x50"
+                android:paddingRight="@dimen/x40"
+                android:paddingStart="@dimen/x50"
+                android:text="继续导航"
+                android:textColor="#cbcdd9"
+                android:textSize="24px" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/cross_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

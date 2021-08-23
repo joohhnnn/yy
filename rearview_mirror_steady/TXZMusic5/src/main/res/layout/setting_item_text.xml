@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_version"
+    style="@style/Setting_Item"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    tools:background="@drawable/base_bg">
+
+    <TextView
+        android:id="@+id/tv_left_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/m30"
+        android:layout_weight="1"
+        android:gravity="left|center_vertical"
+        android:text="当前版本"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/base_tv_h3" />
+
+    <TextView
+        android:id="@+id/tv_right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/m30"
+        android:textColor="#7FFFFFFF"
+        android:textSize="@dimen/base_tv_h3"
+        tools:text="4.0.0" />
+</LinearLayout>

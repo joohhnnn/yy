@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--股票-->
+    <color name="color_stock_name">#FFFFFFFF</color>
+    <color name="color_stock_code">#99FFFFFF</color>
+    <color name="color_stock_item_label">#80FFFFFF</color>
+    <color name="color_stock_price_up">#FFF54545</color>
+    <color name="color_stock_price_down">#FF00CF4A</color>
+    <color name="color_stock_price_normal">#FFFFFFFF</color>
+
+    <!--WIFI热点-->
+    <color name="color_settings_ap_status_on">#B344D8B1</color>
+    <color name="color_settings_ap_status_off">#BF9DA3B7</color>
+    <color name="color_settings_ap_name">#FFFFFFFF</color>
+    <color name="color_settings_ap_password">#B3FFFFFF</color>
+
+    <!--登录安吉星模块-->
+    <color name="color_anjixing_login_status_mask">#CC4D546A</color>
+
+</resources>

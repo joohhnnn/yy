@@ -1,0 +1,39 @@
+<resources>
+
+    <dimen name="text_size_1">@dimen/m20</dimen>
+    <dimen name="text_size_2">@dimen/m22</dimen>
+    <dimen name="text_size_3">@dimen/m24</dimen>
+    <dimen name="text_size_4">@dimen/m28</dimen>
+    <dimen name="text_size_5">@dimen/m32</dimen>
+    <dimen name="text_size_6">@dimen/m34</dimen>
+
+    <dimen name="menu_text_size">@dimen/y20</dimen>
+    <dimen name="song_name_size">@dimen/y28</dimen>
+    <dimen name="artist_name_size">@dimen/y22</dimen>
+    <dimen name="source_size">@dimen/y22</dimen>
+    <dimen name="title_text_size">@dimen/y36</dimen>
+    <dimen name="search_text_size">@dimen/m20</dimen>
+    <dimen name="not_data_text_size">@dimen/m20</dimen>
+    <dimen name="header_refresh_total_text_size">@dimen/m24</dimen>
+    <dimen name="header_refresh_text_size">@dimen/y30</dimen>
+    <dimen name="local_song_list_title_size">@dimen/y30</dimen>
+    <dimen name="local_song_list_artist_size">@dimen/y24</dimen>
+    <dimen name="local_song_list_tip_size">@dimen/y30</dimen>
+    <dimen name="song_list_delete_text_size">@dimen/y30</dimen>
+    <dimen name="filter_text_size">@dimen/y30</dimen>
+    <dimen name="filter_name_text_size">@dimen/y24</dimen>
+    <dimen name="error_refresh_text_size">@dimen/y36</dimen>
+    <dimen name="error_tip_size">@dimen/m24</dimen>
+    <dimen name="loading_text_size">@dimen/y20</dimen>
+    <dimen name="album_intro_text_size">@dimen/m22</dimen>
+    <dimen name="history_title_size">@dimen/y30</dimen>
+    <dimen name="no_history_text_size">@dimen/m20</dimen>
+    <dimen name="album_item_width">@dimen/x128</dimen>
+
+    <!--首页返回按钮的弹框-->
+    <dimen name="dim_home_dialog_back_width">@dimen/m461</dimen>
+    <dimen name="dim_home_dialog_back_height">@dimen/m241</dimen>
+    <dimen name="dim_home_dialog_back_choice_height">@dimen/m80</dimen>
+
+    <dimen name="button_radius_size">@dimen/m50</dimen>
+</resources>

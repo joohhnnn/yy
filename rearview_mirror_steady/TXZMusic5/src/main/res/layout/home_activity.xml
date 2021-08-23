@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:background="@drawable/base_bg">
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tl_tab"
+        android:layout_width="@dimen/m280"
+        android:layout_height="@dimen/m40"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/m20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_close" />
+
+    <com.txznet.music.widget.AlphaImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/m40"
+        android:layout_height="@dimen/m40"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/m46"
+        app:layout_constraintBottom_toTopOf="@id/rv_data"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/base_close_btn" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_data"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/base_page_height"
+        android:layout_marginLeft="@dimen/m40"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.46" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_logo"
+        android:layout_width="?attr/player_bar_cover_size"
+        android:layout_height="?attr/player_bar_cover_size"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/m39"
+        android:src="@drawable/home_default_cover_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_data" />
+
+    <ImageView
+        android:id="@+id/img_logo_play"
+        android:layout_width="?attr/player_bar_control_size"
+        android:layout_height="?attr/player_bar_control_size"
+        android:layout_gravity="center"
+        android:src="@drawable/home_player_play_btn_icon"
+        app:layout_constraintBottom_toBottomOf="@id/img_logo"
+        app:layout_constraintLeft_toLeftOf="@id/img_logo"
+        app:layout_constraintRight_toRightOf="@id/img_logo"
+        app:layout_constraintTop_toTopOf="@id/img_logo" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/img_logo_loading"
+        android:layout_width="?attr/player_bar_control_size"
+        android:layout_height="?attr/player_bar_control_size"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/img_logo"
+        app:layout_constraintLeft_toLeftOf="@id/img_logo"
+        app:layout_constraintRight_toRightOf="@id/img_logo"
+        app:layout_constraintTop_toTopOf="@id/img_logo"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="play_loading.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/TextView_Marquee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/m15"
+        android:gravity="center_vertical"
+        android:maxWidth="@dimen/m234"
+        android:text="暂无内容"
+        android:textColor="@color/white_40"
+        android:textSize="@dimen/base_tv_h5"
+        app:layout_constraintBottom_toBottomOf="@id/img_logo"
+        app:layout_constraintLeft_toRightOf="@id/img_logo"
+        app:layout_constraintTop_toTopOf="@id/img_logo" />
+
+    <ImageView
+        android:layout_width="?attr/player_bar_logo_size"
+        android:layout_height="?attr/player_bar_logo_size"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/m39"
+        android:src="@drawable/home_default_logo_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_data" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frmMessageBox_Blank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#4c000000"
+    android:clickable="true"
+    android:focusable="true" >
+
+    <RelativeLayout
+        android:layout_width="@dimen/x540"
+        android:layout_height="@dimen/y118"
+        android:layout_gravity="center"
+        android:background="@drawable/win_progress_bg"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    android:id="@+id/prgProgress_Progress"
+                    style="@style/win_progress_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100" />
+
+                <TextView
+                    android:id="@+id/prgProgress_Percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/y18" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/imgProgress_Anim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/widget_progress_anim" />
+
+            <TextView
+                android:id="@+id/prgProgress_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x24"
+                android:layout_marginRight="@dimen/x25"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/y26" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

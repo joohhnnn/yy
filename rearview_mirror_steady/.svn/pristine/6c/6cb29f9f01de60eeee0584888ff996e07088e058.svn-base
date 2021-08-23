@@ -1,0 +1,15 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <stroke
+        android:width="@dimen/y1"
+        android:color="@color/empty_view_btn_press_yes"/>
+    <!-- 形状的填充色 -->
+
+    <corners
+        android:bottomLeftRadius="@dimen/button_radius_size"
+        android:bottomRightRadius="@dimen/button_radius_size"
+        android:radius="@dimen/button_radius_size"
+        android:topLeftRadius="@dimen/button_radius_size"
+        android:topRightRadius="@dimen/button_radius_size"/>
+</shape>

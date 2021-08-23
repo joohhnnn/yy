@@ -1,0 +1,107 @@
+package com.txz.ui.im;
+
+import "ui_map.proto";
+
+enum SubEvent {
+	SUBEVENT_IM_ACTION_0 = 0;
+	
+	SUBEVENT_ACTION_ROOM_MEMBER_LIST_REQ = 1;		//获取多车同行用户信息，请求，携带ActionRoomMemberList_Req
+	SUBEVENT_ACTION_ROOM_MEMBER_LIST_RESP = 2;		//获取多车同行用户信息，回复，携带ActionRoomMemberList_Resp
+	SUBEVENT_ACTION_ROOM_IN_REQ = 3;							//进入多车同行用户，请求，携带ActionRoomIn_Req
+	SUBEVENT_ACTION_ROOM_IN_RESP = 4;						//进入多车同行用户，回复，携带ActionRoomIn_Resp
+	SUBEVENT_ACTION_ROOM_OUT_REQ = 5;						//退出多车同行用户，请求，携带ActionRoomOut_Req
+	SUBEVENT_ACTION_ROOM_OUT_RESP = 6;					//退出多车同行用户，回复，携带ActionRoomOut_Resp
+	
+	SUBEVENT_ACTION_ROOM_UPDATE_NOTIFY	 = 3;			//更新通知， 携带ActionRoomUpdateNotify
+}
+
+message MemberInfo{
+	optional string str_user_nick 		= 1;					//用户昵称
+	optional uint64 uint64_uid 			= 2;					//设备ID
+	optional string str_face_url			= 3;					//用户头像下载地址
+}
+
+message RoomMember{
+	optional uint32 uint32_target_distance 		= 1;		//距目的地距离
+	optional com.txz.ui.map.GpsInfo msg_gps 	= 2;		//gps信息
+	optional MemberInfo msg_info						= 3;		//用户信息
+	optional uint32 uint32_target_time 			= 4;		//到达目的地的时间
+}
+
+ /////////////退出多车同行////////////
+ //(请求包)
+message ActionRoomOut_Req
+{
+	optional uint32 uint32_from_type = 1;					//来源（1：微信群; 2：公众帐号）
+	optional uint64 uint64_rid 			 = 2;					//房间ID
+}
+
+//(回应包)  
+message ActionRoomOut_Resp
+{
+	optional uint32 uint32_from_type = 1;					//来源（1：微信群; 2：公众帐号）
+	optional uint64 uint64_rid 			 = 2;					//房间ID
+}
+
+
+ /////////////进入多车同行////////////
+ //(请求包)
+message ActionRoomIn_Req
+{
+	optional uint32 uint32_from_type = 1;					//来源（1：微信群; 2：公众帐号）
+	optional uint64 uint64_rid 			 = 2;					//房间ID
+	optional com.txz.ui.im.RoomMember msg_user_info = 3;		//用户信息
+}
+
+//(回应包)  
+message ActionRoomIn_Resp
+{
+	optional uint32 uint32_from_type = 1;					//来源（1：微信群; 2：公众帐号）
+	optional uint64 uint64_rid 			 = 2;					//房间ID
+}
+
+ /////////////获取多车同行成员列表	////////////
+ //(请求包)
+message ActionRoomMemberList_Req
+{
+	optional uint64 uint64_rid 						= 1;		//房间ID
+	optional uint32 uint32_type 						= 2;		//获取类型（1: RoomMember只带MemberGPS信息; 0:都带）
+	optional uint32 uint32_target_distance 	= 3;		//距目的地距离
+	optional uint32 uint32_target_time 			= 4;		//到达目的地的时间
+}
+
+//(回应包)  
+message ActionRoomMemberList_Resp
+{
+	optional uint64 uint64_rid 			= 1;					//房间ID
+	optional uint32 uint32_type 			= 2;					//获取类型（1: RoomMember只带MemberGPS信息; 0:都带）
+	repeated com.txz.ui.im.RoomMember rpt_msg_member_list = 3;		//用户列表
+}
+
+
+
+////////////////更新通知////////////////////
+message ActionRoomUpdateNotify
+{
+	repeated RoomMember rpt_msg_user_in_list = 1;		//用户进入多车同行
+	repeated uint64 rpt_uint64_user_out_list	= 2;			//用户离开多车同学
+}
+
+
+
+//
+message MapNaviPath
+{
+	optional uint32 uint32_all_length = 1; //全部路程长度
+	optional uint32 uint32_all_time = 2; //全部路程时间
+	optional com.txz.ui.map.GpsInfo msg_bounds_northeast = 3; //东北的经纬度
+	optional com.txz.ui.map.GpsInfo msg_bounds_southwest = 4; //南西的经纬度
+	optional com.txz.ui.map.GpsInfo msg_center = 5; //导航路线的中心点
+	optional com.txz.ui.map.GpsInfo msg_start = 6; //导航路线的起始点
+	optional com.txz.ui.map.GpsInfo msg_end = 7; //导航路线的结束点
+	repeated com.txz.ui.map.GpsInfo msg_points = 8; //导航路线的路径点
+	optional uint32 uint32_steps_count = 9; //导航路径点数量
+	optional uint32 uint32_strategy = 10; //路径规划策略，使用高德的常量
+	optional uint32 uint32_total_cost = 11; //获取导航段的花费金额，单位元
+}
+

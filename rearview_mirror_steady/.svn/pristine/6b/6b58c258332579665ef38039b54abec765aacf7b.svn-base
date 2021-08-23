@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="@dimen/x166"
+        android:layout_height="@dimen/y166"
+        android:src="@drawable/fm_me_no_result" />
+
+    <TextView
+        android:id="@+id/tv_showtips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="网络不给力，数据加载失败"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/y24" />
+
+    <TextView
+        android:id="@+id/btn_refresh"
+        android:layout_width="@dimen/x270"
+        android:layout_height="@dimen/y90"
+        android:layout_marginTop="@dimen/y10"
+        android:gravity="center"
+        android:text="刷新"
+        android:textColor="@color/press_tv"
+        android:textSize="@dimen/y36" />
+
+</LinearLayout>

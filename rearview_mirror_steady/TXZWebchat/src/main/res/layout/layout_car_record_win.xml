@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/ll_car_record_root"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#33000000">
+
+    <RelativeLayout
+        android:id="@+id/rl_car_record_bar"
+        android:layout_width="@dimen/x496"
+        android:layout_height="@dimen/y80"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/src_car_top_dialog_bg">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/view_car_record_avatar"
+            android:layout_width="@dimen/y48"
+            android:layout_height="@dimen/y48"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/x16"
+            app:riv_corner_radius="@dimen/y8"
+            android:src="@drawable/default_headimage"/>
+        
+        <com.txznet.webchat.ui.common.widget.VoiceView
+            android:id="@+id/view_car_record_sound"
+            android:layout_width="@dimen/x58"
+            android:layout_height="@dimen/y48"
+            android:layout_toRightOf="@id/view_car_record_avatar"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_centerVertical="true"
+            app:vv_bar_height_min="@dimen/y3"
+            app:vv_bar_height_max="@dimen/y35"
+            app:vv_bar_count="7"
+            app:vv_bar_width="@dimen/x5"
+            app:vv_bar_src="@drawable/shape_car_record_sound_item"/>
+        
+        <com.txznet.webchat.ui.car.widget.ResourceButton
+            android:id="@+id/view_car_record_end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:resbtn_str_text="@string/lb_car_record_win_end"
+            app:resbtn_size_text="@dimen/y19"
+            app:resbtn_color_text_normal="@color/color_record_text_send"
+            app:resbtn_color_text_pressed="@color/color_record_text_send_pressed"
+            app:resbtn_padding_horizontal="@dimen/x16"
+            app:resbtn_src_icon_normal="@drawable/src_car_record_end_icon_normal"
+            app:resbtn_src_icon_pressed="@drawable/src_car_record_end_icon_pressed"
+            app:resbtn_size_icon="@dimen/y28"/>
+
+        <View
+            android:id="@+id/v_divider"
+            style="@style/divider_line_vertical"
+            android:layout_toLeftOf="@id/view_car_record_end"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_marginBottom="@dimen/y8"/>
+
+        <TextView
+            android:id="@+id/tv_car_record_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/v_divider"
+            android:layout_marginRight="@dimen/x16"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/y19"
+            tools:text="3秒后发送"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

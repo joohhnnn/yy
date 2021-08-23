@@ -1,0 +1,154 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android)
+SHA1-Digest-Manifest: HPF/jAF+0e1+0JdMd2S5WMpuR+Q=
+
+Name: res/drawable/nav_view_zoom_in_n.xml
+SHA1-Digest: 9JhmJzJ3oOjzHBc2Ij8RhvPzLJQ=
+
+Name: res/drawable-nodpi-v4/progress_frame_2.png
+SHA1-Digest: FXJScLfP4ZOJ6Mwdo7se6ZzIrT8=
+
+Name: res/drawable-nodpi-v4/map_n_zoom_in1.png
+SHA1-Digest: +h9G6bnTECUSgeykf3u434PKG9E=
+
+Name: lib/armeabi-v7a/libaec.so
+SHA1-Digest: XrmvN9vj1HNyhkp9ZVJEkZ1IXfM=
+
+Name: res/drawable-nodpi-v4/map_n_zoom_out2.png
+SHA1-Digest: r3/31uRVPSXdNOxW2HKT2kb7GoA=
+
+Name: res/drawable-nodpi-v4/progress_frame_3.png
+SHA1-Digest: WmK3EFmEzAjO/DQJdGJse1HWgXM=
+
+Name: res/drawable-mdpi-v4/ic_launcher.png
+SHA1-Digest: 3LjWSTDaK+LzxXCMhp8d8TFwiHg=
+
+Name: res/drawable/widget_progress_large.xml
+SHA1-Digest: UEvHNccyEerS6czFVDJpNp37f/M=
+
+Name: res/drawable/win_messagebox_cancel_text_color.xml
+SHA1-Digest: BfINrsiafpD2NM87lYftCmLQJFY=
+
+Name: assets/ml
+SHA1-Digest: z9C/Q1802PhOsnvoDj2OcNRdhgk=
+
+Name: res/layout-v17/comm_win_progress.xml
+SHA1-Digest: PCwg3JBkVx+Yu5CdMwxnwfc0zqs=
+
+Name: res/drawable-nodpi-v4/progress_frame_5.png
+SHA1-Digest: Lhu8Z3w+1GpvemVTB8Z2EczUQ8Y=
+
+Name: assets/test.vocab
+SHA1-Digest: NF4RBHIN8Pkvs5nsa+6FQ8nZK4o=
+
+Name: lib/armeabi-v7a/libmsc.so
+SHA1-Digest: aZRr7bmRhtcsequ5EB9LqrhO3kU=
+
+Name: res/drawable-nodpi-v4/win_progress_bg.9.png
+SHA1-Digest: 7Aq2m/YvFAqVMXvf63frnTA2Ibw=
+
+Name: res/drawable/widget_progress_anim.xml
+SHA1-Digest: QxGv++XMV6CLWf8wkBvvQgiyyp8=
+
+Name: assets/ext.vocab
+SHA1-Digest: D+vwo6X/A8+NqwE3MSTIiAFnL44=
+
+Name: assets/version/data
+SHA1-Digest: /OU6mqgD3GfkNrlEj0xox1MIjSo=
+
+Name: assets/ivw/548a6747.jet
+SHA1-Digest: h/YxXiUAOdE1O3QipnapAroic1M=
+
+Name: res/layout/comm_win_progress.xml
+SHA1-Digest: TlV4NEHdh72XrbPNYy3DH28+7uI=
+
+Name: cfg/ts.tab
+SHA1-Digest: PqhzFVGBYXJ3dqVGeM/UNbxrogY=
+
+Name: res/drawable/win_messagebox_sure_text_color.xml
+SHA1-Digest: 749iPUY/I4ACwYBvmcmmkCxb4qg=
+
+Name: res/drawable-nodpi-v4/progress_frame_1.png
+SHA1-Digest: 6sgtvzZZzN5RD15Rkyr+zzDC4NU=
+
+Name: lib/armeabi-v7a/libasrfix.so
+SHA1-Digest: BNt5WdpQsULK//+uQnKky0CPMEE=
+
+Name: assets/asrfix/data
+SHA1-Digest: BZfVu1alud1UpyjyzuqW7g34/j8=
+
+Name: res/drawable-xhdpi-v4/ic_launcher.png
+SHA1-Digest: qLB+xSuTsdod1eS2aPJel/A5PvE=
+
+Name: assets/test.jsgf
+SHA1-Digest: poFf4NDQb6VWuKllLWLIcE/ZfS4=
+
+Name: lib/armeabi-v7a/libuscasr.so
+SHA1-Digest: OordIvwxS1vmg7jtpewL7T7MkTA=
+
+Name: res/drawable-xxhdpi-v4/ic_launcher.png
+SHA1-Digest: W7nSszMeL1x0eIt3K2CoCIHU6Qg=
+
+Name: res/drawable-nodpi-v4/map_n_zoom_in2.png
+SHA1-Digest: HE3bXX90Va/CxCpXcpfoagZS8uM=
+
+Name: resources.arsc
+SHA1-Digest: nULDIXoasQf8AjcXjOXXdhWkIR4=
+
+Name: res/drawable-hdpi-v4/ic_launcher.png
+SHA1-Digest: tYiGDUvOwHeh/pZhFgJ5InuO0zk=
+
+Name: res/drawable-nodpi-v4/win_messagebox_shadow.9.png
+SHA1-Digest: GsICJo7SzRdQdLWJJoFd5esW+As=
+
+Name: AndroidManifest.xml
+SHA1-Digest: 1gNR1VafU5uRo4U7Z2qyY25VmIw=
+
+Name: assets/ext.jsgf
+SHA1-Digest: tpGDZ1JEhmOu9MhWAVSnG1NGm4U=
+
+Name: res/drawable-nodpi-v4/widget_loading.png
+SHA1-Digest: LlWJjhIvE9gDJPkPgTK7ZFOKJRI=
+
+Name: res/drawable-nodpi-v4/progress_frame_4.png
+SHA1-Digest: 0hVlEFDKUvO/R495AaKXE96hUbg=
+
+Name: assets/loading.wav
+SHA1-Digest: 30wo+HyeNhkRGznUXg7rbdueIbA=
+
+Name: res/layout/comm_win_messagebox.xml
+SHA1-Digest: tJmj5dUwk+ER5XbG0VB5HCknMWs=
+
+Name: assets/wakeup/data
+SHA1-Digest: jV079ReC4JLXCUMsbv2D6BZKpsc=
+
+Name: assets/empty
+SHA1-Digest: urC8mSpm0X2pz0G1HPUVY0q3+Ek=
+
+Name: res/drawable/nav_view_zoom_out_n.xml
+SHA1-Digest: evGXZlYuJtSZEOe8HS7Nv7h5yqQ=
+
+Name: res/drawable/widget_color.xml
+SHA1-Digest: oM8s42NnUOG5Go33dcKtrGpSG3g=
+
+Name: assets/net/data
+SHA1-Digest: O0ZAh0eqSdptPySfp05PhHqhIDY=
+
+Name: res/drawable-nodpi-v4/map_n_zoom_out1.png
+SHA1-Digest: ObmL6lTl13bUXSRQx/IFrdr+kT0=
+
+Name: assets/extjsgf/data
+SHA1-Digest: UZ2I3Z5b1CwFVtPCiZ6FLz2aZgs=
+
+Name: classes.dex
+SHA1-Digest: hmLUguwLTtS4guyahYsxJXRM7jc=
+
+Name: res/drawable-nodpi-v4/progress_frame_6.png
+SHA1-Digest: gnRl0GHhaNUitOvwjXBGnOJx7PY=
+
+Name: res/drawable-nodpi-v4/progress_frame_7.png
+SHA1-Digest: aTQyUBcWb0rr3hzLnDR6OwWm8+E=
+
+Name: res/layout/comm_win_list_item.xml
+SHA1-Digest: zoqcGafopvOn+Y07zUclzNYnP70=
+

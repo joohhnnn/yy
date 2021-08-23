@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:background="@drawable/base_bg">
+
+    <ImageView
+        style="@style/Base_Default_Page_icon"
+        android:src="@drawable/album_category_net_error_icon" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m16"
+        android:text="@string/album_category_error_no_net_str"
+        android:textColor="@color/white_50"
+        android:textSize="@dimen/base_tv_h4" />
+
+    <TextView
+        android:id="@+id/tv_error_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m24"
+        android:background="@drawable/base_round_rectange_btn_bg"
+        android:paddingLeft="@dimen/m42"
+        android:paddingTop="@dimen/m14"
+        android:paddingRight="@dimen/m42"
+        android:paddingBottom="@dimen/m14"
+        android:text="点击重试"
+        android:textSize="@dimen/base_tv_h4" />
+</LinearLayout>

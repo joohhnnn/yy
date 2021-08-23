@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="路况早晚报"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/y16" />
+
+    <com.txznet.launcher.widget.CornerFrameLayout
+        android:id="@+id/poi_map_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y10"
+        android:background="#00000000">
+
+        <LinearLayout
+            android:id="@+id/tmc_bg_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_tmc_home_bg"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/addr_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical"
+                    android:paddingBottom="9px"
+                    android:paddingLeft="15px"
+                    android:paddingRight="15px"
+                    android:paddingTop="9px">
+
+                    <ImageView
+                        android:id="@+id/icon_iv"
+                        android:layout_width="@dimen/y60"
+                        android:layout_height="@dimen/y60"
+                        android:src="@drawable/icon_tmc_home" />
+
+                    <TextView
+                        android:id="@+id/rem_min_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y8"
+                        android:text="45分钟到家"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/y16" />
+
+                    <TextView
+                        android:id="@+id/rem_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y10"
+                        android:maxLines="1"
+                        android:text="全长: 18公里   拥堵3公里"
+                        android:textColor="#CCFFFFFF"
+                        android:textSize="@dimen/y14" />
+
+                    <LinearLayout
+                        android:id="@+id/tmc_ly"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y6"
+                        android:orientation="horizontal"></LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--android:background="@drawable/gradient_bg"-->
+            <TextView
+                android:id="@+id/wakeup_kws_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/y7"
+                android:paddingLeft="@dimen/x15"
+                android:paddingRight="@dimen/x15"
+                android:paddingTop="@dimen/y7"
+                android:text="@string/tip_nav"
+                android:textColor="#B3FFFFFF"
+                android:textSize="@dimen/y14" />
+
+        </LinearLayout>
+    </com.txznet.launcher.widget.CornerFrameLayout>
+</LinearLayout>

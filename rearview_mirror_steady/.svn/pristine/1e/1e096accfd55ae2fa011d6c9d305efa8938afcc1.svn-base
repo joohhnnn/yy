@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/y16"
+        android:layout_marginLeft="@dimen/x26"
+        android:layout_marginRight="@dimen/x26"
+        android:layout_marginTop="@dimen/y1"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txtChat_List_Title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y50"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/x4"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="为你找到以下联系人，请选择或取消："
+            android:textColor="#aaa"
+            android:textSize="@dimen/y28" />
+
+
+        <com.txznet.record.view.ListViewEx
+            android:background="@drawable/white_range_layout"
+            android:id="@+id/lvChat_Msg_List"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/white"
+            android:dividerHeight="1px"
+            android:listSelector="#00000000"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </LinearLayout>
+</FrameLayout>

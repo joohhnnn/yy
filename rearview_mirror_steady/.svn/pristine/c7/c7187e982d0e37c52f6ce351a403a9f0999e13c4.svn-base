@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/base_include" />
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m68"
+        android:background="@drawable/base_list_item_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/m62"
+        android:paddingRight="@dimen/m62">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="不需要唤醒词，直接说出指令立即执行"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_tv_h3" />
+
+        <CheckBox
+            android:id="@+id/cb_checked"
+            style="@style/Setting_CheckBox_Size"
+            android:background="@drawable/base_setting_selector_btn_bg"
+            android:button="@null"
+            android:clickable="false"
+            android:gravity="center"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/Base_Divider_Horizontal"
+        android:layout_marginLeft="@dimen/m40"
+        android:layout_marginRight="@dimen/m40" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m68"
+        android:background="@drawable/base_list_item_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/m62"
+        android:paddingRight="@dimen/m62">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支持以下指令"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_tv_h3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m8"
+            android:singleLine="true"
+            android:text="上一首、下一首、暂停播放、继续播放、加入收藏、取消收藏、加入订阅、取消订阅"
+            android:textColor="@color/white_60"
+            android:textSize="@dimen/base_tv_h7" />
+    </LinearLayout>
+
+    <View
+        style="@style/Base_Divider_Horizontal"
+        android:layout_marginLeft="@dimen/m40"
+        android:layout_marginRight="@dimen/m40" />
+</LinearLayout>

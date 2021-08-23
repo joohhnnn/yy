@@ -1,0 +1,249 @@
+package com.txz.equipment_manager;
+
+import "ui_map.proto";
+import "ui_equipment.proto";
+
+//基础指令枚举
+enum SubCommand
+{
+	SUBCMD_LOGIN = 1; //携带xxx_Login
+	SUBCMD_LOGOUT = 2; //携带xxx_Logout
+	SUBCMD_HEARTBEAT = 3; //携带HeartbeatInfo
+	SUBCMD_REGISTER = 4; //携带 xxx_Register，无登录态	
+	SUBCMD_LICENSE = 5; //授权，携带xxx_License
+	
+	SUBCMD_REPORT_TRACE = 6;//上报轨迹，携带xxx_Trace
+	
+	SUBCMD_BIND_WX_URL = 7;//获取绑定微信url，携带xxx_GetBindWXUrl
+	SUBCMD_UPLOAD_PIC	= 8;	//上传图片，
+	SUBCMD_UPLOAD_VOICE	= 9;	//上传语音，
+	SUBCMD_REDIRECT = 10;	//重定向，携带Resp_Redirect
+	SUBCMD_UPGRADE_FINISH = 11;	//升级完成通知，携带xxx_UpgradeFinish
+	SUBCMD_BIND_CAR_TEAM_URL = 12;	//获取绑定车队url，携带xxx_GetBindCarTeamUrl
+	SUBCMD_SHOCK_WAKEUP = 13;		//异常震动开机唤醒上报
+}
+
+
+//错误码
+enum ErrorCode
+{
+	EC_USER_NOT_EXIST 									= 7001;  		//用户未注册
+	EC_PASSWORD_ERROR 								= 7002;  	//登录密码错误
+	EC_USER_ALREADY_EXIST 							= 7003;  	//用户已注册
+	
+	EC_LICENSE_APPID_OR_APPTOKEN_FAIL		= 7004;	//appid or apptoken验证失败
+	EC_LICENSE_QUOTA_NOT_ENOUGH			= 7005;	//license配额不足，请充值
+	EC_LICENSE_NEED_NETWORK						= 7006;	//需要网络，才能激活声控产品
+	EC_LICENSE_QUOTA_NOT_ENOUGH_MANUAL	 = 7007;	//手动激活license配额不足，请充值
+	
+	/////抓取图片错误
+	//抓取图片错误(供SDK使用)
+	EC_UPLOAD_PIC_UNKNOWN						= 7101;	//未知错误
+	EC_UPLOAD_PIC_NO_CAMERA					= 7102;	//没有摄像头
+	EC_UPLOAD_PIC_NO_SUPPORT					= 7103;	//设备不支持
+	EC_UPLOAD_PIC_IO_ERROR							= 7104;	//io错误
+	EC_UPLOAD_PIC_NOT_FOUND					= 7105;	//没有抓到对应时间的图片
+	//抓取图片错误(自己使用)
+	EC_UPLOAD_PIC_CATCH_TIMEOUT				= 7121;	//抓取超时
+	EC_UPLOAD_PIC_UPLOAD_TIMEOUT			= 7122;  //上传超时	
+	EC_UPLOAD_PIC_CATCHING						= 7123;	//正在抓取中
+}
+
+//////////////////升级完成通知//////////////////
+message Req_UpgradeFinish
+{
+	optional string str_package_name = 1;	//程序包名
+	optional string str_old_version = 2;		//升级前的版本
+	optional string str_new_version = 3;		//升级后的版本
+}
+message Resp_UpgradeFinish
+{
+}
+
+/////////////////////登录//////////////////////
+//登录协议(请求包)
+message Req_Login
+{
+	optional bytes str_user_password_md5 = 1;
+	optional com.txz.ui.equipment.DeviceInfo msg_device_info = 2;
+	optional com.txz.ui.equipment.VersionInfo msg_version_info = 3;
+	optional uint32 uint32_login_ok_cnt = 4;										//开机后登录成功次数
+	optional com.txz.ui.equipment.ConfigInfo msg_config_info = 5;	//设备配置信息
+}
+
+//登录协议(回应包)  
+message Resp_Login
+{
+	optional uint64 uint64_uid = 1;
+	optional bytes str_comm_key = 2;
+	optional com.txz.ui.equipment.ServerConfig msg_server_config = 3;	//服务器配置信息
+}
+
+/////////////授权/////////////////////
+//授权协议(请求包)
+message Req_License
+{
+	optional string str_txz_app_id = 1;
+	optional string str_txz_app_token = 2;
+	optional com.txz.ui.equipment.DeviceInfo msg_device_info = 3;
+	optional string str_txz_app_custom_id = 4;
+}
+
+//授权协议(回应包)  
+message Resp_License
+{
+	optional com.txz.ui.equipment.KeyInfo msg_key_info = 1;		//key info
+	optional com.txz.ui.equipment.LicenseVerifyRule msg_license_verify_rule = 2;	//license本地验证规则
+}
+
+/////////////////////重定向//////////////////////////
+//重定向协议(回应包)  
+message Resp_Redirect
+{
+	optional string str_conn_ip = 1;
+	optional uint32 uint32_conn_port = 2;
+	optional string str_file_ip = 3;
+	optional uint32 uint32_file_port = 4;
+}
+
+
+/////////////退出协议//////////////////
+//请求包
+message Req_Logout
+{
+	optional uint64 uint64_uid = 1; //登出的uid
+}
+//回应包
+message Resp_Logout
+{
+
+}
+
+
+//心跳协议，上报一定的信息
+message HeartbeatInfo
+{
+	 
+}
+
+
+//用户注册协议(请求包)
+message Req_Register
+{
+	optional bytes str_passwd_md5by2 		= 1;		//密码2次md5（并加盐）,	已无效，由服务器生成
+	optional string str_name = 2;							//用户（设备)名称(ID),	已无效，由服务器生成
+	optional uint32 uint32_type = 3;						//用户类型; 1:设备
+	optional com.txz.ui.equipment.DeviceInfo msg_device_info = 4;			//device info
+	optional com.txz.ui.equipment.VersionInfo msg_version_info = 5;			//version info
+	optional uint32 uint32_login_ok_cnt = 6;												//开机后登录成功次数
+	optional com.txz.ui.equipment.ConfigInfo msg_config_info = 7;	//设备配置信息
+}
+//用户注册协议(回应包)  
+message Resp_Register
+{
+	optional uint64 uint64_uid = 1;			//内部通信账号ID
+	optional bytes str_comm_key = 2;		//登录通信key
+	optional uint32 uint32_type = 3;			//用户类型; 1:设备
+	optional string str_name = 4;				//用户名
+	optional bytes str_passwd_md5 = 5;		//用户密码
+	optional com.txz.ui.equipment.ServerConfig msg_server_config = 6;	//服务器配置信息
+}
+
+//设备轨迹协议
+message Trace
+{
+	optional com.txz.ui.map.GpsInfo  msg_gps = 1;	//gps信息
+	optional uint32 uint32_time = 2;							//记录时间
+	optional uint32 uint32_distance = 3;					//本位置与上一个位置的距离(单位：厘米）
+}
+
+message TraceList
+{
+	repeated Trace rpt_trace_list = 1;	//trace列表
+}
+
+//请求包
+message Req_ReportTrace
+{
+	optional TraceList msg_trace_list = 	 1;		//trace列表
+	optional uint32 uint32_begin_time = 2;	//trace数据的起始时间
+	optional uint32 uint32_end_time = 	 3;		//trace数据的结束时间
+}
+
+//回应包
+message Resp_ReportTrace
+{
+	optional uint32 uint32_begin_time = 1;	//trace数据的起始时间
+	optional uint32 uint32_end_time = 	 2;		//trace数据的结束时间
+}
+
+///////////////绑定微信URL///////////////////////////
+//请求包
+message Req_GetBindWXUrl
+{
+
+}
+
+//回应包
+message Resp_GetBindWXUrl
+{
+	optional bool b_is_bind = 1;	//是否绑定（true已经绑定，false未绑定）
+	optional com.txz.ui.equipment.WXUserInfo msg_wx = 2;	//微信用户信息（已经绑定，有效）
+	optional string str_bind_wx_url = 3;	//绑定微信URL（未绑定，有效）
+}
+
+///////////////绑定车队URL///////////////////////////
+//请求包
+message Req_GetBindCarTeamUrl
+{
+
+}
+
+//回应包
+message Resp_GetBindCarTeamUrl
+{
+	optional bool b_is_bind = 1;	//是否绑定（true已经绑定，false未绑定）
+	optional string str_car_info = 2;	//车辆信息（已经绑定，有效）
+	optional string str_bind_url = 3;	//绑定微信URL（未绑定，有效）
+}
+
+///////////////上传图片///////////////////////////
+//请求包
+message Req_UploadPic
+{
+	optional com.txz.ui.map.GpsInfo  msg_gps = 1;	//gps信息
+	optional bytes str_pic_data = 2;	//图片数据
+	optional uint32 uint32_time = 3;	//图片上传时间
+	optional uint32 uint32_type	= 4;	//图片上传类型（1:抓取通知上传；2：关机上传）
+	optional uint32 uint32_scale = 5;	//图片比例（0：正常图片；1：缩略图）
+	optional uint64  uint64_group_id = 6;	//图片组ID(非0：组图片，0：普通图片)，标识他们是缩略图、原图关系
+	optional uint32 uint32_err_code = 7;	//错误码（非0：错误）
+	optional string str_err_msg = 8;			//错误信息
+	optional uint64 uint64_push_mid = 9;	//推送消息ID
+}
+//回应包
+message Resp_UploadPic
+{
+}
+
+
+/////////上传语音///////////
+//请求包
+message Req_UploadVoice{
+	optional bytes str_voice_data =  1;	//语音路径
+	optional uint32 uint32_voice_time_length = 2;	//语音数据时间长度(单位毫秒)
+}
+//回应包
+message Resp_UploadVoice{
+	optional string str_url	= 1;	//语音链接
+}
+
+
+/////////异常震动开机唤醒上报///////////
+//请求包
+message Req_ShockWakeup{
+}
+//回应包
+message Resp_ShockWakeup{
+}
+

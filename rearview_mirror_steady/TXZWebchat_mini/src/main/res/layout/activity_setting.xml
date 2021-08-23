@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_help_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y80">
+
+        <!--<ImageView
+            android:layout_width="@dimen/y80"
+            android:layout_height="@dimen/y50"
+            android:layout_centerVertical="true"
+            android:src="@drawable/win_weixin_reason_back"
+            android:scaleType="centerInside"/>-->
+
+        <ImageButton
+            android:id="@+id/btn_setting_back"
+            android:layout_width="@dimen/y80"
+            android:layout_height="@dimen/y80"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/src_arrow_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/y34"
+            android:textColor="@color/color_help_tab_text"
+            android:text="@string/lb_setting_title"/>
+
+    </RelativeLayout>
+
+    <!--设置项比较少，直接写死先-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/y80">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:orientation="vertical">
+
+            <!--自动播报-->
+            <RelativeLayout
+                android:id="@+id/rl_setting_notify"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:layout_marginTop="@dimen/y3"
+                android:layout_marginBottom="@dimen/y3"
+                android:background="@drawable/selector_item_chat_session_bg">
+
+                <View
+                    android:id="@+id/view_setting_notify_icon"
+                    android:layout_width="@dimen/y60"
+                    android:layout_height="@dimen/y60"
+                    android:layout_marginLeft="@dimen/x24"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_setting_notify" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/view_setting_notify_icon"
+                    android:layout_marginLeft="@dimen/x24"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/y30"
+                    android:textColor="@color/color_primary"
+                    android:text="@string/lb_setting_auto_broad"/>
+
+                <com.txznet.webchat.ui.rearview_mirror.widget.IconTextStateBtn
+                    android:id="@+id/itsb_setting_switch_notify"
+                    android:layout_width="@dimen/y50"
+                    android:layout_height="@dimen/y32"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/y20"
+                    app:itsb_clickable="false"
+                    app:itsb_icon="@drawable/ic_setting_switch_on"
+                    app:itsb_icon_disabled="@drawable/ic_setting_switch_off"/>
+
+            </RelativeLayout>
+
+            <!--自动播报-->
+            <RelativeLayout
+                android:id="@+id/rl_setting_auto_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:layout_marginTop="@dimen/y3"
+                android:layout_marginBottom="@dimen/y3"
+                android:background="@drawable/selector_item_chat_session_bg">
+
+                <View
+                    android:id="@+id/view_setting_auto_login_icon"
+                    android:layout_width="@dimen/y60"
+                    android:layout_height="@dimen/y60"
+                    android:layout_marginLeft="@dimen/x24"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_setting_auto_login" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/view_setting_auto_login_icon"
+                    android:layout_marginLeft="@dimen/x24"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/y30"
+                    android:textColor="@color/color_primary"
+                    android:text="@string/lb_setting_auto_login"/>
+
+                <com.txznet.webchat.ui.rearview_mirror.widget.IconTextStateBtn
+                    android:id="@+id/itsb_setting_switch_auto_login"
+                    android:layout_width="@dimen/y50"
+                    android:layout_height="@dimen/y32"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/y20"
+                    app:itsb_clickable="false"
+                    app:itsb_icon="@drawable/ic_setting_switch_on"
+                    app:itsb_icon_disabled="@drawable/ic_setting_switch_off"/>
+
+            </RelativeLayout>
+
+            <!--清除缓存-->
+            <RelativeLayout
+                android:id="@+id/rl_setting_clear_cache"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:layout_marginTop="@dimen/y3"
+                android:layout_marginBottom="@dimen/y3"
+                android:background="@drawable/selector_item_chat_session_bg">
+
+                <View
+                    android:id="@+id/view_setting_clear_cache_icon"
+                    android:layout_width="@dimen/y60"
+                    android:layout_height="@dimen/y60"
+                    android:layout_marginLeft="@dimen/x24"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_setting_clear_cache" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/view_setting_clear_cache_icon"
+                    android:layout_marginLeft="@dimen/x24"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/y30"
+                    android:textColor="@color/color_primary"
+                    android:text="@string/lb_setting_clear_cache"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

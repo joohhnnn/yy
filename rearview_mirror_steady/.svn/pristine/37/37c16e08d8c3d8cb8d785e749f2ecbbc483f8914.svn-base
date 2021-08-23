@@ -1,0 +1,94 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- 窗口背景，开发调试 -->
+        <item name="android:windowBackground">@drawable/xml_bg_card</item>
+    </style>
+
+
+    <!-- start 股票相关 -->
+    <style name="shares_label">
+        <item name="android:textSize">@dimen/sp20</item>
+        <item name="android:textColor">@color/textColorSecondary</item>
+        <item name="android:paddingTop">@dimen/mdp10</item>
+        <item name="android:paddingBottom">@dimen/mdp10</item>
+    </style>
+
+    <style name="shares_value">
+        <item name="android:textSize">@dimen/sp20</item>
+        <item name="android:textColor">#00C873</item>
+        <item name="android:layout_marginLeft">@dimen/mdp10</item>
+        <item name="android:layout_marginRight">@dimen/mdp40</item>
+    </style>
+    <!-- end 股票相关 -->
+
+
+    <!--UI4.0-->
+    <!-- EditText设置提示文字样式 -->
+<!--    <style name="hintAppearance" parent="TextAppearance.AppCompat">-->
+<!--        <item name="android:textSize">18sp</item>-->
+<!--        <item name="android:textColor">@color/textColorSecondary</item>-->
+<!--    </style>-->
+
+    <!--表单标签样式-->
+    <style name="formTableLabel">
+        <item name="android:textSize">@dimen/sp24</item>
+        <item name="android:textColor">@color/textColorSecondary</item>
+    </style>
+
+    <style name="formTableContent">
+        <item name="android:textSize">@dimen/sp24</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="simKeyboardButtonStyle">
+        <item name="android:layout_width">96dp</item>
+        <item name="android:layout_height">96dp</item>
+        <item name="android:background">@drawable/xml_sim_keyboard_btn_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">36dp</item>
+    </style>
+
+    <!--智能捷径卡片-->
+    <style name="smartHandyCard">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@drawable/xml_smart_handy_item_bg</item>
+    </style>
+
+    <style name="SmartHandyCardHeadIcon">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="SmartHandyCardHeadTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SmartHandyCardHeadMore">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:src">@drawable/smart_handy_selector_more</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+</resources>

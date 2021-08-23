@@ -1,0 +1,6 @@
+{
+	'path' : '../../../projects/TXZSDKDemo',
+	'apk' : False,
+	'zip' : True
+}
+

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/m25"
+        android:layout_marginLeft="@dimen/m25"
+        android:background="@drawable/news_tip_bg"
+        android:gravity="center"
+        android:padding="@dimen/m5" >
+
+        <LinearLayout
+            android:id="@+id/ll_news_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/m10" >
+
+            <ImageView
+                android:layout_width="@dimen/m40"
+                android:layout_height="@dimen/m50"
+                android:layout_marginRight= "@dimen/m25"
+                android:layout_marginLeft= "@dimen/m25"
+                android:src="@drawable/news_tip_icon" />
+				
+            <TextView
+                android:id="@+id/tv_news_tag"
+                android:singleLine="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight= "@dimen/m12"
+                android:background="#00FFFFFF" />
+
+            <TextView
+                android:id="@+id/tv_news_text1"
+                android:singleLine="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight= "@dimen/m12"
+                android:background="#00FFFFFF" />
+
+            <TextView
+                android:id="@+id/tv_news_separator1"
+                android:singleLine="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight= "@dimen/m12"
+                android:background="#00FFFFFF" />
+
+            <TextView
+                android:id="@+id/tv_news_text2"
+                android:singleLine="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_news_exit"
+            android:layout_width="@dimen/m35"
+            android:layout_height="@dimen/m35"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight= "@dimen/m30"
+            android:src="@drawable/news_tip_exit" />
+    </RelativeLayout>
+
+</RelativeLayout>

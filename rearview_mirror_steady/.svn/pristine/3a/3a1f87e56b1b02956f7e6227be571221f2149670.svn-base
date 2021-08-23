@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--用户选择页面-->
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/rl_login_wechat_panel0"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+
+        <FrameLayout
+            android:id="@+id/fl_push_login_avatar"
+            android:layout_width="@dimen/y280"
+            android:layout_height="@dimen/y280"
+            android:layout_centerVertical="true">
+
+            <!--RoundedImageView设置边框接口有问题, 所以采用叠加的方式实现头像边框-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_mirror_avatar_bg"/>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_push_login_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/y10"
+                android:src="@drawable/default_headimage"
+                app:riv_corner_radius="@dimen/y280"/>
+
+            <ImageView
+                android:layout_width="@dimen/y24"
+                android:layout_height="@dimen/y24"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="@drawable/ic_push_login_arrow_down"/>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/x280"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x32"
+            android:layout_toRightOf="@id/fl_push_login_avatar">
+
+            <TextView
+                android:id="@+id/tv_push_login_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lb_push_login_tip"
+                android:textColor="@color/color_wechat_text_hint"
+                android:textSize="@dimen/y28"/>
+
+            <Button
+                android:id="@+id/btn_push_login_confirm"
+                android:layout_width="@dimen/y240"
+                android:layout_height="@dimen/y80"
+                android:layout_below="@id/tv_push_login_tip"
+                android:layout_marginTop="@dimen/y24"
+                android:background="@drawable/selector_qrcode_refresh"
+                android:text="@string/lb_push_login_confirm_btn_text"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/y28"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--登录确认页面-->
+    <RelativeLayout
+        android:id="@+id/rl_login_wechat_panel2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+
+        <FrameLayout
+            android:id="@+id/fl_image"
+            android:layout_width="@dimen/y280"
+            android:layout_height="@dimen/y280"
+            android:layout_centerVertical="true">
+
+            <!--RoundedImageView设置边框接口有问题, 所以采用叠加的方式实现头像边框-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_mirror_avatar_bg"/>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_login_wechat_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/y10"
+                android:src="@drawable/default_headimage"
+                app:riv_corner_radius="@dimen/y300"/>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x48"
+            android:layout_toRightOf="@id/fl_image">
+
+            <TextView
+                android:id="@+id/tv_login_wechat_confirm_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lb_login_wechat_scan_success"
+                android:textColor="@color/color_wechat_text_hint"
+                android:textSize="@dimen/y30"/>
+
+            <TextView
+                android:id="@+id/tv_login_wechat_confirm_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_login_wechat_confirm_title"
+                android:layout_marginTop="@dimen/y16"
+                android:text="@string/lb_login_wechat_scan_success2"
+                android:textColor="@color/color_wechat_text_sub_hint"
+                android:textSize="@dimen/y30"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_login_wechat_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/fl_image"
+            android:layout_marginLeft="@dimen/x48"
+            android:layout_toRightOf="@id/fl_image"
+            android:background="@color/transparent"
+            android:text="@string/lb_login_wechat_return"
+            android:textColor="@color/color_wechat_text_return"
+            android:textSize="@dimen/y24"/>
+
+    </RelativeLayout>
+
+    <!--二维码页面-->
+    <RelativeLayout
+        android:id="@+id/rl_login_wechat_panel1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible">
+
+
+        <FrameLayout
+            android:id="@+id/fl_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <!--黑色边框, 因Drawable中的dimens无法动态设置适配分辨率, 采用View叠加方式实现-->
+            <View
+                android:layout_width="@dimen/y260"
+                android:layout_height="@dimen/y260"
+                android:background="#000000"/>
+
+            <!--<View
+                android:layout_width="@dimen/y240"
+                android:layout_height="@dimen/y240"
+                android:background="#ffffff"
+                android:layout_gravity="center"/>-->
+            <!--黑色边框-->
+
+            <ImageView
+                android:id="@+id/iv_login_wechat_qrcode"
+                android:layout_width="@dimen/y240"
+                android:layout_height="@dimen/y240"
+                android:layout_gravity="center"
+                style="@style/qr_landscape"/>
+
+            <ProgressBar
+                android:id="@+id/pb_login_wechat_code"
+                style="?android:progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:id="@+id/view_login_wechat_qr_click_hint"
+                android:layout_width="@dimen/y24"
+                android:layout_height="@dimen/y24"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="@drawable/ic_push_login_arrow_down"/>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_right_container"
+            android:layout_width="@dimen/x280"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x32"
+            android:layout_toRightOf="@id/fl_code">
+
+            <TextView
+                android:id="@+id/tv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lb_login_wechat_tip"
+                android:textColor="@color/color_wechat_text_hint"
+                android:textSize="@dimen/y28"/>
+
+            <Button
+                android:id="@+id/btn_login_wechat_refresh"
+                android:layout_width="@dimen/y240"
+                android:layout_height="@dimen/y80"
+                android:layout_below="@id/tv_label"
+                android:layout_marginTop="@dimen/y24"
+                android:background="@drawable/selector_qrcode_refresh"
+                android:text="@string/lb_login_wechat_refresh"
+                android:textColor="@color/color_wechat_btn_refresh_text"
+                android:textSize="@dimen/y30"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_login_wechat_qr_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/rl_right_container"
+            android:layout_below="@id/rl_right_container"
+            android:layout_marginTop="@dimen/y8"
+            android:text="@string/lb_login_wechat_error"
+            android:textColor="@color/color_wechat_text_error"
+            android:textSize="@dimen/y20"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlNotification_Content"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y100"
+    android:background="#f2232930"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical">
+
+        <com.txznet.record.view.CircleImageView
+            android:id="@+id/imgNotification_Wx_Head"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/y60"
+            android:layout_marginLeft="@dimen/x32"
+            app:border_color="#fff"
+            app:border_width="@dimen/y2" />
+
+        <TextView
+            android:id="@+id/txtNotification_Wx_Nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x20"
+            android:ellipsize="end"
+            android:maxWidth="@dimen/x300"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:textSize="@dimen/y28" />
+
+        <ImageView
+            android:id="@+id/imgNotification_Wx_Voice"
+            android:layout_width="@dimen/x36"
+            android:layout_height="@dimen/y36"
+            android:layout_marginLeft="@dimen/x16"
+            android:src="@drawable/win_notification_ic_voice_anim" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llNotification_Wx_Reply"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="@dimen/y64"
+            android:background="#4cffffff" />
+
+        <ImageView
+            android:layout_width="@dimen/x48"
+            android:layout_height="@dimen/y48"
+            android:layout_marginLeft="@dimen/x16"
+            android:src="@drawable/win_notification_ic_record" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_marginRight="@dimen/x16"
+            android:text="回复微信"
+            android:textColor="#30befe"
+            android:textSize="@dimen/y24" />
+    </LinearLayout>
+</RelativeLayout>

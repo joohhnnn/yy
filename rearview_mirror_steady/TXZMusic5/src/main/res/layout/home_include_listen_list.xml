@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/listen_list_bg"
+    android:orientation="vertical"
+    tools:background="@drawable/base_bg"
+    tools:layout_width="@dimen/m234">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m38"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/m15"
+        android:paddingRight="@dimen/m15"
+        android:textSize="@dimen/base_tv_h5"
+        tools:text="经典必听榜" />
+
+    <View
+        style="@style/Base_Divider_Horizontal"
+        android:layout_marginLeft="@dimen/m15"
+        android:layout_marginRight="@dimen/m15" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_billboard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <View
+        style="@style/Base_Divider_Horizontal"
+        android:layout_marginLeft="@dimen/m15"
+        android:layout_marginRight="@dimen/m15" />
+
+    <com.txznet.music.widget.AlphaTextView
+        android:id="@+id/tv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingLeft="@dimen/m15"
+        android:paddingTop="@dimen/m8"
+        android:paddingRight="@dimen/m15"
+        android:paddingBottom="@dimen/m8"
+        android:text="查看更多"
+        android:textColor="@color/white_50"
+        android:textSize="@dimen/base_tv_h7" />
+
+</LinearLayout>

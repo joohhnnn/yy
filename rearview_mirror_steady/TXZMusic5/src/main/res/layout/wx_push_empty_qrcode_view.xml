@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:background="@drawable/base_bg">
+
+    <FrameLayout
+        android:id="@+id/vg_qrcode"
+        android:layout_width="@dimen/m176"
+        android:layout_height="@dimen/m176"
+        android:background="@drawable/wx_push_qrcode_empty_bg">
+
+        <ImageView
+            android:id="@+id/iv_qrcode"
+            android:layout_width="@dimen/m152"
+            android:layout_height="@dimen/m152"
+            android:layout_gravity="center" />
+
+        <com.txznet.music.widget.AlphaTextView
+            android:id="@+id/tv_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:text="@string/wx_push_qrcode_retry_str"
+            android:textColor="@color/white_90"
+            android:textSize="@dimen/base_tv_h4"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_loading"
+            android:layout_width="@dimen/m93"
+            android:layout_height="@dimen/m93"
+            android:layout_gravity="center"
+            android:src="@drawable/wx_push_qrcode_refresh_icon"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m16"
+        android:text="@string/wx_push_empty_qrcode_str"
+        android:textColor="@color/white_50"
+        android:textSize="@dimen/base_tv_h4" />
+</LinearLayout>

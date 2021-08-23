@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_main_bg">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_left_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_widthPercent="25%">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/civ_main_user_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/y40"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_headimage"
+            app:riv_corner_radius="@dimen/y140"
+            app:layout_heightPercent="29.2%"
+            app:layout_aspectRatio="100%"/>
+
+        <TextView
+            android:id="@+id/tv_main_user_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_below="@id/civ_main_user_icon"
+            android:layout_marginTop="@dimen/x20"
+            android:textSize="@dimen/y26"
+            android:textColor="@color/color_main_text_name"
+            android:gravity="center"
+            tools:text="我擦勒闹不住"/>
+
+        <Button
+            android:id="@+id/btn_main_exit"
+            android:focusable="false"
+            android:layout_width="@dimen/y64"
+            android:layout_height="@dimen/y64"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/y20"
+            android:background="@drawable/selector_main_btn_exit"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+
+
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/rl_left_container">
+
+        <com.txznet.webchat.ui.rearview_mirror.widget.IconTextStateBtn
+            android:id="@+id/view_main_btn_recent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="50%"
+            app:layout_widthPercent="50%"
+            android:background="@drawable/selector_main_square_btn"
+            app:itsb_icon="@drawable/wx_home_icon_weixin"
+            app:itsb_text="@string/lb_main_recent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <com.txznet.webchat.ui.rearview_mirror.widget.IconTextStateBtn
+            android:id="@+id/view_main_btn_setting"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="50%"
+            app:layout_widthPercent="50%"
+            android:layout_alignLeft="@id/view_main_btn_recent"
+            android:layout_below="@id/view_main_btn_recent"
+            android:background="@drawable/selector_main_square_btn"
+            app:itsb_icon="@drawable/wx_home_icon_setting"
+            app:itsb_text="@string/lb_main_setting"/>
+
+        <com.txznet.webchat.ui.rearview_mirror.widget.IconTextStateBtn
+            android:id="@+id/view_main_btn_care"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="50%"
+            app:layout_widthPercent="50%"
+            android:layout_alignTop="@id/view_main_btn_setting"
+            android:layout_toRightOf="@id/view_main_btn_setting"
+            android:background="@drawable/selector_main_square_btn"
+            app:itsb_icon="@drawable/wx_home_icon_care"
+            app:itsb_text="@string/lb_main_care"/>
+
+        <com.txznet.webchat.ui.rearview_mirror.widget.IconTextStateBtn
+            android:id="@+id/view_main_btn_exit"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="50%"
+            app:layout_widthPercent="50%"
+            android:layout_alignTop="@id/view_main_btn_setting"
+            android:layout_toRightOf="@id/view_main_btn_setting"
+            android:background="@drawable/selector_main_square_btn"
+            app:itsb_icon="@drawable/wx_home_icon_exit"
+            app:itsb_text="@string/lb_main_exit"/>
+
+        <com.txznet.webchat.ui.rearview_mirror.widget.IconTextStateBtn
+            android:id="@+id/view_main_btn_help"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="50%"
+            app:layout_widthPercent="50%"
+            android:background="@drawable/selector_main_square_btn"
+            app:itsb_icon="@drawable/wx_home_icon_guide"
+            app:itsb_text="@string/lb_main_help"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/m56"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/m46"
+    android:paddingRight="@dimen/m46"
+    tools:background="@drawable/base_bg">
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="@dimen/base_tv_h4"
+        tools:text="TextView" />
+
+    <com.txznet.music.widget.AlphaLinearLayout
+        android:id="@+id/ll_delete_mgr"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/m24"
+            android:layout_height="@dimen/m24"
+            android:src="@drawable/base_delete_mgr_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/m12"
+            android:text="删除管理"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_tv_h4" />
+    </com.txznet.music.widget.AlphaLinearLayout>
+</LinearLayout>

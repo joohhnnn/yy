@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andexert.library.RippleView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y84"
+    android:background="@drawable/bg_ripple"
+    android:descendantFocusability="blocksDescendants"
+    android:minHeight="@dimen/y84"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/y2"
+    android:paddingTop="@dimen/y2"
+    ripple:rv_rippleDuration="300"
+    ripple:rv_type="rectangle" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.txznet.record.view.GradientProgressBar
+            android:id="@+id/prgChat_List_Item_Waiting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/y80"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <TextView
+                android:id="@+id/txtChat_List_Item_Index"
+                style="@style/text_30"
+                android:layout_width="@dimen/y44"
+                android:layout_height="@dimen/y44"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/x16"
+                android:layout_marginStart="@dimen/x16"
+                android:background="@drawable/poi_item_circle_bg"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="0dp"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/y28" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txtChat_List_Item_Main"
+                        style="@style/text_20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:singleLine="true"
+                        android:text="1331736727"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:id="@+id/txtChat_List_Item_Main_"
+                        style="@style/text_20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:singleLine="true"
+                        android:textColor="#FFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txtChat_List_Item_Province"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="广东"
+                        android:textColor="#aaa"
+                        android:textSize="@dimen/y16" />
+
+                    <TextView
+                        android:id="@+id/txtChat_List_Item_City"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x12"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="深圳"
+                        android:textColor="#aaa"
+                        android:textSize="@dimen/y16" />
+
+                    <TextView
+                        android:id="@+id/txtChat_List_Item_Isp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x12"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="移动"
+                        android:textColor="#aaa"
+                        android:textSize="@dimen/y16" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/list_item_divider_height"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#4c4c4c"
+        android:visibility="gone" />
+</com.andexert.library.RippleView>

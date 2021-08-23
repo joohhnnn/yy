@@ -1,0 +1,30 @@
+package com.txz.version;
+
+import "ui_event.proto";
+
+
+//基础指令枚举
+enum SubCommand
+{
+	SUBCMD_CHECK_NEW_VERSION = 1; //请求带VersionInfo，响应携带NewVersionInfo
+	SUBCMD_NEW_VERSION_PUBLISHED = 2; //后台通知新版本发布
+	
+}
+
+
+//错误码
+enum ErrorCode
+{
+	EC_VERSION_LISENCE_FORBIDDEN 				= 0x10001;  //lisence禁用
+}
+
+
+
+message NewVersionInfo
+{
+	optional com.txz.ui.event.VersionInfo msg_new_version_info = 1; //没有该参数时表示没有新版本
+	optional string str_old_md5 = 2; //当前版本安装包校验，校验本地包决定是否进行全量下载
+	optional string str_new_md5 = 3; //新版本安装包校验
+	optional string str_full_download_url = 4; //全量包下载路径
+	optional string str_inc_download_url = 5; //增量包下载路径
+}

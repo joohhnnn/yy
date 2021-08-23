@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#00000000">
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <com.txznet.webchat.ui.common.widget.ThemedTextView
+            android:id="@+id/tv_bind_reason_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y44"
+            android:textColor="@color/color_bind_item_sub_text"
+            android:textSize="@dimen/y24"
+            tools:text="帮助内容呢帮助内容帮助内容帮助内容"
+            app:theme_color="primary_dark"/>
+    </FrameLayout>
+
+    <com.txznet.webchat.ui.common.widget.ThemedTextView
+        android:id="@+id/tv_bind_reason_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fl_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/color_bind_item_text"
+        android:textSize="@dimen/y36"
+        tools:text="帮助标题"
+        app:theme_color="primary"/>
+
+    <ImageView
+        android:id="@+id/iv_bind_reason_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/y6"
+        android:layout_marginBottom="@dimen/y6"
+        android:layout_above="@id/tv_bind_reason_title"
+        android:scaleType="centerInside"
+        tools:src="@drawable/src_bind_reason_1"/>
+
+
+</RelativeLayout>

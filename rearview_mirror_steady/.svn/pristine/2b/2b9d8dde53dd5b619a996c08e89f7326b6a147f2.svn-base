@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_left_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/x30"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_left_back"
+            android:layout_width="@dimen/m32"
+            android:layout_height="@dimen/m32"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x20"
+            android:src="@drawable/ic_player_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x20"
+            android:clickable="false"
+            android:text="返回"
+            android:textSize="@dimen/y24" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/head_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="?attr/text_size_h1"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/str_car_fm"/>
+
+
+
+</RelativeLayout>

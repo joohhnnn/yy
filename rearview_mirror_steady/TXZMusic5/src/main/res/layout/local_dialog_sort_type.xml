@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_dialog_shadow">
+
+    <LinearLayout
+        android:layout_width="@dimen/m265"
+        android:layout_height="@dimen/m176"
+        android:layout_gravity="center"
+        android:background="@color/base_dialog_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <com.txznet.music.widget.AlphaRelativeLayout
+            android:id="@+id/rl_sort_by_time"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/m8"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/m23"
+            android:paddingRight="@dimen/m23">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="按添加时间排序"
+                android:textColor="@color/white"
+                android:textSize="@dimen/base_tv_h4" />
+
+            <RadioButton
+                android:id="@+id/rb_sort_by_time"
+                android:layout_width="@dimen/m24"
+                android:layout_height="@dimen/m24"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/base_selector_btn_selector"
+                android:button="@null"
+                android:clickable="false" />
+        </com.txznet.music.widget.AlphaRelativeLayout>
+
+        <com.txznet.music.widget.AlphaRelativeLayout
+            android:id="@+id/rl_sort_by_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/m8"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/m23"
+            android:paddingRight="@dimen/m23">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="按歌曲名首字母排序"
+                android:textColor="@color/white"
+                android:textSize="@dimen/base_tv_h4" />
+
+            <RadioButton
+                android:id="@+id/rb_sort_by_name"
+                android:layout_width="@dimen/m24"
+                android:layout_height="@dimen/m24"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/base_selector_btn_selector"
+                android:button="@null"
+                android:clickable="false" />
+        </com.txznet.music.widget.AlphaRelativeLayout>
+
+        <View style="@style/Base_Divider_Horizontal" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m48"
+            android:background="@drawable/base_dialog_btn_bg"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_tv_h4" />
+    </LinearLayout>
+</FrameLayout>

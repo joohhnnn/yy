@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="?attr/bar_player_view_padding"
+    android:paddingRight="?attr/bar_player_view_padding">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/local_header_height">
+        <!--
+                <ImageView
+                    android:id="@+id/iv_local"
+                    android:layout_width="@dimen/m32"
+                    android:layout_height="@dimen/m32"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/list_icon" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x16"
+                    android:layout_toRightOf="@+id/iv_local"
+                    android:text="@string/local_list_title"
+                    android:textColor="@color/white"
+                    android:textSize="?attr/text_size_h3" />
+
+
+                &lt;!&ndash;副标题&ndash;&gt;
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x16"
+                    android:layout_toRightOf="@+id/tv_title"
+                    android:text="@string/local_list_sub_title"
+                    android:textColor="@color/local_song_list_sub_title_color"
+                    android:textSize="?attr/text_size_h4" />-->
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/checkbox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:button="@null"
+            android:checked="false"
+            android:text="全选"
+            android:textColor="#FFFFFF"
+            android:textSize="?attr/text_size_h2" />
+
+
+        <Button
+            android:id="@+id/btn_delete"
+            style="@style/round_rectangle"
+            android:layout_width="@dimen/x104"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_marginBottom="@dimen/y8"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:text="删除"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_scan"
+            style="@style/round_rectangle"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_marginBottom="@dimen/y8"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="@dimen/x13"
+            android:layout_toLeftOf="@+id/btn_delete"
+            android:text="开始扫描"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <com.txznet.music.widget.LoadingView
+        android:id="@+id/layout_library_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_header">
+
+        <include layout="@layout/fragment_swipe_load_layout" />
+    </com.txznet.music.widget.LoadingView>
+</android.support.percent.PercentRelativeLayout>

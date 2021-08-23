@@ -1,0 +1,15 @@
+#使用 # 进行注释, 当行起始加上 #, 这行配置被禁用.
+
+# 全局过滤, 如果没设置 -filter-suggest 并不会应用到 建议的maindexlist.
+# 如果你想要某个已被排除的包路径在maindex中，则使用 -keep 选项，即使他已经在分包的路径中.
+# 注意，没有split只用keep时，miandexlist将仅包含keep指定的类。
+
+-keep class android.arch.lifecycle.** {*;}
+-keep class com.squareup.leakcanary.** {*;}
+-keep class com.txznet.comm.***{*;}
+-keep class com.txznet.loader.***{*;}
+-keep class com.txznet.plugin.**.**.** {*;}
+-keep class com.qihoo360.replugin.**.**.** {*;}
+
+#-keep class android.support.v4.view.**{*;}
+#-keep class com.txznet.***{*;}

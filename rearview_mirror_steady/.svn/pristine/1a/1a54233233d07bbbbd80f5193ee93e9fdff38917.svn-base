@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="VoiceWaveView">
+        <attr name="voice_lines" format="integer" />
+        <attr name="voice_line_max_length" format="dimension" />
+        <attr name="voice_line_min_length" format="dimension" />
+        <attr name="voice_line_interval" format="dimension" />
+        <attr name="voice_line_width" format="dimension" />
+        <attr name="voice_line_color" format="color" />
+    </declare-styleable>
+</resources>

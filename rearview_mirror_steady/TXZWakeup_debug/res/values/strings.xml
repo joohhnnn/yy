@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="fm_home_icon_me">个人</string>
+    <string name="fm_home_icon_music">音乐</string>
+    <string name="fm_home_icon_hot_radio">热门节目</string>
+    <string name="fm_home_icon_news">新闻</string>
+    <string name="fm_home_icon_live">广播</string>
+    <string name="fm_home_icon_novel">小说</string>
+    <string name="fm_home_icon_emotion">情感</string>
+    <string name="fm_home_icon_funny">搞笑</string>
+    <string name="fm_home_icon_finance">财经</string>
+    <string name="fm_home_icon_crosstalk">相声评书</string>
+    <string name="fm_home_icon_talkshow">脱口秀</string>
+    <string name="fm_home_icon_sports">体育</string>
+    <string name="fm_home_icon_cars">汽车</string>
+    <string name="fm_home_icon_radio_play">广播剧</string>
+    <string name="fm_home_icon_bisexual">两性</string>
+    <string name="fm_home_icon_parenting">亲子</string>
+    <string name="localMusic">本地音乐</string>
+    <string name="play_history">最近播放</string>
+    <string name="source">来源于:%s</string>
+    <string name="ptr_pull_to_refresh">下拉刷新</string>
+    <string name="ptr_release_to_refresh">释放刷新</string>
+    <string name="ptr_refreshing">正在刷新...</string>
+    <string name="ptr_last_updated">最后更新: %1$s</string>
+    <!-- 上拉刷新 -->
+    <string name="pull_to_refresh">上拉刷新</string>
+    <string name="total_song">已同步%s首歌曲</string>
+    <string name="search_local_song">扫描本地歌曲%s</string>
+    <string name="title_artist"><![CDATA[注数：&#160;&#160;<font color="#ff0000" size="10">555</font>&#160;&#160;注]]></string>
+
+</resources>

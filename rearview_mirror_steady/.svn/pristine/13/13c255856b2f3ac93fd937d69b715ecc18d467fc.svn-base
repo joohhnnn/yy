@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.txznet.music.ui.view.RefreshHeaderView xmlns:android="http://schemas.android.com/apk/res/android"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/y100">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="1233333"/>
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="@dimen/m40"
+            android:layout_height="@dimen/m40"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/tv_title"
+            android:background="@drawable/ic_arrow"/>
+
+        <ImageView
+            android:id="@+id/iv_success"
+            android:layout_width="@dimen/m40"
+            android:layout_height="@dimen/m40"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/tv_title"
+            android:background="@drawable/ic_success"/>
+
+        <ImageView
+            android:id="@+id/iv_progress"
+            android:layout_width="@dimen/m40"
+            android:layout_height="@dimen/m40"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/tv_title"
+            android:background="@drawable/ic_progress"/>
+
+
+    </RelativeLayout>
+</com.txznet.music.ui.view.RefreshHeaderView>

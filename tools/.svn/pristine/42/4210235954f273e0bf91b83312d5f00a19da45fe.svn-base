@@ -1,0 +1,7 @@
+{
+	'path' : '../../../dxwy_rom/dxwy_a33/TXZBluetooth',
+	'name' : 'TXZBluetooth',
+	'apk' : True,
+	'zip' : False
+}
+

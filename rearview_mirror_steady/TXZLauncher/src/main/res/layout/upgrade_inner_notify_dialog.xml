@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="320px"
+    android:layout_height="124px"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_upgrade_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_upgrade_tips"
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#FFFFFFFF"
+        android:textSize="15px"
+        tools:text="是否确认升级语音助手V3.0.0"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#3A4761"/>
+
+    <TextView
+        android:id="@+id/tv_upgrade_wakeup_tips"
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#B9BCC2"
+        android:textSize="15px"
+        tools:text="你可以说确定或取消"/>
+
+</LinearLayout>

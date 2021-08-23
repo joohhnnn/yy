@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andexert.library.RippleView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/m100"
+    android:minHeight="@dimen/m100"
+    android:orientation="vertical"
+    ripple:rv_rippleDuration="300"
+    ripple:rv_type="rectangle" >
+
+    <FrameLayout
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/list_item_content_marginBottom"
+        android:layout_marginTop="?attr/list_item_content_marginTop" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="@dimen/m80"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_item_reminder_index"
+                android:layout_width="?attr/list_item_txtNum_width"
+                android:layout_height="?attr/list_item_txtNum_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="?attr/list_item_txtNum_marginLeft"
+                android:layout_marginStart="?attr/list_item_txtNum_marginLeft"
+                android:background="@drawable/poi_item_circle_bg"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="0dp"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/m30" />
+
+            <TextView
+                android:id="@+id/tv_item_reminder_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/m16"
+                android:layout_toRightOf="@id/tv_item_reminder_index"
+                android:layout_marginTop="@dimen/m19"
+                android:singleLine="true"
+                android:text=""
+                android:ellipsize="end"
+                android:textColor="#fff"
+                android:textSize="@dimen/m26" />
+            <ImageView 
+                android:id="@+id/iv_time_icon"
+                android:layout_alignLeft="@id/tv_item_reminder_content"
+                android:background="@drawable/reminder_time_icon"
+                android:layout_width="@dimen/m20"
+                android:layout_height="@dimen/m24"
+                android:layout_marginTop="@dimen/m5"
+                android:scaleType="centerCrop"
+                android:layout_below="@id/tv_item_reminder_content"
+                />
+			<TextView 
+			    android:id="@+id/tv_item_reminder_time"
+			    android:text=""
+			    android:textColor="#fff"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textSize="@dimen/m20"
+			    android:layout_alignBaseline="@id/iv_time_icon"
+			    android:layout_below="@id/tv_item_reminder_content"
+			    android:layout_toRightOf="@id/iv_time_icon"
+			    android:ellipsize="end"
+			    android:singleLine="true"
+			    android:layout_marginLeft="@dimen/m12"
+			    />
+			<TextView 
+			    android:id="@+id/tv_reminder_time_full"
+			    android:text="2017/12/19 12:00"
+			    android:visibility="invisible"
+			    android:layout_below="@id/tv_item_reminder_content"
+			    android:layout_toRightOf="@id/iv_time_icon"
+			    android:layout_marginLeft="@dimen/m12"
+			    android:layout_width="wrap_content"
+			    android:layout_height="1dp"
+			    />
+			<ImageView 
+                android:id="@+id/iv_position_icon"
+                android:background="@drawable/reminder_position_icon"
+                android:layout_width="@dimen/m20"
+                android:layout_height="@dimen/m24"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="@dimen/m5"
+                android:layout_below="@id/tv_item_reminder_content"
+                android:layout_toRightOf="@id/tv_reminder_time_full"
+                android:layout_marginLeft="@dimen/m27"
+                />
+			<TextView 
+			    android:id="@+id/tv_item_reminder_position"
+			    android:text=""
+			    android:textColor="#fff"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textSize="@dimen/m20"
+			    android:ellipsize="end"
+			    android:singleLine="true"
+			    android:layout_alignBaseline="@id/iv_position_icon"
+			    android:layout_below="@id/tv_item_reminder_content"
+			    android:layout_toRightOf="@id/iv_position_icon"
+			    android:layout_marginLeft="@dimen/m12"
+			    
+			    />
+
+        </RelativeLayout>
+    </FrameLayout>
+	<View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/list_item_divider_height"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#4c4c4c"
+        android:visibility="gone" />
+</com.andexert.library.RippleView>

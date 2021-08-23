@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_color" >
+
+    <ImageView
+        android:id="@+id/btnHelp_Close"
+        android:layout_width="@dimen/x50"
+        android:layout_height="@dimen/y50"
+        android:layout_marginTop="@dimen/y16"
+        android:scaleType="center"
+        android:src="@drawable/win_help_close" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/text_25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y20"
+            android:text="@string/label_record_fail_title" />
+
+        <TextView
+            style="@style/text_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y5"
+            android:text="@string/label_record_fail_1_1" />
+
+        <TextView
+            android:id="@+id/secure1"
+            style="@style/text_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y5"
+            android:text="@string/label_record_fail_1_2" />
+
+        <TextView
+            android:id="@+id/secure2"
+            style="@style/text_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y15"
+            android:text="@string/label_record_fail_1_3" />
+
+        <TextView
+            style="@style/text_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y5"
+            android:text="@string/label_record_fail_2_1" />
+
+        <TextView
+            style="@style/text_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_record_fail_2_2" />
+    </LinearLayout>
+
+</RelativeLayout>

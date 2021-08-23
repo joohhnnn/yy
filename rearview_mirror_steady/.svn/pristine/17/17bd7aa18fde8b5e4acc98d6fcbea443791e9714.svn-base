@@ -1,0 +1,271 @@
+package com.txz.ui.equipment;
+
+import "ui_map.proto";
+
+enum SubEvent
+{
+	SUBEVENT_REQ_GET_BIND_WX_URL 	= 1;		//请求，获取绑定微信二维码的url，携带Req_GetBindWxUrl
+	SUBEVENT_RESP_GET_BIND_WX_URL = 2;	//响应：获取绑定微信二维码的url，携带Resp_GetBindWxUrl
+	SUBEVENT_REQ_UPLOAD_PIC 				=	3;	//上传图片，携带UploadPic，携带Req_UploadPic
+	SUBEVENT_RESP_UPLOAD_PIC 				=	4;	//上传图片，携带UploadPic，携带Resp_UploadPic
+	SUBEVENT_REQ_LOGOUT					= 5;	//下线操作
+	SUBEVENT_RESP_LOGOUT					= 6;	//下线操作(暂时没用）	
+	SUBEVENT_REQ_UPLOAD_VOICE 				=	7;	//上传语音请求，携带UploadVoice，携带Req_UploadVoice
+	SUBEVENT_RESP_UPLOAD_VOICE 				=	8;	//上传语音回应，携带UploadVoice，携带Resp_UploadVoice
+	SUBEVENT_REQ_LICENSE =  9;							//授权成功事件
+	SUBEVENT_RESP_LICENSE =  10;							//授权成功事件
+	SUBEVENT_REQ_GET_BIND_CAR_TEAM_URL = 11; //请求，获取绑定车队的url，携带Req_GetBindCarTeamUrl
+	SUBEVENT_RESP_GET_BIND_CAR_TEAM_URL = 12; //响应：获取绑定车队的url，携带Resp_GetBindCarTeamUrl
+ 
+ 	SUBEVENT_NOTIFY_ACTIVITED_WITH_NET = 13; //通知联网激活成功
+		
+	SUBEVENT_NOTIFY_UPLOAD_PIC = 102;						//请求抓拍图片，携带Notify_UploadPic
+	SUBEVENT_NOTIFY_NAVIGATION = 103;					//导航通知，携带com.txz.ui.map.NavigateInfo
+	SUBEVENT_NOTIFY_BIND_WX_SUCCESS = 104;			//绑定微信成功通知，携带Notify_BindWxSuccess
+	SUBEVENT_NOTIFY_UNBIND_WX_SUCCESS = 105;		//解绑微信成功通知，携带Notify_UnbindWxSuccess
+	SUBEVENT_NOTIFY_INSTALL_APK = 106;					//安装apk通知，携带Notify_InstallApk
+	SUBEVENT_NOTIFY_CAR_TEAM = 107;						//车队push信息，携带Notify_CarTeam
+}
+
+message PackageInfo
+{
+	optional string str_package_name = 1; 					//包名
+	optional string str_package_version = 2; 				//版本号
+	optional bool b_upgrade_flag = 3;						//状态（true：正在升级中）
+	optional uint32 uint32_upgrade_progress = 4;		//状态（升级进度）
+	optional string str_upgrade_target_version = 5;	//升级目标版本
+}
+
+message VersionInfo
+{
+	optional string str_platform_info = 1; 				//平台信息
+	repeated PackageInfo rpt_msg_package_list = 2;	//app信息列表
+	optional string str_txz_version_info = 3;	//同行者核心程序版本信息
+	optional string str_app_id = 4;					//app id 为了识别是哪个方案公司
+	optional string str_txz_app_custom_id = 5;		//方案公司的特定客户
+}
+
+message DeviceInfo
+{
+	optional string str_imei = 1;			    				//imei
+	optional string str_cpu_serial = 2;	        			//cpu serial
+	optional string str_wifi_mac_addr = 3;	    		//mac addr
+	optional string str_bluetooth_mac_addr = 4;		//bluetooth mac addr
+	optional string str_build_serial = 5;	    			//build serial
+	optional string str_android_id = 6;	        		//android id
+	optional string str_imsi1 = 7;             				//第一个SIM卡，相当于当前用户使用号码标志
+    optional string str_imsi2 = 8;             				//第二个SIM卡，相当于当前用户使用号码标志
+    optional string str_connected_wifi_addr = 9;		//设备连接wifi的mac地址
+    optional string str_connected_wifi_ssid = 10;	//设备连接wifi的名称(ssid)
+    optional string str_uuid = 11;							//用户定义ID
+}
+
+//声控引擎类型
+enum VoiceEngineType
+{
+	VET_YUNZHISHENG = 1;		//云之声
+	VET_SIBICHI = 2;					//思必驰
+	VET_IFLY = 3;						//讯飞
+}
+
+//声控
+enum VoiceEngineMode
+{
+	VEM_TTS_ASR = 1;
+	VEM_ONLY_TTS = 2;
+	VEM_ONLY_ASR = 3;
+	VEM_NONE = 4;
+}
+
+message LicenseVerifyRule
+{
+	optional bool b_imei = 1;			    				//imei
+	optional bool b_cpu_serial = 2;	        			//cpu serial
+	optional bool b_wifi_mac_addr = 3;	    		//mac addr
+	optional bool b_bluetooth_mac_addr = 4;		//bluetooth mac addr
+	optional bool b_build_serial = 5;	    			//build serial
+	optional bool b_android_id = 6;	        		//android id
+	optional bool b_imsi1 = 7;             				//第一个SIM卡，相当于当前用户使用号码标志
+    optional bool b_imsi2 = 8;             				//第二个SIM卡，相当于当前用户使用号码标志
+    optional bool b_uuid = 9;								//用户定义ID
+} 
+
+message KeyInfo{
+	optional string str_txz_app_id = 1;
+	optional string str_txz_app_token = 2;
+	optional string str_ifly_app_id = 3;
+	optional string str_yunzhisheng_app_id = 4;
+	optional string str_yunzhisheng_secrect_key = 5;
+	optional uint32 uint32_use_voice_engine_type = 6;		//使用哪个引擎，VoiceEngineType
+	optional uint32 uint32_start_voice_engine_mode = 7;	//启动声控引擎模式，VoiceEngineMode
+}
+
+message ConfigInfo{
+	repeated string rpt_str_wakeup_words_list = 1;		//设备唤醒词列表
+	optional com.txz.ui.map.GpsInfo  msg_gps = 2;	//gps信息(用户最近的位置信息）
+	repeated uint64 rpt_uint64_used_uid_list = 3;		//使用过的uid列表(超过1个，有问题，需要处理)
+}
+
+
+//日志文件配置信息
+message SC_Log{
+	optional uint32 uint32_file_size = 1;						//日志文件大小（程序重启生效）
+	optional uint32 uint32_file_cnt = 2;						//日志文件个数（程序重启生效）
+	optional uint32 uint32_open_format_level	= 3;	//打开format日志级别（即时生效）
+	optional uint32 uint32_open_text_level	= 4;	//打开文本日志级别（即时生效）
+	optional uint32 uint32_open_console_level	= 5;	//打开文本日志级别（即时生效）
+	optional uint32 uint32_cache_voice_file_cnt = 6;		//cache voice file count（即时生效）
+}
+
+//上报数据配置信息
+message SC_Report
+{
+	optional bool b_report_voice = 1;		//上报声控处理结果
+	optional bool b_report_crash = 2;		//上报crash信息
+}
+
+//服务器下发的配置信息
+message ServerConfig{
+	optional bool b_force_open_report_trace = 1;	//强制打开gps上报
+	optional SC_Log msg_log_info = 2;					//日志配置
+	optional SC_Report msg_report_info = 3;			//上报数据配置信息
+}
+
+
+//设备配置
+message EquipmentConfig{
+	optional uint64 uint64_uid						= 1;		//设备ID，从后台获取，ui不用关心
+	optional uint32 uint32_last_login_time 		= 2; 		//最后登录时间
+	optional string str_name 							= 3;		//设备名称（通过imei+mac+cpu serial) 
+	optional bytes str_license							= 4;		//授权key信息，加密存储
+	optional string str_passwd_md5				= 5;		//设备密码
+	optional string str_imei								= 6;		//imei
+	optional string str_cpu_serial						= 7;		//cpu serial
+	optional ServerConfig msg_server_config = 8;		//服务器下发的配置信息
+}
+
+message WXUserInfo{
+	optional string str_nick = 1;	//微信昵称
+}
+
+////授权//////////
+message Req_License
+{
+	optional string str_txz_app_id = 1;
+	optional string str_txz_app_token = 2;
+	optional string str_txz_app_custom_id = 3;
+}
+
+message Resp_License
+{
+	optional bool b_ok = 1;
+	optional string str_errmsg = 2;			//(b_ok=false，有效)
+	optional KeyInfo msg_key_info = 3; 	//(b_ok=true，有效)
+}
+
+message LicenseInfo
+{
+	optional uint64 uint64_time = 1;					//建立时间
+	optional KeyInfo msg_key_info = 2;				//key信息
+	optional DeviceInfo msg_device_info = 3;		//本设备硬件信息
+	optional LicenseVerifyRule msg_license_verify_rule = 4;	//license本地验证规则
+}
+
+/////////上传图片///////////
+message Req_UploadPic{
+	optional uint32 uint32_err_code = 1;				//0:成功,非0：错误
+	optional string str_err_msg = 2;						//错误描述信息
+	optional string str_pic_path =  3;	//图片路径
+	optional string str_thumb_pic_path = 4;	//图片路径(缩略图)
+	optional uint32 uint32_type	= 5;	//图片上传类型（1:抓取通知上传；2：关机上传）
+}
+
+message Resp_UploadPic{
+
+}
+
+/////////上传语音///////////
+message Req_UploadVoice{
+	optional string str_path =  1;							//语音数据
+	optional uint32 uint32_voice_time_length = 2;	//语音数据时间长度(单位毫秒)
+}
+
+message Resp_UploadVoice{
+	optional bool b_ok = 1;						//服务器返回是否成功
+	optional string str_err_msg = 2;		//服务器返回失败时，有效
+	optional string str_url	= 3;				//语音链接
+}
+
+//////////获取绑定微信二维码的url
+message Req_GetBindWxUrl
+{
+}
+message Resp_GetBindWxUrl
+{
+	optional bool b_ok = 1;						//服务器返回是否成功
+	optional string str_err_msg = 2;		//服务器返回失败时，有效
+	optional bool b_is_bind = 3;				//是否绑定(true已绑定，false未绑定)
+	optional WXUserInfo msg_wx = 4;	//微信信息（已绑定，有效）
+	optional string str_bind_wx_url = 5;	//绑定微信二维码的url（未绑定，有效）
+	optional uint64 uint64_uid = 6;		//设备ID
+}
+
+//////////获取绑定微信二维码的url
+message Req_GetBindCarTeamUrl
+{
+}
+message Resp_GetBindCarTeamUrl
+{
+	optional bool b_ok = 1;						//服务器返回是否成功
+	optional string str_err_msg = 2;		//服务器返回失败时，有效
+	optional bool b_is_bind = 3;				//是否绑定(true已绑定，false未绑定)
+	optional string  str_car_info = 4;		//车信息（已绑定，有效）
+	optional string str_bind_wx_url = 5;	//绑定微信二维码的url（未绑定，有效）
+	optional uint64 uint64_uid = 6;		//设备ID
+}
+
+
+////车队push通知信息/////
+enum CarTeamMsgType
+{
+	CTMT_BIND = 1;			//绑定
+	CTMT_UNBIND = 2;		//解绑
+}
+message Notify_CarTeam
+{
+	optional uint32 uint32_type = 1; 	//消息类型CarTeamMsgType
+	optional string str_car_info = 2;	//绑定类型时 有效（uint32_type=CTMT_BIND）
+	optional string str_url	= 3;						////解绑类型时 有效（uint32_type=CTMT_UNBIND）
+}
+
+////绑定微信成功通知//////////
+message Notify_BindWxSuccess
+{
+	optional WXUserInfo msg_wx = 1;	//微信信息（已绑定，有效）
+}
+
+////绑定微信成功通知//////////
+message Notify_UnbindWxSuccess
+{
+	optional string str_bind_wx_url = 1;	//绑定微信二维码的url
+}
+
+
+////上传图片通知//////////
+message Notify_UploadPic
+{
+
+}
+
+////安装App通知//////////
+message Notify_InstallApk
+{
+	optional string str_package_name = 1;		//安装app的包名
+	optional string str_version = 2;					//新版本号
+	optional string str_install_tips = 3;				//安装提示内容
+	optional string str_apk_path = 4;				//安装包文件目录
+	optional bool b_force_upgrade = 5;			//是否强制升级
+	optional uint32 uint32_flag = 6;				//	flag
+}
+
+

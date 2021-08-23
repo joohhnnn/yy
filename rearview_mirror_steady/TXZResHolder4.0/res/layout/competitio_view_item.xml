@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_large"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/xdp20">
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#02:30"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/sp20"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tvCompetition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/xdp10"
+                android:text="#NBA常规赛事"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/sp20" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingLeft="@dimen/xdp20"
+            android:paddingRight="@dimen/xdp20">
+
+            <LinearLayout
+                android:id="@+id/centerWarp"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvGoal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VS"
+                    android:textSize="@dimen/sp24"
+                    android:textColor="@color/textColorPrimary"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/xdp20"
+                    android:paddingRight="@dimen/xdp20"
+                    android:paddingTop="@dimen/y2"
+                    android:paddingBottom="@dimen/y2"
+                    android:text="未开始"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/sp18" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_toLeftOf="@+id/centerWarp"
+                android:layout_alignParentLeft="true">
+
+                <ImageView
+                    android:id="@+id/ivHomeTeamLogo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/title_icon_competition"/>
+
+                <TextView
+                    android:id="@+id/tvHomeTeamName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="队伍1"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/sp18"
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/centerWarp"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:id="@+id/ivAwayTeamLogo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/title_icon_competition"/>
+
+                <TextView
+                    android:id="@+id/tvAwayTeamName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="队伍2"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/sp18"
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/listDividerColor"/>
+
+</LinearLayout>

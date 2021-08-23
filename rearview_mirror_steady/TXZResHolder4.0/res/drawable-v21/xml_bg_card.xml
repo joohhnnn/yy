@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <solid android:color="#F2161D47"/>
+            <corners android:radius="@dimen/mdp10"/>
+        </shape>
+    </item>
+
+    <!--左上角-->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#E6652F63"
+                android:endColor="#00000000"
+                android:centerX="0%"
+                android:centerY="0%"
+                android:type="radial"
+                android:gradientRadius="@dimen/win_layout_card_width"/>
+            <corners android:radius="@dimen/mdp10" />
+        </shape>
+    </item>
+
+    <!--右上角-->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#734295BA"
+                android:endColor="#004295BA"
+                android:centerX="100%"
+                android:centerY="0%"
+                android:type="radial"
+                android:gradientRadius="536dp"/>
+            <corners android:radius="@dimen/mdp10" />
+        </shape>
+    </item>
+
+    <!--左下角-->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#73426ABA"
+                android:endColor="#00000000"
+                android:centerX="0%"
+                android:centerY="100%"
+                android:type="radial"
+                android:gradientRadius="536dp"/>
+            <corners android:radius="@dimen/mdp10" />
+        </shape>
+    </item>
+
+</layer-list>

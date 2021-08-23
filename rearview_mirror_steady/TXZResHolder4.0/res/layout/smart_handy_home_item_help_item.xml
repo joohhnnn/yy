@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:textSize="@dimen/sp18"
+    android:textColor="@color/textColorPrimary"
+    android:text=""
+    android:background="@drawable/xml_smart_handy_btn_bg_word_item"
+    android:ellipsize="end"
+    android:singleLine="true"
+    android:maxLines="1"/>

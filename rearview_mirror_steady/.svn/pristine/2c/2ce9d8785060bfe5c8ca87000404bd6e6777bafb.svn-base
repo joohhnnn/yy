@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <com.txznet.record.view.DisplayLvRef
+        android:id="@+id/poi_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtChat_Msg_Text"
+        style="@style/Font_Style_From_Sys_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
+        android:maxWidth="@dimen/x500"
+        android:minHeight="?attr/list_item_txtChat_minHeight"
+        android:lineSpacingMultiplier="1.2"
+        android:text=""
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y150"
+    android:background="#00000000" >
+
+    <FrameLayout
+        android:id="@+id/layout_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:background="#ff000000"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/sound_help_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@null"
+            android:padding="@dimen/x16"
+            android:scaleType="center"
+            android:src="@drawable/question_mark_sel"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/sound_step_note_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/y20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginTop="@dimen/y15"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="@dimen/y30"
+            android:visibility="gone" />
+
+        <com.txznet.txz.ui.widget.SoundMonitorView
+            android:id="@+id/voice_smv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="@dimen/y45"
+            android:layout_marginRight="@dimen/x45"
+            android:layout_marginTop="@dimen/y15"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</FrameLayout>

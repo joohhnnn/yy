@@ -1,0 +1,178 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!--<dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>-->
+
+    <dimen name="unit">12px</dimen>
+    <dimen name="h0">40px</dimen>
+    <dimen name="h1">36px</dimen>
+    <dimen name="h2">34px</dimen>
+    <dimen name="h3">32px</dimen>
+    <dimen name="h4">30px</dimen>
+    <dimen name="h5">28px</dimen>
+    <dimen name="h6">26px</dimen>
+    <dimen name="h7">24px</dimen>
+    <dimen name="h0_height">52px</dimen>
+    <dimen name="h1_height">48px</dimen>
+    <dimen name="h2_height">46px</dimen>
+    <dimen name="h3_height">44px</dimen>
+    <dimen name="h4_height">40px</dimen>
+    <dimen name="h5_height">38px</dimen>
+    <dimen name="h6_height">36px</dimen>
+    <dimen name="h7_height">34px</dimen>
+    <dimen name="h0_none">38px</dimen>
+    <dimen name="h1_none">34px</dimen>
+    <dimen name="h2_none">32px</dimen>
+    <dimen name="h3_none">30px</dimen>
+    <dimen name="h4_none">28px</dimen>
+    <dimen name="h5_none">26px</dimen>
+    <dimen name="h6_none">24px</dimen>
+    <dimen name="h7_none">22px</dimen>
+    <dimen name="h0_height_none">50px</dimen>
+    <dimen name="h1_height_none">46px</dimen>
+    <dimen name="h2_height_none">44px</dimen>
+    <dimen name="h3_height_none">40px</dimen>
+    <dimen name="h4_height_none">38px</dimen>
+    <dimen name="h5_height_none">36px</dimen>
+    <dimen name="h6_height_none">34px</dimen>
+    <dimen name="h7_height_none">32px</dimen>
+    <!--优惠信息、有声书标签大小-->
+    <dimen name="musicTagSide">40px</dimen>
+    <!--竖屏单位-->
+    <dimen name="vertScreenUnit">8px</dimen>
+    <!--竖屏列表数量-->
+    <dimen name="vertScreenItemNum">4px</dimen>
+    <!--列表标题到内容的间距-->
+    <dimen name="centerInterval">8px</dimen>
+    <!--半屏长文本行高-->
+    <dimen name="chat_height_half">70px</dimen>
+    <!--无屏长文本行高-->
+    <dimen name="chat_height_none">60px</dimen>
+    <!--电影海报宽高-->
+    <dimen name="billWidth">256px</dimen>
+    <dimen name="billHeight">384px</dimen>
+    <dimen name="billWidthHalf">254px</dimen>
+    <dimen name="billHeightHalf">381px</dimen>
+    <dimen name="billWidthNone">200px</dimen>
+    <dimen name="billHeightNone">300px</dimen>
+    <!--股票价格名称大小-->
+    <dimen name="shockPriceSize">90px</dimen>
+    <dimen name="shockPriceHeight">102px</dimen>
+    <dimen name="shockNameSize">36px</dimen>
+    <dimen name="shockPriceSizeNone">84px</dimen>
+    <dimen name="shockPriceHeightNone">96px</dimen>
+    <dimen name="shockNameSizeNone">32px</dimen>
+
+    <!--竖屏参数-->
+    <dimen name="vertical_unit">12px</dimen>
+    <dimen name="vertical_h0">40px</dimen>
+    <dimen name="vertical_h1">36px</dimen>
+    <dimen name="vertical_h2">34px</dimen>
+    <dimen name="vertical_h3">32px</dimen>
+    <dimen name="vertical_h4">30px</dimen>
+    <dimen name="vertical_h5">28px</dimen>
+    <dimen name="vertical_h6">26px</dimen>
+    <dimen name="vertical_h7">24px</dimen>
+    <dimen name="vertical_h0_height">52px</dimen>
+    <dimen name="vertical_h1_height">48px</dimen>
+    <dimen name="vertical_h2_height">46px</dimen>
+    <dimen name="vertical_h3_height">44px</dimen>
+    <dimen name="vertical_h4_height">40px</dimen>
+    <dimen name="vertical_h5_height">38px</dimen>
+    <dimen name="vertical_h6_height">36px</dimen>
+    <dimen name="vertical_h7_height">34px</dimen>
+    <dimen name="vertical_h1_none">34px</dimen>
+    <dimen name="vertical_h2_none">32px</dimen>
+    <dimen name="vertical_h3_none">30px</dimen>
+    <dimen name="vertical_h4_none">28px</dimen>
+    <dimen name="vertical_h5_none">26px</dimen>
+    <dimen name="vertical_h6_none">24px</dimen>
+    <dimen name="vertical_h7_none">22px</dimen>
+    <dimen name="vertical_h1_height_none">46px</dimen>
+    <dimen name="vertical_h2_height_none">44px</dimen>
+    <dimen name="vertical_h3_height_none">40px</dimen>
+    <dimen name="vertical_h4_height_none">38px</dimen>
+    <dimen name="vertical_h5_height_none">36px</dimen>
+    <dimen name="vertical_h6_height_none">34px</dimen>
+    <dimen name="vertical_h7_height_none">32px</dimen>
+    <!--优惠信息、有声书标签大小-->
+    <dimen name="vertical_musicTagSide">40px</dimen>
+    <!--列表标题到内容的间距-->
+    <dimen name="vertical_centerInterval">8px</dimen>
+    <!--半屏长文本行高-->
+    <dimen name="vertical_chat_height_half">70px</dimen>
+    <!--无屏长文本行高-->
+    <dimen name="vertical_chat_height_none">60px</dimen>
+    <!--电影海报宽高-->
+    <dimen name="vertical_billHeightNone">300px</dimen>
+    <dimen name="vertical_billWidthNone">200px</dimen>
+    <dimen name="vertical_billHeight">384px</dimen>
+    <dimen name="vertical_billWidth">256px</dimen>
+    <dimen name="vertical_billHeightHalf">381px</dimen>
+    <dimen name="vertical_billWidthHalf">254px</dimen>
+    <!--股票价格名称大小-->
+    <dimen name="vertical_shockPriceSize">90px</dimen>
+    <dimen name="vertical_shockPriceHeight">102px</dimen>
+    <dimen name="vertical_shockNameSize">36px</dimen>
+    <dimen name="vertical_shockPriceSizeNone">84px</dimen>
+    <dimen name="vertical_shockPriceHeightNone">96px</dimen>
+    <dimen name="vertical_shockNameSizeNone">32px</dimen>
+
+
+
+    <!-- start-8.0 -->
+
+    <dimen name="mdp10">10dp</dimen>
+    <dimen name="mdp20">20dp</dimen>
+    <dimen name="mdp30">30dp</dimen>
+    <dimen name="mdp40">40dp</dimen>
+    <dimen name="mdp50">50dp</dimen>
+    <dimen name="mdp60">60dp</dimen>
+
+    <dimen name="xdp10">10dp</dimen>
+    <dimen name="xdp20">20dp</dimen>
+    <dimen name="xdp30">30dp</dimen>
+    <dimen name="xdp40">40dp</dimen>
+    <dimen name="xdp50">50dp</dimen>
+    <dimen name="xdp60">60dp</dimen>
+
+    <dimen name="ydp10">10dp</dimen>
+    <dimen name="ydp20">20dp</dimen>
+    <dimen name="ydp30">30dp</dimen>
+    <dimen name="ydp40">40dp</dimen>
+    <dimen name="ydp50">50dp</dimen>
+    <dimen name="ydp60">60dp</dimen>
+
+    <dimen name="sp18">18dp</dimen>
+    <dimen name="sp20">20dp</dimen>
+    <dimen name="sp22">22dp</dimen>
+    <dimen name="sp24">24dp</dimen>
+    <dimen name="sp26">26dp</dimen>
+    <dimen name="sp28">28dp</dimen>
+
+    <!--卡片内边距-->
+    <dimen name="win_layout_card_padding">10dp</dimen>
+    <dimen name="win_layout_card_padding_2x">20dp</dimen>
+    <!--卡片距离屏幕上下的距离    32px-->
+    <dimen name="win_layout_card_margin_ver_screen">32dp</dimen>
+    <!--卡片距离屏幕左右的距离-->
+    <dimen name="win_layout_card_margin_hor_screen">10dp</dimen>
+    <!--卡片宽度   340px-->
+    <dimen name="win_layout_card_width">340dp</dimen>
+    <!--第二张卡片宽度   300px-->
+    <dimen name="win_layout_card_ext_width">300dp</dimen>
+    <!--页码bar宽度-->
+    <dimen name="ver_progress_bar_width">3dp</dimen>
+    <!--声控机器人大小   80px-->
+    <dimen name="talk_logo_size">80dp</dimen>
+    <!--列表高度，一般列表，最多显示4个    112px-->
+    <dimen name="item_height_normal">112dp</dimen>
+    <!--列表高度, 大列表，最多显示3个   150px-->
+    <dimen name="item_height_large">150dp</dimen>
+    <!--对话框宽度 300px-->
+    <dimen name="dialog_width">300dp</dimen>
+
+    <!-- end-8.0 -->
+
+</resources>

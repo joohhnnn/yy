@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleProgressView">
+        <attr name="progress" format="integer|reference" />
+        <attr name="max" format="integer|reference" />
+        <attr name="backgroundColor" format="color|reference" />
+        <attr name="frontgroundColor" format="color|reference" />
+        <attr name="strokeWidth" format="dimension|reference" />
+
+    </declare-styleable>
+
+</resources>

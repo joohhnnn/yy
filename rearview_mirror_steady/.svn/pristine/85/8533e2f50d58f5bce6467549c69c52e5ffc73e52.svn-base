@@ -1,0 +1,41 @@
+package com.txz.ui.audio;
+
+
+
+enum SubEvent {
+	SUBEVENT_PREPROCESSING_READY = 1;	//预处理准备好，携带com.txz.audio_manager::AudioRecord
+	SUBEVENT_REQ_DATA_INTERFACE = 2;				//req数据通道接口
+	SUBEVENT_RESP_DATA_INTERFACE = 3;				//resp数据通道接口
+}
+
+////////////////////数据通道接口////////////////////////
+//数据通道接口(请求包)
+message Req_DataInterface
+{
+	optional string str_cmd = 1;			//命令字
+	optional bytes str_data = 2;			//数据内容
+}
+//数据通道接口(回应包)  
+message Resp_DataInterface
+{
+	optional string str_cmd = 1;					//命令字
+	optional bytes str_data = 2;					//数据内容
+	optional uint32 uint32_err_code = 3;	//错误码
+}
+
+
+//收藏信息
+message AudioFavourite
+{
+	optional uint32 uint32_type = 1;					//收藏类型（0：id；1：path）
+	optional uint32 uint32_app_id = 2;				//数据来源的app id （id有效）
+	optional uint64 uint64_audio_id = 3;			//音频ID（id有效）
+	optional string str_path = 4;							//路径（path有效）
+}
+
+
+//audio信息本地存储
+message File_AudioList
+{
+	repeated AudioFavourite rpt_favourite_list = 1;		//收藏列表
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_lyric_loading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:text="正在获取歌词"
+    android:textColor="@color/white_50"
+    android:textSize="@dimen/base_tv_h4"
+    tools:background="@drawable/base_bg" />

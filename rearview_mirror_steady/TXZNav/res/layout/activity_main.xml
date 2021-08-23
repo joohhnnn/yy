@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ButtonImageText="http://schemas.android.com/apk/res/com.txznet.nav"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/etDest"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y110"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:background="@color/activity_home_color_dest_bg"
+            android:hint="@string/activity_home_str_dest_hint"
+            android:imeOptions="flagNoExtractUi"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="0dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/activity_home_color_dest_text_color_hint"
+            android:textCursorDrawable="@null"
+            android:textSize="38px" />
+
+        <com.txznet.nav.ui.widget.ButtonImageText
+            android:id="@+id/btnSearch"
+            android:layout_width="@dimen/x150"
+            android:layout_height="@dimen/y110"
+            android:background="@drawable/activity_home_search_bg"
+            android:gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/activity_home_search_draw" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:background="@color/split_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <com.txznet.nav.ui.widget.ButtonImageText
+            android:id="@+id/btnCheckLocation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            ButtonImageText:drawablePadding="@dimen/x26"
+            ButtonImageText:text="@string/activity_home_str_check_location_text"
+            ButtonImageText:textColor="@color/text_color"
+            ButtonImageText:textSize="34px"
+            android:background="@drawable/widget_color"
+            android:gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/activity_home_ic_checkmap" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/split_line" />
+
+        <com.txznet.nav.ui.widget.ButtonImageText
+            android:id="@+id/btnNavHistory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            ButtonImageText:drawablePadding="@dimen/x26"
+            ButtonImageText:text="@string/activity_home_str_nav_history_text"
+            ButtonImageText:textColor="@color/text_color"
+            ButtonImageText:textSize="34px"
+            android:background="@drawable/widget_color"
+            android:gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/activity_home_ic_nav_history" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/split_line" />
+
+        <com.txznet.nav.ui.widget.ButtonImageText
+            android:id="@+id/btnOfflineMap"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            ButtonImageText:drawablePadding="@dimen/x26"
+            ButtonImageText:text="@string/activity_home_str_offline_map_text"
+            ButtonImageText:textColor="@color/text_color"
+            ButtonImageText:textSize="34px"
+            android:background="@drawable/widget_color"
+            android:gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/activity_home_ic_offline_map" />
+    </LinearLayout>
+
+</LinearLayout>

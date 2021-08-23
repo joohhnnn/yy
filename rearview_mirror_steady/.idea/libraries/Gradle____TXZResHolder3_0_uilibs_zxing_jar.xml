@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./TXZResHolder3.0/uilibs/zxing.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TXZResHolder3.0/uilibs/zxing.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

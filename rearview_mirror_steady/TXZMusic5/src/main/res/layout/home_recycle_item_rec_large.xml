@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="?attr/rec_page_large_item_width"
+    android:layout_height="?attr/rec_page_large_item_height"
+    tools:background="@color/black_50">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="?attr/rec_page_large_item_width"
+        android:layout_height="?attr/rec_page_large_item_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/home_default_cover_icon_strip_large" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/m9"
+        android:layout_marginRight="@dimen/m9"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/base_tv_h4"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_describe"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="AI电台" />
+
+    <TextView
+        android:id="@+id/tv_describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/m9"
+        android:layout_marginTop="@dimen/m2"
+        android:layout_marginRight="@dimen/m9"
+        android:layout_marginBottom="@dimen/m11"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="根据你的喜好进行播放"
+        android:textColor="@color/white_60"
+        android:textSize="@dimen/base_tv_h6"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.txznet.music.widget.PlayingStateView
+        android:id="@+id/iv_playing"
+        android:layout_width="@dimen/m22"
+        android:layout_height="@dimen/m22"
+        android:layout_marginTop="@dimen/m5"
+        android:layout_marginRight="@dimen/m5"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

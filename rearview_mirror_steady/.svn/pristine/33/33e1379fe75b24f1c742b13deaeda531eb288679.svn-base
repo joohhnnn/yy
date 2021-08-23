@@ -1,0 +1,45 @@
+package com.txz.app_head;
+
+
+//业务通用错误码
+enum ErrorCode
+{
+	EC_SUCCESS = 0x0000; //处理成功
+	EC_INVALID_PARAM = 0x0001; //参数错误
+	EC_ILLEGAL_USER = 0x0002; //非法用户
+	EC_TIMEOUT = 0x0003; //处理超时
+	
+	//业务错误码必须从该值开始
+	EC_SERVICE_BEGIN = 0x1000; //业务其实错误码
+}
+
+//客户端信息
+message ClientInfo
+{
+	optional uint32 uint32_proto_version = 1;	//应用协议版本号
+	optional bool b_app_data_gzip = 2;								//app数据是否gzip压缩
+}
+
+message ServerInfo
+{
+	optional uint64 uint64_server_time = 1;	//服务器时间（毫秒）
+}
+
+//协议头
+message Head
+{
+	optional uint32     uint32_errorcode = 1; //错误码
+	optional ClientInfo msg_client_info = 4; //客户端其他信息
+	optional bytes       str_body_res_id = 5; //填写该字段时表示本次body为空，真正的body使用已经上传的资源，该ID一次上传或下载完成后后台资源释放
+	optional uint64 uint64_from_push_mid = 6;	//本次协议通信，由push推送发起
+	optional ServerInfo msg_server_info = 7;	//服务器信息
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y96"
+    android:background="#0000"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y6"
+        android:background="#0000" />
+
+    <LinearLayout
+        android:id="@+id/help_group_layout"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/help_group_icon"
+            android:layout_width="?attr/list_item_help_icon_width"
+            android:layout_height="?attr/list_item_help_icon_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/y15"
+            android:src="@drawable/win_help_wechat" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/y15"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/help_group_title"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y45"
+                android:layout_gravity="center_vertical"
+                android:gravity="left|center_vertical"
+                android:text="本地生活"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/y26" />
+
+            <TextView
+                android:id="@+id/help_group_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text="欢乐谷附近的川菜"
+                android:textColor="@color/list_second_text_color"
+                android:textSize="@dimen/y22" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/help_group_arrow"
+            android:layout_width="@dimen/y28"
+            android:layout_height="@dimen/y28"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/y15"
+            android:src="@drawable/arrow_down"
+            android:visibility="gone" />
+    </LinearLayout>
+	<View
+        android:id="@+id/help_group_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#4c4c4c"
+        android:visibility="gone" />
+</LinearLayout>

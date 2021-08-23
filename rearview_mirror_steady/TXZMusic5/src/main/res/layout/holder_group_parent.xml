@@ -1,0 +1,12 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text"
+    style="@style/Setting_Item_Padding"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/m48"
+    android:layout_marginTop="@dimen/m24"
+    android:gravity="center_vertical"
+    android:textColor="@color/white_60"
+    android:textSize="@dimen/base_tv_h4"
+    tools:background="@drawable/base_bg"
+    tools:text="aaaaaaa" />

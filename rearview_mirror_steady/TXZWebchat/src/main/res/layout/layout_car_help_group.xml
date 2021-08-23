@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <View
+            android:id="@+id/view_group_focus_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:layout_marginLeft="@dimen/x32"
+            android:layout_marginRight="@dimen/x32"
+            android:background="@drawable/shape_item_car_session_back_selected"/>
+
+    <com.txznet.webchat.ui.common.widget.ThemedTextView
+        android:id="@+id/tv_car_help_group_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x48"
+        android:layout_centerVertical="true"
+        android:text="1."
+        android:textColor="@color/color_primary"
+        android:textSize="@dimen/y19"
+        android:textStyle="bold"
+        app:theme_color="primary"/>
+
+    <com.txznet.webchat.ui.common.widget.ThemedTextView
+        android:id="@+id/tv_car_help_group_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y80"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/tv_car_help_group_index"
+        android:gravity="center"
+        android:text="如何发微信"
+        android:textColor="@color/color_primary"
+        android:textSize="@dimen/y19"
+        app:theme_color="primary"/>
+
+        <View
+            android:id="@+id/view_car_group_divider"
+            style="@style/divider_line_horizontal"
+            android:layout_marginLeft="@dimen/x32"
+            android:layout_marginRight="@dimen/x32"
+            android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

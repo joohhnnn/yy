@@ -1,0 +1,67 @@
+package com.txz.im_manager;
+
+import "ui_im.proto";
+
+//基础指令枚举
+enum SubCommand
+{
+	SUBCMD_0		= 0;
+	
+	SUBCMD_ROOM_IN	= 1;							//进入多车同行
+	SUBCMD_ROOM_OUT = 2;						//退出多车同行
+	SUBCMD_ROOM_MEMBER_LIST = 3;			//获取多车同行成员列表	
+}
+
+
+//错误码
+enum ErrorCode
+{
+	EC_ROOM_NOT_EXIST 				= 8001;  //房间不存在
+}
+ 
+ /////////////进入多车同行////////////
+ //进入多车同行(请求包)
+message Req_RoomIn
+{
+	optional uint32 uint32_from_type = 1;					//来源（1：微信群; 2：公众帐号）
+	optional uint64 uint64_rid 			= 2;					//房间ID
+	optional com.txz.ui.im.RoomMember msg_user_info		= 3;					//用户信息
+}
+//进入多车同行(回应包)  
+message Resp_RoomIn
+{
+	optional uint32 uint32_from_type = 1;					//来源（1：微信群; 2：公众帐号）
+	optional uint64 uint64_rid 			 = 2;					//房间ID
+}
+
+ /////////////离开多车同行////////////
+ //(请求包)
+message Req_RoomOut
+{
+	optional uint32 uint32_from_type = 1;					//来源（1：微信群; 2：公众帐号）
+	optional uint64 uint64_rid 			= 2;					//房间ID
+}
+//(回应包)  
+message Resp_RoomOut
+{
+	optional uint32 uint32_from_type = 1;					//来源（1：微信群; 2：公众帐号）
+	optional uint64 uint64_rid 			= 2;					//房间ID
+}
+
+ /////////////获取多车同行成员列表	////////////
+ //(请求包)
+message Req_RoomMemberList
+{
+	optional uint64 uint64_rid 			= 1;					//房间ID
+	optional uint32 uint32_type 			= 2;					//获取类型（1:RoomMember只带GPS信息）
+	optional com.txz.ui.im.RoomMember msg_user_info		= 3;					//用户信息
+}
+
+//(回应包)  
+message Resp_RoomMemberList
+{
+	optional uint64 uint64_rid 			= 1;					//房间ID
+	optional uint32 uint32_type 			= 2;					//获取类型（1:RoomMember只带GPS信息）
+	repeated com.txz.ui.im.RoomMember rpt_msg_member_list = 3;		//用户列表
+}
+

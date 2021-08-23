@@ -1,0 +1,29 @@
+变化:
+1、云知声SDK开始与appid版本绑定。即没SDK绑定的APPID，不能初始化在线识别部分。
+2、在线识别部分需要传递有效的唯一码进行初始化。否则，在线识别不可用。
+
+解决方案:
+假设usc.jar中校验appkey的实现类为checker(一般为com.unisound.common.aa)
+确认checker的方法：
+   1、申请不同appkey的同一个版本的sdk，对比usc.jar即可确认checker。
+
+方案：
+   1、反编译usc.jar中的checker.class
+   2、修改反编译出的checher的源文件,直接返回TXZCore设置进来的appid的md5值，而不是硬编码APPID的MD5值。
+   3、去掉usr.jar中的checker.class
+   4、编译修改后的com.unisound.common.aa的源文件，并且放置到usr.jar中。
+   5、使用新的usc.jar文件。
+
+checker文件主要实现了以下几个接口：
+   1、获取硬编码的MD5值。用来判断设置的APPID是否是SDK预先绑定的APPID。
+   2、计算字符串的MD5值。
+   3、计算文件的MD5值。
+   4、计算输入流的MD5值。
+   5、比较文件和字符串的MD5值是否相等。
+
+因此、更新SDK的时候要按一下步骤严格执行：
+1、对比当前使用的SDK版本usc.jar中原来的checker和新版本的反编译出来的checker。
+2、没发生变化，则继续使用正在使用的usc.jar的checker，即将当前使用的checker.class覆盖掉新usc.jar中的checker.class。
+3、否则，需要重新按上述方案执行。
+
+

@@ -1,0 +1,50 @@
+初始化完成：
+ServiceManager.getInstance().sendInvoke(ServiceManager.TXZ,
+					"nav.action.initcomplete", null, null);
+
+
+打开导航应用：
+ServiceManager.getInstance().sendInvoke(ServiceManager.NAV,"nav.action.opennaviapp", s, null);
+
+
+导航接口：
+NavigateInfo info;
+byte[] bs = NavigateInfo.toByteArray(info);
+String s = BytesHelper.bytesToString(bs);
+ServiceManager.getInstance().sendInvoke(ServiceManager.NAV,"nav.action.startnavi", s, null);
+
+
+关闭导航接口：
+ServiceManager.getInstance().sendInvoke(ServiceManager.NAV,"nav.action.stopnavi", s, null);
+
+
+搜索接口:
+String data = null;
+data = strDest + ";";
+data += NavManager.getInstance().getNavService().getLocation().msgGeoInfo.strCity + ";";
+data += "true;";
+data += "0";
+ServiceManager.getInstance().sendInvoke(ServiceManager.NAV,"nav.action.search", data, null);
+
+
+注册列表：
+ServiceManager.getInstance().sendInvoke(ServiceManager.NAV,"nav.action.searchlist",listCount, null);
+
+
+导航预览暂停倒数接口：
+ServiceManager.getInstance().sendInvoke(ServiceManager.NAV,"nav.action.navipreviewstopcount", null, null);
+
+
+获取是否正在导航：   
+返回值为boolean
+ServiceManager.getInstance().sendInvoke(ServiceManager.NAV,"nav.status.getIsNavi", null, null);
+
+
+广播接口：
+if (command.equals("nav.action.isNavi")) {
+try {
+	boolean isNavi = Boolean.parseBoolean(data);
+} catch (Exception e) {
+	LogUtil.loge("parse isNavi fail!");
+}
+

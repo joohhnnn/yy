@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/layout_fenlei_item"
+                android:layout_width="@dimen/y133"
+                android:layout_height="@dimen/y133">
+
+    <!--增加一层包裹以实现描边效果-->
+    <RelativeLayout
+        android:id="@+id/layout_fenlei_item_wrapper"
+        android:layout_width="@dimen/y124"
+        android:layout_height="@dimen/y124"
+        android:layout_centerInParent="true"
+        android:background="#00FF00">
+
+        <TextView
+            android:id="@+id/tv_item_music_fenlei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="民谣"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/y26"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

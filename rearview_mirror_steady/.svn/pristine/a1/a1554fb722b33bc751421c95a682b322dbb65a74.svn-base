@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\ASUS User\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.0.1.aar\ed547ad949953017723e809b02c4c1d3\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="F:\ASWorkSpace\SimDemo\app\build\intermediates\transforms\preDex\release\9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ASUS User\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.0.1.aar\e2534058eee497eed7b7fa9fdb06bb59\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="F:\ASWorkSpace\SimDemo\app\build\intermediates\transforms\preDex\release\7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ASUS User\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.0.1.aar\72801a444a5481e5ffc00175db9dd984\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="F:\ASWorkSpace\SimDemo\app\build\intermediates\transforms\preDex\release\3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ASUS User\.gradle\caches\transforms-1\files-1.1\support-compat-25.0.1.aar\ccd74938d339794af54effc44396a536\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="F:\ASWorkSpace\SimDemo\app\build\intermediates\transforms\preDex\release\13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\work\ASSDK\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="F:\ASWorkSpace\SimDemo\app\build\intermediates\transforms\preDex\release\15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ASUS User\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.0.1.aar\dd157a31091c98100efe8be3af727172\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="F:\ASWorkSpace\SimDemo\app\build\intermediates\transforms\preDex\release\12.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ASUS User\.gradle\caches\transforms-1\files-1.1\support-fragment-25.0.1.aar\9e8538a184fb4dc6c44236dca49adeca\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="F:\ASWorkSpace\SimDemo\app\build\intermediates\transforms\preDex\release\6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ASUS User\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.0.1.aar\96d60998116d9204e3486de1562f4484\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="F:\ASWorkSpace\SimDemo\app\build\intermediates\transforms\preDex\release\1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ASUS User\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.0.1.aar\c3e3aadc081aa986b12b505a22337820\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="F:\ASWorkSpace\SimDemo\app\build\intermediates\transforms\preDex\release\4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ASUS User\.gradle\caches\transforms-1\files-1.1\support-compat-25.0.1.aar\ccd74938d339794af54effc44396a536\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="F:\ASWorkSpace\SimDemo\app\build\intermediates\transforms\preDex\release\14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ASUS User\.gradle\caches\transforms-1\files-1.1\support-fragment-25.0.1.aar\9e8538a184fb4dc6c44236dca49adeca\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="F:\ASWorkSpace\SimDemo\app\build\intermediates\transforms\preDex\release\5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ASUS User\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.0.1.aar\e2534058eee497eed7b7fa9fdb06bb59\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="F:\ASWorkSpace\SimDemo\app\build\intermediates\transforms\preDex\release\8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ASUS User\.gradle\caches\transforms-1\files-1.1\support-v4-25.0.1.aar\16137325287c7319b99318f98c8a1652\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="F:\ASWorkSpace\SimDemo\app\build\intermediates\transforms\preDex\release\2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ASUS User\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.0.1.aar\ed547ad949953017723e809b02c4c1d3\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="F:\ASWorkSpace\SimDemo\app\build\intermediates\transforms\preDex\release\10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ASUS User\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.0.1.aar\dd157a31091c98100efe8be3af727172\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="15"
+        optimize="true"
+        revision="26.0.2"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="F:\ASWorkSpace\SimDemo\app\build\intermediates\transforms\preDex\release\11.jar" />
+    </item>
+
+</items>

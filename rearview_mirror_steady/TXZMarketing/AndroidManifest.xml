@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.txznet.marketing"
+    android:versionCode="111"
+    android:versionName="1.1.1">
+
+    <!--获取网络状态的权限-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!--访问网络的权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--<uses-permission android:name="android.permission.WRITE_SETTINGS" />-->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- <uses-permission android:name="android.permission.DEVICE_POWER"/> -->
+    <!-- <uses-permission android:name="android.permission.WAKE_LOCK"/> -->
+    <!--读写SD卡权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:name="com.txznet.marketing.SDKDemoApp"
+        android:allowBackup="true"
+        android:icon="@drawable/icon4"
+        android:label="智能体验"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="com.txznet.marketing.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.txznet.sdk.TXZService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.txznet.marketing.service.TXZService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <!--&lt;!&ndash; 适配广播 &ndash;&gt;
+        <receiver
+            android:name=".receiver.BbReceiver"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                &lt;!&ndash; 适配接收的广播 &ndash;&gt;
+                <action android:name="com.txznet.adapter.recv" />
+                &lt;!&ndash; 开机广播 &ndash;&gt;
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                &lt;!&ndash; 语音界面开 &ndash;&gt;
+                <action android:name="com.txznet.txz.record.show" />
+                &lt;!&ndash; 语音界面关 &ndash;&gt;
+                <action android:name="com.txznet.txz.record.dismiss" />
+            </intent-filter>
+        </receiver>-->
+
+        <!--&lt;!&ndash; 开机启动监控 &ndash;&gt;
+        <receiver android:name="com.txznet.marketing.bean.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>-->
+    </application>
+
+</manifest>

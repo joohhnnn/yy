@@ -1,0 +1,58 @@
+#JSGF V1.0 utf-8 cn;
+
+grammar txzWeChat;
+public <txzWeChat> = ( "<s>" (
+([<preActive>|<prePassive>|<prePlease>]<sendWeChatMsgTo><WeChatFriend>)
+| (<SendTo><WeChatFriend><sendWeChatMsg>)
+| ([<Nav>]<Option>)
+) "</s>" );
+
+<Nav> = (
+导航到
+);
+
+//////////////////////////////////////前缀相关///////////////////////////////////
+<preActive>=(
+"<preActive_>"(
+我要 | 我想 | 我想要
+)"</preActive_>"
+);
+<prePassive>=(
+"<prePassive_>"(
+帮我 | 替我 | 给我 | 帮 | 帮忙 | 你给我 | 你替我 | 你
+)"</prePassive_>"
+);
+<prePlease>=(
+"<prePlease_>"(
+请 | 麻烦
+)"</prePlease_>"
+);
+
+<sendWeChatMsgTo> = (
+"<sendWeChatMsgTo_>"(
+发微信给
+)"</sendWeChatMsgTo_>"
+);
+
+<sendWeChatMsg> = (
+"<sendWeChatMsg_>"(
+发微信
+)"</sendWeChatMsg_>"
+);
+
+<WeChatFriend> = (
+"<WeChatFriend_>"(
+比尔盖茨
+|刘德华
+|乔布斯
+|张学友
+)"</WeChatFriend_>"
+);
+
+<SendTo>=(
+"<SendTo_>"(
+给
+)"</SendTo_>"
+);
+
+

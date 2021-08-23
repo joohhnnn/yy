@@ -1,0 +1,264 @@
+<resources>
+
+    <style name="AppThemeNotFullscreen" parent="@android:style/Theme.Translucent">
+        <!-- Customize your theme here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="StartAppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/bg_pic</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+
+    <style name="divider_line_vertical">
+        <item name="android:layout_width">0.5px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#33ffffff</item>
+    </style>
+
+    <style name="PlayerListFragmentStyle">
+        <item name="android:background">@android:color/transparent</item>
+        <!-- 设置自定义布局的背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 设置window背景透明，也就是去边框 -->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+
+        <item name="android:backgroundDimEnabled">true</item>
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppThemeCheji" parent="AppThemeNotFullscreen">
+        <item name="fg_music_title_height">@dimen/y43</item>
+
+        <item name="list_item_height">@dimen/y58</item>
+        <item name="local_top_margin">0dp</item>
+        <item name="local_header_height">@dimen/y48</item>
+
+        <item name="album_item_content_size_width">@dimen/m120</item>
+        <item name="album_item_content_size_height">@dimen/m174</item>
+        <item name="album_item_content_icon_height">@dimen/m120</item>
+        <item name="album_item_content_tv_padding_top">@dimen/m10</item>
+        <item name="album_item_content_tv_padding_left">0dp</item>
+        <item name="album_item_content_tv_padding_right">0dp</item>
+        <item name="album_item_content_margin_top">@dimen/m26</item>
+        <item name="album_item_content_margin_bottom">@dimen/m22</item>
+        <item name="album_item_content_tv_height">@dimen/m43</item>
+        <item name="album_item_gap">@dimen/m28</item>
+        <item name="album_item_icon_with_text_top">@dimen/y9</item>
+        <item name="album_item_content_loading_icon_size">@dimen/m120</item>
+        <item name="album_item_content_loading_center_icon_size">@dimen/m30</item>
+
+
+        <item name="text_size_h1">@dimen/m19</item>
+        <item name="text_size_h2">@dimen/m18</item>
+        <item name="text_size_h3">@dimen/m16</item>
+        <item name="text_size_h4">@dimen/m14</item>
+
+        <item name="bar_player_view_padding">@dimen/m48</item>
+        <item name="bar_player_view_cd_margin">@dimen/m32</item>
+        <item name="bar_player_view_icon_size">@dimen/m58</item>
+        <item name="bar_player_view_cd_size">@dimen/m87</item>
+
+
+        <item name="cover_player_view_icon_size">@dimen/m58</item>
+        <item name="cover_player_view_icon_margin">@dimen/x19</item>
+        <item name="cover_player_view_margin_bottom">@dimen/y24</item>
+        <item name="cover_player_view_margin_horizontal">3.1%</item>
+
+        <item name="cover_player_view_width_percent">42%</item>
+        <item name="cover_player_view_height_percent">25%</item>
+
+        <item name="list_margin_left">5.9%</item>
+        <item name="list_margin_right">5.9%</item>
+        <item name="bar_player_view_height_percent">25%</item>
+        <item name="list_margin_bottom">0%</item>
+        <item name="list_margin_top">0%</item>
+
+        <item name="head_height">16.7%</item>
+
+
+        <item name="head_category_height_percent">13%</item>
+    </style>
+
+
+    <style name="AppThemeHoushijing" parent="AppThemeNotFullscreen">
+        <item name="fg_music_title_height">@dimen/y70</item>
+
+        <item name="list_item_height">@dimen/y80</item>
+        <item name="local_top_margin">@dimen/y30</item>
+        <item name="local_header_height">@dimen/y90</item>
+
+        <item name="album_item_content_size_width">@dimen/m160</item>
+        <item name="album_item_content_size_height">@dimen/m236</item>
+        <item name="album_item_content_icon_height">@dimen/m160</item>
+        <item name="album_item_content_tv_padding_top">@dimen/m12</item>
+        <item name="album_item_content_tv_padding_left">0dp</item>
+        <item name="album_item_content_tv_padding_right">0dp</item>
+        <item name="album_item_content_margin_top">@dimen/m20</item>
+        <item name="album_item_content_margin_bottom">@dimen/m10</item>
+        <item name="album_item_content_tv_height">@dimen/m76</item>
+        <item name="album_item_gap">@dimen/m30</item>
+        <item name="album_item_icon_with_text_top">@dimen/y11</item>
+        <item name="album_item_content_loading_icon_size">@dimen/m160</item>
+        <item name="album_item_content_loading_center_icon_size">@dimen/m50</item>
+
+        <item name="text_size_h1">@dimen/m26</item>
+        <item name="text_size_h2">@dimen/m24</item>
+        <item name="text_size_h3">@dimen/m22</item>
+        <item name="text_size_h4">@dimen/m20</item>
+
+        <item name="bar_player_view_padding">@dimen/m40</item>
+        <item name="bar_player_view_cd_margin">@dimen/m15</item>
+        <item name="bar_player_view_icon_size">@dimen/m72</item>
+        <item name="bar_player_view_cd_size">@dimen/m120</item>
+
+
+        <item name="cover_player_view_icon_size">@dimen/m72</item>
+        <item name="cover_player_view_icon_margin">@dimen/x48</item>
+        <item name="cover_player_view_margin_bottom">@dimen/y13</item>
+        <item name="cover_player_view_margin_horizontal">6.2%</item>
+
+        <item name="cover_player_view_width_percent">50%</item>
+        <item name="cover_player_view_height_percent">30%</item>
+
+        <item name="list_margin_left">3.1%</item>
+        <item name="list_margin_right">3.1%</item>
+        <item name="list_margin_bottom">0%</item>
+        <item name="list_margin_top">0%</item>
+        <item name="head_height">14.6%</item>
+    </style>
+
+
+    <style name="AppThemeShortHoushijing" parent="AppThemeHoushijing">
+        <item name="cover_player_view_icon_size">@dimen/m72</item>
+        <item name="cover_player_view_icon_margin">@dimen/x24</item>
+        <item name="cover_player_view_margin_bottom">@dimen/y13</item>
+        <item name="cover_player_view_margin_horizontal">2.3%</item>
+
+        <item name="cover_player_view_width_percent">50%</item>
+    </style>
+
+
+    <style name="AppThemeVertical" parent="AppThemeCheji">
+        <!--
+                <item name="text_size_h1">@dimen/m26</item>
+                <item name="text_size_h2">@dimen/m24</item>
+                <item name="text_size_h3">@dimen/m22</item>
+                <item name="text_size_h4">@dimen/m20</item>-->
+        <item name="album_item_content_margin_top">@dimen/m10</item>
+        <item name="album_item_content_margin_bottom">@dimen/m1</item>
+        <item name="album_item_content_size_width">@dimen/m120</item>
+        <item name="bar_player_view_padding">@dimen/m16</item>
+
+        <item name="bar_player_view_height_percent">20%</item>
+        <item name="album_item_gap">@dimen/m10</item>
+        <item name="list_item_height">@dimen/y34</item>
+        <item name="head_category_height_percent">5%</item>
+        <item name="album_item_icon_with_text_top">@dimen/m9</item>
+    </style>
+
+
+    <style name="album_item_content_ll">
+        <item name="android:layout_width">?attr/album_item_content_size_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clipChildren">false</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="album_item_content_des_tv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:maxEms">8</item>
+        <item name="android:lines">2</item>
+        <item name="android:paddingTop">?attr/album_item_content_tv_padding_top</item>
+        <item name="android:paddingLeft">?attr/album_item_content_tv_padding_left</item>
+        <item name="android:paddingRight">?attr/album_item_content_tv_padding_right</item>
+        <item name="android:textColor">@color/album_intro_text_color</item>
+        <item name="android:textSize">?attr/text_size_h3</item>
+        <item name="android:layout_marginTop">?attr/album_item_icon_with_text_top</item>
+    </style>
+
+    <style name="album_item_content_icon">
+        <item name="android:layout_width">?attr/album_item_content_icon_height</item>
+        <item name="android:layout_height">?attr/album_item_content_icon_height</item>
+    </style>
+
+    <style name="album_item_content_icon_playing">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@drawable/fm_album_item_play</item>
+    </style>
+
+    <style name="album_item_content_margin">
+        <item name="android:layout_marginTop">?attr/album_item_content_margin_top</item>
+        <item name="android:layout_marginBottom">?attr/album_item_content_margin_bottom</item>
+    </style>
+
+    <style name="list_text">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">?attr/text_size_h3</item>
+    </style>
+
+    <style name="title_text">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/type_text</item>
+        <item name="android:textSize">?attr/text_size_h1</item>
+    </style>
+
+    <style name="mine_main">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@color/setting_btn_bg</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="default_empty_icon_style">
+        <item name="android:layout_width">@dimen/m140</item>
+        <item name="android:layout_height">@dimen/m140</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="setting_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/y100</item>
+        <item name="android:paddingLeft">@dimen/x22</item>
+        <item name="android:paddingRight">@dimen/x22</item>
+        <item name="android:background">@drawable/bg_item_setting</item>
+    </style>
+
+    <style name="round_rectangle">
+        <item name="android:layout_width">@dimen/y200</item>
+        <item name="android:layout_height">@dimen/y48</item>
+        <item name="android:background">@drawable/selector_exit_cancel_app</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_1</item>
+    </style>
+
+    <style name="album_category_dot_style">
+        <item name="android:layout_width">@dimen/m6</item>
+        <item name="android:layout_height">@dimen/m6</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+</resources>

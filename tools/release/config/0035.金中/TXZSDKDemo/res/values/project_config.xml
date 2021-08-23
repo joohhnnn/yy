@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="txz_sdk_init_app_id">24ae815a29a9d9cf685dfa53337ee495</string>
+    <string name="txz_sdk_init_app_token">b47e9bd3a8445e8b4ed0b8852ae0ff8d78550127</string>
+    <string-array name="txz_sdk_init_wakeup_keywords">
+        <item>你好小踢</item>
+    </string-array>
+
+</resources>

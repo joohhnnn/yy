@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.txznet.music.widget.LyricView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lrcView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:fadeInFadeOut="true"
+    app:highlightColor="@color/player_lyric_selected_tv_color"
+    app:hint="暂时没有歌词"
+    app:lineSpace="@dimen/m16"
+    app:maxLength="@dimen/m480"
+    app:textPlaySize="@dimen/base_tv_h4"
+    app:textSize="@dimen/base_tv_h4"
+    tools:background="@drawable/base_bg" />

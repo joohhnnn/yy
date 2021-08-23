@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/image_iv"
+        android:layout_width="166.2px"
+        android:layout_height="206px"
+        android:scaleType="fitEnd"
+        android:src="@drawable/image_normal" />
+
+    <TextView
+        android:id="@+id/tts_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:maxLines="1"
+        tools:text="早上好"
+        android:textColor="#FFFFFF"
+        android:textSize="24px" />
+
+</LinearLayout>

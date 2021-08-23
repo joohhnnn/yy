@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/x424"
+        android:layout_height="@dimen/y250"
+        android:gravity="center"
+        android:background="@drawable/win_messagebox_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txt_dialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y90"
+            android:gravity="center"
+            android:text="@string/label_asrcmd_add"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/y24" />
+
+        <EditText
+            android:id="@+id/et_command"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:background="@drawable/black_edit_background"
+            android:gravity="center_vertical"
+            android:inputType="text"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:paddingLeft="@dimen/x28"
+            android:paddingRight="@dimen/x28"
+            android:text="你好，地恩杰"
+            android:hint="不超过8个字符"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/y24" />
+
+        <View
+            android:layout_marginTop="@dimen/y20"
+	            android:layout_width="match_parent"
+	            android:layout_height="@dimen/y1"
+	            android:background="#454545" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <Button
+                android:id="@+id/commit_editCommand"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/y60"
+                android:layout_weight="1"
+                android:background="@drawable/win_messagebox_sure_text_color"
+                android:gravity="center"
+                android:text="@string/label_commit"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/y20" />
+			<View
+	            android:layout_width="@dimen/y1"
+	            android:layout_height="match_parent"
+	            android:background="#454545" />
+            <Button
+                android:id="@+id/cancel_editCommand"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/y60"
+                android:layout_weight="1"
+                android:background="@drawable/win_messagebox_cancel_text_color"
+                android:gravity="center"
+                android:text="@string/label_cancel"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/y20" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

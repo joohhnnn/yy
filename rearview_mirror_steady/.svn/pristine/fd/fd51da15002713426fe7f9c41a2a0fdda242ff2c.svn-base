@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="@dimen/dimen_layout_width_system_upgrade_dialog"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_system_upgrade_corner_border_bg"
+        android:gravity="center"
+        android:minHeight="84px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_upgrade_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingBottom="22px"
+            android:paddingLeft="28px"
+            android:paddingRight="28px"
+            android:paddingTop="22px"
+            android:textColor="#FFFFFFFF"
+            android:textSize="15px"
+            tools:text="系统新版本V1.000009C升级已中断，您确定要升级吗" />
+        <!--检测到系统新版本V1.000009C(共20M)，您确定要升级吗？-->
+        <!--系统新版本V1.000009C升级已中断，您确定要继续升级吗-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#3A4761" />
+
+        <TextView
+            android:id="@+id/tv_upgrade_wakeup_tips"
+            android:layout_width="match_parent"
+            android:layout_height="40px"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#B9BCC2"
+            android:textSize="15px"
+            android:text="@string/ota_upgrade_notify_dialog_wakeup_tips" />
+    </LinearLayout>
+</FrameLayout>

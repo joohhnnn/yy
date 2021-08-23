@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 应用程序名 -->
+    <string name="app_name">TXZRecord</string>
+    <string name="app_version">1.0.2</string>
+    <!-- 版本描述 -->
+    <string name="app_desc"></string>
+
+</resources>

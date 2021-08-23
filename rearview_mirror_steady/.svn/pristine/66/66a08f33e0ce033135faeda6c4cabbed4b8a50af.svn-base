@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        style="@style/smartHandyCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:src="@drawable/smart_handy_icon_help"
+                style="@style/SmartHandyCardHeadIcon"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="帮助"
+                style="@style/SmartHandyCardHeadTitle"/>
+
+            <ImageButton
+                android:id="@+id/imgBtnMore"
+                style="@style/SmartHandyCardHeadMore"/>
+
+        </LinearLayout>
+
+        <com.txznet.comm.ui.theme.test.widget.WordPoolLayout
+            android:id="@+id/wordPoolLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:max_lines="3"
+            app:item_layout="@layout/smart_handy_home_item_help_item"
+            app:item_text_view_id="@+id/tv"
+            app:item_padding_ver="14dp"
+            app:item_padding_hor="10dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

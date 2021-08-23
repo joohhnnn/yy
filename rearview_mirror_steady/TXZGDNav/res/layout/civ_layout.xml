@@ -1,0 +1,7 @@
+<com.txznet.nav.ui.widget.CircleImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/head_image_civ"
+    android:layout_width="80dip"
+    android:layout_height="80dip"
+    attr:border_color="#34bfff"
+    attr:border_width="4dip" />

@@ -1,0 +1,184 @@
+1.唤醒词：
+   你好小腾
+   
+   
+2.免唤醒词：
+   "调大音量"
+	 "调小音量"
+  	"上一首","上一台"
+		"下一首","下一台"
+		"开始播放"
+		"暂停播放"
+		"打开屏幕"
+		"关闭屏幕"
+		"打开收音机"
+		"打开导航"
+		"打开音乐"
+		
+		查看全程
+		放大地图
+		缩小地图
+		躲避拥堵
+		高速优先
+		停止导航
+		退出导航
+		
+3.唤醒后指令
+
+
+  <string-array name = "open_radio">
+          <item>打开收音机</item>
+          <item>听收音机</item>
+          <item>打开收音</item>
+          <item>听收音</item>
+          <item>收音机</item>
+          <item>收音</item>
+          <item>启动收音机</item>
+          <item>开启收音机</item>
+         </string-array>
+         
+       <string-array name = "open_navi">
+          <item>打开导航</item>
+          <item>我要导航</item>
+          <item>打开地图导航</item>
+          <item>打开导航地图</item>
+         </string-array>
+         
+      <string-array name = "close_radio">
+          <item>关闭收音机</item>
+          <item>关闭收音</item>
+          <item>退出收音</item>
+          <item>退出收音机</item>
+         </string-array>
+       <string-array name = "open_bt">
+          <item>打开蓝牙</item>
+          <item>播放蓝牙</item>
+          <item>打电话</item>
+          <item>电话</item>
+          <item>蓝牙</item>
+           <item>开启蓝牙</item>
+           <item>启动蓝牙</item>
+         </string-array>
+         
+       <string-array name = "close_bt">
+          <item>关闭蓝牙</item>
+          <item>退出蓝牙</item>
+         </string-array>
+         
+
+         
+         <string-array name = "open_audio">
+         <item>打开音乐</item>
+         <item>进入音乐</item>
+         <item>打开歌曲</item>
+         <item>进入歌曲</item>
+         <item>听音乐</item>
+         </string-array>
+         
+         <string-array name = "close_audio">
+         <item>关闭音乐</item>
+         <item>退出音乐</item>
+         <item>关闭歌曲</item>
+         <item>退出歌曲</item>
+         </string-array>
+         
+          <string-array name = "open_video">
+         <item>打开视频</item>
+         <item>播放视频</item>
+          <item>看视频</item>
+          <item>视频</item>
+          <item>打开视频播放器</item>
+          <item>启动视频播放器</item>
+          <item>启动视频</item>
+          <item>开始视频</item>
+         </string-array>
+          <string-array name = "close_video">
+         <item>关闭视频</item>
+         <item>退出视频</item>
+         <item>关闭视频播放器</item>
+         <item>退出视频播放器</item>
+         </string-array>
+         
+          <string-array name = "open_dvd">
+         <item>打开DVD</item>
+          <item>打开光碟</item>
+          <item>打开光盘</item>
+           <item>打开dvd</item>
+          <item>播放DVD</item>
+          <item>播放光碟</item>
+          <item>播放光盘</item>
+          <item>播放dvd</item>
+          <item>看DVD</item>
+          <item>看光碟</item>
+          <item>看光盘</item>
+           <item>看dvd</item>
+           <item>光盘</item>
+         </string-array>
+         
+          <string-array name = "close_dvd">
+         	<item>关闭DVD</item>
+          	<item>关闭光盘</item>
+          	 <item>关闭光碟</item>
+           	 <item>关闭dvd</item>
+             <item>退出DVD</item>
+         	 <item>退出光盘</item>
+          	 <item>退出光碟</item>
+            <item>退出dvd</item>
+         </string-array>
+         
+         
+         
+          <string-array name = "open_xmly">
+         <item>打开喜马拉雅</item>
+          <item>进入喜马拉雅</item>
+          <item>打开电台</item>
+          <item>进入电台</item>
+         </string-array>
+         
+           <string-array name = "close_xmly">
+         <item>退出喜马拉雅</item>
+          <item>关闭喜马拉雅</item>
+          <item>退出电台</item>
+          <item>关闭电台</item>
+         </string-array>
+         
+        
+          
+         
+  
+         
+          <!-- 打开《一键导航》 -->
+		<string-array name = "open_wenavi">
+			<item>打开一键导航</item>
+			<item>我要一键导航</item>
+			<item>一键导航</item>
+			<item>打开弗凡导航</item>
+			<item>导航辅助</item>
+		</string-array>
+		
+		<!-- 导航到汇合点 -->
+		<string-array name = "navi_to_aim">
+			<item>导航到目的地</item>
+			<item>导航到汇合点</item>
+			<item>我要去接朋友</item>
+			<item>我去接朋友</item>
+			<item>我要接朋友</item>
+			<item>接朋友</item>
+			<item>去接朋友</item>
+			<item>去朋友那</item>
+			<item>我要接人</item>
+		</string-array>
+		
+		<!-- 导航到分享者 -->
+		<string-array name = "navi_to_sharer">
+			<item>导航到他</item>
+			<item>导航到朋友</item>
+		</string-array>  
+           
+         
+      
+		
+		
+		
+   
+  

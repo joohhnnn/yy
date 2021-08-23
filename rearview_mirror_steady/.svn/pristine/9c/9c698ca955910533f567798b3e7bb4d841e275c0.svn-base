@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y80"
+        android:gravity="center"
+        android:background="@color/title_header"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_history_music"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right" >
+
+            <RelativeLayout
+                android:layout_width="@dimen/x140"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/tv_history_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="音乐"
+                    android:textColor="@color/item_play_list_click_1"
+                    android:textSize="@dimen/y30" />
+
+                <View
+                    android:id="@+id/line_history_music"
+                    android:layout_width="@dimen/x140"
+                    android:layout_height="@dimen/y4"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/drak_green" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_history_radio"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left" >
+
+            <RelativeLayout
+                android:layout_width="@dimen/x140"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/tv_history_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="电台"
+                    android:textColor="@color/item_play_list_click_1"
+                    android:textSize="@dimen/y30" />
+
+                <View
+                    android:id="@+id/line_history_radio"
+                    android:layout_width="@dimen/x140"
+                    android:layout_height="@dimen/y4"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/drak_green"
+                    android:visibility="invisible"
+                     />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <!-- <include layout="@layout/list_with_nodata"/> -->
+
+</LinearLayout>

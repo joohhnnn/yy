@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                style="@style/car_portrait_chat_msg_root_left">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_car_chat_msg_avatar"
+        style="@style/car_portrait_chat_avatar_left"
+        tools:src="@drawable/default_headimage"/>
+
+    <com.txznet.webchat.ui.rearview_mirror.widget.BubbleRelativeLayout
+        android:id="@+id/view_car_chat_msg_bubble"
+        android:layout_toRightOf="@id/iv_car_chat_msg_avatar"
+        style="@style/car_portrait_chat_bubble_left">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/x60"
+            android:paddingLeft="@dimen/x15"
+            android:paddingRight="@dimen/x100">
+
+            <ImageView
+                android:id="@+id/iv_car_chat_voice_indicator"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/src_voice_left"
+                android:visibility="visible"/>
+        </FrameLayout>
+
+    </com.txznet.webchat.ui.rearview_mirror.widget.BubbleRelativeLayout>
+
+</RelativeLayout>

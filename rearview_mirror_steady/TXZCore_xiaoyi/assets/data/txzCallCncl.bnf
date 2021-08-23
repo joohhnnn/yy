@@ -1,0 +1,36 @@
+#BNF+IAT 1.0 UTF-8;
+
+!grammar %GRAMMAR_ID%;
+
+!slot <preActive>;
+!slot <prePassive>;
+!slot <prePlease>;
+
+!slot <cnclOk>;
+!slot <cnclCancel>;
+
+!start <txzStart>;
+
+//////////////////////////////////////命令开始//////////////////////////////////////
+
+<txzStart>:<cnclStart>;
+
+//////////////////////////////////////前缀相关//////////////////////////////////////
+
+<preAll>:<preActive>|<preAllPls>;
+<preAllPls>:[<prePlease>]<prePassive>;
+
+<preActive>:我;
+<prePassive>:帮我|替我|给我|帮|帮忙|你给我|你替我|你;
+<prePlease>:请|麻烦;
+
+//////////////////////////////////////取消相关//////////////////////////////////////
+
+<cnclStart>:[<preAll>]<cnclCmd>;
+
+<cnclCmd>:<cnclOk>|<cnclCancel>;
+
+<cnclOk>:确定|确定呼叫|确定拨打;
+<cnclCancel>:取消|取消呼叫|取消拨打|挂掉|挂断|掐断|掐掉;
+
+

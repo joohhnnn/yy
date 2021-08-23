@@ -1,0 +1,26 @@
+//呼叫相关事件和数据
+
+package com.txz.ui.makecall;
+
+enum SubEvent
+{
+	SUBEVENT_MAKE_CALL_DIRECT = 0x1; //高匹配1人仅有一个号码，携带的数据为MobileContact，即将为您呼叫xx，挂掉请说取消(n秒后自动拨出，确定后直接拨出)
+	SUBEVENT_MAKE_CALL_LIST_NUMBER = 0x2; //高匹配1人多号码，携带的数据为voice_data.proto下的MobileContact，即将为您拨打XX139的号码，挂断请说取消，更改请说第几个
+	SUBEVENT_MAKE_CALL_CHECK = 0x3; //低匹配1人，携带的数据为voice_data.proto下的MobileContact，您是要打电话给给xx吗？(不自动拨出)，如果有多个号码，再使用SUBEVENT_MAKE_CALL_LIST_NUMBER场景一次
+	
+	SUBEVENT_MAKE_CALL_LIST = 0x4; //低匹配n人或同匹配n人，携带的数据为voice_data.proto下的MobileContacts，找到以下联系人，第一个xxx，第二个xxx，第三个xxx，您要呼叫第几个(不自动拨出)
+	SUBEVENT_MAKE_CALL_CANDIDATE = 0x5; //高匹配1+n人，携带数据为voice_data.proto下的MobileContacts，第一个直接发起呼叫，其他作为候选提示，暂时屏蔽
+	
+	SUBEVENT_MAKE_CALL_NUMBER_DIRECT = 0x11; //单号码联系人直接发起呼叫，携带的数据为MobileContact，即将为您呼叫xx153的号码，挂断请说取消(自动呼叫)
+	SUBEVENT_MAKE_CALL_NUMBER = 0x12; //单号码陌生人发起呼叫确认，携带的数据为MobileContact，您是否要呼叫153xxxx(不自动呼叫)
+	
+	SUBEVENT_INCOMING_CALL_NOTIFY = 0x101; //来电通知，携带电话号码通知native
+	SUBEVENT_INCOMING_CALL = 0x102; //来电，携带MobileContact通知ui
+	SUBEVENT_CALLING = 0x103; //通话中
+	
+	SUBEVENT_INCOMING_CALL_REPEAT = 0x200; //复述来电信息
+	SUBEVENT_CANCEL_CALL = 0x201; //取消呼叫
+	SUBEVENT_ACCEPT_CALL = 0x202; //接受来电
+	SUBEVENT_REJECT_CALL = 0x203; //拒绝来点
+	
+}

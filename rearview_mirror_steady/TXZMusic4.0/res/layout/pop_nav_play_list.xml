@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:weightSum="2"
+    >
+
+
+    <View
+        android:id="@+id/view_blank"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#80000000"/>
+
+    <LinearLayout
+        android:id="@+id/layout_playlist"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/player_list_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_list_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x16"
+            android:text="共300期"
+            android:layout_marginTop="@dimen/y12"
+            android:layout_marginBottom="@dimen/y19"
+            android:textSize="@dimen/y18"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:background="@color/pop_list_divider"/>
+
+        <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+            android:id="@+id/swipeToLoadLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <!--<com.txznet.music.ui.view.RefreshHeaderView-->
+                <!--android:id="@id/swipe_refresh_header"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:gravity="center"/>-->
+
+            <include
+                android:id="@id/swipe_refresh_header"
+                layout="@layout/layout_refresh_header"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@id/swipe_target"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+
+            <!--<com.txznet.music.ui.view.LoadMoreFooterView-->
+                <!--android:id="@id/swipe_load_more_footer"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:gravity="center"/>-->
+
+            <include
+                android:id="@id/swipe_load_more_footer"
+                layout="@layout/layout_loadmore_footer"/>
+
+        </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

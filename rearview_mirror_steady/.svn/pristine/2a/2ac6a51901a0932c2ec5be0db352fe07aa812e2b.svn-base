@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/help_ll_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--这里的文字要在代码中特殊处理，所以没有设置text-->
+        <TextView
+            android:id="@+id/help_tv_list_title"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textColor="#B2FFFFFF"
+            android:textSize="@dimen/dimen_text_size_list_title"
+            tools:text="请先说“小O小O”唤醒语音" />
+
+
+        <TextView
+            android:id="@+id/help_tv_list_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="上一页"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/dimen_text_size_list_pre" />
+
+        <TextView
+            android:id="@+id/help_tv_list_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x7"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/dimen_text_size_list_page"
+            tools:text="2/3" />
+
+        <TextView
+            android:id="@+id/help_tv_list_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x7"
+            android:layout_marginRight="@dimen/x4"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="下一页"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/dimen_text_size_list_next" />
+        <!--</LinearLayout>-->
+    </LinearLayout>
+
+    <com.txznet.launcher.widget.CornerFrameLayout
+        android:id="@+id/help_corner_ly"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/help_list_command"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="3"
+            tools:listitem="@layout/layout_help_command_item" />
+
+    </com.txznet.launcher.widget.CornerFrameLayout>
+
+    <!--这里的文字要在代码中特殊处理，所以没有设置text-->
+    <TextView
+        android:id="@+id/help_tv_command_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:layout_marginTop="4px"
+        android:textColor="#B2FFFFFF"
+        tools:text="你可以说 “上一页”、“下一页”、“返回桌面”" />
+
+</LinearLayout>

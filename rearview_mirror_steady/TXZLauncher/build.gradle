@@ -1,0 +1,156 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.txznet.launcher"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 10101
+        versionName "1.1.1"
+        multiDexEnabled true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('../../tools/txz.keystore')
+            storePassword 'android'
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("boolean", "ANJIXING_TEST", "false")
+            buildConfigField("boolean", "LOG_DEBUG", "true")
+            buildConfigField("int", "SVN_VERSION", "${getSvnRevision()}")
+            buildConfigField("boolean", "ENABLE_TOUCH_EVENT", "true")
+            signingConfig signingConfigs.release
+        }
+
+        release {
+            buildConfigField("boolean", "ANJIXING_TEST", "false")
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            buildConfigField("int", "SVN_VERSION", "${getSvnRevision()}")
+            buildConfigField("boolean", "ENABLE_TOUCH_EVENT", "false")
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        anjixingtest {
+            initWith release
+            buildConfigField("boolean", "ANJIXING_TEST", "true")
+            matchingFallbacks = ['debug', 'release']
+        }
+
+        applicationVariants.all { variant ->
+            if (variant.buildType.isMinifyEnabled()) {
+                def fileNamePrefix = "${project.name}_${variant.buildType.name}_${defaultConfig.versionName}(${getSvnRevision()})_${getTime()}"
+                variant.outputs.each { output ->
+                    if (null != output.outputFile && output.outputFile.name.endsWith('.apk')) {
+                        variant.assemble.doLast {
+                            copy {
+                                from (output.outputFile, variant.mappingFile.path)
+                                into "${projectDir}/outputs"
+                                rename { String fileName ->
+                                    if (fileName.endsWith('.apk')) {
+                                        "${fileNamePrefix}.apk"
+                                    } else {
+                                        "${fileNamePrefix}.txt"
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+        disable 'CheckResult'
+    }
+
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation project(':TXZComm')
+    implementation googleSupport()
+
+    implementation "com.google.code.gson:gson:$rootProject.ext.GsonVersion"
+    implementation "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
+    // 高德地图
+    implementation 'com.amap.api:3dmap:latest.integration'
+    //高斯模糊
+    implementation 'jp.wasabeef:glide-transformations:3.0.1'
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.1.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+    //    compile ('com.airbnb.android:lottie:2.5.4',{
+    //        exclude module: 'appcompat-v7'
+    //    })
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.ext.RxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.ext.RxAndroidVersion"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.0'
+    implementation 'com.android.support:multidex:1.0.1'
+
+    implementation 'com.github.wangchenyan:HtmlText:1.0'
+}
+
+
+def googleSupport() {
+    [
+            "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:support-annotations:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:design:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:cardview-v7:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:percent:$rootProject.ext.supportLibraryVersion",
+    ]
+}
+
+def getSvnRevision() {
+    new ByteArrayOutputStream().withStream { os ->
+        def result = exec {
+            executable = 'svn'
+            args = ['info']
+            standardOutput = os
+        }
+        def outputAsString = os.toString()
+        def matchLastChangedRev = outputAsString =~ /Last Changed Rev: (\d+)/
+
+        ext.svnRev = "${matchLastChangedRev[0][1]}".toInteger()
+    }
+    return svnRev
+}
+
+def getTime() {
+    return new Date().format("yyyyMMddHHmm")
+}

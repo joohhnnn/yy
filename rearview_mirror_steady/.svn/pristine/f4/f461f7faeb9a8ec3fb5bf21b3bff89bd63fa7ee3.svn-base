@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andexert.library.RippleView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y80"
+    android:descendantFocusability="blocksDescendants"
+    android:minHeight="@dimen/y80"
+    android:orientation="vertical"
+    ripple:rv_rippleDuration="300"
+    ripple:rv_type="rectangle" >
+
+    <com.txznet.record.view.GradientProgressBar
+        android:id="@+id/my_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/txtNum"
+        android:layout_width="?attr/list_item_txtNum_width"
+        android:layout_height="?attr/list_item_txtNum_height"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="?attr/list_item_txtNum_marginLeft"
+        android:background="@drawable/poi_item_circle_bg"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:textColor="@android:color/white" />
+
+    <RelativeLayout
+        android:id="@+id/rl_del"
+        android:layout_width="@dimen/x100"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/txtNum"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/txtNum" >
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#7F4f4f4f" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/poi_history_del" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/rl_del"
+        android:layout_toRightOf="@id/txtNum"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtContent"
+            style="@style/text_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_marginStart="@dimen/x16"
+            android:ellipsize="end"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/txtDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_marginStart="@dimen/x16"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#80FFFFFF" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/list_item_divider_height"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#4c4c4c"
+        android:visibility="gone" />
+
+</com.andexert.library.RippleView>

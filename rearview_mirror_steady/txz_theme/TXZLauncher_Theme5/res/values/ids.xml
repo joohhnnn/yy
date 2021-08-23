@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="launcher_view_pager" type="id" />
+    <item name="launcher_indicator" type="id" />
+    <item name="llIndicator" type="id" />
+</resources>

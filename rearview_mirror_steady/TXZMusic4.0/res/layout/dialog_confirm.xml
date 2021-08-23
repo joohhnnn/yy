@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dialog_confim"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:id="@+id/dialog_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_5"
+        android:text="确定退出同听" />
+
+
+
+    <View
+        android:layout_above="@+id/ll_btn"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/gray"/>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_home_dialog_back_choice_height"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:id="@+id/dialog_sure"
+            android:textSize="@dimen/text_size_4"
+            android:text="取消" />
+
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="1dp"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_home_dialog_back_choice_height"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/dialog_cancle"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_4"
+            android:text="取消" />
+
+    </LinearLayout>
+
+</RelativeLayout>

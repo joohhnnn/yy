@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_lyric_error"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@drawable/base_bg">
+
+    <TextView
+        android:id="@+id/tv_lyric_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="获取歌词失败"
+        android:textColor="@color/white_50"
+        android:textSize="@dimen/base_tv_h4" />
+
+    <TextView
+        android:id="@+id/tv_error_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_lyric_error"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/m24"
+        android:background="@drawable/base_round_rectange_btn_bg"
+        android:paddingLeft="@dimen/m44"
+        android:paddingTop="@dimen/m16"
+        android:paddingRight="@dimen/m44"
+        android:paddingBottom="@dimen/m16"
+        android:text="点击重试"
+        android:textColor="@color/white"
+        android:textSize="@dimen/base_tv_h4" />
+</RelativeLayout>

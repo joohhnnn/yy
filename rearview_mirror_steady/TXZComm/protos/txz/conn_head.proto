@@ -1,0 +1,86 @@
+package com.txz.conn_head;
+
+import "app_head.proto";
+
+
+//基础指令枚举
+enum Command
+{
+	//客户端指令
+	CMD_USER_MANAGER = 1; 		//会话管理指令，包括登录、登出、心跳、用户信息、注册等
+	CMD_RELATIONSHIP_MANAGER = 2; //关系链信息查询修改
+	CMD_DATA_MANAGER = 3; 		//数据上报、在线配置更新/推送、大数据上传
+	//端到端消息指令
+	CMD_MESSAGE_MANAGER = 4; 		//消息中心指令，负责端到端消息推送
+	CMD_LOG_MANAGER = 5;			//日志管理
+	CMD_MUSIC_MANAGER = 6;		//音乐管理
+	CMD_EQUIPMENT_MANAGER	= 7;		//设备管理
+	CMD_IM_MANAGER 	= 8;			//及时通信模块（聊天、多车通信等）
+	CMD_SERVER_MANAGER = 9;		//后台内部使用
+	CMD_PUSH_MANAGER	= 10;			//push管理
+	CMD_AUDIO_MANAGER = 11;		//电台管理
+	CMD_REPORT_MANAGER = 12;		//上报管理
+	
+	CMD_VERSION_MANAGER = 0x10000; 		//版本管理
+
+	
+	//UI指令起始命令字，预留段
+	CMD_UI_BEGIN = 0x7FFF0000;
+}
+
+
+//Conn错误码，只能在这里定义
+enum ErrorCode
+{
+	EC_OK = 			0; //业务调用成功
+	EC_SERVICE_NOTFOUND = 1; //没有找到服务，业务不可达
+	EC_SERVICE_TIMEOUT = 2; 		//业务超时
+	EC_SERVICE_OVERLOAD = 3; 	//业务过载
+	EC_REQUEST_FULL		= 4; 		//请求队列已满
+	EC_NO_LOGIN			= 5; 			//没有登录态
+	EC_SVR_BUSY			= 6;			//服务器繁忙
+	EC_PROTO_PARSE_ERR	= 7;		//协议解析失败 
+	EC_PARAM_ERROR = 8; 			//参数错误
+	EC_REQUEST_TIMEOUT = 9; 	//客户端请求发生超时，本地错误，非后台错误
+	EC_SEND_ERROR = 10; 			//客户端请求发送异常，本地错误，非后台错误
+	EC_NEED_NETWORK = 11; 		//需要网络才能发送请求
+	EC_NEED_SDK_INIT = 12;			//需要sdk初始化
+}
+
+
+enum PacketType
+{
+	PACKTYPE_REQUEST = 0; //请求包，默认
+	PACKTYPE_RESPONSE = 1;  //响应包
+}
+
+//协议头
+message Head
+{
+	optional uint32     uint32_cmd = 1; //命令字
+	optional uint32     uint32_subcmd = 2; //子命令
+    optional bytes      str_version = 3; //版本号
+	optional bytes      str_username = 4; //登录用的用户名，登录完成后不填
+	optional uint64     uint64_uid = 5; //用户id，登录完成后使用这个进行传输
+	optional uint32     uint32_seq = 6; //序列号，请求序列号，如果是响应的，与请求的保持一致
+	optional uint32     uint32_resultcode = 7; //响应码，不填该字段表明是请求，填充了表明是响应
+	optional uint32		uint32_type = 8;	//参考PacketType
+}
+
+
+//协议体
+message Body
+{
+	optional com.txz.app_head.Head   msg_app_head = 1; //业务请求头
+	optional bytes     str_app_data = 2; //业务请求数据
+}
+
+//请求记录结构
+message RequestRecord
+{
+	optional Head msg_conn_head = 1; //整体请求头
+	optional com.txz.app_head.Head   msg_app_head = 2; //业务请求头
+	optional bytes     str_app_data = 3; //业务请求数据
+}
+
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <com.txznet.music.widget.LoadingView
+        android:id="@+id/v_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/album_item_content_margin"
+        android:paddingLeft="?attr/bar_player_view_padding"
+        android:paddingRight="?attr/bar_player_view_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.txznet.music.widget.NavRecyclerView
+                android:id="@+id/list_album"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:minHeight="@dimen/album_item_width"/>
+        </LinearLayout>
+
+    </com.txznet.music.widget.LoadingView>
+</LinearLayout>

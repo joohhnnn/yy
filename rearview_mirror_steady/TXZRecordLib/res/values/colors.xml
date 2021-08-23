@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="win_bg">#FF000000</color>
+    <color name="chat_list_item_pressed">#1b1e20</color>
+    <color name="chat_list_item_unpressed">#444a50</color>
+    <color name="chat_list_item_wx_pressed">#2e3438</color>
+    <color name="transparent">#00000000</color>
+    <color name="chat_list_item_wx_text">#FFFFFF</color>
+    
+    <color name="poi_call_nor">#15bd50</color>
+    <color name="poi_call_press">#0d712f</color>
+    <color name="poi_nav_nor">#34bfff</color>
+    <color name="poi_nav_press">#1f7399</color>
+    
+    <color name="rippelColor">#FFFFFF</color>
+    <color name="bg_ripple_nor">#00000000</color>
+    <color name="bg_ripple_focused">#4AA5FA</color>
+    <color name="bg_list_item_nor">#00000000</color>
+    <color name="bg_list_item_focused">#4AA5FA</color>
+    
+    <color name="search_text_color_nor">#fff</color>
+   	<color name="search_text_color_pre">#8ce3fd</color>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/flMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+       <FrameLayout
+	        android:id="@+id/fm_map"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent">           
+       </FrameLayout>
+        
+        <LinearLayout
+            android:id="@+id/llPoi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            
+            <com.txznet.record.view.DisplayLvEx
+                android:background="@drawable/white_range_layout"
+                android:id="@+id/list_ex"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none" />
+            
+            <FrameLayout 
+                android:id="@+id/lyButton"
+                android:layout_width="match_parent"
+            	android:layout_height="0dp"
+            	android:layout_weight="1">               
+            </FrameLayout>
+        </LinearLayout>    
+       <LinearLayout
+            android:id="@+id/ll_map_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="#CC000000"
+            android:orientation="vertical" >
+            <ImageView 
+	            android:id="@+id/iv_map_poi_loading"
+	            android:scaleType="fitCenter"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" />
+     	</LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

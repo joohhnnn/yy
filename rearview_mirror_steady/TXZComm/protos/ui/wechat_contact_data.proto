@@ -1,0 +1,28 @@
+package com.txz.ui.wechatcontact;
+
+enum SubEventId
+{
+	SUBEVENT_UPDATED_WECHAT_CONTACT_LIST = 0x00001; //更新微信联系人列表，携带WeChatContacts
+}
+
+enum ContactType
+{
+   TYPE_FRIEND = 0x0000;
+   TYPE_GROUP = 0x0001;
+   TYPE_MIX = 0x0002;
+}
+
+//微信联系人
+message WeChatContact {
+	optional string name = 1;
+	optional string id = 2; 
+	optional int32 score = 3;
+	optional uint32 uint32_times_contacted = 4; //联系的次数
+	optional uint32 uint32_last_time_contacted = 5; //最后联系的时间
+	optional uint32 uint32_last_time_updated = 6; //最后插入或修改的时间
+	optional uint32 uint32_type = 7; //联系人类型 0表示普通联系人， 1表示群聊
+}
+
+message WeChatContacts {
+	repeated WeChatContact cons = 1;
+}

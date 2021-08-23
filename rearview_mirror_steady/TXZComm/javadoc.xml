@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc" >
+
+    <target name="clean" >
+    	<exec executable="cmd.exe">
+			<arg line="/C rmdir /S /Q doc\html"/>
+		</exec>
+	</target>
+		
+    <target name="javadoc" depends="clean">
+		
+        <javadoc
+            access="public"
+            additionalparam="-encoding UTF-8 -charset UTF-8 "
+            author="false"
+            classpath="libs/protobuf-java-2.3.0-nano.jar;libs/fastjson-1.1.34.android.jar"
+            destdir="doc/html"
+            doctitle="同行者开发者接入文档"
+            nodeprecated="false"
+            nodeprecatedlist="false"
+            noindex="false"
+            nonavbar="false"
+            notree="false"
+            packagenames="com.txznet.sdk.music,com.txznet.sdk.bean,com.txznet.sdk"
+            source="1.6"
+            sourcepath="gen;pbsrc;src"
+            splitindex="true"
+            use="true"
+            version="true" />
+    </target>
+
+</project>

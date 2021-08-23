@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./TXZRecordLib/uilibs/Android_Map3D_SDK_V_20171107.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TXZRecordLib/uilibs/Android_Map3D_SDK_V_20171107.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

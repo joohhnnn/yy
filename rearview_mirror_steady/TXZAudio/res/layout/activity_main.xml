@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:music="http://schemas.android.com/com.txznet.music"
+    xmlns:app="http://schemas.android.com/apk/res/com.txznet.music"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y70"
+        android:layout_gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/y30" />
+
+        <RelativeLayout
+            android:id="@+id/rl_music"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/y80"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingBottom="@dimen/x5"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10" >
+
+            <com.txznet.music.widget.MusicMoveView
+                android:id="@+id/musicMoveView1"
+                android:layout_width="@dimen/y80"
+                android:layout_height="@dimen/y80"
+                app:MusicMoveColor="@color/green" />
+        </RelativeLayout>
+
+        <com.txznet.music.widget.ShadeImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/y70"
+            android:layout_height="@dimen/y70"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/back"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+<!--         <include layout="@layout/fragment_homepage"/> -->
+    </FrameLayout>
+
+</LinearLayout>

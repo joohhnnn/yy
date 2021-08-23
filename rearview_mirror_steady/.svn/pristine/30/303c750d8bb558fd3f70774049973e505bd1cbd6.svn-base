@@ -1,0 +1,134 @@
+package com.txz.ui.contact;
+
+
+import "ui_map.proto";
+import "ui_music.proto";
+
+enum SubEventId
+{
+	SUBEVENT_UPDATED_MOBILE_CONTACT_LIST = 0x00001; //更新手机联系人列表，携带MobileContacts
+	
+	SUBEVENT_REFRESH_SERVICE_CONTACT_LIST = 0x01001; //从文件读取刷新服务号信息，内部使用，异步接入主消息线程触发导入服务号联系人列表
+	SUBEVENT_SWITCH_CONTACT_ALIAS_LIST = 0x01002; //离线管理器在创建别名后切换别名列表，用消息队列的线程切换，防止读写冲突
+}
+
+//手机联系人
+message MobileContact {
+	optional string name = 1;
+	repeated string phones = 2; 
+	optional int32 score = 3;
+	optional uint32 uint32_times_contacted = 4; //联系的次数
+	optional uint32 uint32_last_time_contacted = 5; //最后联系的时间
+	optional uint32 uint32_last_time_updated = 6; //最后插入或修改的时间
+}
+
+message MobileContacts {
+	repeated MobileContact cons = 1;
+}
+
+
+//用户在线状态
+enum UserStatus
+{
+	USER_STATUS_OFFLINE = 1; //离线
+	USER_STATUS_ONLINE = 2; //手机在线
+	USER_STATUS_CAR_ONLINE = 3; //与车配对在线
+}
+
+//用户性别
+enum UserSex
+{
+	USER_SEX_UNKNOW = 0; //0为未知，不确定性别
+	USER_SEX_MAN = 1; //男性
+	USER_SEX_FEMAN = 2; //女性
+}
+
+//后台用户配置
+message UserNetConfigInfo
+{
+	optional uint32 uint32_tag   = 1; //更新标记值，后台使用时间戳
+	
+	optional com.txz.ui.map.NavigateInfo msg_home_loc = 2; //家的位置设置
+	optional com.txz.ui.map.NavigateInfo msg_company_loc = 3; //公司的位置设置
+	optional com.txz.ui.map.NavigateInfoList msg_history_locs = 4; //历史位置
+	repeated string music_select_catogory = 5;
+	optional com.txz.ui.contact.UiSetting msg_ui_setting = 6; // ui的设置界面选项
+	optional com.txz.ui.music.MediaList msg_favourite_music_list = 7; //用户收藏音乐列表
+}
+
+enum MusicDownloadType
+{
+	MUSIC_DOWNLOAD_CLOSE = 0;			//关闭
+	MUSIC_DOWNLOAD_OPEN_WIFI_ONLY = 1;	//开启只在wifi情况下才可以下载
+	MUSIC_DOWNLOAD_OPEN_ALL 	  = 2;	//开启所有网络情况下都可以下载	
+	
+}
+
+// ui的设置界面选项
+message UiSetting 
+{
+	optional bool b_inited = 1; 				//是否被初始化过
+	optional bool b_wifi_update_music = 2; 		//wifi自动更新音乐设置 (废弃，使用int32_download_music_type代替)
+	optional bool b_wifi_update_version = 3; 	//wifi自动更新升级包
+	optional bool b_wifi_auto_speak_sms = 4; 	//wifi短信播报
+	optional bool b_wifi_not_speak_stranger = 5; //wifi陌生人短信不播报
+	optional bool b_use_bluetooth_recogonize = 6; //优先使用蓝牙识别
+	optional int32 int32_download_music_type = 7; //下载音乐开关（默认值：MUSIC_DOWNLOAD_CLOSE， 值如：MusicDownloadType）
+}
+
+
+//基础资料信息
+message UserBasicInfo
+{
+	optional uint32 uint32_tag   = 1; //更新标记值，后台使用时间戳
+	
+	optional uint32 uint32_phone_area	= 2;		//手机国家(地区)区号
+	optional uint64 uint64_phone_num 	= 3;		//手机号码
+	optional string str_nick 		= 4; //用户昵称
+	optional uint32 uint32_sex   = 5; //性别，参考UserSex
+}
+
+//用户照片数据
+message UserPhotoInfo
+{
+	optional uint32 uint32_tag   = 1; //更新标记值，后台使用时间戳
+	
+	optional string str_photo_path = 2; //头像路径，ui显示头像使用
+	optional bytes str_photo_data = 3; //头像数据，ui上传头像使用
+}
+
+//后台用户信息
+message UserInfo
+{
+	optional uint64 uint64_uid					= 1;		//用户ID，从后台获取，ui不用关心
+	optional uint32 uint32_status = 2; //在线状态，参考UserStatus
+	optional UserBasicInfo msg_basic_info	= 3;		//用户昵称
+	optional UserNetConfigInfo msg_net_cfg_info = 4; //用户网络配置
+	optional UserPhotoInfo msg_photo_info = 5; //头像路径，ui显示头像使用
+}
+
+//用户信息列表
+message UserInfoList
+{
+	repeated UserInfo rpt_msg_users = 1; //用户列表
+}
+
+//呼叫记录类型
+enum CallLogRecType {
+	CALL_LOG_REC_TYPE_INCOMING = 1; //来电
+	CALL_LOG_REC_TYPE_OUTGOING = 2; //去电
+	CALL_LOG_REC_TYPE_MISSED = 3; //未接
+	CALL_LOG_REC_TYPE_REJECTED = 4; //拒接
+}
+
+message CallLogRec {
+	optional string str_number = 1; //记录的号码
+	optional string str_name = 2; //记录的历史名称
+	optional uint32 uint32_type = 3; //记录类型
+	optional uint32 uint32_date = 4; //记录时间，android数据库读取到后需要除以1000
+	optional uint32 uint32_durnation = 5; //通话时长
+}
+
+message CallLogRecList {
+	repeated CallLogRec rpt_msg_rec = 1;
+}

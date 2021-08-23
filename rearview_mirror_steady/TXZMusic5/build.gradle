@@ -1,0 +1,228 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.txznet.music"
+        minSdkVersion 19
+        targetSdkVersion 19
+        versionCode 500
+        versionName "5.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        multiDexKeepProguard file('dexKnife.txt')
+        buildConfigField "boolean", "PROGRAME", "false"
+
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('../../tools/txz.keystore')
+            storePassword 'android'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+
+    buildTypes {
+        debug {
+            // 编译速度优化
+            aaptOptions.cruncherEnabled = false
+            project.gradle.startParameter.excludedTaskNames.add('lint')  // 屏蔽lint耗时检查
+
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            shrinkResources false
+            debuggable true
+            zipAlignEnabled true
+            proguardFiles 'proguard-project.txt'
+
+            buildConfigField "String", "CODE_VERSION", "\"${getSvnRevision()}\""
+            buildConfigField "String", "BUILD_TIME", "\"${getTime()}\""
+        }
+
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            shrinkResources false
+            debuggable false
+            jniDebuggable false
+            zipAlignEnabled true
+            proguardFiles 'proguard-project.txt'
+            // multiDexKeepProguard file('multidex-config.pro')
+
+            buildConfigField "String", "CODE_VERSION", "\"${getSvnRevision()}\""
+            buildConfigField "String", "BUILD_TIME", "\"${getTime()}\""
+        }
+
+//        program_debug {
+//            aaptOptions.cruncherEnabled = false
+//
+//            minifyEnabled false
+//            signingConfig signingConfigs.release
+//            shrinkResources false
+//            debuggable true
+//
+//            buildConfigField "String", "CODE_VERSION", "\"${getSvnRevision()}\""
+//            buildConfigField "String", "BUILD_TIME", "\"${getTime()}\""
+//            buildConfigField "boolean", "PROGRAME", "true"
+//        }
+//
+//        program_release{
+//            minifyEnabled false
+//            signingConfig signingConfigs.release
+//            shrinkResources false
+//            debuggable false
+//            jniDebuggable false
+//            zipAlignEnabled true
+//            proguardFiles 'proguard-project.txt'
+//            // multiDexKeepProguard file('multidex-config.pro')
+//
+//            buildConfigField "String", "CODE_VERSION", "\"${getSvnRevision()}\""
+//            buildConfigField "String", "BUILD_TIME", "\"${getTime()}\""
+//            buildConfigField "boolean", "PROGRAME", "true"
+//        }
+
+        applicationVariants.all { variant ->
+            // 只copy开启了混淆的版本至输出目录
+            if (variant.buildType.isMinifyEnabled()) {
+                def fileNamePrefix = "${project.name}_${variant.buildType.name}_${defaultConfig.versionName}(${getSvnRevision()})_${getTime()}"
+                variant.outputs.each { output ->
+                    if (null != output.outputFile && output.outputFile.name.endsWith('.apk')) {
+                        variant.assemble.doLast {
+                            copy {
+                                from(output.outputFile, variant.mappingFile.path)
+                                into "${projectDir}/outputs"
+                                rename { String fileName ->
+                                    if (fileName.endsWith('.apk')) {
+                                        "${fileNamePrefix}.apk"
+                                    } else {
+                                        "${fileNamePrefix}.txt"
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+repositories {
+    flatDir {
+        //默认aar本地存放路径在libs下
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.10'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
+    implementation "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'jp.wasabeef:glide-transformations:3.2.0@aar'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation project(':TXZMediaPlayer')
+    implementation project(':TXZMediaProxy')
+    implementation project(':TXZComm')
+    implementation 'com.dinuscxj:recycleritemdecoration:1.0.1'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.jude:easyrecyclerview:4.4.3'
+    implementation 'com.qbw.recyclerview:expandableadapter:4.0.5'
+    implementation 'com.airbnb.android:lottie:2.7.0'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'com.github.Aspsine:SwipeToLoadLayout:1.0.4'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+//    implementation 'de.ruedigermoeller:fst:2.56'
+
+    implementation googleSupport()
+}
+
+def googleSupport() {
+    [
+            "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:support-annotations:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:design:$rootProject.ext.supportLibraryVersion",
+            "com.android.support:cardview-v7:$rootProject.ext.supportLibraryVersion",
+    ]
+}
+
+def getSvnRevision() {
+    new ByteArrayOutputStream().withStream { os ->
+        def result = exec {
+            executable = 'svn'
+            args = ['info']
+            standardOutput = os
+        }
+        def outputAsString = os.toString()
+        def matchLastChangedRev = outputAsString =~ /Last Changed Rev: (\d+)/
+
+        ext.svnRev = "${matchLastChangedRev[0][1]}".toInteger()
+    }
+    return svnRev
+}
+
+static def getTime() {
+    return new Date().format("yyyyMMddHHmm")
+}
+
+
+afterEvaluate {
+    tasks.matching {
+        it.name.startsWith('dex')
+    }.each { dx ->
+        if (dx.additionalParameters == null) {
+            dx.additionalParameters = ['--multi-dex']
+        } else {
+            dx.additionalParameters += '--multi-dex'
+        }
+    }
+}
+
+// 这个plugin需要放在android配置之后，因为需要读取android中的配置项
+//apply plugin: 'replugin-plugin-gradle'

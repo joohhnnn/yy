@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_container_left">20px</dimen>
+    <dimen name="dimen_container_right">8.6px</dimen>
+    <dimen name="dimen_container_top">23px</dimen>
+    <dimen name="dimen_container_bottom">23px</dimen>
+
+    <dimen name="dimen_full_image_w">192px</dimen>
+    <dimen name="dimen_full_image_h">206px</dimen>
+    <dimen name="dimen_full_text_size">24px</dimen>
+    <dimen name="dimen_small_image_w">59px</dimen>
+    <dimen name="dimen_small_image_h">59px</dimen>
+    <dimen name="dimen_half_text_size">17px</dimen>
+
+    <dimen name="dimen_notice_card_offset">8px</dimen>
+
+    <dimen name="dimen_text_size_list_index">18px</dimen>
+
+    <!--通用的字体大小-->
+    <!--语音对话特殊字体，如地点、音乐名字-->
+    <dimen name="dimen_text_size_h1">23px</dimen>
+    <!--语音对话/标题特殊字体-->
+    <dimen name="dimen_text_size_h2">20px</dimen>
+    <!--特殊字体-->
+    <dimen name="dimen_text_size_h3">18px</dimen>
+    <!--标题文字、列表标题文字-->
+    <dimen name="dimen_text_size_h4">16px</dimen>
+    <!--语音对话特殊文字、特殊的内容文字-->
+    <dimen name="dimen_text_size_h5">15px</dimen>
+    <!--内容字体-->
+    <dimen name="dimen_text_size_h6">14px</dimen>
+    <!--较小内容文字-->
+    <dimen name="dimen_text_size_h7">13px</dimen>
+    <!--最小文字-->
+    <dimen name="dimen_text_size_h8">12px</dimen>
+
+
+    <!--定义字体大小-->
+    <!--音乐列表-->
+    <dimen name="dimen_text_size_list_audio_title">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_list_audio_singer">@dimen/dimen_text_size_h6</dimen>
+    <!--poi列表-->
+    <dimen name="dimen_text_size_list_poi_name">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_list_poi_geo">@dimen/dimen_text_size_h6</dimen>
+    <dimen name="dimen_text_size_list_poi_distance">@dimen/dimen_text_size_h6</dimen>
+    <!--简单列表-->
+    <dimen name="dimen_text_size_list_simple_title">@dimen/dimen_text_size_h4</dimen>
+    <!--微信列表-->
+    <dimen name="dimen_text_size_list_wechat_name">@dimen/dimen_text_size_h4</dimen>
+
+    <dimen name="dimen_text_size_wechat_msg_answer">@dimen/dimen_text_size_h8</dimen>
+    <dimen name="dimen_text_size_wechat_msg_nav">@dimen/dimen_text_size_h8</dimen>
+
+    <dimen name="dimen_text_size_wechat_qrcode_tips">@dimen/dimen_text_size_h4</dimen>
+
+    <dimen name="dimen_text_size_wechat_user_nick">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_wechat_location">@dimen/dimen_text_size_h6</dimen>
+
+    <dimen name="dimen_text_size_login_tips">@dimen/dimen_text_size_h4</dimen>
+
+    <dimen name="dimen_text_size_music_title">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_music_artist">@dimen/dimen_text_size_h8</dimen>
+
+    <dimen name="dimen_text_size_music_large_title">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_music_large_artist">@dimen/dimen_text_size_h6</dimen>
+
+    <dimen name="dimen_text_size_music_middle_title">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_music_middle_artist">@dimen/dimen_text_size_h6</dimen>
+
+    <dimen name="dimen_text_size_stock_name">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_stock_code">@dimen/dimen_text_size_h6</dimen>
+    <dimen name="dimen_text_size_stock_price">40px</dimen>
+    <dimen name="dimen_text_size_stock_changeRate">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_stock_highest_price">@dimen/dimen_text_size_h5</dimen>
+    <dimen name="dimen_text_size_stock_lowest_price">@dimen/dimen_text_size_h5</dimen>
+    <dimen name="dimen_text_size_stock_yestoday_close_price">@dimen/dimen_text_size_h5</dimen>
+    <dimen name="dimen_text_size_stock_today_open_price">@dimen/dimen_text_size_h5</dimen>
+
+    <dimen name="dimen_text_size_nav_source">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_nav_limit_speed">24px</dimen>
+    <dimen name="dimen_text_size_nav_remain_distance">32px</dimen>
+    <dimen name="dimen_text_size_nav_mi">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_nav_next_road">@dimen/dimen_text_size_h3</dimen>
+    <dimen name="dimen_text_size_nav_enter">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_nav_dest">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_nav_remain">@dimen/dimen_text_size_h6</dimen>
+
+    <dimen name="dimen_text_size_weather_title">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_weather_cur_temp">60px</dimen>
+    <dimen name="dimen_text_size_weather_msg">@dimen/dimen_text_size_h2</dimen>
+    <dimen name="dimen_text_size_weather_temp">@dimen/dimen_text_size_h5</dimen>
+    <dimen name="dimen_text_size_weather_pm25">@dimen/dimen_text_size_h6</dimen>
+
+    <dimen name="dimen_text_size_third_weather_city">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_third_weather_msg">@dimen/dimen_text_size_h3</dimen>
+    <dimen name="dimen_text_size_third_weather_temp">@dimen/dimen_text_size_h7</dimen>
+    <dimen name="dimen_text_size_third_weather_pm25">@dimen/dimen_text_size_h4</dimen>
+
+
+    <dimen name="dimen_text_size_list_title">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_list_pre">@dimen/dimen_text_size_h8</dimen>
+    <dimen name="dimen_text_size_list_page">@dimen/dimen_text_size_h8</dimen>
+    <dimen name="dimen_text_size_list_next">@dimen/dimen_text_size_h8</dimen>
+
+
+    <dimen name="dimen_text_size_settings_ap_title">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_settings_ap_status">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_settings_ap_name">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_settings_ap_password">@dimen/dimen_text_size_h6</dimen>
+
+    <dimen name="dimen_text_size_notice_date">@dimen/dimen_text_size_h2</dimen>
+    <dimen name="dimen_text_size_notice_time">@dimen/dimen_text_size_h8</dimen>
+    <dimen name="dimen_text_size_notice_title">@dimen/dimen_text_size_h4</dimen>
+
+    <dimen name="dimen_text_size_tts_text_tv">24px</dimen>
+
+    <dimen name="dimen_text_size_wechat_bind_title">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_wechat_bind_tips">@dimen/dimen_text_size_h4</dimen>
+
+    <dimen name="dimen_text_size_dialog_wechat_msg_answer">@dimen/dimen_text_size_h8</dimen>
+    <dimen name="dimen_text_size_dialog_wechat_msg_nav">@dimen/dimen_text_size_h8</dimen>
+    <dimen name="dimen_text_size_wechat_title">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_half_wechat_user_nick">@dimen/dimen_text_size_h4</dimen>
+
+    <dimen name="dimen_text_size_record_wechat_user_nick">@dimen/dimen_text_size_h6</dimen>
+    <dimen name="dimen_text_size_record_wechat_send_tip">@dimen/dimen_text_size_h5</dimen>
+    <dimen name="dimen_text_size_record_wechat_send_tip2">@dimen/dimen_text_size_h8</dimen>
+
+    <dimen name="dimen_text_size_third_wechat_user_nick">@dimen/dimen_text_size_h4</dimen>
+
+    <dimen name="dimen_text_size_list_help_title">@dimen/dimen_text_size_h4</dimen>
+    <dimen name="dimen_text_size_list_help_single">@dimen/dimen_text_size_h6</dimen>
+
+    <!--系统升级框的宽度-->
+    <dimen name="dimen_layout_width_system_upgrade_dialog">280px</dimen>
+
+</resources>

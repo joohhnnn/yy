@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.txznet.music"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fm_bg"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="@dimen/x150"
+        android:layout_height="match_parent"
+        android:background="@color/menu_left"
+        android:orientation="vertical" >
+
+        <!-- 四个组件 -->
+
+        <LinearLayout
+            android:id="@+id/ll_local"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y120"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_local"
+                android:layout_width="@dimen/y40"
+                android:layout_height="@dimen/y40"
+                android:background="@drawable/d_local_icon" />
+
+            <TextView
+                android:id="@+id/tv_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="0px"
+                android:text="本地"
+                android:textColor="@color/item_play_list_click_1"
+                android:textSize="@dimen/y30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_music"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y120"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_music"
+                android:layout_width="@dimen/y40"
+                android:layout_height="@dimen/y40"
+                android:background="@drawable/d_music_icon" />
+
+            <TextView
+                android:id="@+id/tv_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="0px"
+                android:text="音乐"
+                android:textColor="@color/item_play_list_click_1"
+                android:textSize="@dimen/y30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_radio"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y120"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_radio"
+                android:layout_width="@dimen/y40"
+                android:layout_height="@dimen/y40"
+                android:background="@drawable/d_radio_icon" />
+
+            <TextView
+                android:id="@+id/tv_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="0px"
+                android:text="电台"
+                android:textColor="@color/item_play_list_click_1"
+                android:textSize="@dimen/y30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_history"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y120"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_history"
+                android:layout_width="@dimen/y40"
+                android:layout_height="@dimen/y40"
+                android:background="@drawable/d_history_icon" />
+
+            <TextView
+                android:id="@+id/tv_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="0px"
+                android:text="最近"
+                android:textColor="@color/item_play_list_click_1"
+                android:textSize="@dimen/y30" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/rl_below"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y92"
+            android:layout_alignParentBottom="true"
+            android:background="@color/player_bg"
+            android:orientation="vertical" >
+
+            <com.txznet.music.widget.CustomSeekBar
+                android:id="@+id/customSeekBar1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y4"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="15" >
+
+                <RelativeLayout
+                    android:id="@+id/ll_info"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/x20"
+                    android:paddingRight="0px" >
+
+                    <TextView
+                        android:id="@+id/tv_song_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/str_change_song"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_artist_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_song_name"
+                        android:singleLine="true"
+                        android:textColor="@color/c_local_tag" />
+
+                    <TextView
+                        android:id="@+id/tv_source"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_song_name"
+                        android:layout_toRightOf="@id/tv_artist_name"
+                        android:layout_marginLeft="@dimen/x6"
+                        android:ems="6"
+                        android:singleLine="true"
+                        android:textColor="@color/c_source" />
+                </RelativeLayout>
+
+                <com.txznet.music.widget.ShadeImageView
+                    android:id="@+id/iv_prev"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:src="@drawable/fm_player_prev1"
+                    android:visibility="visible" />
+
+                <FrameLayout
+                    android:id="@+id/fl_play"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" >
+
+                    <com.txznet.music.widget.ShadeImageView
+                        android:id="@+id/iv_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/fm_player_play1"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_round"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/fm_player_loading1"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_buffer_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/fm_player_loading1_1"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <!-- <com.txznet.music.widget.ShadeImageView -->
+                <!-- android:id="@+id/iv_play" -->
+                <!-- android:layout_width="0px" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_gravity="center" -->
+                <!-- android:layout_weight="2" -->
+                <!-- android:src="@drawable/fm_player_play1" -->
+                <!-- android:visibility="visible" /> -->
+
+                <com.txznet.music.widget.ShadeImageView
+                    android:id="@+id/iv_next"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:src="@drawable/fm_player_next1"
+                    android:visibility="visible" />
+
+                <com.txznet.music.widget.ShadeImageView
+                    android:id="@+id/iv_play_mode"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:src="@drawable/fm_player_sequential_playing1"
+                    android:visibility="visible" />
+
+                <com.txznet.music.widget.ShadeImageView
+                    android:id="@+id/iv_play_list"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:src="@drawable/fm_player_play_list1"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fm_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/rl_below" >
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/llMusic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_music_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y90"
+            android:background="@drawable/title_bar_bg" >
+
+            <com.txznet.txz.ui.win.music.MusicMoveView
+                android:id="@+id/music_cur_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x24"
+                android:layout_marginRight="@dimen/x24"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24" />
+
+            <CheckBox
+                android:id="@+id/cbCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/win_music_title"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingLeft="@dimen/x7"
+                android:paddingRight="@dimen/x25"
+                android:textColor="@color/music_title"
+                android:textSize="@dimen/y34" />
+
+            <ImageView
+                android:id="@+id/music_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x30"
+                android:paddingRight="@dimen/x30" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/rlMusic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:padding="@dimen/x50" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/win_music_logo" />
+
+                    <TextView
+                        android:id="@+id/txtNoMusic"
+                        style="@style/text_20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/y15"
+                        android:singleLine="false" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ListView
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/split_line"
+                android:dividerHeight="@dimen/y1" />
+
+            <LinearLayout
+                android:id="@+id/llCategory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/widget_color_normal"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:visibility="invisible" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vpCategories"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="@dimen/y8"
+                        android:layout_marginTop="@dimen/y7"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal" />
+                    <!-- 达讯伟业 -->
+
+                    <TextView
+                        android:id="@+id/tvVersion"
+                        style="@style/text_20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/x10" />
+                    <!-- 达讯伟业 -->
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtTips"
+                    style="@style/text_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/y5" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

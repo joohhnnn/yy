@@ -1,0 +1,26 @@
+package com.txz.ui.app;
+
+
+enum SubEvent {
+	SUBEVENT_UPDATED_APP_LIST = 1; //更新应用列表，ui通知native
+	SUBEVENT_OPEN_APP = 2; //通知ui打开应用
+	SUBEVENT_CLOSE_APP = 3; //通知ui关闭应用
+	SUBEVENT_SEND_BROADCAST = 4; //通知ui发送系统广播	
+}
+
+
+message AppInfo {
+	optional string str_app_name = 1; //应用名
+	optional string str_package_name = 2;  //包名
+	optional string str_activity_name = 3; //启动的Activity名称
+	optional string str_params = 4; //携带的参数，由ui解析发送
+}
+
+
+message AppInfoList {
+	repeated AppInfo rpt_msg_apps = 1; //应用程序列表
+}
+
+
+
+

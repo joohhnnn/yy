@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.txznet.txz.ui.widget.mov.CinemaLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cinema_view_ly"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="@dimen/x16"
+    android:paddingLeft="@dimen/x16"
+    android:paddingRight="@dimen/x16"
+    android:paddingStart="@dimen/x16" >
+
+</com.txznet.txz.ui.widget.mov.CinemaLayout>

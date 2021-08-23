@@ -1,0 +1,101 @@
+<!-- 无屏模式录音界面 -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/win_layout_card_margin_ver_screen"
+    android:paddingBottom="@dimen/win_layout_card_margin_ver_screen"
+    android:paddingLeft="@dimen/win_layout_card_margin_hor_screen"
+    android:paddingRight="@dimen/win_layout_card_margin_hor_screen">
+
+    <LinearLayout
+        android:layout_width="@dimen/win_layout_card_width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="right|bottom">
+
+        <LinearLayout
+            android:id="@+id/rootWrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end|bottom"
+            android:orientation="vertical"
+            android:background="@drawable/xml_bg_card">
+
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                    <!-- Test -->
+<!--                    <ScrollView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:orientation="vertical">-->
+
+<!--                            <include layout="@layout/a_chat_weather_view_more_item"/>-->
+<!--                            <include layout="@layout/a_chat_weather_view_more_item"/>-->
+<!--                            <include layout="@layout/a_chat_weather_view_more_item" />-->
+<!--                            <include layout="@layout/a_chat_weather_view_more_item"/>-->
+<!--                            <include layout="@layout/a_chat_weather_view_more_item"/>-->
+<!--                            <include layout="@layout/a_chat_weather_view_more_item"/>-->
+<!--                            <include layout="@layout/a_chat_weather_view_more_item"/>-->
+<!--                            <include layout="@layout/a_chat_weather_view_more_item"/>-->
+<!--                            <include layout="@layout/a_chat_weather_view_more_item"/>-->
+<!--                            <include layout="@layout/a_chat_weather_view_more_item"/>-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </ScrollView>-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Test Test Test"
+                    android:padding="20dp"
+                    android:textColor="@color/white"/>
+
+            </FrameLayout>
+
+            <View
+                android:id="@+id/horDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#50FFFFFF"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/talk_logo_size"
+                android:gravity="start|center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/flTalk"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlRecordView"
+                    android:layout_width="@dimen/talk_logo_size"
+                    android:layout_height="@dimen/talk_logo_size"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

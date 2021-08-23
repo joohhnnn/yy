@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8000000"
+    android:keepScreenOn="true" >
+
+    <RelativeLayout
+        android:id="@+id/rlRecord_Wave_Panel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y110"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+        <FrameLayout
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/x100"
+            android:layout_centerInParent="true" >
+
+            <ProgressBar
+                android:id="@+id/prgRecord_ProgressBar"
+                style="@style/Record_Loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/prgRecord_ProgressBar_Full_Mask"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/record_wait_loading_full" />
+
+            <ImageView
+                android:id="@+id/imgRecord_Icon"
+                android:layout_width="@dimen/x28"
+                android:layout_height="@dimen/y40"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <com.txznet.record.view.WaveformViewImpl
+            android:id="@+id/viewRecord_Wave"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/x106"
+            android:layout_marginRight="@dimen/x106"
+            android:visibility="invisible" />
+        
+        <ImageView
+            android:id="@+id/imgRecord_Close"
+            android:layout_width="@dimen/y100"
+            android:layout_height="@dimen/y100"
+            android:visibility="invisible"
+            android:src="@drawable/ic_close" />
+
+    </RelativeLayout>
+
+    <com.txznet.record.view.ChatListView
+        android:id="@+id/lvRecord_ChatContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rlRecord_Wave_Panel"
+        android:layout_alignParentTop="true"
+        android:divider="@null"
+        android:listSelector="@drawable/transparent_background"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <com.txznet.record.view.DisplayLvRef
+        android:id="@+id/lvRecord_dll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rlRecord_Wave_Panel"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/weatcher_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/stock_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible" />
+
+</RelativeLayout>

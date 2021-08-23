@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.txznet.comm.ui.view.RippleView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp22"
+            android:textColor="@color/textColorPrimary"
+            android:maxLines="2"
+            android:text="在学习中获取真知，在工作中获取乐趣"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="7-21 14:00"
+                android:textColor="#80FFFFFF"
+                android:textSize="@dimen/sp18" />
+
+            <TextView
+                android:id="@+id/tvClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:clickable="true"
+                android:text="关闭"
+                android:textSize="12dp"
+                android:textColor="#80FFFFFF"
+                android:background="@drawable/xml_smart_handy_btn_bg_reminder_close"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.txznet.comm.ui.view.RippleView>

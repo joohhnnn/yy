@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <com.txznet.music.widget.LoadingView
+        android:id="@+id/lv_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--为了降低内存：因为会占用653K的内存：android:overScrollMode="never"-->
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/fg_music_title_height"
+                android:layout_centerHorizontal="true"
+                android:overScrollMode="never"
+                app:tabBackground="@color/transparent"
+                app:tabGravity="center"
+                app:tabTextAppearance="@style/CategoryTabTextAppearance" />
+
+
+            <com.txznet.music.widget.TXZViewPager
+                android:id="@+id/vp_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tab"/>
+
+        </RelativeLayout>
+
+    </com.txznet.music.widget.LoadingView>
+
+
+</LinearLayout>

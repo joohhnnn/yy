@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="nav_tab_call">電話</string>
+    <string name="nav_tab_music">電台</string>
+    <string name="nav_tab_drive">導航</string>
+    <string name="nav_tab_home">主頁</string>
+    <string name="nav_tab_me">我的</string>
+    <string name="nav_tab_drive_together">多車同行</string>
+    <string name="nav_tab_guide">位置分享</string>
+    <string name="call_mode_open">外放模式</string>
+    <string name="call_mode_close">聽筒模式</string>
+    <string name="call_refuse">掛斷</string>
+    <string name="call_accept">接聽</string>
+    <string name="call_calling">正在呼叫 ...</string>
+    <string name="call_hangup">掛斷</string>
+    <string name="music_prev">上一首</string>
+    <string name="music_next">下一首</string>
+    <string name="music_single">單曲循環</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_ok">確定</string>
+    <string name="should_read">是否播報？</string>
+    <string name="msg_tolist">列表</string>
+    <string name="msg_tonext">下一條</string>
+    <string name="no_contact">陌生人</string>
+    <string name="register_title">註冊</string>
+    <string name="login_title">登錄</string>
+    <string name="login_right_text">註冊</string>
+    <string name="login_button_text">登錄</string>
+    <string name="login_forget_password">忘記密碼</string>
+    <string name="input_phone_hint">請輸入手機號碼</string>
+    <string name="input_code_hint">請輸入驗證碼</string>
+    <string name="get_code">獲取</string>
+    <string name="input_pass_hint">請輸入密碼</string>
+    <string name="personal_info_save">保存</string>
+    <string name="personal_info_confirm">確定</string>
+    <string name="personal_info_show_password">顯示密碼</string>
+    <string name="personal_info_title">個人信息</string>
+    <string name="personal_info_ID">ID</string>
+    <string name="personal_info_nickname">昵稱</string>
+    <string name="personal_info_sex">性別</string>
+    <string name="personal_info_change_password">修改密碼</string>
+    <string name="friends_title">好友</string>
+    <string name="setting_title">設置</string>
+    <string name="feedback_right_text">發送</string>
+    <string name="feedback_title_text">反饋</string>
+    <string name="history_title_text">歷史記錄</string>
+    <string name="offline_title_text">離線地圖</string>
+    <string name="tx_history">同行歷史</string>
+    <string name="login_tips">請先登錄</string>
+    <string name="no_network_tips">當前網絡不給力…</string>
+
+    <!-- 重構 -->
+    <string name="action_settings">設置</string>
+    <string name="nav_name">導航</string>
+    <string name="music_name">音樂</string>
+
+    <!-- win_main -->
+    <string name="win_main_str_call">電話</string>
+    <string name="win_main_str_nav">導航</string>
+    <string name="win_main_str_music">音樂</string>
+    <string name="win_main_str_setting">設置</string>
+
+    <!-- activity_search -->
+    <string name="activity_search_map_text">切換地圖</string>
+    <string name="activity_search_null_text">抱歉，未能找到結果!</string>
+    <string name="activity_searching_text">搜索中</string>
+    <string name="activity_search_start_planing_text">出發</string>
+    <string name="activity_search_commit">到這裏去</string>
+    <string name="activity_search_set_up_success_text">設置成功!</string>
+    <string name="activity_search_set_text">設置</string>
+    <string name="activity_home_str_dest_hint">請輸入您的目的地</string>
+    <string name="activity_poi_use_gz">你可以通過公眾號,</string>
+    <string name="activity_poi_focus_gz">你可以關注公眾號,</string>
+    <string name="activity_poi_send_text">使用手機發送目的地至設備，快速發起導航</string>
+    
+    <!-- 錄音失敗界面 -->
+    <string name="label_record_fail_title">啟動錄音失敗，可按如下方式解決:</string>
+    <string name="label_record_fail_1_1">原因1.被手機安全軟件限定了權限。</string>
+    <string name="label_record_fail_1_2">請設同行者為信任程序:在手機安全設置下選擇同行者應用程序,</string>
+    <string name="label_record_fail_1_3">並將其設為信任程序</string>
+    <string name="label_record_fail_2_1">原因2.被其他應用佔了麥克風</string>
+    <string name="label_record_fail_2_2">請關掉其他應用的錄音功能</string>
+
+    <!-- win_help_detail -->
+    <string name="label_win_help_title">幫助</string>
+    <string-array name="win_help_title">
+        <item>導航</item>
+        <item>生活周邊</item>
+        <item>音樂</item>
+        <item>電話</item>
+        <item>日曆</item>
+        <item>百科</item>
+        <item>股票</item>
+        <item>天氣</item>
+        <item>微信</item>
+    </string-array>
+    <string-array name="win_help_intro">
+        <item>我要去北京</item>
+        <item>歡樂谷附近的川菜</item>
+        <item>我要聽歌</item>
+        <item>打電話給張三</item>
+        <item>現在是幾點</item>
+        <item>劉德華是誰</item>
+        <item>騰訊的股票是多少</item>
+        <item>明天的天氣怎麼樣</item>
+        <item>發微信給張三</item>
+    </string-array>
+    <string-array name="win_help_desps">
+        <item>北京怎麼走/我要去北京\n我要回家/我要去公司</item>
+        <item>歡樂谷附近的川菜\n我想上網\n我要健身\n附近的肯德基\n我要吃燒烤</item>
+        <item>我要聽歌\n聽忘情水\n我要聽劉德華的忘情水</item>
+        <item>打電話給張三\n呼叫134XXXXX494/打電話給134XXXXX494</item>
+        <item>現在是幾點\n今年除夕是幾號\n聖誕節是農曆幾號\n上周三是幾號</item>
+        <item>劉德華是誰</item>
+        <item>騰訊的股票是多少\n查一下上證指數</item>
+        <item>明天的天氣怎麼樣\n空氣質量怎麼樣\n深圳的天氣</item>
+        <item>發微信/發微信給張三（聯繫人）\n關閉微信播報/關閉自動播報\n退出微信/退出車載微信</item>
+    </string-array>
+    
+    <string-array name="win_delp_icon">
+        <item>@drawable/win_help_daohang</item>
+        <item>@drawable/win_help_zhoubian</item>
+        <item>@drawable/win_help_diantai</item>
+        <item>@drawable/win_help_dianhua</item>
+        <item>@drawable/win_help_rili</item>
+        <item>@drawable/win_help_baike</item>
+        <item>@drawable/win_help_gupiao</item>
+        <item>@drawable/win_help_tianqi</item>
+        <item>@drawable/win_help_wechat</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--底色-->
+    <item>
+        <shape>
+            <solid android:color="#F2161D47"/>
+            <corners android:radius="@dimen/mdp10"/>
+        </shape>
+    </item>
+
+    <!--左到右-->
+    <item>
+        <shape>
+            <gradient
+                android:angle="315"
+                android:startColor="#4DB33CAF"
+                android:endColor="#00000000"
+                android:type="linear"
+                android:useLevel="false"/>
+            <corners android:radius="@dimen/mdp10" />
+        </shape>
+    </item>
+
+    <!--右到左-->
+    <item>
+        <shape>
+            <gradient
+                android:angle="225"
+                android:startColor="#4D2EBFFF"
+                android:endColor="#00000000"
+                android:type="linear"
+                android:useLevel="true"/>
+            <corners android:radius="@dimen/mdp10" />
+        </shape>
+    </item>
+
+</layer-list>

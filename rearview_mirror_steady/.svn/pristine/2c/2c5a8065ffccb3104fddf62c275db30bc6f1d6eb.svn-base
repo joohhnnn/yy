@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_bg"
+    android:orientation="vertical"
+    tools:context="com.txznet.txzsetting.activity.SetPoiMapModeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="26"
+            android:background="@color/background_00" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/actionbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y64"
+                android:layout_marginBottom="@dimen/y16">
+
+                <Button
+                    android:id="@+id/actionbar_return_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:background="@color/background_00"
+                    android:drawablePadding="@dimen/y13"
+                    android:drawableStart="@drawable/selector_btn_return"
+                    android:text="@string/actionbar_return"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/actionbar_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/background_00"
+                    android:text="@string/actionbar_text_poi_map_mode"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="28sp" />
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/setting_poi_mode_radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/setting_poi_mode_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawablePadding="@dimen/y10"
+                    android:drawableTop="@drawable/selector_poi_mode_list"
+                    android:gravity="center"
+                    android:text="@string/setting_poi_map_mode_list"
+                    android:textColor="@drawable/selector_text_color"
+                    android:textSize="@dimen/x20" />
+
+
+                <RadioButton
+                    android:id="@+id/setting_poi_mode_blend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawablePadding="@dimen/y10"
+                    android:drawableTop="@drawable/selector_poi_mode_blend"
+                    android:gravity="center"
+                    android:text="@string/setting_poi_map_mode_blend"
+                    android:textColor="@drawable/selector_text_color"
+                    android:textSize="@dimen/x20" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="26"
+            android:background="@color/background_00" />
+    </LinearLayout>
+
+</LinearLayout>

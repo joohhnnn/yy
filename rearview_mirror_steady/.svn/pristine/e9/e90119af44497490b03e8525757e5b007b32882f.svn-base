@@ -1,0 +1,89 @@
+package com.unisound.common;
+
+import java.util.HashMap;
+
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Process;
+import android.util.Log;
+
+public class f {
+	static HashMap<String, HandlerThread> sMapThreads = new HashMap<String, HandlerThread>();
+	
+    protected int a = 0;
+	
+	protected HandlerThread mWorkThread;
+	protected boolean mAlive = false;
+	
+    public final boolean isAlive() {
+        return mAlive;
+    }
+    
+	public synchronized void start() {
+		if (mAlive) {
+			// // Log.d("txz_tts", mWorkThread.getName()+" already alive thread: " + f.this);
+			return;
+		}
+		mAlive = true;
+		new Handler(mWorkThread.getLooper()).post(new Runnable() {
+			@Override
+			public void run() {
+				synchronized (mWorkThread) {
+					// Log.d("txz_tts", mWorkThread.getName()+" start thread: " + f.this);
+					f.this.run();
+					// Log.d("txz_tts", mWorkThread.getName()+" end thread: " + f.this);
+					mAlive = false;
+				}
+			}
+		});
+	}
+	
+	public final void join(long millis) throws InterruptedException {
+		synchronized (mWorkThread) {
+			// Log.d("txz_tts", mWorkThread.getName()+" join thread: " + f.this);
+		}
+    }
+    
+    public void setPriority(int priority) {
+    	
+    }
+    
+    public void setName(String threadName) {
+    	synchronized (sMapThreads) {
+	    	mWorkThread = sMapThreads.get(threadName);
+	    	if (mWorkThread == null) {
+	    		mWorkThread = new HandlerThread(threadName);
+	    		sMapThreads.put(threadName, mWorkThread);
+	    		mWorkThread.start();
+	    		new Handler(mWorkThread.getLooper()).post(new Runnable() {
+					@Override
+					public void run() {
+						Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
+						try{
+							Process.setThreadPriority(Process.myTid(), Process.THREAD_PRIORITY_AUDIO);
+						} catch (Exception e) {
+						}
+						try{
+							Process.setThreadPriority(Process.myTid(), Process.THREAD_PRIORITY_URGENT_AUDIO);
+						} catch (Exception e) {
+						}
+						Log.d("txz_tts", " set thread[" + Thread.currentThread().getName() + "] pid[" + Process.myPid() + "] tid[" + Process.myTid() + "] max priority");
+					}
+				});
+	    	}
+    	}
+    }
+    
+    public f(boolean z) {
+    }
+
+    public void a(int i) {
+        this.a = i;
+    }
+
+    public void run() {
+    	// Log.d("txz_tts", mWorkThread.getName()+" enter run thread: " + f.this);
+    	// new Throwable().printStackTrace();
+    	// Log.d("txz_tts", mWorkThread.getName()+" exit run thread: " + f.this);
+    }
+}

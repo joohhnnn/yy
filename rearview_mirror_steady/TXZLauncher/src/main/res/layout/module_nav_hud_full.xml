@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_width="310px"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/source_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_nav"
+        android:text="高德导航"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/dimen_text_size_nav_source" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/list_item_range_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/direct_iv"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:layout_marginTop="25px"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/sou2" />
+
+            <TextView
+                android:id="@+id/limit_speed_tv"
+                android:layout_width="45px"
+                android:layout_height="45px"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50px"
+                android:visibility="invisible"
+                android:layout_marginTop="15px"
+                android:background="@drawable/auto_navi_speed_bg_day"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#333333"
+                android:textSize="@dimen/dimen_text_size_nav_limit_speed" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/direct_iv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10px"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/remain_distance_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:includeFontPadding="false"
+                        android:text="50"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/dimen_text_size_nav_remain_distance" />
+
+                    <TextView
+                        android:id="@+id/mi_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/remain_distance_tv"
+                        android:layout_marginLeft="10px"
+                        android:layout_toRightOf="@id/remain_distance_tv"
+                        android:text="米后"
+                        android:paddingBottom="5px"
+                        android:textColor="#B3FFFFFF"
+                        android:textSize="@dimen/dimen_text_size_nav_mi" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="进入"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/dimen_text_size_nav_enter"/>
+
+                    <TextView
+                        android:layout_marginLeft="2px"
+                        android:id="@+id/next_road_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="高新南一道中科大厦26楼"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:focusableInTouchMode="true"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/dimen_text_size_nav_next_road" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

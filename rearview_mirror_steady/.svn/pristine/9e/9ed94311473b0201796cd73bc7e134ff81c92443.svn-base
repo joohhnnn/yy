@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="inner_app_name">
+        <item>语音助手</item>
+        <item>微信助手</item>
+        <item>高德地图</item>
+        <item>网络电话</item>
+        <item>在线播放器</item>
+        <item>Launcher主题</item>
+    </string-array>
+
+    <string-array name="inner_app_pkg">
+        <item>com.txznet.txz</item>
+        <item>com.txznet.webchat</item>
+        <item>com.autonavi.amapautolite</item>
+        <item>com.zdfl.sipphone</item>
+        <item>com.txznet.music</item>
+        <item>com.txznet.launcher</item>
+    </string-array>
+</resources>

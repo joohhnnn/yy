@@ -1,0 +1,15 @@
+低内存语音助手版本主要针对运行内存低于1GB的设备，
+但是需要保留语音助手的在线功能，在没有网络时支持部分离线功能使用
+
+方案：
+1、只支持几个固定的唤醒词。
+2、只支持几个固定的离线命令字。
+3、内存控制在60M以内。
+4、其他功能基本和完整版本的Core保持一致。
+
+适配程序在原有基础上需要进行以下修改：
+
+TXZPoiSearchManager.getInstance().setPoiSearchResultList(true);
+TXZPoiSearchManager.getInstance().setPoiPlayTipTts(false);
+
+使用上面的配置可减少内存消耗以及优化在导航场景下的交互体验

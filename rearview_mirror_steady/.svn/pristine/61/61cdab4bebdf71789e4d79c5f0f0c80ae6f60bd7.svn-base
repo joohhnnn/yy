@@ -1,0 +1,13 @@
+ø™ º≤•∑≈“Ù¿÷
+String data = mName + ";";
+data += mSinger + ";";
+data += mPath;
+ServiceManager.getInstance().broadInvoke("music.action.start", data);
+
+
+‘›Õ£≤•∑≈“Ù¿÷
+ServiceManager.getInstance().broadInvoke("music.action.pause", null);
+
+
+Õ£÷π≤•∑≈“Ù¿÷
+ServiceManager.getInstance().broadInvoke("music.action.stop", null);

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.txznet.music.widget.NavRecyclerView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/refresh_header"
+        android:animateLayoutChanges="false"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="true"
+        android:scrollbarSize="@dimen/m5"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/playlist_scrollbar_thumb"
+        android:scrollbarTrackVertical="@drawable/playlist_scrollbar_bg"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/ll_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_no_result"
+            style="@style/default_empty_icon_style"
+            android:layout_centerInParent="true"
+            android:src="@drawable/local_noresult" />
+
+
+        <TextView
+            android:id="@+id/nolist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="@dimen/x20"
+            android:text="@string/no_history_text"
+            android:textColor="@color/no_history_text_color"
+            android:textSize="@dimen/no_history_text_size" />
+
+
+        <!--         <TextView -->
+        <!--             android:id="@+id/nolist" -->
+        <!--             android:layout_width="wrap_content" -->
+        <!--             android:layout_height="wrap_content" -->
+        <!--             android:layout_centerInParent="true" -->
+        <!--             android:layout_gravity="center" -->
+        <!--             android:drawableTop="@drawable/fm_me_no_result" -->
+        <!--             android:gravity="center" -->
+        <!--             android:text="当前没有收听记录" -->
+        <!--             android:textColor="@color/white" -->
+        <!--             android:textSize="@dimen/y30" /> -->
+    </LinearLayout>
+
+</LinearLayout>

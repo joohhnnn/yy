@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.txznet.launcher.widget.CornerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vg_weather_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <RelativeLayout
+        android:id="@+id/ll_weather"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@drawable/bg_weather_dayu">
+
+        <ImageView
+            android:id="@+id/iv_weather_icon"
+            android:layout_width="42px"
+            android:layout_height="42px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14px"
+            tools:src="@drawable/ic_weather_dayu" />
+
+        <TextView
+            android:id="@+id/tv_weather_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10px"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/dimen_text_size_third_weather_city"
+            tools:text="深圳市" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:layout_toLeftOf="@id/tv_weather_city"
+            android:layout_toRightOf="@id/iv_weather_icon"
+            android:gravity="center_vertical">
+
+            <!-- 正文 -->
+            <TextView
+                android:id="@+id/tv_weather_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/dimen_text_size_third_weather_msg"
+                tools:text="大雨 18°" />
+
+            <TextView
+                android:id="@+id/tv_weather_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/dimen_text_size_third_weather_temp" />
+
+            <!-- 附加信息 -->
+            <TextView
+                android:id="@+id/tv_weather_pm25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9px"
+                android:maxLines="1"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/dimen_text_size_third_weather_pm25"
+                tools:text="空气优" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</com.txznet.launcher.widget.CornerFrameLayout>

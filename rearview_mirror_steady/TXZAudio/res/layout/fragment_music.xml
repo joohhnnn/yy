@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/type_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y68"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/y24"
+            android:layout_marginRight="@dimen/y36"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y48"
+                android:gravity="center_vertical"
+                android:text="热门"
+                android:textColor="@color/green"
+                android:textSize="@dimen/y24" />
+
+            <TextView
+                android:id="@+id/type_filter"
+                android:layout_width="@dimen/y126"
+                android:layout_height="@dimen/y48"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/type_filter_bg"
+                android:drawableRight="@drawable/fm_item_screening_down"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:paddingRight="10dp"
+                android:text="筛选"
+                android:textColor="@color/green"
+                android:textSize="@dimen/y24" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/y10"
+            android:paddingRight="@dimen/y10" >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scrollbars="vertical" >
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/ll_error"
+        layout="@layout/error_layout"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/ll_loading"
+        layout="@layout/dialog_loading"
+        android:visibility="gone" />
+
+</FrameLayout>

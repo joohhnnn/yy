@@ -1,0 +1,170 @@
+ÿþ
+@echo off
+
+cls
+
+setlocal EnableDelayedExpansion
+
+
+echo ==========Í¬ÐÐÕßÏµÍ³Ó¦ÓÃ°²×°½Å±¾ by bihongpi==========
+echo ===========================================================
+
+SET TEMP_DIR=__pibihong_temp_%RANDOM%
+
+SET APKS=%*
+
+if "%APKS%"=="" (
+    echo ÓÃ·¨£ºinstall_sys_apk apkÎÄ¼þÁÐ±í
+    echo ÀýÈç£ºinstall_sys_apk TXZCore.apk TXZMusic.apk
+    goto END
+)
+
+
+:MUTIL_DEV
+
+SET DEV=
+SET /a c=0
+FOR /f %%f in ('adb devices^|find /V "devices"^|find "device"') do (
+    SET /a c+=1
+    SET DEV=%%f
+)
+
+::echo ==========¹²ÕÒµ½%c%¸öÉè±¸
+
+IF %c%==0 (
+    adb devices
+    echo ==========Ã»ÓÐÕÒµ½ÔÚÏßÉè±¸£¬ÇëÊ¹ÓÃadb devices¼ì²éÁ¬½ÓÊÇ·ñÕý³££¡£¡£¡
+    goto END
+)
+
+IF NOT %c%==1 (
+    SET /a c=0
+    FOR /f %%f in ('adb devices^|find /V "devices"^|find "device"') do (
+        SET /a c+=1
+        ECHO !c!  %%f
+    )
+    SET /p o=´æÔÚ!c!¸öÉè±¸£¬ÇëÎÊÄãÒªÑ¡ÔñµÚ¼¸¸ö£º
+    IF NOT DEFINED o (
+        GOTO MUTIL_DEV
+    )
+    IF !o!=="" (
+        GOTO MUTIL_DEV
+    )
+    SET DEV=
+    SET /a c=0
+    FOR /f %%f in ('adb devices^|find /V "devices"^|find "device"') do (
+        SET /a c+=1
+        IF !c!==!o! SET DEV=%%f
+    )
+    IF NOT DEFINED DEV (
+        GOTO MUTIL_DEV
+    )
+    IF !DEV!=="" (
+        GOTO MUTIL_DEV
+    )
+)
+
+:BEGIN
+
+ECHO Ê¹ÓÃ%DEV%½øÐÐ°²×°
+
+echo ===========================================================
+
+ECHO ==========¿ªÊ¼ÖØÐÂ×°ÔØÏµÍ³·ÖÇø...
+adb -s %DEV% remount
+
+IF ERRORLEVEL 1 (
+    echo ==========ÖØÐÂ×°ÔØÏµÍ³·ÖÇø·¢Éú´íÎó£¡£¡£¡
+    goto END
+)
+
+
+::ÅÐ¶ÏÊÇ·ñÎªandroid5.0
+SET /a APK_COUNT=0
+SET /a DIR_COUNT=0
+FOR /f %%f in ('adb shell ls /system/app^|find ".apk"') do (
+	set /a APK_COUNT+=1
+)
+FOR /f %%f in ('adb shell ls /system/app^|find /V ".apk"') do (
+	set /a DIR_COUNT+=1
+)
+if %DIR_COUNT% EQU %APK_COUNT% (
+    echo ==========ÎÞ·¨È·¶¨ÏµÍ³Ó¦ÓÃ°²×°·½Ê½£¡£¡£¡
+    goto END
+)
+SET /a DIR_INSTALL=0
+if %DIR_COUNT%  GTR %APK_COUNT% (
+    SET /a DIR_INSTALL=1
+)
+
+
+IF EXIST %TEMP_DIR% RD /S /Q %TEMP_DIR%
+ECHO ==========¿ªÊ¼´´½¨ÁÙÊ±¹¤×÷Ä¿Â¼...
+MD %TEMP_DIR%
+IF ERRORLEVEL 1 (
+    echo ==========´´½¨ÁÙÊ±¹¤×÷Ä¿Â¼·¢Éú´íÎó£¡£¡£¡
+    goto END
+)
+
+FOR %%f in (%APKS%) do (
+    SET APK_FILE=%%~dpnxf
+	IF EXIST %TEMP_DIR%/lib RD /S /Q %TEMP_DIR%/lib
+    ECHO ==========¿ªÊ¼½âÑ¹[%%f]...
+    start /min /D %TEMP_DIR% /wait jar -xvf "!APK_FILE!" lib
+    IF ERRORLEVEL 1 (
+        echo ==========½âÑ¹[%%f]·¢Éú´íÎó£¡£¡£¡
+        goto END
+    )
+	adb -s %DEV% shell rm -rf /system/app/%%~nf
+	adb -s %DEV% shell rm -rf /system/app/%%~nxf
+	IF %DIR_INSTALL%==1 (
+	    adb -s %DEV% shell mkdir -p /system/app/%%~nf/lib/arm
+	)
+	FOR /R %TEMP_DIR%\lib %%k in (*.so) DO (
+		ECHO ==========¿ªÊ¼ÉÏ´«¶¯Ì¬¿â[%%~nxk]...
+		if %DIR_INSTALL%==0 (
+		    adb -s %DEV% push "%%k" /system/lib/%%~nxk
+		) else (
+		    adb -s %DEV% push "%%k" /system/app/%%~nf/lib/arm/%%~nxk
+		)
+		IF ERRORLEVEL 1 (
+			echo ==========ÉÏ´«¶¯Ì¬¿â[%%~nxk]·¢Éú´íÎó£¡£¡£¡
+			goto END
+		)
+	)
+	ECHO ==========¿ªÊ¼ÉÏ´«apk[%%f]...
+	if %DIR_INSTALL%==0 (
+		adb -s %DEV% push "%%f" /system/app/%%~nxf
+	) else (
+		adb -s %DEV% push "%%f" /system/app/%%~nf/%%~nxf
+	)
+    IF ERRORLEVEL 1 (
+        echo ==========ÉÏ´«apk[%%f]·¢Éú´íÎó£¡£¡£¡
+        goto END
+    )
+)
+
+
+ECHO ==========¿ªÊ¼ÇåÀíÄ¿Â¼...
+RD /S /Q %TEMP_DIR%
+
+
+echo ===========================================================
+set o=
+set /p o=°²×°Íê³É£¬ÐèÒªÁ¢¼´ÖØÆôÂð? (Y/N):
+IF NOT DEFINED o goto END
+IF /i "%o%"=="Y" goto YES
+goto END
+:YES
+echo ÏµÍ³ÕýÔÚÖØÆô£¬ÇëÉÔºó...
+adb reboot
+IF ERRORLEVEL 1 (
+    echo ==========ÖØÆô·¢Éú´íÎó£¬Çë×ÔÐÐÊÖ¹¤ÖØÆôÉè±¸£¡£¡£¡
+    goto END
+)
+
+
+:END
+IF EXIST %TEMP_DIR% RD /S /Q %TEMP_DIR%
+pause
+

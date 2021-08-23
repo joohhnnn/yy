@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fm_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <CheckBox
+                android:id="@+id/power_status_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:button="@null"
+                android:drawableTop="@drawable/fm_status_drawable"
+                android:paddingEnd="@dimen/y40"
+                android:paddingLeft="@dimen/x40"
+                android:paddingRight="@dimen/x40"
+                android:paddingTop="@dimen/y40"
+                android:src="@drawable/fm_status_drawable" />
+
+            <TextView
+                android:id="@+id/power_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/power_status_cb"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/y34"
+                android:textColor="#adb6cc"
+                android:textSize="@dimen/y24" />
+        </RelativeLayout>
+
+        <com.txznet.cldfm.ui.widget.wheel.WheelDatePicker
+            android:id="@+id/picker_date_wdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/fm_mhz_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x45"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x45"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_marginTop="@dimen/y20"
+            android:text="@string/string_mhz"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/y44" />
+    </LinearLayout>
+
+    <com.txznet.cldfm.ui.widget.SeekBarEx
+        android:id="@+id/fm_progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:background="@drawable/fm_graduaction_gray"
+        android:paddingEnd="@dimen/x54"
+        android:paddingStart="@dimen/x54"
+        android:progress="0"
+        android:progressDrawable="@android:color/transparent"
+        android:thumb="@drawable/fm_shaft" />
+
+</LinearLayout>

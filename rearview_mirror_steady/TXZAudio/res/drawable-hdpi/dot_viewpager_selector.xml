@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="true"><shape android:shape="rectangle">
+            <size android:height="@dimen/y6" android:width="@dimen/x32" />
+
+            <solid android:color="@color/indicator_selected"></solid>
+        </shape></item>
+    <item><shape android:shape="rectangle">
+            <size android:height="@dimen/y6" android:width="@dimen/x32" />
+
+            <solid android:color="@color/indicator_selected_nor"></solid>
+        </shape></item>
+
+</selector>

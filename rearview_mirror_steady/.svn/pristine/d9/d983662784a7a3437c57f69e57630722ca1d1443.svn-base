@@ -1,0 +1,156 @@
+<!-- 无屏模式录音界面 -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/win_layout_card_margin_ver_screen"
+        android:paddingBottom="@dimen/win_layout_card_margin_ver_screen"
+        android:paddingLeft="@dimen/win_layout_card_margin_hor_screen"
+        android:paddingRight="@dimen/win_layout_card_margin_hor_screen">
+
+        <LinearLayout
+            android:layout_width="600dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/rootWrap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|bottom"
+                android:orientation="vertical"
+                android:background="@drawable/xml_bg_card">
+
+                <LinearLayout
+                    android:id="@+id/llHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/talk_logo_size"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlRecordView"
+                        android:layout_width="@dimen/talk_logo_size"
+                        android:layout_height="@dimen/talk_logo_size"
+                        android:layout_marginLeft="@dimen/mdp10"
+                        android:layout_marginRight="@dimen/mdp10"
+                        android:layout_gravity="center_vertical" />
+
+                    <RelativeLayout
+                        android:id="@+id/talkWrap"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <!--Test-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Test Test Test Test"
+                            android:textColor="@color/white"
+                            android:singleLine="true"
+                            android:ellipsize="start"
+                            android:textSize="@dimen/sp22"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ivHelp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:padding="@dimen/mdp20"
+                        android:src="@drawable/xml_ic_help" />
+
+                    <ImageView
+                        android:id="@+id/ivSpeechBroadcast"
+                        android:layout_width="@dimen/mdp40"
+                        android:layout_height="@dimen/mdp40"
+                        android:layout_marginLeft="@dimen/mdp10"
+                        android:layout_marginRight="@dimen/mdp20"
+                        android:background="@drawable/speech_broadcast" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/horDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/cardDividerColor"/>
+
+                <FrameLayout
+                    android:id="@+id/container"
+                    android:layout_width="@dimen/win_layout_card_width"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="0dp">
+
+                    <!--Test-->
+                    <!--                <ScrollView-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="wrap_content">-->
+
+                    <!--                    <LinearLayout-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:orientation="vertical">-->
+
+                    <!--                        <include layout="@layout/a_chat_weather_view_more_item"/>-->
+                    <!--                        <include layout="@layout/a_chat_weather_view_more_item"/>-->
+                    <!--                        <include layout="@layout/a_chat_weather_view_more_item" />-->
+                    <!--                        <include layout="@layout/a_chat_weather_view_more_item"/>-->
+                    <!--                        <include layout="@layout/a_chat_weather_view_more_item"/>-->
+                    <!--                        <include layout="@layout/a_chat_weather_view_more_item"/>-->
+                    <!--                        <include layout="@layout/a_chat_weather_view_more_item"/>-->
+                    <!--                        <include layout="@layout/a_chat_weather_view_more_item"/>-->
+
+
+
+                    <!--                    </LinearLayout>-->
+
+                    <!--                </ScrollView>-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Test Test Test"
+                        android:padding="@dimen/mdp20"
+                        android:textColor="@color/white"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/win_layout_card_width">
+
+            <FrameLayout
+                android:id="@+id/extContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/win_layout_card_padding" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--对话框容器-->
+    <FrameLayout
+        android:id="@+id/layoutDialogWrap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+    </FrameLayout>
+
+</FrameLayout>

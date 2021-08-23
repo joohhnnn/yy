@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        style="@style/smartHandyCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:src="@drawable/smart_handy_icon_remind"
+                style="@style/SmartHandyCardHeadIcon"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="提醒事项"
+                style="@style/SmartHandyCardHeadTitle"/>
+
+            <ImageButton
+                android:id="@+id/imgBtnMore"
+                style="@style/SmartHandyCardHeadMore"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/wrapCreate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:background="@drawable/xml_smart_handy_bg_rect">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/smart_handy_icon_create"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="去创建"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/sp18"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/itemContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/smart_handy_home_item_reminder_item"/>
+            <include layout="@layout/smart_handy_home_item_reminder_item"/>
+            <include layout="@layout/smart_handy_home_item_reminder_item"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

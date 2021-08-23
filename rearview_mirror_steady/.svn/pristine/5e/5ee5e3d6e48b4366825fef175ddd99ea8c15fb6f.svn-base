@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ptr_tail"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#DADFDC" >
+
+    <ImageView
+        android:id="@+id/iv_tail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x20"
+        android:src="@drawable/arrow_bottom" />
+
+    <TextView
+        android:id="@+id/tv_tail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="上拉刷新"
+        android:textSize="@dimen/y23" />
+
+    <ProgressBar
+        android:id="@+id/pb_tail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/x20" />
+
+</RelativeLayout>

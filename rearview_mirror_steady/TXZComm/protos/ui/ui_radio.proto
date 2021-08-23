@@ -1,0 +1,53 @@
+package com.txz.ui.radio;
+
+enum SubEvent {
+	SUBEVENT_RADIO_PLAY = 0x1;
+	SUBEVENT_RADIO_PAUSE = 0x2;
+	SUBEVENT_RADIO_NEXT = 0x3;
+	SUBEVENT_RADIO_PREV = 0x4;
+	SUBEVENT_RADIO_RANDOM = 0x5;
+	SUBEVENT_RADIO_MODE_LOOP_SINGLE = 0x6;
+	SUBEVENT_RADIO_MODE_LOOP_ALL = 0x7;
+	SUBEVENT_RADIO_MODE_RANDOM = 0x8;
+	SUBEVENT_RADIO_PLAY_ONLY = 0x9;
+	SUBEVENT_RADIO_DELETE = 0x10;		//删除电台，携带电台文件路径字符串
+	SUBEVENT_RADIO_EXIT = 0x11; //退出
+}
+
+
+enum RADIOType
+{
+	RADIO_TYPE_RADIO = 0; //电台，默认
+	RADIO_TYPE_NEWS = 1; //新闻
+}
+
+message RADIOModel {
+	optional int32 int32_id = 1; // 数据库id，后台下发的id不填
+	optional string str_title = 2;  // 名字
+	optional string str_album = 3;  // 专辑
+	repeated string rpt_str_artist = 4;  // 歌手
+	optional string str_path = 5;  // 路径，在线电台使用播放url
+	optional uint32 uint32_duration  = 6; // 时长
+	optional uint32 uint32_size = 7; // 大小
+	optional string str_type = 8; //流派
+	optional string str_file_name = 9; //文件名
+	optional string str_file_ext = 10; //文件扩展名
+	optional int32 int32_album_id = 11; //专辑id，用户获取电台封面
+	repeated string rpt_str_keywords = 13; //媒体关键字，电台或新闻的关键字
+	optional uint32 uint32_RADIO_type = 14; //媒体类型，参考RADIOType
+	optional bool b_favourite = 19; //是否已经被当前用户收藏
+	//歌曲别名
+	repeated string rpt_str_alias = 20; //歌曲别名，用于去掉括号等
+	//文本搜索
+	optional string str_search_text = 21;	//搜索关键字
+	optional uint32 uint32_app_id = 22;				//数据来源的app id
+	optional uint64 uint64_audio_id = 23;			//音频ID
+}
+
+
+
+
+
+
+
+

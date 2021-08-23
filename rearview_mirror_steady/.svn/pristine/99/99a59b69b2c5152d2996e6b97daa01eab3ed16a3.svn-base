@@ -1,0 +1,10 @@
+<resources>
+    <string name = "iflytek_appKey">548a6747</string>
+    <string name = "yunzhisheng_appKey">b25kmr3ztigd2m5i4qazswkm7uytykbwbsrflwqv</string>
+
+    <string-array name="txz_sdk_init_wakeup_keywords">
+        <item>你好小踢</item>
+        <item>小踢你好</item>
+    </string-array>
+
+</resources>

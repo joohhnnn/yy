@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_sim_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#333333"
+        android:padding="@dimen/m30">
+
+        <ImageView
+            android:id="@+id/iv_sim_empty_exit"
+            android:layout_width="@dimen/m42"
+            android:layout_height="@dimen/m42"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/m5"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/sim_empty_close" />
+        <View
+            android:layout_width="1px"
+            android:layout_height="1px"
+            android:id="@+id/center"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:id="@+id/tv_sim_empty_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/center"
+            android:layout_centerHorizontal="true"
+            android:maxWidth="@dimen/x469"
+            android:layout_marginTop="@dimen/m20"
+            android:text="当前设备未检测到SIM卡，为了保证正常使用请将官方SIM卡插入设备。如SIM卡遗失请联系商家。"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/m22" />
+
+        <ImageView
+            android:id="@+id/iv_sim_empty_icon"
+            android:layout_width="@dimen/m160"
+            android:layout_height="@dimen/m160"
+            android:layout_above="@+id/tv_sim_empty_content"
+            android:layout_below="@+id/iv_sim_empty_exit"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/sim_empty_icon" />
+
+        <TextView
+            android:id="@+id/tv_sim_empty_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.5"
+            android:layout_marginLeft="@dimen/x94"
+            android:layout_marginBottom="@dimen/m18"
+            android:soundEffectsEnabled="false"
+            android:text="温馨提示：\n1.请查看物联网卡是否安装错误\n2.如物联网卡已正确安装但未检测到可重启设备进行再次尝试"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/m16" />
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/web_view_sim_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"></WebView>
+
+
+</RelativeLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andexert.library.RippleView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y84"
+    android:background="@drawable/bg_ripple"
+    android:descendantFocusability="blocksDescendants"
+    android:minHeight="@dimen/y84"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/y2"
+    android:paddingBottom="@dimen/y2"
+    ripple:rv_rippleDuration="300"
+    android:clickable="false"
+    ripple:rv_type="rectangle">
+
+    <FrameLayout
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.txznet.record.view.GradientProgressBar
+            android:id="@+id/prgChat_List_Item_Waiting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:clickable="false"
+            android:id="@+id/layout_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/y80">
+
+            <TextView
+                android:id="@+id/tv_num"
+                style="@style/text_30"
+                android:layout_width="@dimen/y44"
+                android:layout_height="@dimen/y44"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/x20"
+                android:layout_marginLeft="@dimen/x20"
+                android:background="@drawable/poi_item_circle_bg"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="0dp"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/y28" />
+
+
+            <TextView
+                android:id="@+id/tv_main_title"
+                android:maxEms="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_toRightOf="@id/tv_num"
+                android:ellipsize="end"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:textColor="#FFF"
+                android:textSize="@dimen/y26" />
+
+            <TextView
+                android:id="@+id/tv_spilt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x1"
+                android:layout_marginRight="@dimen/x1"
+                android:layout_toRightOf="@id/tv_main_title"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="-"
+                android:textColor="#FFF"
+                android:textSize="@dimen/y26" />
+
+            <TextView
+                android:maxEms="10"
+                android:id="@+id/tv_sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_spilt"
+                android:ellipsize="end"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:textColor="#FFF"
+                android:textSize="@dimen/y26" />
+
+            <TextView
+                android:maxEms="10"
+                android:id="@+id/tv_device_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_main_title"
+                android:layout_alignLeft="@id/tv_main_title"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="广东"
+                android:textColor="#aaa"
+                android:textSize="@dimen/y20" />
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x20"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="查询中"
+                android:textColor="#2790FF"
+                android:textSize="@dimen/y20" />
+
+            <ImageView
+                android:id="@+id/iv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x9"
+                android:layout_toLeftOf="@id/tv_state"
+                android:src="@drawable/item_car_control_home_progress"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tv_close_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x20"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="查询中"
+                android:textSize="@dimen/y20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_open_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/y10"
+                android:layout_marginRight="@dimen/x20"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="查询中"
+                android:textColor="#00CF7F"
+                android:textSize="@dimen/y20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_title_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x175"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="温度"
+                android:visibility="gone"
+                android:textColor="#99FFFFFF"
+                android:textSize="@dimen/m16" />
+
+            <TextView
+                android:id="@+id/tv_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x115"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="26℃"
+                android:visibility="gone"
+                android:textColor="#CCFFFFFF"
+                android:textSize="@dimen/m24" />
+
+            <TextView
+                android:id="@+id/tv_title_humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x69"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="湿度"
+                android:visibility="gone"
+                android:textColor="#99FFFFFF"
+                android:textSize="@dimen/m16" />
+
+            <TextView
+                android:id="@+id/tv_humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x8"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="50%"
+                android:visibility="gone"
+                android:textColor="#CCFFFFFF"
+                android:textSize="@dimen/m24" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <View
+        android:clickable="false"
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/list_item_divider_height"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#4c4c4c"
+        android:visibility="gone" />
+
+</com.andexert.library.RippleView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/right_fragment_bg"
+              android:orientation="vertical"
+              android:weightSum="45">
+
+    <RelativeLayout
+        android:id="@+id/ll_mine_head"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <Button
+                android:id="@+id/btn_starred"
+                android:layout_width="@dimen/x78"
+                android:layout_height="@dimen/y47"
+                android:layout_marginRight="@dimen/x24"
+                android:background="@drawable/mine_title_btn_bg"
+                android:gravity="center"
+                android:text="收藏"
+                android:visibility="gone"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/y24"/>
+
+            <Button
+                android:id="@+id/btn_history"
+                android:layout_width="@dimen/x78"
+                android:layout_height="@dimen/y47"
+                android:layout_marginLeft="@dimen/x24"
+                android:background="@drawable/mine_title_btn_bg"
+                android:gravity="center"
+                android:text="历史"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/y24"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_setting"
+            android:layout_width="@dimen/x150"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x16"
+            android:background="@drawable/mine_title_setting_bg"
+            android:drawableLeft="@drawable/mine_title_setting"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:paddingTop="@dimen/y10"
+            android:paddingBottom="@dimen/y10"
+            android:text="设置"
+            android:visibility="visible"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/y26"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="37">
+
+        <GridView
+            android:id="@+id/grid_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:horizontalSpacing="@dimen/x10"
+            android:numColumns="2"
+            android:verticalSpacing="@dimen/y10"
+            android:visibility="visible"
+            >
+        </GridView>
+
+        <TextView
+            android:id="@+id/tv_null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="当前列表为空"
+            android:textSize="@dimen/x30"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"/>
+
+        <include layout="@layout/layout_setting"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

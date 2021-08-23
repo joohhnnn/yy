@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Setting_Item_Padding"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/m68"
+    android:background="@drawable/base_list_item_bg"
+    android:orientation="vertical"
+    tools:background="@drawable/base_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/cb_checked"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_tv_h3"
+            tools:text="hfahsfoshofioshfoiasohfosahf" />
+
+        <TextView
+            android:id="@+id/tv_setting_sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_60"
+            android:textSize="@dimen/base_tv_h7"
+            tools:text="hfahsfoshofioshfoiasohfosahf" />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cb_checked"
+        android:layout_width="@dimen/m24"
+        android:layout_height="@dimen/m24"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:background="@drawable/base_selector_btn_selector"
+        android:button="@null"
+        android:checked="true" />
+</RelativeLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    这个文件的修改都需要知会到FAE（比方说：杨一凡），否则皮肤包会出问题。
+    -->
+    <color name="select_normal">#00000000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="song_name_color">@color/white</color>
+    <color name="song_src_color">@color/half_white</color>
+    <color name="artist_name_color">@color/c_local_tag</color>
+    <color name="source_color">@color/c_source</color>
+    <color name="seekbar_background_color">#6d6f6f</color>
+    <color name="seekbar_progress_color">#E82526</color>
+    <color name="seekbar_buffer_color">#FF5D5A5A</color>
+    <color name="title_text_color">@color/white</color>
+    <color name="search_text_color">@color/white</color>
+    <color name="not_data_text_color">@color/white</color>
+    <color name="local_song_list_title_color">@color/white</color>
+    <color name="local_song_list_sub_title_color">#7FFFFFFF</color>
+    <color name="song_title_playing_color">#1cc859</color>
+    <color name="song_title_normal_color">#FFFFFF</color>
+    <color name="local_song_list_artist_color">@color/gray</color>
+    <color name="local_song_list_tip_color">@color/c_local_tag</color>
+    <color name="song_list_delete_text_color">#8AFFFFFF</color>
+    <color name="filter_text_color">@color/white</color>
+    <color name="filter_bg_selected">@color/green</color>
+    <color name="filter_bg_normal">#0000</color>
+    <color name="filter_name_text_color">@color/drak_green</color>
+    <color name="error_tip_color">@color/gray</color>
+    <color name="loading_text_color">#8aFFFFFF</color>
+    <color name="album_intro_text_color">@android:color/white</color>
+    <color name="history_title_bg">@color/title_header</color>
+    <color name="history_title_color">@color/item_play_list_click_1</color>
+    <color name="history_line_color">@color/drak_green</color>
+    <color name="no_history_text_color">@color/white</color>
+    <color name="color_focused">@color/drak_green</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- 首页 -->
+    <color name="home_type_item_bg_nor">#252728</color>
+    <color name="home_bg">#0A0A0A</color>
+    <!-- 左侧 -->
+    <color name="type_layout_bg_nor">#252728</color>
+    <!-- 右侧 -->
+    <color name="right_fragment_bg">#0A0A0A</color>
+    <!-- 标题栏-->
+    <color name="head_type_text">#FFFFFF</color>
+
+    <color name="mine_head_btn_normal">#00000000</color>
+
+    <color name="setting_item_bg">#7f121524</color>
+
+    <color name="help_item_bg">#14FFFFFF</color>
+    <color name="music_fenlei_item_normal">#252728</color>
+
+    <color name="local_item_normal">#80121524</color>
+
+    <color name="color_selected">#E82526</color>
+    <color name="color_normal">#FFFFFF</color>
+
+    <!--尚斌增加弹框的背景颜色-->
+    <color name="bg_dialog_confim_color_start">#E5191B22</color>
+    <color name="bg_dialog_confim_color_end">#E531343c</color>
+
+    <color name="local_item_text_normal">#FFFFFF</color>
+    <color name="local_item_text_playing">#E82526</color>
+    <color name="local_scan_btn_text">@color/white</color>
+
+    <color name="popup_list_played">@color/gray</color>
+    <color name="popup_list_normal">@color/white</color>
+
+    <color name="tips_ok_text">#FFFFFF</color>
+    <color name="tips_cancel_text">#FFFFFF</color>
+
+
+    <!-- 00%=FF（不透明）    5%=F2    10%=E5    15%=D8    20%=CC    25%=BF    30%=B2    35%=A5    40%=99    45%=8c    50%=7F -->
+    <!-- 55%=72    60%=66    65%=59    70%=4c    75%=3F    80%=33    85%=21    90%=19    95%=0c    100%=00（全透明） -->
+    <color name="indicator_selected">#ffffff</color>
+    <color name="indicator_selected_nor">#7fff</color>
+    <color name="green">#1cc859</color>
+    <color name="drak_green">#039e77</color>
+    <color name="item_music_type_bg">#282828</color>
+    <color name="item_bg_selected">#1e1e1e</color>
+    <color name="item_bg_selected_nor">#991e1e1e</color>
+    <color name="type_filter_pop_bg">#B2000000</color>
+    <color name="type_filter_pop_item_normal_bg">#484947</color>
+    <color name="white">#fff</color>
+    <color name="text_title_nor">#80ffffff</color>
+    <color name="black">#000</color>
+    <color name="half_white">#8fff</color>
+    <color name="singer_name">#7fffffff</color>
+    <color name="media_player_time">#a0a0a0</color>
+    <color name="progress_color">#B2393939</color>
+    <color name="finished_progress_color">#1cc859</color>
+    <color name="buffered_progress_color">#5d5a5a</color>
+    <color name="player_list_item_bg">#050505</color>
+    <color name="player_list_bg">#2F313F</color>
+    <color name="gray">#707070</color>
+    <color name="pop_list_divider">#33FFFFFF</color>
+    <color name="album_des_bg">#282828</color>
+    <color name="song_selected">#383838</color>
+    <color name="song_selected_nor">#1b1a1c</color>
+    <color name="song_delete_selected_nor">#444a50</color>
+    <color name="song_delete_selected">#282828</color>
+    <color name="dialog_bg">#24262d</color>
+    <color name="dialog_line_bg">#1f2225</color>
+    <color name="dialog_bg_press">#181818</color>
+    <color name="dialog_sure_text_color">#fb4c49</color>
+    <color name="song_fliter_bg">#99000000</color>
+    <color name="type_filter_bg">#ccffffff</color>
+    <color name="press_local_music">#13863c</color>
+    <color name="c_local_tag">#adb6cc</color>
+    <color name="c_source">#808080</color>
+    <color name="c_type_selected">#4cffffff</color>
+    <color name="menu_left">#00000000</color>
+    <color name="menu_left_normal">#00000000</color>
+    <color name="menu_left_clicked">#E82526</color>
+    <color name="title_header">@color/transparent</color>
+    <color name="player_bg">#121524</color>
+    <color name="album_item_bg">#121524</color>
+    <color name="album_item_selected_bg">#FF039e77</color>
+
+    <color name="menu_text_selected">#E82526</color>
+
+
+    <!--模糊背景过滤值-->
+    <color name="bg_blur_filter">#7F191B21</color>
+    <color name="bg_item_filter">#33000000</color>
+
+
+    <color name="play_list_item_artist_normal">#FF939393</color>
+    <color name="play_list_item_artist_grey">#7F939393</color>
+    <color name="play_list_item_name_normal">#FFFFFFFF</color>
+    <color name="play_list_item_name_grey">#7FFFFFFF</color>
+
+    <color name="player_list_bg_v41">#E5191B21</color>
+
+    <!--设置界面-->
+    <color name="setting_btn_bg">#14ffffff</color>
+    <!--收藏界面的标题头部->删除按钮的背景颜色-->
+    <color name="favour_delete_bg">#FFE53F40</color>
+    <color name="empty_view_btn_press_no">#14FFFFFF</color>
+    <color name="empty_view_btn_press_yes">#7FFFFFFF</color>
+
+</resources>

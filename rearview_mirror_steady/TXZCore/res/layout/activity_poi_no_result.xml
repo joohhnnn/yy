@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/no_result_ly"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:visibility="gone" >
+
+    <FrameLayout
+        android:id="@+id/code_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x50"
+        android:layout_marginRight="@dimen/x50"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/code_iv"
+            android:layout_width="@dimen/x260"
+            android:layout_height="@dimen/y260"
+            android:background="#888"
+            android:scaleType="matrix" />
+
+        <ProgressBar
+            android:id="@+id/code_pb"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/no_result_txt_ly"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_search_null_text"
+            android:textColor="#adb6cc"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/poi_mark_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y44"
+            android:text="@string/activity_poi_use_gz"
+            android:textColor="#adb6cc"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/send_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_poi_send_text"
+            android:textColor="#adb6cc"
+            android:textSize="24px"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

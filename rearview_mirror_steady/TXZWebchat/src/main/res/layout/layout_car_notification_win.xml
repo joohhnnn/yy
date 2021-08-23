@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_car_notification_root"
+        android:layout_width="@dimen/x496"
+        android:layout_height="@dimen/y80"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/src_car_top_dialog_bg">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/view_car_notification_avatar"
+            android:layout_width="@dimen/y48"
+            android:layout_height="@dimen/y48"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x16"
+            android:src="@drawable/default_headimage"
+            app:riv_corner_radius="@dimen/y8"/>
+
+        <TextView
+            android:id="@+id/tv_car_notification_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_toRightOf="@id/view_car_notification_avatar"
+            android:maxLines="1"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/y19"
+            tools:text="你大爷"/>
+
+        <ImageView
+            android:id="@+id/iv_car_notification_voice"
+            android:layout_width="@dimen/y23"
+            android:layout_height="@dimen/y26"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_toRightOf="@id/tv_car_notification_name"
+            android:background="@drawable/src_car_notification_voice_anim"/>
+
+        <com.txznet.webchat.ui.car.widget.ResourceButton
+            android:id="@+id/view_car_notification_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:resbtn_padding_horizontal="@dimen/x16"
+            app:resbtn_size_icon="@dimen/y28"
+            app:resbtn_size_text="@dimen/y19"
+            app:resbtn_color_text_normal="@color/color_notification_text_send"
+            app:resbtn_color_text_pressed="@color/color_notification_text_send_pressed"
+            app:resbtn_src_icon_normal="@drawable/src_car_record_end_icon_normal"
+            app:resbtn_src_icon_pressed="@drawable/src_car_record_end_icon_pressed"
+            app:resbtn_str_text="@string/lb_chat_reply"/>
+
+        <View
+            android:id="@+id/v_divider"
+            style="@style/divider_line_vertical"
+            android:layout_marginBottom="@dimen/y8"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_toLeftOf="@id/view_car_notification_reply"/>
+
+        <View
+            android:id="@+id/view_car_notification_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/v_divider"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

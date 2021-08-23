@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/appwidget_play_press_rc" android:state_pressed="true" />
+    <item android:drawable="@drawable/appwidget_play_normal_rc" android:state_pressed="false" />
+
+</selector>

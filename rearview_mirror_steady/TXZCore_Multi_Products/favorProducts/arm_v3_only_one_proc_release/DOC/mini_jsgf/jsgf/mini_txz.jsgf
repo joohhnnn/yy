@@ -1,0 +1,28 @@
+#JSGF V1.0 utf-8 cn;
+
+grammar txzTag;
+
+//////////////////////////////////////命令开始//////////////////////////////////////
+
+public <txzTag> = ( "<s>" (
+ ( [( <preActive> | ( [<prePlease>]<prePassive> ) )]<cmdKeywords> )
+) "</s>" );
+
+
+
+//////////////////////////////////////前缀相关//////////////////////////////////////
+<preActive>=(
+"<preActive_>"(
+我 要 | 我 想 | 我 想 要
+)"</preActive_>"
+);
+<prePassive>=(
+"<prePassive_>"(
+帮 我 | 替 我 | 给 我 | 帮 忙 | 你 给 我 | 你 替 我
+)"</prePassive_>"
+);
+<prePlease>=(
+"<prePlease_>"(
+请 | 麻 烦
+)"</prePlease_>"
+);

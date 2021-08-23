@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--订单，未支付-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/win_layout_card_padding"
+            android:paddingLeft="@dimen/win_layout_card_padding_2x"
+            android:paddingRight="@dimen/win_layout_card_padding_2x"
+            android:paddingBottom="@dimen/win_layout_card_padding_2x">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/ydp10"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/ivIcon"
+                    android:layout_width="@dimen/mdp40"
+                    android:layout_height="@dimen/mdp40"
+                    android:src="@drawable/qiwu_ticket_pending_order_icon"/>
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/win_layout_card_padding"
+                    android:text="Test"
+                    android:textSize="@dimen/sp24"
+                    android:textColor="@color/textColorPrimary"/>
+
+                <LinearLayout
+                    android:id="@+id/surplusPayTimeWrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="剩余时间："
+                        android:textSize="@dimen/sp20"
+                        android:textColor="@color/textColorSecondary"/>
+
+                    <TextView
+                        android:id="@+id/tvSurplusPayTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:textSize="@dimen/sp22"
+                        android:textColor="@color/textColorPrimary"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textSize="@dimen/sp20"
+                android:textColor="@color/textColorSecondary"
+                android:text="资金在3-5个工作日原路退回"/>
+
+            <LinearLayout
+                android:id="@+id/payWarp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总价："
+                        android:textSize="@dimen/sp24"
+                        android:textColor="@color/textColorSecondary"/>
+
+                    <TextView
+                        android:id="@+id/tvPriceTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥2479"
+                        android:textSize="@dimen/sp24"
+                        android:textColor="@color/colorAccent"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/ydp10"
+                    android:gravity="center">
+
+                    <!--二维码没有边距，手动加白边-->
+                    <ImageView
+                        android:id="@+id/ivQrCode"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:padding="@dimen/m3"
+                        android:background="@color/white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/ydp10"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ivPayType"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/qiwu_ticket_pending_order_select_wechat_pay"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ydp20"
+                android:shrinkColumns="2">
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="姓"
+                            style="@style/formTableLabel"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="名"
+                            style="@style/formTableLabel"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="："
+                        style="@style/formTableLabel"/>
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="小林"
+                        style="@style/formTableContent"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/ydp10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="车"
+                            style="@style/formTableLabel"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="次"
+                            style="@style/formTableLabel"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="："
+                        style="@style/formTableLabel"/>
+
+                    <TextView
+                        android:id="@+id/tvTrainNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ZC3376"
+                        style="@style/formTableContent"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/ydp10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="始"
+                            style="@style/formTableLabel"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="发"
+                            style="@style/formTableLabel"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地"
+                            style="@style/formTableLabel"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="："
+                        style="@style/formTableLabel"/>
+
+                    <TextView
+                        android:id="@+id/tvBeginAddr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="深圳宝安T3"
+                        style="@style/formTableContent"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/ydp10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="到"
+                            style="@style/formTableLabel"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="达"
+                            style="@style/formTableLabel"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地"
+                            style="@style/formTableLabel"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="："
+                        style="@style/formTableLabel"/>
+
+                    <TextView
+                        android:id="@+id/tvEndAddr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="北京首都T2"
+                        style="@style/formTableContent"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/ydp10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="日"
+                            style="@style/formTableLabel"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="期"
+                            style="@style/formTableLabel"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="："
+                        style="@style/formTableLabel"/>
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2020-10-24"
+                        style="@style/formTableContent"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/ydp10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="始"
+                            style="@style/formTableLabel"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="发"
+                            style="@style/formTableLabel"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="时"
+                            style="@style/formTableLabel"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="间"
+                            style="@style/formTableLabel"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="："
+                        style="@style/formTableLabel"/>
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="13:20"
+                        style="@style/formTableContent"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/ydp10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="成"
+                            style="@style/formTableLabel"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="人"
+                            style="@style/formTableLabel"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="票"
+                            style="@style/formTableLabel"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="："
+                        style="@style/formTableLabel"/>
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥2429"
+                        style="@style/formTableContent"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/ydp10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="座"
+                            style="@style/formTableLabel"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="位"
+                            style="@style/formTableLabel"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="："
+                        style="@style/formTableLabel"/>
+
+                    <TextView
+                        android:id="@+id/tvSeat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12C"
+                        style="@style/formTableContent"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/ydp50"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/win_layout_card_padding_2x"
+                android:layout_marginRight="@dimen/win_layout_card_padding_2x"
+                android:layout_marginTop="@dimen/win_layout_card_padding_2x"
+                android:layout_marginBottom="@dimen/win_layout_card_padding_2x"
+                android:paddingLeft="@dimen/xdp30"
+                android:paddingRight="@dimen/xdp30"
+                android:text="取消订单"
+                android:textColor="#CCFFFFFF"
+                android:textSize="@dimen/sp20"
+                android:paddingTop="@dimen/y5"
+                android:paddingBottom="@dimen/y5"
+                android:background="@drawable/xml_bg_btn_ticket_cancel_order"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

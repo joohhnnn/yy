@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/x600"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="@dimen/x280"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/record_bg"
+        android:gravity="center_horizontal"
+        android:minHeight="@dimen/y280"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y38"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x20"
+                android:src="@drawable/record_voice" />
+
+            <ImageView
+                android:id="@+id/volume_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:src="@drawable/icon_line_6" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y38"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="20px" />
+
+        <TextView
+            android:id="@+id/send_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y62"
+            android:layout_marginTop="@dimen/y16"
+            android:background="@drawable/cancel_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="立即发送"
+            android:textColor="#ffffff"
+            android:textSize="26px" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x40"
+        android:layout_toRightOf="@id/ll"
+        android:src="@drawable/icon_hand_note" />
+
+</RelativeLayout>

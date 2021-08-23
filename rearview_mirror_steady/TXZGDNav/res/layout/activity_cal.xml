@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/navFrame"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1" >
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/routemap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y10"
+                    android:background="@drawable/activity_route_btn_shadow" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="#E5ffffff"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/y12"
+                    android:paddingTop="@dimen/y12" >
+
+                    <TextView
+                        android:id="@+id/txt_name_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="#333"
+                        android:textSize="24px" />
+
+                    <TextView
+                        android:id="@+id/txt_geoinfo_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="#666666"
+                        android:textSize="22px" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="@dimen/x10"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/zoom_out_ib"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/nav_view_zoom_in" />
+
+                <ImageButton
+                    android:id="@+id/zoom_in_ib"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/nav_view_zoom_out" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btnStartNav"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y70"
+            android:layout_gravity="bottom"
+            android:background="@drawable/activity_preview_start_button_bg"
+            android:textColor="#ffffff"
+            android:textSize="35px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="@dimen/x1"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/split_line" />
+
+    <RadioGroup
+        android:id="@+id/path_select"
+        android:layout_width="@dimen/x115"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="0dp" >
+
+        <RadioButton
+            android:id="@+id/recommend"
+            style="@style/activity_preview_rb_select_path"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/activity_preview_rb_select_path_recommend"
+            android:text="@string/activity_preview_rb_recommand_text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/split_line" />
+
+        <RadioButton
+            android:id="@+id/toll"
+            style="@style/activity_preview_rb_select_path"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/activity_preview_rb_select_path_min_toll"
+            android:text="@string/activity_preview_rb_toll_text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/split_line" />
+
+        <RadioButton
+            android:id="@+id/distance"
+            style="@style/activity_preview_rb_select_path"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/activity_preview_rb_select_path_min_dist"
+            android:text="@string/activity_preview_rb_dist_text" />
+    </RadioGroup>
+
+</LinearLayout>

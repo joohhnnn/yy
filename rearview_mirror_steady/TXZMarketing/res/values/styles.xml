@@ -1,0 +1,69 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    
+    <style name="TXZ_Dialog_Style_Full" parent="@android:style/Theme.Dialog">
+                <item name="android:windowFrame">@null</item>
+        <!-- 是否没标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否背景阴影 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimAmount">0.1</item>
+        <!-- 去黑边 -->
+<!--         <item name="android:windowBackground">@drawable/transparent_background</item> -->
+        <!-- 全屏 -->
+<!--         <item name="android:windowFullscreen">true</item> -->
+        
+<!--         <item name="android:windowNoTitle">true</item> -->
+<!--         <item name="android:windowIsFloating">false</item> -->
+<!--         是否背景阴影 -->
+<!--         <item name="android:backgroundDimEnabled">true</item> -->
+<!--         <item name="android:windowContentOverlay">@null</item> -->
+<!--         <item name="android:backgroundDimAmount">0.1</item> -->
+<!--         全屏 -->
+<!--         <item name="android:fitsSystemWindows">true</item> -->
+<!--         <item name="android:clipToPadding">true</item> -->
+<!--         <item name="android:windowFrame">@null</item> -->
+<!--         去黑边 -->
+<!--         <item name="android:windowBackground">@drawable/transparent_background</item> -->
+<!--         全屏 -->
+<!--         <item name="android:windowFullscreen">true</item> -->
+  
+    </style>
+    
+<!--             <item name="android:windowFullscreen">true</item> -->
+    
+    
+    
+
+    <style name="dialogWindowAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit_anim</item>
+    </style>
+
+    <style name="SlideDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit_anim</item>
+    </style>
+
+    <style name="BackgroundOnly">
+        
+        <item name="android:windowBackground">@android:color/transparent</item>  
+                <item name="android:windowIsTranslucent">true</item>  
+        
+        <!--<item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>-->
+        
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowNoDisplay">true</item>
+    </style>
+
+</resources>

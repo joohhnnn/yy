@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_help"
+    style="@style/Setting_Item"
+    tools:background="@drawable/base_bg">
+
+    <TextView
+        android:id="@+id/tv_left_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/m30"
+        android:text="帮助"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/base_tv_h3" />
+
+    <TextView
+        android:id="@+id/tv_right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="@dimen/m48"
+        android:textColor="#7FFFFFFF"
+        android:textSize="@dimen/base_tv_h3"
+        tools:text="帮助" />
+
+
+    <ImageView
+        android:id="@+id/iv_right_arrow"
+        android:layout_width="@dimen/m11"
+        android:layout_height="@dimen/m24"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="@dimen/m30"
+        android:src="@drawable/setting_right_arrow_icon" />
+</FrameLayout>

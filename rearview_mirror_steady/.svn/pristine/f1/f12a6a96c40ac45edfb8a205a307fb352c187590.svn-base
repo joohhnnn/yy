@@ -1,0 +1,306 @@
+package com.txz.ui.voice;
+import "ui_event.proto";
+
+enum SubEvent {
+	SUBEVENT_VOICE_PARSE = 0x101; //解析语音数据，携带VoiceParseData
+	
+	SUBEVENT_VOICE_ADD_KEYWORDS_CMD = 0x201; //添加语音指令
+	SUBEVENT_VOICE_DEL_KEYWORDS_CMD = 0x202; //移除语音指令
+	SUBEVENT_VOICE_SET_WAKEUP_ASR_KEYWORDS = 0x203; //设置唤醒识别关键字WakeupKeywords，特定语法命中槽位wkCmds或wkKws
+	SUBEVENT_VOICE_ADD_WAKEUP_ASR_KEYWORDS = 0x204; //增加唤醒识别关键字WakeupKeywords，特定语法命中槽位wkCmds或wkKws
+	SUBEVENT_VOICE_DEL_WAKEUP_ASR_KEYWORDS = 0x205; //删除唤醒识别关键字WakeupKeywords，特定语法命中槽位wkCmds或wkKws
+	
+	SUBEVENT_VOICE_SPEAK_WORDS = 0x301; //播报语音提示，携带为需要播放的内容
+	SUBEVENT_VOICE_SPEAK_WORDS_CLOSE_RECORD = 0x302; //播报语音提示，播报完后关闭录音窗口
+	
+	//由底层维护词库导入队列
+	SUBEVENT_VOICE_ENGINE_READY = 0x400; //上层通知native，语音引擎就绪，可以开始更新语法和词库了
+	SUBEVENT_VOICE_REG_SDK_KEYWORDS = 0x401; //native通知UI，给识别SDK注册关键字词库，携带SdkKeywords
+	SUBEVENT_VOICE_REG_SDK_KEYWORDS_SUCCESS = 0x402; //上层通知native，当前词库更新成功，native重新生成校验，携带SdkKeywords
+	SUBEVENT_VOICE_REG_SDK_KEYWORDS_FAILED = 0x403; //上层通知native，当前词库更新失败，native重新生成校验，携带SdkKeywords
+	SUBEVENT_VOICE_UPDATE_GRAMMAR = 0x404; //native通知UI，更新语法，携带SdkGrammar
+	SUBEVENT_VOICE_UPDATE_GRAMMAR_SUCCESS = 0x405; //上层通知native，更新语法成功，携带SdkGrammar
+	SUBEVENT_VOICE_UPDATE_GRAMMAR_FAILED = 0x406; //上层通知native，更新语法失败，携带SdkGrammar
+	SUBEVENT_VOICE_ALL_KEYWORDS_READY = 0x407; //native通知UI，当前所有关键字注册完成
+	SUBEVENT_VOICE_RETRY_ONLINE_KEYWORDS = 0x408; //重试在线词库
+	
+	SUBEVENT_VOICE_INTERACTION = 0x501; //语音交互，携带语音交互的ID，见res_interaction.json定义
+	
+	SUBEVENT_VOICE_WAKEUP_KEYWORDS = 0x600; //命中语音唤醒词，通知给语音唤醒模块
+	SUBEVENT_VOICE_SET_WAKEUP_KEYWORDS = 0x601; //设置唤醒词，携带唤醒词，由native下发
+	SUBEVENT_VOICE_SET_STYLE = 0x602; //设置语音风格，携带风格字符串，由ui下发
+	SUBEVENT_VOICE_UPDATED_STYLE = 0x603; //已更新语音风格，携带风格字符串，由native下发
+	SUBEVENT_VOICE_REPLACE_RESOURCE = 0x604; //整体替换资源，由ui下发
+	SUBEVENT_VOICE_UPDATE_RESOURCE = 0x605; //更新修改资源，由ui下发
+	SUBEVENT_VOICE_REPLACE_RESOURCE_BY_PATH = 0x606; //整体替换资源文件，由ui下发
+	SUBEVENT_VOICE_UPDATE_RESOURCE_BY_PATH = 0x607; //更新修改资源文件，由ui下发
+	
+	
+	SUBEVENT_VOICE_RECORD_START = 0x1000; //开始录音，ui通知native
+	SUBEVENT_VOICE_RECORD_RELEASE = 0x1001; //录音释放，ui通知native，携带RecognizeReleaseReason
+	SUBEVENT_VOICE_RECORD_END = 0x1002; //结束录音，navtive通知ui关闭录音界面
+	SUBEVENT_VOICE_RECORD_BEGIN = 0x1003; //启动录音，携带提示字符串，navtive通知ui播放提示后重新打开录音界面
+	SUBEVENT_VOICE_RECORD_SHOW_HELP = 0x1004;// 第二次识别失败，打开帮助页面，携带HelpIndex
+	SUBEVENT_VOICE_RECORD_SHOW_ABORT = 0x1005;// 第二次识别失败，打开网络异常提示
+	SUBEVENT_VOICE_RECORD_SHOW_USER_TEXT = 0x1006;// 显示用户识别文本
+	SUBEVENT_VOICE_RECORD_CLOSE = 0x1007; //关闭录音窗口
+	SUBEVENT_VOICE_SHOW_DEBUG_TEXT = 0x1008; //显示调试文本
+	
+	SUBEVENT_VOICE_COMMAND_SENCE = 0x2000; //命令场景
+	SUBEVENT_VOICE_SHOW_STOCK_INFO = 0x2001; //显示股票信息，携带SockInfo
+	SUBEVENT_VOICE_SHOW_WEATHER_INFO = 0x2002; //显示天气信息，携带WeatherInfos
+	SUBEVENT_VOICE_SHOW_LOCATION = 0x2003; //显示定位信息，请求当前的位置
+	SUBEVENT_VOICE_SHOW_ROAD_TRAFFIC = 0x2004; //显示路况信息，携带RoadTrafficQueryInfo
+	SUBEVENT_VOICE_PLAY_MEDIA = 0x2005; //播放音乐
+	SUBEVENT_VOICE_COMMON_RESULT = 0x2006; //通用结果
+	
+	SUBEVENT_VOICE_REPORT_ASR_ERROR = 0x2007;	//上报语音识别错误，携带ReportAsrError
+}
+
+enum VoiceParseDataType {
+	VOICE_DATA_TYPE_RAW = 0; //原始字符串
+	VOICE_DATA_TYPE_XML = 1; //XML字符串
+	VOICE_DATA_TYPE_SENCE_JSON = 2; //在线语义JSON场景字符串
+	VOICE_DATA_TYPE_LOCAL_JSON = 3; //本地语法JSON语法字符串
+	VOICE_DATA_TYPE_MIX_JSON = 4; //混合模式JSON结果字符串
+	VOICE_DATA_TYPE_YUNZHISHENG_SENCE_JSON = 5; //云知声json场景字符串
+	VOICE_DATA_TYPE_YUNZHISHENG_LOCAL_JSON = 6; //云知声json场景字符串
+	VOICE_DATA_TYPE_TXZ_SENCE = 99; //同行者场景数据
+}
+
+message VoiceParseData {
+	optional uint32 uint32_data_type = 1; //数据类型
+	optional string str_voice_data = 2; // 字符串
+	optional uint32 bool_manual = 3; //是否是用户主动手动采集的语音，采用整形
+	optional uint32 uint32_sence = 4; //识别场景，参考GrammarSence
+	optional uint32 uint32_session_id = 5; //识别的会话id，每次解析前判断ui的id是否已变化，已变化则放弃本次处理
+	optional uint64 uint64_voice_file_id = 6;		//声控文件ID
+	optional string str_voice_engine_id = 7;			//声控引擎ID
+}
+
+enum CommResultType {
+	COMMON_RESULT_TYPE_EMPTY = 0; //好像没有说话
+	COMMON_RESULT_TYPE_UNSUPPORT = 1; //不支持的操作
+	COMMON_RESULT_TYPE_UNKNOW = 2; //不能识别说的话
+	COMMON_RESULT_TYPE_PROCESSED = 3; //已处理识别的结果
+	COMMON_RESULT_TYPE_NET_REQUEST_FAIL = 4;//识别时服务器通讯错误
+	COMMON_RESULT_TYPE_UNKNOW_ERROR = 5;//识别中未知错误
+}
+
+
+message VoiceParseCommResult {
+	optional uint32 uint32_result_type = 1; //结果类型，CommResultType
+	optional uint32 uint32_session_id = 2; //识别的会话id
+	optional uint32 uint32_grammar_id = 3; //当前的语法
+	optional bool bool_manual = 4; //是否为手动启动
+	optional bool bool_local = 5; //是否为本地识别结果
+	optional string str_user_text = 6; //用户识别文本
+	optional string str_answer_text = 7; //识别返回的回答文本
+	optional uint32 uint32_grammar_compile_status = 8; //语法编译状态，1表示全部编译成功，0表示有词库编译中，-1有词库编译发生异常
+	optional uint64 uint64_voice_file_id = 9;		//声控文件ID
+}
+
+enum CmdType{
+	CMD_TYPE_FORE_GROUD = 50;
+	CMD_TYPE_BACK_GROUD = 100;
+	CMD_TYPE_FOCUS = 150; //焦点指令，特殊处理
+	CMD_TYPE_REMOTE = 200;
+}
+
+message CmdData {
+	optional uint32 uint32_event = 1; //指令触发事件ID
+	optional uint32 uint32_sub_event = 2; //指令触发的子事件ID
+	optional bytes  string_data = 3; //指令携带的自定义数据
+}
+
+message OneCmd {
+	repeated string  word = 1; //自定义命令字，不建议使用，只有动态字符串使用该方式注册
+	optional string   str_res_id = 2; //使用配置文件资源注册
+	optional uint32  uint32_type = 3; //指令注册的类型，类型从小到大排列
+	optional CmdData msg_data = 4; //指令触发事件ID
+}
+
+message KeyCmds {
+	repeated OneCmd cmds = 1; 
+}
+
+message RmtCmdInfo{
+   optional string rmtServName = 1; //远程注册命令字服务名称
+   optional string rmtData = 2;//远程服务自定定义数据
+   optional string rmtCmd = 3;//注册的远程命令字
+}
+
+message GrammarInfo
+{
+	optional string str_id = 1; //当前使用的语法ID
+	optional string str_build_path = 2; //语法构建路径
+}
+
+
+//语法场景
+enum GrammarSence
+{
+	GRAMMAR_SENCE_DEFAULT = 0; //默认场景
+	GRAMMAR_SENCE_MAKE_CALL = 1; //打电话，请问你要打给谁
+	GRAMMAR_SENCE_NAVIGATE = 2; //导航，请问你要去哪里
+	GRAMMAR_SENCE_SET_HOME = 3; //设置家的位置
+	GRAMMAR_SENCE_SET_COMPANY = 4; //设置公司的位置
+	
+	GRAMMAR_SENCE_SELECT_WITH_CANCEL = 0x101; //导航选择第几个或取消
+	
+	GRAMMAR_SENCE_CALL_MAKE_SURE = 0x1001; //发起呼叫确认或取消
+	GRAMMAR_SENCE_CALL_SELECT = 0x1002; //呼叫确认或取消或第几个
+	
+	GRAMMAR_SENCE_SMS_MAKE_SURE = 0x2001; //短信播报确认
+	
+	GRAMMAR_SENCE_INCOMING_MAKE_SURE = 0x3001; //来电接听确认
+}
+
+
+message SdkKeywords
+{
+	optional GrammarInfo msg_grammar_info = 1; //语法信息
+	optional string str_type = 2; //词库类型
+	optional string str_content = 3; //词库内容，用\n隔开
+	optional uint32 uint32_content_crc32 = 4;		//crc32
+	optional uint32 uint32_session_id = 5;		//sessionId
+} 
+
+message SdkGrammar
+{
+	optional GrammarInfo msg_grammar_info = 1; //语法信息
+	optional string str_content = 2;
+	optional bool b_no_need_update_grammar = 3;	//是否需要更新
+}
+
+
+enum RecognizeReleaseCode
+{
+	RECOGNIZE_RELEASE_SUCCESS = 0; //成功识别完成释放
+	RECOGNIZE_RELEASE_CANCEL = 1; //主动取消识别
+	RECOGNIZE_RELEASE_ERROR = 2; //识别发生错误
+	RECOGNIZE_RELEASE_ABORT = 3; //启动识别发生异常
+}
+
+message RecognizeReleaseReason
+{
+	optional uint32 uint32_result_code = 1;//识别释放响应码RecognizeReleaseCode
+	optional uint32 uint32_error_code = 2; //识别错误时的错误码
+}
+
+enum HelpIndex
+{
+	HELP_INFO_COMMON = 0;
+	HELP_INFO_LOCAL_OK = 1;
+	HELP_INFO_LOCAL_PROCESSING = 2;
+	HELP_INFO_LOCAL_ABORT = 3;
+}
+
+message StockInfo
+{
+	optional string str_name = 1; //股票名称
+	optional string str_code = 2; //股票代码
+	optional string str_url = 3; //股票分时图url
+	optional string str_current_price = 4; //当前价格
+	optional string str_change_amount = 5; //股价变化
+	optional string str_change_rate = 6; //股价变化率
+	optional string str_highest_price = 7; //最高价
+	optional string str_lowest_price = 8; //最低价
+	optional string str_trading_volume = 9; //成交量
+	optional string str_yestoday_close_price = 10; //昨日收盘价
+	optional string str_today_open_price = 11; //今日开盘价
+	optional string str_update_time = 12; //更新时间
+} 
+
+message WeatherData
+{
+	optional uint32 uint32_year = 1; //年
+	optional uint32 uint32_month = 2; //月
+	optional uint32 uint32_day = 3; //日
+	optional uint32 uint32_day_of_week = 4; //周几
+	optional string str_weather = 5; //天气
+	optional int32 int32_cur_temperature = 6; //当前温度
+	optional int32 int32_low_temperature = 7; //最低温度
+	optional int32 int32_high_temperature = 8; //最高温度
+	optional int32 int32_pm25 = 9; //PM2.5数值
+	optional string str_air_quality = 10; //空气质量
+	optional string str_wind = 11; //风力情况
+	optional string str_car_wash_index = 12; //洗车指数
+	optional string str_car_wash_index_desc = 13; //洗车指数详细描述
+	optional string str_travel_index = 14; //旅行指数
+	optional string str_travel_index_desc = 15; //
+	optional string str_sport_index = 16; //运动指数
+	optional string str_sport_index_desc = 17; //
+	optional string str_suggest = 18; //
+	optional string str_comfort_index = 19; //舒适度指数
+	optional string str_comfort_index_desc = 20; //
+	optional string str_cold_index = 21; //感冒指数
+	optional string str_cold_index_desc = 22; //
+	optional string str_morning_exercise_index = 23; //晨练指数
+	optional string str_morning_exercise_index_desc = 24; //
+	optional string str_dress_index = 25; //穿衣指数
+	optional string str_dress_index_desc = 26; //穿衣指数详细描述
+	optional string str_umbrella_index = 27; //打伞指数
+	optional string str_umbrella_index_desc = 28; //
+	optional string str_sun_block_index = 29; //光照指数
+	optional string str_sun_block_index_desc = 30; //
+	optional string str_drying_index = 31; //干燥指数
+	optional string str_drying_index_desc = 32; //
+	optional string str_dating_index = 33; //约会指数
+	optional string str_dating_index_desc = 34; //
+}
+
+message WeatherInfos
+{
+	optional string str_city_name = 1;
+	optional uint32 uint32_focus_index = 2;
+	repeated WeatherData rpt_msg_weather = 3;
+}
+
+message RoadTrafficQueryInfo
+{
+	optional string str_city = 1; //城市
+	optional string str_keywords = 2; //关键字信息，特殊路名：ROAD_AHEAD（前方）ROAD_SURROUNDING（周边）
+	optional string str_direction = 3; //查询方向信息：INTO_TOWN (进城)OUT_OF_TOWN (出城)OUTER_RING (外圈)INNER_CIRCLE (内圈)EAST_TO_WEST (东向西)WEST_TO_EAST(西向东)NORTH_TO_SOUTH(北向南)SOUTH_TO_NORTH(南向北)
+}
+
+
+
+////////////////grammar config///////////////////////
+message File_GrammarModel
+{
+	optional string str_file = 1;								//文件绝对路径
+	optional uint64 uint64_file_mtime = 2;				//文件修改时间
+	optional uint64 uint64_file_mtime_nsec = 3;		//文件修改时间
+	optional uint32 uint32_crc32 = 4;					//数据crc32
+	optional string str_grm_data_mtime = 5;			//语法数据mtime内容
+}
+
+message File_GrammarDict
+{
+	optional string str_grammar_id = 1;			//语法数据ID
+	optional string str_grammar_type = 2;		//type
+	optional uint32 uint32_crc32 = 3;		//crc32
+	optional uint32 uint32_save_time = 4;	//保存时间
+}
+
+message File_GrammarCheck
+{
+	repeated File_GrammarModel rpt_msg_file_list = 1;
+	repeated File_GrammarDict rpt_msg_dict_list = 2;
+}
+
+
+//唤醒关键字注册
+message WakeupAsrKeywords
+{
+	repeated string rpt_str_kws = 1; //注册的关键字
+}
+
+message ReportAsrError
+{
+	optional uint64 uint64_voice_file_id = 1;		//声控文件ID
+	optional int32 int32_err_code1 = 2;					//错误1（引擎内部错误）错误码
+	optional string str_err_msg1	= 3;					//错误1（引擎内部错误）描述
+	optional int32 int32_err_code2 = 4;					//错误2（业务错误）错误码
+}

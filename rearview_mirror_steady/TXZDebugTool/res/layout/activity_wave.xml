@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <com.txznet.debugtool.view.WaveSurfaceView
+        android:id="@+id/wavesfvLeft"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+ />
+    
+<!--             android:onClick="wavesfvLeftClick" -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+    <com.txznet.debugtool.view.WaveSurfaceView
+        android:id="@+id/wavesfvRight"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+ />
+    
+<!--             android:onClick="wavesfvRightClick" -->
+
+</LinearLayout>

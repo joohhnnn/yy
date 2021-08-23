@@ -1,0 +1,154 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android)
+SHA1-Digest-Manifest: Py60Hm+Q/+pKd2Tek8KBOLMk0EY=
+
+Name: res/drawable-xhdpi/ic_launcher.png
+SHA1-Digest: cIga++hy5wqjHl9IHSfbg8tqCug=
+
+Name: res/drawable/nav_view_zoom_in_n.xml
+SHA1-Digest: 9JhmJzJ3oOjzHBc2Ij8RhvPzLJQ=
+
+Name: res/drawable-hdpi/ic_launcher.png
+SHA1-Digest: 0oRDYl4wUOm0bMq8eVLJG09zkTg=
+
+Name: lib/armeabi-v7a/libaec.so
+SHA1-Digest: XrmvN9vj1HNyhkp9ZVJEkZ1IXfM=
+
+Name: res/drawable-nodpi/progress_frame_1.png
+SHA1-Digest: 9AKDpz1T+CFJKMSaLJInwmNF1EQ=
+
+Name: resources.arsc
+SHA1-Digest: u7sNz0ePniQu3CDrL80gDo/7KIc=
+
+Name: res/drawable-nodpi/win_messagebox_shadow.9.png
+SHA1-Digest: vWWBSxTM5QYQT1x4PLCEdt3vN6Y=
+
+Name: ../../../../propertyBuild/build.properties
+SHA1-Digest: PDfhNBdGL6lTyuXNdFOXvw1W+cQ=
+
+Name: assets/ml
+SHA1-Digest: z9C/Q1802PhOsnvoDj2OcNRdhgk=
+
+Name: res/drawable/win_messagebox_cancel_text_color.xml
+SHA1-Digest: BfINrsiafpD2NM87lYftCmLQJFY=
+
+Name: res/drawable/widget_progress_large.xml
+SHA1-Digest: UEvHNccyEerS6czFVDJpNp37f/M=
+
+Name: res/drawable-nodpi/win_progress_bg.9.png
+SHA1-Digest: 4cCkO3EEY3GxdDZeN+1ZZJvJK/A=
+
+Name: res/drawable-nodpi/map_n_zoom_in2.png
+SHA1-Digest: EhWQHsXtZAFzIyp4/lhbbHq8p20=
+
+Name: res/drawable-nodpi/map_n_zoom_out1.png
+SHA1-Digest: Weqy/o1LT3/HBGor4K8VFR+IPJA=
+
+Name: res/drawable-nodpi/progress_frame_5.png
+SHA1-Digest: w//X6UHrCEGbH87DhIHPAd3jD+4=
+
+Name: AndroidManifest.xml
+SHA1-Digest: OC2pZz2F8hAE0nl3n1XdhB5kaxg=
+
+Name: res/drawable-nodpi/progress_frame_4.png
+SHA1-Digest: LkgzoHiRXprV4JD9xxhzb9fuhOw=
+
+Name: assets/ext.jsgf
+SHA1-Digest: tpGDZ1JEhmOu9MhWAVSnG1NGm4U=
+
+Name: res/drawable-nodpi/progress_frame_3.png
+SHA1-Digest: f9hjvCDfbYgCtbLdlQSZpIOeAQc=
+
+Name: assets/test.vocab
+SHA1-Digest: NF4RBHIN8Pkvs5nsa+6FQ8nZK4o=
+
+Name: assets/loading.wav
+SHA1-Digest: 30wo+HyeNhkRGznUXg7rbdueIbA=
+
+Name: lib/armeabi-v7a/libmsc.so
+SHA1-Digest: aZRr7bmRhtcsequ5EB9LqrhO3kU=
+
+Name: res/drawable-nodpi/progress_frame_2.png
+SHA1-Digest: oM/AFNXobL5cMw+el6fjX4K6Hqk=
+
+Name: res/drawable/widget_progress_anim.xml
+SHA1-Digest: QxGv++XMV6CLWf8wkBvvQgiyyp8=
+
+Name: assets/ext.vocab
+SHA1-Digest: D+vwo6X/A8+NqwE3MSTIiAFnL44=
+
+Name: res/layout/comm_win_messagebox.xml
+SHA1-Digest: tJmj5dUwk+ER5XbG0VB5HCknMWs=
+
+Name: assets/version/data
+SHA1-Digest: 0LahQ9koSGsa12HVNw0eDhzvnUA=
+
+Name: assets/wakeup/data
+SHA1-Digest: jV079ReC4JLXCUMsbv2D6BZKpsc=
+
+Name: assets/ivw/548a6747.jet
+SHA1-Digest: h/YxXiUAOdE1O3QipnapAroic1M=
+
+Name: assets/empty
+SHA1-Digest: urC8mSpm0X2pz0G1HPUVY0q3+Ek=
+
+Name: res/drawable/nav_view_zoom_out_n.xml
+SHA1-Digest: evGXZlYuJtSZEOe8HS7Nv7h5yqQ=
+
+Name: res/drawable/widget_color.xml
+SHA1-Digest: oM8s42NnUOG5Go33dcKtrGpSG3g=
+
+Name: assets/net/data
+SHA1-Digest: O0ZAh0eqSdptPySfp05PhHqhIDY=
+
+Name: res/layout/comm_win_progress.xml
+SHA1-Digest: ziUBjoQtTtd3uNRPgv6KbFzj9mo=
+
+Name: cfg/ts.tab
+SHA1-Digest: PqhzFVGBYXJ3dqVGeM/UNbxrogY=
+
+Name: assets/extjsgf/data
+SHA1-Digest: UZ2I3Z5b1CwFVtPCiZ6FLz2aZgs=
+
+Name: res/drawable/win_messagebox_sure_text_color.xml
+SHA1-Digest: 749iPUY/I4ACwYBvmcmmkCxb4qg=
+
+Name: classes.dex
+SHA1-Digest: mu7MbnLy2Rt/vcNvBryc3UcRNWQ=
+
+Name: res/drawable-nodpi/map_n_zoom_in1.png
+SHA1-Digest: aJ5rpY0cImXXOrYNmZC7N5F8Mto=
+
+Name: lib/armeabi-v7a/libasrfix.so
+SHA1-Digest: agdOvzK5+mYI2nM0GtEqrsSoh+s=
+
+Name: res/drawable-xxhdpi/ic_launcher.png
+SHA1-Digest: KKqaLh/DVvFp+v1KoaDw7xETvrI=
+
+Name: res/drawable-nodpi/map_n_zoom_out2.png
+SHA1-Digest: A+KpcnVvRzvELuTXoNNf/zZelRE=
+
+Name: res/drawable-nodpi/progress_frame_6.png
+SHA1-Digest: SaeenTlzw8QTCxvzQY5fr6m8mEE=
+
+Name: res/drawable-mdpi/ic_launcher.png
+SHA1-Digest: 73TZoa+3ApYPkY+wbmr1XiAso58=
+
+Name: assets/asrfix/data
+SHA1-Digest: teyo1d5CyBY/eElCuLhLghFfoeA=
+
+Name: res/drawable-nodpi/widget_loading.png
+SHA1-Digest: v31kpBa3bVRTm42p4rR00Z2MN/o=
+
+Name: assets/test.jsgf
+SHA1-Digest: poFf4NDQb6VWuKllLWLIcE/ZfS4=
+
+Name: res/drawable-nodpi/progress_frame_7.png
+SHA1-Digest: EMM3DCAEn3ljbGNRyG44lvO1XS4=
+
+Name: res/layout/comm_win_list_item.xml
+SHA1-Digest: zoqcGafopvOn+Y07zUclzNYnP70=
+
+Name: lib/armeabi-v7a/libuscasr.so
+SHA1-Digest: OordIvwxS1vmg7jtpewL7T7MkTA=
+

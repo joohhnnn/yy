@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <View
+        android:id="@+id/recommend_item_bottomline"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" >
+    </View>
+
+    <View
+        android:id="@+id/recommend_item_topline"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_alignParentTop="true"
+        android:background="@color/white" >
+    </View>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/y30" />
+
+    <View
+        android:id="@+id/recommend_item_leftline"
+        android:layout_width="@dimen/x1"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@color/type_filter_bg" >
+    </View>
+
+    <View
+        android:id="@+id/recommend_item_rightline"
+        android:layout_width="@dimen/x1"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@color/type_filter_bg" >
+    </View>
+
+    
+    <View 
+       android:id="@+id/v_bg"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+        ></View>
+</RelativeLayout>

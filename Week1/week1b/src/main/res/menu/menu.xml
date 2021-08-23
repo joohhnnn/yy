@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.jiapeng.munedemo.MainActivity" >
+
+    <item
+        android:id="@+id/mune_enter"
+        android:orderInCategory="100"
+        android:title="新建联系人"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/mune_setting"
+        android:orderInCategory="100"
+        android:title="加载本地数据"
+        app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_set_wakeup_user"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_bg"
+    android:orientation="vertical"
+    tools:context="com.txznet.txzsetting.activity.SetWelcomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="26"
+            android:background="@color/background_00" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/actionbar"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/y16"
+                android:layout_height="@dimen/y64">
+
+                <Button
+                    android:id="@+id/actionbar_return_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:background="@color/background_00"
+                    android:drawablePadding="@dimen/y13"
+                    android:drawableStart="@drawable/selector_btn_return"
+                    android:text="@string/actionbar_return"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/actionbar_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/background_00"
+                    android:text="@string/actionbar_text_zdy_wakeup"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="28sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/layout_set_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/wakeup_user_btn_set"
+                        android:layout_width="@dimen/x107"
+                        android:layout_height="@dimen/y80"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/x33"
+                        android:background="@drawable/set_welcome_ok"
+                        android:text="@string/welcome_text_btn"
+                        android:textSize="30sp"
+                        android:textColor="@color/text_color_white" />
+
+                    <EditText
+                        android:id="@+id/wakeup_user_text_set"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/wakeup_user_btn_set"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@id/wakeup_user_btn_set"
+                        android:layout_marginStart="@dimen/x33"
+                        android:layout_toStartOf="@id/wakeup_user_btn_set"
+                        android:background="@drawable/edit_welcome_shape"
+                        android:hint="@string/wakeup_text_please_input"
+                        android:maxLength="8"
+                        android:textColor="@color/text_color_white"
+                        android:textColorHint="@color/text_color_white_transparent"
+                        android:maxLines="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/y20"
+                        android:layout_below="@id/wakeup_user_text_set"
+                        android:text="@string/wakeup_text_explain"
+                        android:layout_alignStart="@+id/wakeup_user_text_set"
+                        android:textColor="@color/color_text_item"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="26"
+            android:background="@color/background_00" />
+    </LinearLayout>
+</LinearLayout>

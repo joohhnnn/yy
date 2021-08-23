@@ -1,0 +1,39 @@
+#BNF+IAT 1.0 UTF-8;
+
+!grammar %GRAMMAR_ID%;
+
+!slot <preActive>;
+!slot <prePassive>;
+!slot <prePlease>;
+
+!slot <smsY>;
+!slot <smsN>;
+!slot <smsCmd>;
+
+!start <txzStart>;
+
+//////////////////////////////////////命令开始//////////////////////////////////////
+
+<txzStart>:<smsStart>;
+
+//////////////////////////////////////前缀相关//////////////////////////////////////
+
+<preAll>:<preActive>|<preAllPls>;
+<preAllPls>:[<prePlease>]<prePassive>;
+
+<preActive>:我;
+<prePassive>:帮我|替我|给我|帮|帮忙|你给我|你替我|你;
+<prePlease>:请|麻烦;
+
+//////////////////////////////////////短信播报相关//////////////////////////////////////
+
+<smsStart>:[<preAll>]<smsTar>;
+
+<smsTar>:<smsSel>|<smsCmd>|<smsCat>;
+<smsCat>:[<smsSel>]<smsCmd>;
+<smsSel>:<smsY>|<smsN>;
+<smsY>:是|确定|好|要|想;
+<smsN>:否|取消|不好|不要|不想|不|别|拒绝;
+
+<smsCmd>:播|报|放|播报|播放;
+

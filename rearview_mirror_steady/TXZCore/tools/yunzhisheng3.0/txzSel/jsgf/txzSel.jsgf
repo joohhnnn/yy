@@ -1,0 +1,67 @@
+#JSGF V1.0 utf-8 cn;
+
+grammar txzSel;
+public <txzSel> = ( "<s>" (
+[<preActive>|([<prePlease>][<prePassive>])]([<selCmd>|<navCmd>|<callCmd>|<sortCmd>]<wkKws>)[(<numSuffix>[<selSuffix>])][<otherSuffix>]
+) "</s>" );
+
+//////////////////////////////////////前缀相关///////////////////////////////////
+<preActive>=(
+"<preActive_>"(
+我要 | 我想 | 我想要
+)"</preActive_>"
+);
+<prePassive>=(
+"<prePassive_>"(
+帮我 | 替我 | 给我 | 帮 | 帮忙 | 你给我 | 你替我 | 你
+)"</prePassive_>"
+);
+<prePlease>=(
+"<prePlease_>"(
+请 | 麻烦
+)"</prePlease_>"
+);
+
+<selCmd> = (
+"<selCmd_>"(
+选|选择
+)"</selCmd_>"
+);
+
+<navCmd> = (
+"<navCmd_>"(
+去|导航去|导航到|到|回|回到|吃
+)"</navCmd_>"
+);
+
+<callCmd> = (
+"<callCmd_>"(
+拨打|拨给|呼叫|打|打给
+)"</callCmd_>"
+);
+
+
+<sortCmd> = (
+"<sortCmd_>"(
+按|按照|照|依照|依据|依|根据
+)"</sortCmd_>"
+);
+
+<numSuffix> = (
+"<numSuffix_>"(
+那个|那一个|这个|这一个|的
+)"</numSuffix_>"
+);
+
+<selSuffix> = (
+"<selSuffix_>"(
+号码|手机|电话|电话号码|地址|地方|口味
+)"</selSuffix_>"
+);
+
+<otherSuffix> = (
+"<otherSuffix_>"(
+去|导航|玩|呼叫|拨打
+)"</otherSuffix_>"
+);
+

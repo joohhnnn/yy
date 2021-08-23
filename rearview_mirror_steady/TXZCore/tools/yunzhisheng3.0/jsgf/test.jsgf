@@ -1,0 +1,567 @@
+#JSGF V1.0 utf-8 cn;
+
+grammar txzTag;
+
+//////////////////////////////////////命令开始//////////////////////////////////////
+
+public <txzTag> = ( "<s>" (
+
+//--> 交流相关
+(<cmuKeywords>)
+
+//--> 现在播放的是什么音乐
+//请告诉我当前播放的歌是什么歌
+| (( [[<prePlease>]<preTell>]<askMscNow><askMscPlay>[<askMscOf>[<askMscMsc>]<askMscIs>]<askMscWhat>[<askMscMsc>] )
+//请告诉我这是播的什么歌
+|( [[<prePlease>]<preTell>]<askMscNow>[<askMscIs>[<askMscPlay>[<askMscOf>]]]<askMscWhat><askMscMsc> )
+//请告诉我这歌是什么歌
+|( [[<prePlease>]<preTell>]<askMscNow><askMscMsc>[<askMscIs>]<askMscWhat>[<askMscMsc>] ))
+
+//--> 指令相关
+| ( [<oneShot>][( <preActive> | ( [<prePlease>]<prePassive> ) )]<cmdKeywords> )
+| ( [<oneShot>] [( <preActive> | ( [<prePlease>]<prePassive> ) )](<cmdAppOpen>|<cmdAppClose>)<cmdAppNames> ) 
+| ( [<oneShot>] [( <preActive> | ( [<prePlease>]<prePassive> ) )][<cmdAppMake>]<cmdAppNames>(<cmdAppOpen>|<cmdAppClose>))
+
+//--> 呼叫相关
+//给xxx的手机打个电话
+| ( ( [( <preActive>|( [<prePlease>]<prePassive> ) )]<callTo>( ( <callCon1>|<callCon2>|[<callPrefix>]( <callUsual>|<callUnusual> )[<callSuffix>]|<callService>)|<callEnglish>|<callNumber> )[[<callOf>]( <callPhoneA>|<callPhoneZ>|<callPhoneM>|<callPhoneS> )][<callActToSuf>]<callPhoneSuf> )
+//打电话给xxx的手机
+|( [<oneShot>][( <preActive>|( [<prePlease>]<prePassive> ) )]<callCmd>( ( <callCon1>|<callCon2>|[<callPrefix>]( <callUsual>|<callUnusual> )[<callSuffix>]|<callService>)|<callEnglish>|<callNumber> )[[<callOf>]( <callPhoneA>|<callPhoneZ>|<callPhoneM>|<callPhoneS> )] )
+//打xxx的手机
+|( [( <preActive>|( [<prePlease>]<prePassive> ) )]<callMake>( ( <callCon1>|<callCon2>|[<callPrefix>]( <callUsual>|<callUnusual> )[<callSuffix>]|<callService>)|<callEnglish>|<callNumber> )[<callOf>]( [<callPhoneA>|<callPhoneZ>|<callPhoneM>|<callPhoneS>] ) ) )
+|( [( <preActive>|( [<prePlease>]<prePassive> ) )][<callSearch>]<callCon2><callOf><callPhoneA>)
+|( [( <preActive>|( [<prePlease>]<prePassive> ) )]<callSearch><callCon2>[<callOf><callPhoneA>])
+
+
+//--> 音乐相关
+| ( [<oneShot>][( <preActive>|( [<prePlease>]<prePassive> ) )]<mscCmd>[<mscAmount>](( [<mscSinger><mscOf>]<mscType>[<mscTSuf><mscOf>]<mscSong>)|( [<mscSinger>[<mscOf>]]<mscList>[<mscSSuf>] )|( <mscSinger>[<mscOf><mscSong>] )|( [<mscSinger>[<mscOf>]]<mscAlbum>[<mscASuf>] ) ) )
+
+//--> 导航相关
+//导航到xxx去
+| ( ( [( <preActive>|( [<prePlease>]<prePassive> ) )][<navNav>]<navToWords>( <navHome>|<navCompany>|( [<navNear>[<navOf>]]<navNearKw> )|<navPOI> )<navSuffix> )
+//导航去xxx
+|( [<oneShot>][( <preActive>|( [<prePlease>]<prePassive> ) )][<navNav>]( ( <navCmdWord>( <navHome>|<navCompany>|( [<navNear>[<navOf>]]<navNearKw> )|<navPOI> ) )|( [<navSuffix>]<navNearAct> ) ) )
+//告诉我xxx怎么走
+|( [[<prePlease>]<preTell>]( <navHome>|<navCompany>|( [<navNear>[<navOf>]]<navNearKw> )|<navPOI> )<navWhere> )
+//[附近][搜索][一下]沿途[的]xxx
+|( [( <preActive>|( [<prePlease>]<prePassive> ) )][<navNear>][<navFind>][<navAmount>]( <navPass>[<navOf>]<navNearKw> ) )
+//[附近]搜索[一下][附近[的]]xxx[怎么走]
+|( [( <preActive>|( [<prePlease>]<prePassive> ) )][<navNear>]<navFind>[<navAmount>]( <navHome>|<navCompany>|( [<navNear>[<navOf>]]<navNearKw> )|<navPOI> )[<navWhere>] )
+//[ ]搜索[一下][附近]有什么xxx
+|( [( <preActive>|( [<prePlease>]<prePassive> ) )][<navNear>][<navFind>[<navAmount>]][<navNear>]<navHow>( <navHome>|<navCompany>|( [<navNear>[<navOf>]]<navNearKw> )|<navPOI> ) ) )
+//打开导航记录
+|( [( <preActive>|( [<prePlease>]<prePassive> ) )]<findNavHst><navHst>)
+//查看以前去过哪里
+|( [( <preActive>|( [<prePlease>]<prePassive> ) )]<findNavHst><navAgo><navHst2>)
+//[附近][搜索][一下][附近[的]]xxx[怎么走]
+|( [( <preActive>|( [<prePlease>]<prePassive> ) )][<navNear>][<navFind>][<navAmount>]( [<navEnd>][<navNear>[<navOf>]]<navNearKw> ) )
+
+//--> 微信相关
+|([<oneShot>][<preActive>|<prePassive>|<prePlease>]<sendWeChatMsg>[<wechatAmount>]<weChatMsg><wechatTo><WeChatFriend>)
+|([<oneShot>][<preActive>|<prePassive>|<prePlease>]<wechatTo><WeChatFriend><sendWeChatMsg>[<wechatAmount>]<weChatMsg>)
+|([<oneShot>][<preActive>|<prePassive>|<prePlease>]<sendWeChatMsg>[<wechatAmount>](<weChatMsg>|<weChatGroupMsg>)<wechatTo><WeChatGroup>[<weChatGroupSuffix>])
+|([<oneShot>][<preActive>|<prePassive>|<prePlease>]<wechatTo><WeChatGroup>[<weChatGroupSuffix>]<sendWeChatMsg>[<wechatAmount>](<weChatGroupMsg>|<weChatMsg>))
+
+//--> FM相关
+|([<oneShot>][<preActive>|<prePassive>|<prePlease>]<toFm><fmFreqValue>[<fmUnit>])
+|([<oneShot>][<preActive>|<prePassive>|<prePlease>]<make><kwFm><fmSet><fmFreqValue>[<fmUnit>])
+|([<oneShot>][<preActive>|<prePassive>|<prePlease>]<fmPlay><fmFreqName>)
+
+//--> AM相关
+|([<oneShot>][<preActive>|<prePassive>|<prePlease>]<toAm><amValue>[<amUnit>])
+
+//--> 空调相关
+//[<空调>][<温度>][<调到|调至>]XX<度>
+|([<oneShot>][<preActive>|<prePassive>|<prePlease>][<kwAC>][<acTemp>]<ctrlTo><tempValue><tempUnit>)
+//[<空调>][<温度>]<调高|调低><\d+?><度>
+|([<oneShot>][<preActive>|<prePassive>|<prePlease>][<kwAC>][<acTemp>](<ctrlUp>|<ctrlDown>)<tempRateValue><tempUnit>)
+//风量调到X档风
+|([<oneShot>][<preActive>|<prePassive>|<prePlease>][<acSpeed>]<ctrlTo><gearValue><gearUnit>[<wind>])
+//调整风速到x级/档
+|([<oneShot>][<preActive>|<prePassive>|<prePlease>][<ctrl>]<acSpeed>[<to>]<gearValue><gearUnit>)
+//X级/档风速
+|([<oneShot>][<preActive>|<prePassive>|<prePlease>]<gearValue><gearUnit><acSpeed>)
+
+//--> 流量相关
+//<流量><剩余|还有|只有>XXX<兆><时><提醒我|告诉我>
+|([<oneShot>][<preActive>|<prePassive>|<prePlease>]<kwFlow><remain><flow><flowUnit>[<when>]<flowRemind>)
+
+//音量控制相关
+//音量调到XXX
+|([<preActive>|<prePassive>|<prePlease>]<kwVolume><vlCtrlTo><volumeValue>)
+//音量调高/调低XXX
+|([<preActive>|<prePassive>|<prePlease>]<kwVolume>(<vlCtrlUp>|<vlCtrlDown>)<volumeRateValue>)
+
+//离线情况下用来提高识别率的，需要走正则的词
+|(<ruleKeywords>)
+//唤醒词
+|(<wakeupKeywords>)
+) "</s>" );
+
+
+
+//////////////////////////////////////前缀相关//////////////////////////////////////
+<preActive>=(
+"<preActive_>"(
+我 要 | 我 想 | 我 想 要
+)"</preActive_>"
+);
+<prePassive>=(
+"<prePassive_>"(
+帮 我 | 替 我 | 给 我 | 帮 忙 | 你 给 我 | 你 替 我
+)"</prePassive_>"
+);
+<preTell>=(
+"<preTell_>"(
+告 诉 我 | 你 告 诉 我
+)"</preTell_>"
+);
+<prePlease>=(
+"<prePlease_>"(
+请 | 麻 烦
+)"</prePlease_>"
+);
+
+
+//////////////////////////////////////现在播放的是什么音乐/////////////////////////
+<askMscNow>=(
+"<askMscNow_>"(
+现 在 | 当 前 | 正 在 | 这
+)"</askMscNow_>"
+);
+<askMscPlay>=(
+"<askMscPlay_>"(
+播 放 | 播 | 放 | 收 听 | 听
+)"</askMscPlay_>"
+);
+<askMscOf>=(
+"<askMscOf_>"(
+的
+)"</askMscOf_>"
+);
+<askMscIs>=(
+"<askMscIs_>"(
+是 | 叫
+)"</askMscIs_>"
+);
+<askMscWhat>=(
+"<askMscWhat_>"(
+什 么 | 啥 | 嘛 | 谁 的
+)"</askMscWhat_>"
+);
+<askMscMsc>=(
+"<askMscMsc_>"(
+歌 | 歌 曲 | 音 乐 | 曲 | 曲 子
+)"</askMscMsc_>"
+);
+
+
+//////////////////////////////////////指令相关//////////////////////////////////////
+
+
+<cmdAppOpen>=(
+"<cmdAppOpen_>"(
+打 开 | 启 动 | 运 行 | 开 启 | 进 入
+)"</cmdAppOpen_>"
+);
+
+<cmdAppClose>=(
+"<cmdAppClose_>"(
+关闭|退出|关掉 | 结束|关起来
+)"</cmdAppClose_>"
+);
+
+<cmdAppMake>=(
+"<cmdAppMake_>"(
+    把
+)"</cmdAppMake_>"
+);
+
+//////////////////////////////////////呼叫相关//////////////////////////////////////
+<callActToSuf>=(
+"<callActToSuf_>"(
+一 | 个 | 一个 | 打 | 打个 | 打一个 | 拨打 | 拨打个 | 拨打一个|去|回
+)"</callActToSuf_>"
+);
+
+<callSearch>=(
+"<callSearch_>"(
+查找 | 查询 | 查下 | 查一下
+)"</callSearch_>"
+);
+
+<callPhoneSuf>=(
+"<callPhoneSuf_>"(
+电 话
+)"</callPhoneSuf_>"
+);
+<callCmd>=(
+"<callCmd_>"(
+打 电 话 给 | 打 个 电 话 给 | 打 一 个 电 话 给 | 拨 号 给 | 呼 叫 | 打 给 | 电 话 给 | 联 系|拨打|呼叫电话给|呼电话给|打电话|去电话|拨电话|拨打电话|打个电话|去个电话|拨个电话|拨打个电话|去电话给|拨电话给|拨打电话给|打个电话给|去个电话给|拨个电话给|拨打个电话给
+)"</callCmd_>"
+);
+<callMake>=(
+"<callMake_>"(
+拨 打 | 拨 | 打|呼叫
+)"</callMake_>"
+);
+<callPro>=(
+"<callPro_>"(
+移 动 | 联 通 | 电 信 | 铁 通
+)"</callPro_>"
+);
+<callPhoneA>=(
+"<callPhoneA_>"(
+号 码 | 电 话 | 电 话 号 | 电 话 号 码 |联系方式
+)"</callPhoneA_>"
+);
+<callPhoneZ>=(
+"<callPhoneZ_>"(
+座 机 | 座 机 号 | 座 机 号码 | 固 定 电 话 | 固 话
+)"</callPhoneZ_>"
+);
+<callPhoneM>=(
+"<callPhoneM_>"(
+手 机 | 手 机 号 | 手 机 号 码
+)"</callPhoneM_>"
+);
+<callPhoneS>=(
+"<callPhoneS_>"(
+短 号 | 亲 情 号 | 亲 情 短 号 |亲 情 号 码 | 集 团 号 | 集 团 号 码 | 集 团 短 号
+)"</callPhoneS_>"
+);
+<callTo>=(
+"<callTo_>"(
+给
+)"</callTo_>"
+);
+<callOf>=(
+"<callOf_>"(
+的
+)"</callOf_>"
+);
+
+
+
+//////////////////////////////////////音乐相关//////////////////////////////////////
+<mscCmd>=(
+"<mscCmd_>"(
+听 | 播 放| 播 | 放 | 来 | 点 播 | 点 | 收 听
+)"</mscCmd_>"
+);
+<mscAmount>=(
+"<mscAmount_>"(
+个 | 一 个 | 首 | 一 首 | 曲 | 一 曲 | 一
+)"</mscAmount_>"
+);
+
+
+<mscSong>=(
+"<mscSong_>"(
+歌 | 歌 曲 | 音 乐 | 曲 | 曲 子
+)"</mscSong_>"
+);
+<mscOf>=(
+"<mscOf_>"(
+的
+)"</mscOf_>"
+);
+
+
+<mscTSuf>=(
+"<mscTSuf_>"(
+流 派 | 类 | 类 型 | 风 格
+)"</mscTSuf_>"
+);
+<mscASuf>=(
+"<mscASuf_>"(
+专 辑
+)"</mscASuf_>"
+);
+<mscSSuf>=(
+"<mscSSuf_>"(
+这 首 歌
+)"</mscSSuf_>"
+);
+
+
+//////////////////////////////////////导航相关//////////////////////////////////////
+<navNav>=(
+"<navNav_>"(
+导 航 | 领 路 | 带 我 | 领 我 | 引 我 | 带 领 | 带 领 我
+)"</navNav_>"
+);
+<navHow>=(
+"<navWhere_>"(
+怎 么 走 | 怎 么 去 | 怎 么 到
+)"</navWhere_>"
+);
+<navWhere>=(
+"<navWhere_>"(
+怎 么 走 | 怎 么 去 | 怎 么 到 | 在 哪 里 | 哪 有 | 哪 里 有
+)"</navWhere_>"
+);
+<navCmdWord>=(
+"<navCmdWord_>"(
+到 | 去 | 回  | 至 | 的
+)"</navCmdWord_>"
+);
+<navToWords>=(
+"<navToWords_>"(
+到 | 回
+)"</navToWords_>"
+);
+<navSuffix>=(
+"<navSuffix_>"(
+去
+)"</navSuffix_>"
+);
+<navNear>=(
+"<navNear_>"(
+附 近 | 最 近 | 就 近 | 旁 边 | 周 围 | 周 边
+)"</navNear_>"
+);
+<navPass>=(
+"<navPass_>"(
+途 经 | 先 去 | 经 过 | 先 走 | 沿 途
+)"</navPass_>"
+);
+<navEnd>=(
+"<navEnd_>"(
+终 点 | 目 的 地
+)"</navEnd_>"
+);
+<navFind>=(
+"<navFind_>"(
+查 找 | 查 | 查 询 | 找 | 搜 索 | 搜
+)"</navFind_>"
+);
+<navAmount>=(
+"<navAmount_>"(
+下 | 一 下
+)"</navAmount_>"
+);
+<navOf>=(
+"<navOf_>"(
+的
+)"</navOf_>"
+);
+<navHome>=(
+"<navHome_>"(
+家 | 家 里
+)"</navHome_>"
+);
+<navCompany>=(
+"<navCompany_>"(
+公 司 | 单 位
+)"</navCompany_>"
+);
+<findNavHst>=(
+"<findNavHst_>"(
+打开|查看|查找|找一下|查看下|看一下|查一下|查看一下|查询
+)"</findNavHst_>"
+);
+<navHst>=(
+"<navHst_>"(
+导航记录|导航历史|历史导航|导航历史记录|历史目的地
+)"</navHst_>"
+);
+<navAgo>=(
+"<navAgo_>"(
+之前|以前
+)"</navAgo_>"
+);
+<navHst2>=(
+"<navHst2_>"(
+去过哪里|去过哪儿|去过的地方|去的地方
+)"</navHst2_>"
+);
+
+
+///////////////////////微信相关////////////////////////////////
+
+<weChatGroupSuffix> = (
+"<weChatGroupSuffix_>"(
+群|讨论组|微信群
+)"</weChatGroupSuffix_>"
+);
+
+<weChatMsg> = (
+"<weChatMsg_>"(
+微信|微信消息|微信信息
+)"</weChatMsg_>"
+);
+
+<weChatGroupMsg> = (
+"<weChatGroupMsg_>"(
+微信群消息|群消息
+)"</weChatGroupMsg_>"
+);
+
+<wechatAmount>=(
+"<wechatAmount_>"(
+个 | 一个 |条|一条
+)"</wechatAmount_>"
+);
+
+<wechatTo>=(
+"<wechatTo_>"(
+给|到
+)"</wechatTo_>"
+);
+
+<sendWeChatMsg> = (
+"<sendWeChatMsg_>"(
+发|发送|回|回复
+)"</sendWeChatMsg_>"
+);
+
+///////// FM相关/////////
+<toFm>=(
+"<toFm_>"(
+调频|调频到|调到调频|FM|听|换到|换台到|切换到|听FM|调到FM|调到频率|打开调频|打开频率|打开FM
+)"</toFm_>"
+);
+<fmUnit>=(
+"<fmUnit_>"(
+兆赫|千赫|赫兹
+)"</fmUnit_>"
+);
+<make>=(
+"<make_>"(
+把
+)"</make_>"
+);
+<kwFm>=(
+"<kwFm_>"(
+调频|频率|FM射频|FM
+)"</kwFm_>"
+);
+<fmSet>=(
+"<fmSet_>"(
+改为|设为
+)"</fmSet_>"
+);
+<fmPlay>=(
+"<fmPlay_>"(
+听|收听|放|播放|点播|播
+)"</fmPlay_>"
+);
+
+///////////AM相关//////////
+<toAm>=(
+"<toAm_>"(
+调幅|调幅到|AM|听|换到|换台到|切换到|听AM|打开AM|打开调幅|调到AM
+)"</toAm_>"
+);
+<amUnit>=(
+"<amUnit_>"(
+度
+)"</amUnit_>"
+);
+
+////////////////空调相关////////////
+<kwAC>=(
+"<kwAC_>"(
+空调
+)"</kwAC_>"
+);
+<acSpeed>=(
+"<acSpeed_>"(
+风速|风量
+)"</acSpeed_>"
+);
+<gearUnit>=(
+"<gearUnit_>"(
+档|级
+)"</gearUnit_>"
+);
+<wind>=(
+"<wind_>"(
+风
+)"</wind_>"
+);
+<acTemp>=(
+"<acTemp_>"(
+温度
+)"</acTemp_>"
+);
+<ctrlTo>=(
+"<ctrlTo_>"(
+调至|调到|设为
+)"</ctrlTo_>"
+);
+<ctrlUp>=(
+"<ctrlUp_>"(
+调高|调大
+)"</ctrlUp_>"
+);
+<ctrlDown>=(
+"<ctrlDown_>"(
+调低|调小
+)"</ctrlDown_>"
+);
+<tempUnit>=(
+"<tempUnit_>"(
+度
+)"</tempUnit_>"
+);
+<ctrl>=(
+"<ctrl_>"(
+调整
+)"</ctrl_>"
+);
+<to>=(
+"<to_>"(
+到
+)"</to_>"
+);
+
+///////////////////////流量相关////////////////////////////////
+<kwFlow>=(
+"<kwFlow_>"(
+流量
+)"</kwFlow_>"
+);
+<remain>=(
+"<remain_>"(
+剩余|还有|只有
+)"</remain_>"
+);
+<flowUnit>=(
+"<flowUnit_>"(
+兆
+)"</flowUnit_>"
+);
+<when>=(
+"<when_>"(
+时
+)"</when_>"
+);
+<flowRemind>=(
+"<flowRemind_>"(
+提醒我|告诉我
+)"</flowRemind_>"
+);
+
+///////////////////////音量相关////////////////////////////////
+<kwVolume>=(
+"<kwVolume_>"(
+音量
+)"</kwVolume_>"
+);
+<vlCtrlTo>=(
+"<vlCtrlTo_>"(
+调到|设为
+)"</vlCtrlTo_>"
+);
+<vlCtrlUp>=(
+"<vlCtrlUp_>"(
+调高|增大|增加
+)"</vlCtrlUp_>"
+);
+<vlCtrlDown>=(
+"<vlCtrlDown_>"(
+调低|减小
+)"</vlCtrlDown_>"
+);

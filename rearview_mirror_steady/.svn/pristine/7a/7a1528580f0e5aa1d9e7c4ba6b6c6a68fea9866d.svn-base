@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout-config>
+    <!--
+    @顺序不能变
+    布局类型
+    1 : 标准网格(8格)
+    -->
+    <type>1</type>
+    <!-- // 名字
+    public static final int[] RESIDENT_APP_NAME_ID = {
+            R.string.ResidentAppNamePhone,
+            R.string.ResidentAppNameNavi,
+            R.string.ResidentAppNameDrivingRecord,
+            R.string.ResidentAppNameWechatHelper,
+            R.string.ResidentAppNameMusic,
+            R.string.ResidentAppNameFM,
+            R.string.ResidentAppNameVedio,
+            R.string.ResidentAppNameApps,
+            R.string.ResidentAppNameSettings
+    };
+    // 显示的图片
+    public static final String[] RESIDENT_APP_DRAWABLE = {
+            "ic_phone",
+            "ic_navi",
+            "ic_driving_record",
+            "ic_wechat_helper",
+            "ic_music",
+            "ic_fm",
+            "ic_video",
+            "ic_apps",
+            "ic_settings"
+    };
+
+    public static final String[] RESIDENT_APP_PACKAGE = {
+    	"com.txznet.bluetooth",
+        "com.txznet.nav",
+        "com.android.camera2",
+        "com.txznet.webchat",
+        "com.txznet.music",
+        "com.txznet.fm",
+        "com.txznet.video",
+        "com.txznet.launcher",
+        "com.txznet.settings"
+    };
+
+    public static final String[] RESIDENT_APP_CLASS = {
+    	"com.txznet.bluetooth.ui.activity.MainActivity",
+        "com.txznet.nav.ui.MainActivity",
+        "com.android.camera.CameraActivity",
+        "com.txznet.webchat.ui.AppStartActivity",
+        "com.txznet.music.ui.MainActivity",
+        "com.txznet.fm.ui.FMActivity",
+        "com.txznet.video.MainActivity",
+        "com.txznet.launcher.ui.MainActivity",
+        "com.txznet.settings.ui.MainActivity"}; -->
+    <plugins>
+        <plugin name="digital_clock_date" start="0" end="1" />
+        <plugin name="weather_pm" start="2" end="3" />
+    </plugins>
+    <icon-values>
+        <icon name="telephone" src="ic_phone" text="ResidentAppNamePhone" package_name=" com.android.dialer" onclick=""/>
+        <icon name="apps" src="ic_music" text="ResidentAppNameMusic" package_name="cn.kuwo.kwmusiccar" onclick=""/>
+        <icon name="navi" src="ic_navi" text="ResidentAppNameNavi" package_name="com.autonavi.xmgd.navigator" onclick=""/>
+        <icon name="navi" src="ic_driving_record" text="ResidentAppNameDrivingRecord" package_name="com.snd.carrecord" onclick=""/>
+        <icon name="navi" src="ic_fm" text="ResidentAppNameFm" package_name="com.snd.fmshoot" onclick=""/>
+        <icon name="navi" src="ic_wechat_helper" text="ResidentAppNameWechat" package_name="com.txznet.webchat" onclick=""/>
+        <icon name="navi" src="ic_folder" text="ResidentAppNameFolder" package_name="com.mediatek.filemanager" onclick=""/>
+        <icon name="navi" src="ic_settings" text="ResidentAppNameSetting" package_name="com.android.settings" onclick=""/>
+        <icon name="navi" src="ic_bluetooth" text="ResidentAppNameBlueTooth" package_name="com.goodocom.rk" onclick=""/>
+        <icon name="navi" src="ic_hot_point" text="ResidentAppNameHotPoint" package_name="com.android.settings" onclick="com.android.settings.wifi.hotspot.TetherWifiSettings"/>
+        <icon name="navi" src="ic_apps" text="ResidentAppNameApps" package_name="com.txznet.launcher" onclick="com.txznet.launcher.ui.AllAppView"/>
+    </icon-values>
+    
+</layout-config>

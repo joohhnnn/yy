@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/album_ll"
+    style="@style/album_item_content_ll">
+
+    <LinearLayout
+        android:id="@+id/ll_album"
+        style="@style/album_item_content_ll"
+        android:orientation="vertical">
+
+        <RelativeLayout style="@style/album_item_content_icon">
+
+            <com.txznet.music.widget.CircleShadeImageView
+                android:id="@+id/type_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="@dimen/m4" />
+
+            <ImageView
+                android:id="@+id/iv_playing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="center"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/intro_tv"
+            style="@style/album_item_content_des_tv" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_novel_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/y8"
+        android:scaleType="center"
+        android:src="@drawable/novel_ended"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_focus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="@drawable/album_focus"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

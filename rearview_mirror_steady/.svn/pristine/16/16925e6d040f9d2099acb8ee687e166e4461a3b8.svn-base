@@ -1,0 +1,74 @@
+# 输入
+-injars txzcomm.jar
+-injars protobuf-java-2.3.0-nano.jar
+
+# 输出
+-outjars TXZ_SDK.jar
+
+# 编译依赖的库
+-libraryjars libs\android.jar
+-libraryjars libs\protobuf-java-2.3.0-nano.jar
+-libraryjars libs\universal-image-loader-1.9.3.jar
+-libraryjars libs\zxing.jar
+
+-printusage log\usage.out
+-printmapping log\map.out
+-printseeds log\seeds.out
+
+# 设置混淆的压缩比率 0~7
+-optimizationpasses 5  
+# 混淆时不会产生形形色色的类名 ??
+-dontusemixedcaseclassnames
+# 指定不去忽略非公共的库类
+-dontskipnonpubliclibraryclasses
+# 不预校验
+-dontpreverify
+# 输出信息
+-verbose
+# 优化算法
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+# 指定不去忽略包可见的库类的成员
+-dontskipnonpubliclibraryclassmembers
+# 混淆时应用侵入式重载 
+-overloadaggressively
+# 确定统一的混淆类的成员名称来增加混淆
+-useuniqueclassmembernames
+# 重新包装所有重命名的包并放在给定的单一包中 
+-flattenpackagehierarchy a.b.c.d.e
+# 重新包装所有重命名的类文件中放在给定的单一包中
+-repackageclasses a.b.c.d.e.f.g
+-dontwarn
+
+# 保留设置，如果不配，A.B会变成A$B
+-keepattributes Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable,LocalVariable*Table,*Annotation*,Synthetic,EnclosingMethod
+
+# 保护序列化类
+-keepclassmembers class * extends android.os.Parcelable {
+    static android.os.Parcelable$Creator CREATOR;
+}
+
+# 保护枚举类
+-keepclassmembers class * extends java.lang.Enum {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+# ----------------------------------------------------------------------------
+
+-keep class com.txznet.sdk.** {
+    public <fields>;
+    public <methods>;
+}
+
+-keep class com.txznet.txz.util.recordcenter.TXZAudioRecorder {
+    public <methods>;
+}
+
+-keep class com.txznet.sdk.bean.** {
+    void set*(***);
+    void set*(int,***);
+    boolean is*();
+    boolean is*(int);
+    *** get*();
+    *** get*(int);
+}

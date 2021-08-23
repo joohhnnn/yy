@@ -1,0 +1,189 @@
+#JSGF V1.0 utf-8 cn;
+
+grammar txzStart;
+
+//////////////////////////////////////命令开始//////////////////////////////////////
+
+public <txzStart> = ( "<s>" (
+
+//--> 交流相关
+(<cmuKeywords>)
+
+//--> 现在播放的是什么音乐
+//请告诉我当前播放的歌是什么歌
+| (( [[<prePlease>]<preTell>]<askMscNow><askMscPlay>[<askMscOf>[<askMscMsc>]<askMscIs>]<askMscWhat>[<askMscMsc>] )
+//请告诉我这是播的什么歌
+|( [[<prePlease>]<preTell>]<askMscNow>[<askMscIs>[<askMscPlay>[<askMscOf>]]]<askMscWhat><askMscMsc> )
+//请告诉我这歌是什么歌
+|( [[<prePlease>]<preTell>]<askMscNow><askMscMsc>[<askMscIs>]<askMscWhat>[<askMscMsc>] ))
+
+//--> 指令相关
+| ( ( [( <preActive> | ( [<prePlease>]<prePassive> ) )]<cmdKeywords> )|( [( <preActive> | ( [<prePlease>]<prePassive> ) )]<cmdAppOpen><cmdAppNames> ) )
+
+//--> 呼叫相关
+//给xxx的手机打个电话
+| ( ( [( <preActive>|( [<prePlease>]<prePassive> ) )]<callTo>( ( <callCon1>|<callCon2>|[<callPrefix>]( <callUsual>|<callUnusual> )[<callSuffix>]|<callService>|( <allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>]]]]]]]]]]]] ) )|<callEnglish> )[[<callOf>]( <callPhoneA>|<callPhoneZ>|<callPhoneM>|<callPhoneS> )][<callActToSuf>]<callPhoneSuf> )
+//打电话给xxx的手机
+|( [( <preActive>|( [<prePlease>]<prePassive> ) )]<callCmd>( ( <callCon1>|<callCon2>|[<callPrefix>]( <callUsual>|<callUnusual> )[<callSuffix>]|<callService>|( <allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>]]]]]]]]]]]] ) )|<callEnglish> )[[<callOf>]( <callPhoneA>|<callPhoneZ>|<callPhoneM>|<callPhoneS> )] )
+//打xxx的手机
+|( [( <preActive>|( [<prePlease>]<prePassive> ) )]<callMake>( ( <callCon1>|<callCon2>|[<callPrefix>]( <callUsual>|<callUnusual> )[<callSuffix>]|<callService>|( <allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>[<allDigit>]]]]]]]]]]]] ) )|<callEnglish> )[<callOf>]( <callPhoneA>|<callPhoneZ>|<callPhoneM>|<callPhoneS> ) ) )
+
+//--> 音乐相关
+| ( [( <preActive>|( [<prePlease>]<prePassive> ) )]<mscCmd>[<mscAmount>]( ( [<mscSinger>[<mscOf>]]<mscType>[<mscTSuf>][[<mscOf>]<mscSong>] )|( [<mscSinger>[<mscOf>]]<mscList>[<mscSSuf>] )|( <mscSinger>[<mscOf><mscSong>] )|( [<mscSinger>[<mscOf>]]<mscAlbum>[<mscASuf>] ) ) )
+
+//--> 导航相关
+//导航到xxx去
+| ( ( [( <preActive>|( [<prePlease>]<prePassive> ) )][<navNav>]<navToWords>( <navHome>|<navCompany>|( [<navNear>[<navOf>]]<navNearKw> )|<navPOI> )<navSuffix> )
+//导航去xxx
+|( [( <preActive>|( [<prePlease>]<prePassive> ) )][<navNav>]( ( <navCmdWord>( <navHome>|<navCompany>|( [<navNear>[<navOf>]]<navNearKw> )|<navPOI> ) )|( [<navSuffix>]<navNearAct> ) ) )
+//告诉我xxx怎么走
+|( [[<prePlease>]<preTell>]( <navHome>|<navCompany>|( [<navNear>[<navOf>]]<navNearKw> )|<navPOI> )<navWhere> )
+//[附近]搜索[一下][附近[的]]xxx[怎么走]
+|( [( <preActive>|( [<prePlease>]<prePassive> ) )][<navNear>]<navFind>[<navAmount>]( <navHome>|<navCompany>|( [<navNear>[<navOf>]]<navNearKw> )|<navPOI> )[<navWhere>] )
+//[附近]搜索[一下][附近]有什么xxx
+|( [( <preActive>|( [<prePlease>]<prePassive> ) )][<navNear>][<navFind>[<navAmount>]][<navNear>]<navWhere>( <navHome>|<navCompany>|( [<navNear>[<navOf>]]<navNearKw> )|<navPOI> ) ) )
+
+) "</s>" );
+
+
+
+//////////////////////////////////////前缀相关//////////////////////////////////////
+<preActive>=(
+我 要 | 我 想 | 我 想 要 );
+<prePassive>=(
+帮 我 | 替 我 | 给 我 | 帮 | 帮 忙 | 你 给 我 | 你 替 我 | 你 );
+<preTell>=(
+告 诉 我 | 你 告 诉 我 );
+<prePlease>=(
+请 | 麻 烦 );
+
+
+//////////////////////////////////////交流相关//////////////////////////////////////
+<cmuKeywords>=(
+你 好 );
+
+
+//////////////////////////////////////现在播放的是什么音乐/////////////////////////
+<askMscNow>=(
+现 在 | 当 前 | 正 在 | 这 );
+<askMscPlay>=(
+播 放 | 播 | 放 | 收 听 | 听 );
+<askMscOf>=(
+的 );
+<askMscIs>=(
+是 | 叫 );
+<askMscWhat>=(
+什 么 | 啥 | 嘛 | 谁 的 );
+<askMscMsc>=(
+歌 | 歌 曲 | 音 乐 | 曲 | 曲 子 );
+
+
+//////////////////////////////////////指令相关//////////////////////////////////////
+<cmdKeywords>=(
+打 开 音 乐 | 关 闭 音 乐 );
+<cmdAppOpen>=(
+打 开 | 启 动 | 运 行 );
+<cmdAppNames>=(
+电 子 狗 );
+
+
+//////////////////////////////////////呼叫相关//////////////////////////////////////
+<callActToSuf>=(
+一 | 个 | 一 个 | 打 | 打 个 | 打 一 个 | 拨 打 | 拨 打 个 | 拨 打 一 个 );
+<callPhoneSuf>=(
+电 话 );
+<callCmd>=(
+打 电 话 给 | 打 个 电 话 给 | 打 一 个 电 话 给 | 拨 号 给 | 呼 叫 | 打 给 | 电 话 给 | 联 系 );
+<callMake>=(
+拨 打 | 拨 | 打 );
+<callPro>=(
+移 动 | 联 通 | 电 信 | 铁 通 );
+<callPhoneA>=(
+号 码 | 电 话 | 电 话 号 | 电 话 号 码 );
+<callPhoneZ>=(
+座 机 | 座 机 号 | 座 机 号码 | 固 定 电 话 | 固 话 );
+<callPhoneM>=(
+手 机 | 手 机 号 | 手 机 号 码 );
+<callPhoneS>=(
+短 号 | 亲 情 号 | 亲 情 短 号 |亲 情 号 码 | 集 团 号 | 集 团 号 码 | 集 团 短 号 );
+<callTo>=(
+给 );
+<callOf>=(
+的 );
+<callCon1>=(
+张 三 );
+<callCon2>=(
+张 三 );
+<callUsual>=(
+李 四 );
+<callUnusual>=(
+王 二 );
+<callService>=(
+服 务 号 );
+<callEnglish>=(
+happy );
+<callPrefix>=(
+同 行 者 );
+<callSuffix>=(
+腾 讯 );
+
+
+//////////////////////////////////////音乐相关//////////////////////////////////////
+<mscCmd>=(
+听 | 播 放| 播 | 放 | 来 | 点 播 | 点 | 收 听 );
+<mscAmount>=(
+个 | 一 个 | 首 | 一 首 | 曲 | 一 曲 | 一 );
+<mscSinger>=(
+陈 奕 迅 );
+<mscAlbum>=(
+明 年 今 日 );
+<mscList>=(
+十 年 );
+<mscSong>=(
+歌 | 歌 曲 | 音 乐 | 曲 | 曲 子 );
+<mscOf>=(
+的 );
+<mscType>=(
+摇 滚 );
+<mscTSuf>=(
+流 派 | 类 | 类 型 | 风 格 );
+<mscASuf>=(
+专 辑 );
+<mscSSuf>=(
+这 首 歌 );
+
+
+//////////////////////////////////////导航相关//////////////////////////////////////
+<navNav>=(
+导 航 | 领 路 | 带 我 | 领 我 | 引 我 | 带 领 | 带 领 我 );
+<navWhere>=(
+怎 么 走 | 怎 么 去 | 怎 么 到 | 在 哪 里 | 哪 有 | 哪 里 有 );
+<navCmdWord>=(
+到 | 去 | 回  | 至 | 的 );
+<navToWords>=( 
+到 | 回 );
+<navSuffix>=(
+去 );
+<navNear>=(
+附 近 | 最 近 | 就 近 | 旁 边 | 周 围 | 周 边 );
+<navFind>=(
+查 找 | 查 | 查 询 | 找 | 搜 索 | 搜 );
+<navAmount>=(
+下 | 一 下 );
+<navOf>=(
+的 );
+<navHome>=(
+家 | 家 里 );
+<navCompany>=(
+公 司 | 单 位 );
+<navPOI>=(
+世 界 之 窗 );
+<navNearAct>=(
+加 油 );
+<navNearKw>=(
+加 油 站 );
+
+
+//////////////////////////////////////混乱字符//////////////////////////////////////
+<allDigit>=(
+0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 );

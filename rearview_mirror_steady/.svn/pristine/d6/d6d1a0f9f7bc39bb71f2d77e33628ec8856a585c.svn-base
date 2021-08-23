@@ -1,0 +1,1 @@
+先按arm_v3_debug(仅供测试SDK使用)打包方式合并好代码，然后执行mergeCore.bat，返回TXZCore_Multi_Products目录执行release.bat

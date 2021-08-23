@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attrValue="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.txznet.nav.ui.widget.TabViewGroup
+        android:id="@+id/tab_tvg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000000" />
+
+    <com.txznet.nav.ui.widget.ViewPagerEx
+        android:id="@+id/main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#32373b"
+        attrValue:allow_scroll="false" />
+
+</LinearLayout>

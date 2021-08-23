@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.txznet.sdkdemo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:name="com.txznet.sdkdemo.SDKDemoApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="同行者演示程序"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity android:name="com.txznet.sdkdemo.ui.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.txznet.sdkdemo.ui.AsrActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.txznet.sdkdemo.ui.CallActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.txznet.sdkdemo.ui.CameraActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.txznet.sdkdemo.ui.ConfigActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.txznet.sdkdemo.ui.MusicActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.txznet.sdkdemo.ui.NavActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.txznet.sdkdemo.ui.NetDataActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.txznet.sdkdemo.ui.PowerActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.txznet.sdkdemo.ui.ResourceActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.txznet.sdkdemo.ui.SenceActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.txznet.sdkdemo.ui.StatusActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.txznet.sdkdemo.ui.SystemActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.txznet.sdkdemo.ui.TtsActivity"
+            android:launchMode="singleTask" >
+        </activity>
+
+        <service
+            android:name="com.txznet.sdk.TXZService"
+            android:exported="true" >
+            <intent-filter>
+
+                <!-- {项目包名}.service.TXZService -->
+                <action android:name="com.txznet.sdkdemo.service.TXZService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.txznet.sdkdemo.service.RemoteRecord"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.txznet.txz.intent.action.REMOTERECORD"/>
+            </intent-filter>
+        </service>
+        
+        <!-- 开机启动监控 -->
+        <receiver android:name="com.txznet.sdkdemo.BootCompletedReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

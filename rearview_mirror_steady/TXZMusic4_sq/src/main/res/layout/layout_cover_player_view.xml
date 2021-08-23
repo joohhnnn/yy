@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="?attr/text_size_h1"
+            app:layout_marginTopPercent="3.3%"
+            app:layout_widthPercent="67%" />
+
+        <TextView
+            android:id="@+id/tv_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_centerHorizontal="true"
+            android:maxLines="1"
+            android:text=""
+            android:textSize="?attr/text_size_h4" />
+
+        <android.support.percent.PercentFrameLayout
+            android:id="@+id/rl_cover"
+            android:layout_below="@id/tv_artist"
+            android:layout_centerHorizontal="true"
+            app:layout_aspectRatio="100%"
+            app:layout_heightPercent="50%"
+            app:layout_marginTopPercent="2.5%">
+
+            <ImageView
+                android:id="@+id/iv_conver_cd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_play_cd_v42" />
+
+            <ImageView
+                android:id="@+id/iv_cover"
+                android:layout_gravity="center"
+                app:layout_heightPercent="41%"
+                app:layout_widthPercent="41%" />
+
+        </android.support.percent.PercentFrameLayout>
+
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/layout_control"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/cover_player_view_icon_size"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="?attr/cover_player_view_margin_bottom">
+
+            <com.txznet.music.widget.ShadeImageView
+                android:id="@+id/iv_favor"
+                android:layout_width="?attr/cover_player_view_icon_size"
+                android:layout_height="?attr/cover_player_view_icon_size"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_unfavorite" />
+
+            <com.txznet.music.widget.ShadeImageView
+                android:id="@+id/iv_prev"
+                android:layout_width="?attr/cover_player_view_icon_size"
+                android:layout_height="?attr/cover_player_view_icon_size"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_favor"
+                android:src="@drawable/fm_player_prev"
+                app:layout_marginLeftPercent="5.8%" />
+
+            <FrameLayout
+                android:id="@+id/fl_play"
+                android:layout_width="?attr/cover_player_view_icon_size"
+                android:layout_height="?attr/cover_player_view_icon_size"
+                android:layout_alignBaseline="@id/iv_prev"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_prev"
+                app:layout_marginLeftPercent="5.8%"
+                app:layout_marginRightPercent="5.8%">
+
+                <com.txznet.music.widget.ShadeImageView
+                    android:id="@+id/iv_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/fm_player_play1"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_round"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/fm_player_loading1"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_buffer_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/fm_player_loading1_1"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+
+            <com.txznet.music.widget.ShadeImageView
+                android:id="@+id/iv_next"
+                android:layout_width="?attr/cover_player_view_icon_size"
+                android:layout_height="?attr/cover_player_view_icon_size"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/fl_play"
+                android:src="@drawable/fm_player_next" />
+
+
+            <com.txznet.music.widget.ShadeImageView
+                android:id="@+id/iv_mode"
+                android:layout_width="?attr/cover_player_view_icon_size"
+                android:layout_height="?attr/cover_player_view_icon_size"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_next"
+                android:src="@drawable/fm_player_sequential_playing"
+                app:layout_marginLeftPercent="5.8%" />
+
+        </android.support.percent.PercentRelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/layout_control"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_marginBottomPercent="4%"
+            app:layout_marginLeftPercent="?attr/cover_player_view_margin_horizontal"
+            app:layout_marginRightPercent="?attr/cover_player_view_margin_horizontal">
+
+            <TextView
+                android:id="@+id/tv_current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0:23"
+                android:textColor="@color/white"
+                android:textSize="?attr/text_size_h4" />
+
+            <com.txznet.music.widget.CustomSeekBar
+                android:id="@+id/customSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/m3"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_sum_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1:59"
+                android:textColor="@color/white"
+                android:textSize="?attr/text_size_h4" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll_bar"
+            android:layout_alignRight="@id/ll_bar"
+            android:textColor="#939393"
+            app:layout_marginBottomPercent="1.7%"
+
+            />
+    </android.support.percent.PercentRelativeLayout>
+
+</FrameLayout>

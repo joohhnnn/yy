@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 音乐播放器 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_player"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fm_bg"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+         <android.support.v4.view.ViewPager
+            android:id="@+id/vp_media_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="90dp"
+            android:paddingRight="90dp" />
+
+        <com.txznet.music.widget.ShadeImageView
+            android:id="@+id/iv_back"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="top"
+            android:src="@drawable/fm_player_close" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="网络歌曲来源于：考拉FM"
+        android:textColor="@color/singer_name"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tv_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="0:00"
+            android:textColor="@color/media_player_time"
+            android:textSize="@dimen/x24" />
+
+        <com.txznet.music.widget.CustomSeekBar
+            android:id="@+id/seekBar1"
+            android:layout_width="@dimen/x560"
+            android:layout_height="@dimen/y6"
+            android:layout_weight="1"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="0:00"
+            android:textColor="@color/media_player_time"
+            android:textSize="@dimen/x24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y10"
+        android:layout_marginTop="@dimen/y10"
+        android:gravity="center_vertical" >
+
+        <com.txznet.music.widget.ShadeImageView
+            android:id="@+id/iv_play_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/fm_player_sequential_playing"
+            android:visibility="visible" />
+
+        <com.txznet.music.widget.ShadeImageView
+            android:id="@+id/iv_prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/fm_player_prev"
+            android:visibility="visible" />
+
+        <FrameLayout
+            android:id="@+id/fl_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <com.txznet.music.widget.ShadeImageView
+                android:id="@+id/iv_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/fm_player_play"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_round"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/fm_media_loading_round"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_buffer_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/fm_media_loading_button"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <com.txznet.music.widget.ShadeImageView
+            android:id="@+id/iv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/fm_player_next"
+            android:visibility="visible" />
+
+        <com.txznet.music.widget.ShadeImageView
+            android:id="@+id/iv_play_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/fm_player_play_list"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="#b3000000">
+
+    <LinearLayout
+        android:id="@+id/ll_dialog_container"
+        android:layout_width="@dimen/x280"
+        android:layout_height="@dimen/y192"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_car_dialog_bg"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y128">
+
+            <com.txznet.webchat.ui.common.widget.ThemedTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x15"
+                android:layout_marginRight="@dimen/x15"
+                android:layout_gravity="center"
+                android:text="@string/lb_main_help_dialog_content"
+                android:textColor="@color/color_dialog_exit_text_content"
+                android:textSize="@dimen/y19"
+                app:theme_color="primary"/>
+
+        </FrameLayout>
+
+        <View
+            style="@style/divider_line_horizontal"/>
+
+        <com.txznet.webchat.ui.common.widget.ThemedTextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_car_dialog_button_bg_left"
+            android:gravity="center"
+            android:text="@string/lb_main_help_dialog_commit"
+            android:textColor="@color/color_accent"
+            android:textSize="@dimen/y19"
+            app:theme_color="accent"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

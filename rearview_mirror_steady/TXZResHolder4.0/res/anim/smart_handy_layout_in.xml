@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layoutAnimation xmlns:x="http://schemas.android.com/apk/res/android"
+    x:delay="20%"
+    x:animationOrder="normal"
+    x:animation="@anim/smart_handy_layout_in_item">
+
+</layoutAnimation>

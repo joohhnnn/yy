@@ -1,0 +1,65 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!--<dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>-->
+
+    <dimen name="unit">8px</dimen>
+    <dimen name="h0">34px</dimen>
+    <dimen name="h1">30px</dimen>
+    <dimen name="h2">28px</dimen>
+    <dimen name="h3">26px</dimen>
+    <dimen name="h4">24px</dimen>
+    <dimen name="h5">22px</dimen>
+    <dimen name="h6">20px</dimen>
+    <dimen name="h7">18px</dimen>
+    <dimen name="h1_height">40px</dimen>
+    <dimen name="h2_height">38px</dimen>
+    <dimen name="h3_height">36px</dimen>
+    <dimen name="h4_height">34px</dimen>
+    <dimen name="h5_height">32px</dimen>
+    <dimen name="h6_height">30px</dimen>
+    <dimen name="h7_height">28px</dimen>
+    <dimen name="h1_none">28px</dimen>
+    <dimen name="h2_none">26px</dimen>
+    <dimen name="h3_none">24px</dimen>
+    <dimen name="h4_none">22px</dimen>
+    <dimen name="h5_none">20px</dimen>
+    <dimen name="h6_none">18px</dimen>
+    <dimen name="h7_none">16px</dimen>
+    <dimen name="h1_height_none">38px</dimen>
+    <dimen name="h2_height_none">36px</dimen>
+    <dimen name="h3_height_none">34px</dimen>
+    <dimen name="h4_height_none">32px</dimen>
+    <dimen name="h5_height_none">30px</dimen>
+    <dimen name="h6_height_none">28px</dimen>
+    <dimen name="h7_height_none">26px</dimen>
+    <!--有声书标签大小-->
+    <dimen name="musicTagSide">32px</dimen>
+    <!--列表标题到内容的间距-->
+    <dimen name="centerInterval">4px</dimen>
+    <!--半屏长文本行高-->
+    <dimen name="chat_height_half">56px</dimen>
+    <!--无屏长文本行高-->
+    <dimen name="chat_height_none">48px</dimen>
+    <!--电影海报宽高-->
+    <dimen name="billWidth">160px</dimen>
+    <dimen name="billHeight">240px</dimen>
+    <dimen name="billWidthHalf">154px</dimen>
+    <dimen name="billHeightHalf">231px</dimen>
+    <dimen name="billWidthNone">136px</dimen>
+    <dimen name="billHeightNone">204px</dimen>
+    <!--股票价格名称大小-->
+    <dimen name="shockPriceSize">80px</dimen>
+    <dimen name="shockPriceHeight">92px</dimen>
+    <dimen name="shockNameSize">34px</dimen>
+    <dimen name="shockPriceSizeNone">60px</dimen>
+    <dimen name="shockPriceHeightNone">72px</dimen>
+    <dimen name="shockNameSizeNone">32px</dimen>
+    <!--竖屏单位-->
+    <dimen name="vertScreenUnit">8px</dimen>
+    <!--竖屏列表数量-->
+    <dimen name="vertScreenItemNum">4px</dimen>
+    <dimen name="vertical_shockNameSizeNone">33px</dimen>
+
+</resources>

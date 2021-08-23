@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.txznet.webchat.plugin'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 327
+        versionName "3.2.7"
+    }
+
+    buildTypes {
+        release_plugin {
+            matchingFallbacks = ['debug', 'release']
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro', '../TXZWebchat/proguard-project.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly project(':TXZWebchatComm')
+    compileOnly fileTree(dir: 'provided_libs', include: ['*.jar'])
+}
+
+WxPlugin {
+    pluginName "wx_logic_plugin"
+    // 插件版本号与编译版本号保持一致
+    pluginVersionName android.defaultConfig.versionName
+
+    debugBuildType "debug"
+    debugOutPath "/output/debug"
+
+    releaseBuildType "release_plugin"
+    releaseOutPath "/output/release"
+}

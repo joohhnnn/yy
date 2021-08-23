@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:layout_width="@dimen/x467"
+        android:layout_height="wrap_content"
+        android:background="@color/background_00"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:background="@drawable/list_bg1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/x7"
+                android:paddingStart="@dimen/x20"
+                android:text="@string/threshhold_high_very"
+                android:textColor="@color/text_color_white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/threshhold_dialog_checkbox_highvery_show"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/threshhold_high_very_example"
+                android:textColor="@color/color_text_item"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/threshhold_dialog_checkbox_highvery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/x20"
+                android:button="@drawable/radiobutton"
+                android:text="@null" />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:background="@color/color_xiantiao"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:background="@drawable/list_bg2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/x7"
+                android:paddingStart="@dimen/x20"
+                android:text="@string/threshhold_high"
+                android:textColor="@color/text_color_white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/threshhold_dialog_checkbox_high_show"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/threshhold_high_example"
+                android:textColor="@color/color_text_item"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/threshhold_dialog_checkbox_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/x20"
+                android:button="@drawable/radiobutton"
+                android:text="@null" />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:background="@color/color_xiantiao"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:background="@drawable/list_bg2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/x7"
+                android:paddingStart="@dimen/x20"
+                android:text="@string/threshhold_normal"
+                android:textColor="@color/text_color_white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/threshhold_dialog_checkbox_normal_show"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/threshhold_normal_example"
+                android:textColor="@color/color_text_item"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/threshhold_dialog_checkbox_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/x20"
+                android:button="@drawable/radiobutton"
+                android:text="@null" />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:background="@color/color_xiantiao"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:background="@drawable/list_bg2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/x7"
+                android:paddingStart="@dimen/x20"
+                android:text="@string/threshhold_low"
+                android:textColor="@color/text_color_white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/threshhold_dialog_checkbox_low_show"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/threshhold_low_example"
+                android:textColor="@color/color_text_item"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/threshhold_dialog_checkbox_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/x20"
+                android:button="@drawable/radiobutton"
+                android:text="@null" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:background="@color/color_xiantiao"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:background="@drawable/list_bg3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/x7"
+                android:paddingStart="@dimen/x20"
+                android:text="@string/threshhold_low_very"
+                android:textColor="@color/text_color_white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/threshhold_dialog_checkbox_lowvery_show"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/threshhold_low_very_example"
+                android:textColor="@color/color_text_item"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/threshhold_dialog_checkbox_lowvery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/x20"
+                android:button="@drawable/radiobutton"
+                android:text="@null" />
+        </LinearLayout>
+    </RadioGroup>
+
+</LinearLayout>

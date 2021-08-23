@@ -1,0 +1,118 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--左边用户头像-->
+    <style name="car_portrait_chat_avatar_left">
+        <item name="android:layout_width">@dimen/x60</item>
+        <item name="android:layout_height">@dimen/x60</item>
+        <item name="android:layout_marginLeft">@dimen/x6</item>
+        <!--top margin是为了使头像和气泡顶部对齐, 需要与气泡的extra padding top保持一致-->
+        <item name="android:layout_marginTop">5px</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="riv_corner_radius">2dp</item>
+    </style>
+
+    <!--右边用户头像-->
+    <style name="car_portrait_chat_avatar_right">
+        <item name="android:layout_width">@dimen/x60</item>
+        <item name="android:layout_height">@dimen/x60</item>
+        <item name="android:layout_marginRight">@dimen/x6</item>
+        <!--top margin是为了使头像和气泡顶部对齐, 需要与气泡的extra padding top保持一致-->
+        <item name="android:layout_marginTop">5px</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="riv_corner_radius">2dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <!--左边消息root-->
+    <style name="car_portrait_chat_msg_root_left">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/y5</item>
+        <item name="android:paddingBottom">@dimen/y10</item>
+        <item name="android:paddingLeft">@dimen/x16</item>
+        <item name="android:paddingRight">@dimen/x82</item>
+    </style>
+
+    <!--右边消息root-->
+    <style name="car_portrait_chat_msg_root_right">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/y5</item>
+        <item name="android:paddingBottom">@dimen/y10</item>
+        <item name="android:paddingLeft">@dimen/x82</item>
+        <item name="android:paddingRight">@dimen/x16</item>
+    </style>
+
+    <!--左边气泡-->
+    <style name="car_portrait_chat_bubble_left">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cbv_extra_padding_left">24px</item>
+        <item name="cbv_extra_padding_top">5px</item>
+        <item name="cbv_extra_padding_right">5px</item>
+        <item name="cbv_extra_padding_bottom">5px</item>
+        <item name="cbv_arrow_height">@dimen/x12</item>
+        <item name="cbv_arrow_position">@dimen/x30</item>
+        <item name="cbv_arrow_src">@drawable/src_bubble_left_arrow</item>
+        <item name="cbv_arrow_src_pressed">@drawable/src_bubble_left_arrow_pressed</item>
+        <item name="cbv_bottom_src">@drawable/src_bubble_left_bottom</item>
+        <item name="cbv_bottom_src_pressed">@drawable/src_bubble_left_bottom_pressed</item>
+        <item name="cbv_top_src">@drawable/src_bubble_left_top</item>
+        <item name="cbv_top_src_pressed">@drawable/src_bubble_left_top_pressed</item>
+    </style>
+
+    <!--右边气泡-->
+    <style name="car_portrait_chat_bubble_right">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cbv_extra_padding_left">5px</item>
+        <item name="cbv_extra_padding_top">5px</item>
+        <item name="cbv_extra_padding_right">24px</item>
+        <item name="cbv_extra_padding_bottom">5px</item>
+        <item name="cbv_arrow_height">@dimen/x12</item>
+        <item name="cbv_arrow_position">@dimen/x30</item>
+        <item name="cbv_arrow_src">@drawable/src_bubble_right_arrow</item>
+        <item name="cbv_arrow_src_pressed">@drawable/src_bubble_right_arrow_pressed</item>
+        <item name="cbv_bottom_src">@drawable/src_bubble_right_bottom</item>
+        <item name="cbv_bottom_src_pressed">@drawable/src_bubble_right_bottom_pressed</item>
+        <item name="cbv_top_src">@drawable/src_bubble_right_top</item>
+        <item name="cbv_top_src_pressed">@drawable/src_bubble_right_top_pressed</item>
+    </style>
+
+    <!--右边白色气泡(文件消息在用)-->
+    <style name="car_portrait_chat_bubble_right_white">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cbv_extra_padding_left">5px</item>
+        <item name="cbv_extra_padding_top">5px</item>
+        <item name="cbv_extra_padding_right">24px</item>
+        <item name="cbv_extra_padding_bottom">5px</item>
+        <item name="cbv_arrow_height">@dimen/x12</item>
+        <item name="cbv_arrow_position">@dimen/x30</item>
+        <item name="cbv_arrow_src">@drawable/src_bubble_right_white_arrow</item>
+        <item name="cbv_arrow_src_pressed">@drawable/src_bubble_right_white_arrow_pressed</item>
+        <item name="cbv_bottom_src">@drawable/src_bubble_right_white_bottom</item>
+        <item name="cbv_bottom_src_pressed">@drawable/src_bubble_right_white_bottom_pressed</item>
+        <item name="cbv_top_src">@drawable/src_bubble_right_white_top</item>
+        <item name="cbv_top_src_pressed">@drawable/src_bubble_right_white_top_pressed</item>
+    </style>
+
+    <!--消息正文文本-->
+    <style name="car_portrait_chat_content_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/x60</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/x16</item>
+        <item name="android:paddingRight">@dimen/x16</item>
+        <item name="android:paddingBottom">@dimen/x16</item>
+        <item name="android:paddingTop">@dimen/x18</item>
+        <item name="android:textColor">@color/color_chat_item_text</item>
+        <item name="android:textSize">@dimen/x18</item>
+    </style>
+
+    <style name="car_portrait_chat_divider_line_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">#40000000</item>
+    </style>
+</resources>

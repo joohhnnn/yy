@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andexert.library.RippleView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y84"
+    android:orientation="vertical"
+    ripple:rv_rippleDuration="300"
+    ripple:rv_type="rectangle" >
+
+    <FrameLayout
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/y2"
+        android:layout_marginTop="@dimen/y2" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.txznet.record.view.GradientProgressBar
+                android:id="@+id/my_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="@dimen/y80"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txtNum"
+                    android:layout_width="@dimen/y44"
+                    android:layout_height="@dimen/y44"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_marginStart="@dimen/x10"
+                    android:background="@drawable/poi_item_circle_bg"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:padding="0dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/y30" />
+
+                <com.txznet.record.view.RoundImageView
+                    android:id="@+id/nav_item_avatar"
+                    android:layout_width="?attr/list_item_wx_head_width"
+                    android:layout_height="?attr/list_item_wx_head_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/y16"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/y16"
+                    android:layout_marginStart="@dimen/y16"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/y80"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/name_tv"
+                        style="@style/text_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/y45"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="主标题" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/x6"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/right_top_tv"
+                            style="@style/text_20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/x6"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/right_btm_tv"
+                            style="@style/text_20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/x6"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#4c4c4c"
+        android:visibility="gone" />
+
+</com.andexert.library.RippleView>

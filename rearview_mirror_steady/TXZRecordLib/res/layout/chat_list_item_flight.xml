@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andexert.library.RippleView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/m100"
+    android:minHeight="@dimen/m100"
+    android:orientation="vertical"
+    ripple:rv_rippleDuration="300"
+    ripple:rv_type="rectangle">
+
+    <FrameLayout
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/list_item_content_marginBottom"
+        android:layout_marginTop="?attr/list_item_content_marginTop">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="@dimen/m80"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/ll_item_fight_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+                <TextView
+                    android:id="@+id/tv_item_flight_airline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/m40"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#fff"
+                    android:textSize="@dimen/m20" />
+
+                <TextView
+                    android:id="@+id/tv_item_flight_flightno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_item_flight_airline"
+                    android:layout_below="@+id/tv_item_flight_airline"
+                    android:layout_marginTop="@dimen/m3"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#fff"
+                    android:textSize="@dimen/m20" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_item_fight_supply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/m40"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="@dimen/m20">
+                    <TextView
+                        android:id="@+id/tv_item_flight_seat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#fff"
+                        android:textSize="@dimen/m20" />
+
+                    <TextView
+                        android:id="@+id/tv_item_flight_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m3"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#00B9FF"
+                        android:textSize="@dimen/m20" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_item_flight_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#fff"
+                        android:textSize="@dimen/m20" />
+
+                    <TextView
+                        android:id="@+id/tv_item_flight_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m3"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#00B9FF"
+                        android:textSize="@dimen/m20" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_item_fight_route"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ll_item_fight_info"
+                android:layout_toLeftOf="@id/ll_item_fight_supply"
+                android:layout_marginRight="@dimen/m20"
+                android:layout_marginLeft="@dimen/m20"
+                android:layout_centerVertical="true">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iv_item_flight_arrow"
+                    android:layout_marginLeft="@dimen/m5"
+                    android:layout_marginRight="@dimen/m5"
+                    android:src="@drawable/arrow_flight_white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tv_item_flight_departName"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_item_flight_departName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:layout_toLeftOf="@id/iv_item_flight_arrow"
+                    android:gravity="right"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/m20" />
+
+                <TextView
+                    android:id="@+id/tv_item_flight_arrivalName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:layout_toRightOf="@+id/iv_item_flight_arrow"
+                    android:layout_alignTop="@+id/tv_item_flight_departName"
+                    android:text=""
+                    android:textColor="#fff"
+                    android:textSize="@dimen/m20" />
+
+                <TextView
+                    android:id="@+id/tv_item_flight_departTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_below="@+id/iv_item_flight_arrow"
+                    android:layout_toLeftOf="@id/iv_item_flight_arrow"
+                    android:text=""
+                    android:textColor="#fff"
+                    android:textSize="@dimen/m20" />
+
+                <TextView
+                    android:id="@+id/tv_item_flight_arrivalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:layout_alignLeft="@+id/tv_item_flight_arrivalName"
+                    android:layout_alignTop="@+id/tv_item_flight_departTime"
+                    android:text=""
+                    android:textColor="#fff"
+                    android:textSize="@dimen/m20" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_item_flight_adddate"
+                    android:textColor="#FFF"
+                    android:text="+1天"
+                    android:textSize="@dimen/m16"
+                    android:layout_alignLeft="@+id/iv_item_flight_arrow"
+                    android:layout_alignRight="@+id/iv_item_flight_arrow"
+                    android:gravity="center_horizontal"
+                    android:layout_above="@+id/iv_item_flight_arrow"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/list_item_divider_height"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#4c4c4c"
+        android:visibility="gone" />
+</com.andexert.library.RippleView>

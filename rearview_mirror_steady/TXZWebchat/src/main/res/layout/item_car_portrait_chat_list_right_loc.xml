@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/car_portrait_chat_msg_root_right"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_car_chat_msg_avatar"
+        style="@style/car_portrait_chat_avatar_right"
+        android:src="@drawable/default_headimage"/>
+
+    <com.txznet.webchat.ui.rearview_mirror.widget.BubbleRelativeLayout
+        android:id="@+id/view_car_chat_msg_bubble"
+        style="@style/car_portrait_chat_bubble_right"
+        android:layout_toLeftOf="@id/iv_car_chat_msg_avatar">
+
+        <LinearLayout
+            android:id="@+id/ll_car_chat_msg_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/x60"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/fl_car_chat_msg_action"
+                android:layout_width="@dimen/x60"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_message_action_btn_right">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/x25"
+                        android:layout_height="@dimen/x25"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_chat_message_action_nav"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y5"
+                        android:text="导航过去"
+                        android:textColor="#fff"
+                        android:maxLines="1"
+                        android:textSize="@dimen/x12"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_car_chat_msg_content"
+                style="@style/car_portrait_chat_content_text"
+                tools:text="[广东省深圳市同行者科技]"/>
+
+        </LinearLayout>
+
+    </com.txznet.webchat.ui.rearview_mirror.widget.BubbleRelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/login_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/x20" >
+
+        <TextView
+            style="@style/PagerTitleStyle"
+            android:text="@string/string_login_notice_txt" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/LoginTextStyle"
+                    android:drawableLeft="@drawable/icon_voice"
+                    android:text="@string/string_login_voice" />
+
+                <TextView
+                    style="@style/LoginTextStyle"
+                    android:layout_marginBottom="@dimen/y48"
+                    android:layout_marginTop="@dimen/y48"
+                    android:drawableLeft="@drawable/icon_camera"
+                    android:text="@string/string_login_capture" />
+
+                <TextView
+                    style="@style/LoginTextStyle"
+                    android:drawableLeft="@drawable/icon_nav"
+                    android:text="@string/string_login_nav" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/x1"
+                android:layout_height="match_parent"
+                android:background="#33FFFFFF" />
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginStart="@dimen/x40"
+                android:layout_weight="3" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/iphone_ly"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y80"
+                        android:background="@drawable/selector_edit_bg"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/y80"
+                            android:layout_marginLeft="@dimen/y30"
+                            android:layout_marginRight="@dimen/y30"
+                            android:gravity="center"
+                            android:text="@string/string_phone_name"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/y20" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="#80FFFFFF" />
+
+                        <EditText
+                            android:id="@+id/phone_et"
+                            style="@style/LoginEdit" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/code_ly"
+                        style="@style/LoginEditStyle"
+                        android:layout_marginTop="@dimen/y20" >
+
+                        <TextView
+                            style="@style/LoginEditLabel"
+                            android:text="@string/string_id_code" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="#80FFFFFF" />
+
+                        <EditText
+                            android:id="@+id/idcode_et"
+                            style="@style/LoginEdit" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/y10"
+                            android:layout_marginTop="@dimen/y10"
+                            android:background="#80FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/getCode_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginRight="@dimen/x20"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/string_get_code"
+                            android:textColor="#4AA5FA"
+                            android:textSize="@dimen/y20" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/plate_ly"
+                        style="@style/LoginEditStyle"
+                        android:layout_marginTop="@dimen/y20"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/LoginEditLabel"
+                            android:text="@string/string_plate_num" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="#80FFFFFF" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginRight="@dimen/x20"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="@string/string_get_code"
+                            android:textColor="#4AA5FA"
+                            android:textSize="@dimen/y22" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/y10"
+                            android:layout_marginTop="@dimen/y10"
+                            android:background="#80FFFFFF" />
+
+                        <EditText
+                            android:id="@+id/plate_et"
+                            style="@style/LoginEdit" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/login_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y80"
+                        android:layout_marginTop="@dimen/y20"
+                        android:background="@drawable/selector_login_btn"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="@string/string_login"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/y22" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_accept_login"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/y18" />
+
+                    <TextView
+                        android:id="@+id/txz_disclaimer_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:text="@string/string_txz_disclaimer"
+                        android:textColor="#4AA5FA"
+                        android:textSize="@dimen/y18" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/saomao_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:text="@string/string_saoma"
+            android:textColor="#4AA5FA"
+            android:textSize="@dimen/y24"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/disclaimer_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/x40"
+        android:paddingLeft="@dimen/x40"
+        android:paddingRight="@dimen/x40"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/back_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/icon_login_back"
+                android:drawablePadding="@dimen/x20"
+                android:gravity="center_vertical"
+                android:text="@string/string_back"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/y18" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/string_txz"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/y28" />
+        </RelativeLayout>
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null" />
+    </LinearLayout>
+
+</LinearLayout>

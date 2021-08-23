@@ -1,0 +1,272 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.txznet.webchat"
+        minSdkVersion 15
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 30121
+        versionName "3.1.21"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('../../tools/txz.keystore')
+            storePassword 'android'
+        }
+    }
+
+    // 默认模式的abiFilter, 屏蔽x86相关lib减小包体积
+    def abiFilters_default = ["armeabi", "armeabi-v7a"]
+    // x86模式的abiFilter, 只保留x86版本的lib, 避免某些os link出错
+    def abiFilters_x86 = ["x86"]
+
+    buildTypes {
+        release {
+            buildConfigField("String", "THEME", '\"mirror\"')
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            buildConfigField("boolean", "PLUGIN_DEBUG", "false")
+            buildConfigField("int", "SVN_VERSION", "${getSvnRevision()}")
+            buildConfigField("boolean", "FORCE_WECHAT_MODE", "false")
+            buildConfigField("boolean", "SHOW_DEVICE_ITEM", "true")
+            minifyEnabled true
+            proguardFiles 'proguard-project.txt'
+            signingConfig signingConfigs.release
+
+            ndk {
+                setAbiFilters abiFilters_default
+            }
+        }
+        debug {
+            buildConfigField("String", "THEME", '\"mirror\"')
+            buildConfigField("boolean", "LOG_DEBUG", "true")
+            buildConfigField("boolean", "PLUGIN_DEBUG", "true")
+            buildConfigField("int", "SVN_VERSION", "${getSvnRevision()}")
+            buildConfigField("boolean", "FORCE_WECHAT_MODE", "false")
+            buildConfigField("boolean", "SHOW_DEVICE_ITEM", "true")
+            debuggable true
+
+            ndk {
+                setAbiFilters abiFilters_default
+            }
+        }
+        debug_car {
+            matchingFallbacks = ['debug', 'release']
+            buildConfigField("String", "THEME", '\"car\"')
+            buildConfigField("boolean", "LOG_DEBUG", "true")
+            buildConfigField("boolean", "PLUGIN_DEBUG", "true")
+            buildConfigField("int", "SVN_VERSION", "${getSvnRevision()}")
+            buildConfigField("boolean", "FORCE_WECHAT_MODE", "false")
+            buildConfigField("boolean", "SHOW_DEVICE_ITEM", "true")
+            debuggable true
+
+            ndk {
+                setAbiFilters abiFilters_default
+            }
+        }
+        release_webchat {
+            matchingFallbacks = ['debug', 'release']
+            buildConfigField("String", "THEME", '\"mirror\"')
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            buildConfigField("boolean", "PLUGIN_DEBUG", "false")
+            buildConfigField("int", "SVN_VERSION", "${getSvnRevision()}")
+            buildConfigField("boolean", "FORCE_WECHAT_MODE", "true")
+            buildConfigField("boolean", "SHOW_DEVICE_ITEM", "true")
+            minifyEnabled true
+            proguardFiles 'proguard-project.txt'
+            signingConfig signingConfigs.release
+
+            ndk {
+                setAbiFilters abiFilters_default
+            }
+        }
+        release_all {
+            matchingFallbacks = ['debug', 'release']
+            buildConfigField("String", "THEME", '\"mirror\"')
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            buildConfigField("boolean", "PLUGIN_DEBUG", "false")
+            buildConfigField("int", "SVN_VERSION", "${getSvnRevision()}")
+            buildConfigField("boolean", "FORCE_WECHAT_MODE", "false")
+            buildConfigField("boolean", "SHOW_DEVICE_ITEM", "true")
+            minifyEnabled true
+            proguardFiles 'proguard-project.txt'
+            signingConfig signingConfigs.release
+
+            ndk {
+                setAbiFilters abiFilters_default
+            }
+        }
+        release_car_webchat {
+            matchingFallbacks = ['debug', 'release']
+            buildConfigField("String", "THEME", '\"car\"')
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            buildConfigField("boolean", "PLUGIN_DEBUG", "false")
+            buildConfigField("int", "SVN_VERSION", "${getSvnRevision()}")
+            buildConfigField("boolean", "FORCE_WECHAT_MODE", "true")
+            buildConfigField("boolean", "SHOW_DEVICE_ITEM", "true")
+            minifyEnabled true
+            proguardFiles 'proguard-project.txt'
+            signingConfig signingConfigs.release
+
+            ndk {
+                setAbiFilters abiFilters_default
+            }
+        }
+        release_car_all {
+            matchingFallbacks = ['debug', 'release']
+            buildConfigField("String", "THEME", '\"car\"')
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            buildConfigField("boolean", "PLUGIN_DEBUG", "false")
+            buildConfigField("int", "SVN_VERSION", "${getSvnRevision()}")
+            buildConfigField("boolean", "FORCE_WECHAT_MODE", "false")
+            buildConfigField("boolean", "SHOW_DEVICE_ITEM", "true")
+            minifyEnabled true
+            proguardFiles 'proguard-project.txt'
+            signingConfig signingConfigs.release
+
+            ndk {
+                setAbiFilters abiFilters_default
+            }
+        }
+        release_car_portrait {
+            matchingFallbacks = ['debug', 'release']
+            buildConfigField("String", "THEME", '\"car_portrait\"')
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            buildConfigField("boolean", "PLUGIN_DEBUG", "false")
+            buildConfigField("int", "SVN_VERSION", "${getSvnRevision()}")
+            buildConfigField("boolean", "FORCE_WECHAT_MODE", "false")
+            buildConfigField("boolean", "SHOW_DEVICE_ITEM", "true")
+            minifyEnabled true
+            proguardFiles 'proguard-project.txt'
+            signingConfig signingConfigs.release
+
+            ndk {
+                setAbiFilters abiFilters_default
+            }
+        }
+        release_car_t700 {
+            matchingFallbacks = ['debug', 'release']
+            buildConfigField("String", "THEME", '\"car_portrait_t700\"')
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            buildConfigField("boolean", "PLUGIN_DEBUG", "false")
+            buildConfigField("int", "SVN_VERSION", "${getSvnRevision()}")
+            buildConfigField("boolean", "FORCE_WECHAT_MODE", "false")
+            buildConfigField("boolean", "SHOW_DEVICE_ITEM", "true")
+            minifyEnabled true
+            proguardFiles 'proguard-project.txt'
+            signingConfig signingConfigs.release
+
+            ndk {
+                setAbiFilters abiFilters_default
+            }
+        }
+        release_no_control {
+            matchingFallbacks = ['debug', 'release']
+            buildConfigField("String", "THEME", '\"mirror\"')
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            buildConfigField("boolean", "PLUGIN_DEBUG", "false")
+            buildConfigField("int", "SVN_VERSION", "${getSvnRevision()}")
+            buildConfigField("boolean", "FORCE_WECHAT_MODE", "true")
+            buildConfigField("boolean", "SHOW_DEVICE_ITEM", "false")
+            minifyEnabled true
+            proguardFiles 'proguard-project.txt'
+            signingConfig signingConfigs.release
+
+            ndk {
+                setAbiFilters abiFilters_default
+            }
+        }
+
+        release_all_x86 {
+            matchingFallbacks = ['debug', 'release']
+            buildConfigField("String", "THEME", '\"mirror\"')
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            buildConfigField("boolean", "PLUGIN_DEBUG", "false")
+            buildConfigField("int", "SVN_VERSION", "${getSvnRevision()}")
+            buildConfigField("boolean", "FORCE_WECHAT_MODE", "false")
+            buildConfigField("boolean", "SHOW_DEVICE_ITEM", "true")
+            minifyEnabled true
+            proguardFiles 'proguard-project.txt'
+            signingConfig signingConfigs.release
+
+            ndk {
+                setAbiFilters abiFilters_x86
+            }
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    applicationVariants.all { variant ->
+        // 只copy开启了混淆的版本至输出目录
+        if (variant.buildType.isMinifyEnabled()) {
+            def fileNamePrefix = "${project.name}_${variant.buildType.name}_${defaultConfig.versionName}(${getSvnRevision()})_${getTime()}"
+            variant.outputs.each { output ->
+                if (null != output.outputFile && output.outputFile.name.endsWith('.apk')) {
+                    variant.assemble.doLast {
+                        copy {
+                            from (output.outputFile, variant.mappingFile.path)
+                            into "${projectDir}/outputs"
+                            rename { String fileName ->
+                                if (fileName.endsWith('.apk')) {
+                                    "${fileNamePrefix}.apk"
+                                } else {
+                                    "${fileNamePrefix}.txt"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':TXZWebchatComm')
+    implementation project(':WechatLogicPlugin')
+    implementation project(':TXZComm')
+    implementation 'com.squareup:otto:1.3.8'
+    implementation "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
+    implementation 'com.makeramen:roundedimageview:2.2.1'
+    implementation "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
+    implementation 'com.pnikosis:materialish-progress:1.7'
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
+    implementation "com.android.support:percent:$rootProject.ext.supportLibraryVersion"
+    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
+
+        // test dependency
+    testImplementation 'junit:junit:4.12'
+}
+
+def getSvnRevision() {
+    new ByteArrayOutputStream().withStream { os ->
+        def result = exec {
+            executable = "$project.rootDir\\..\\tools\\sliksvn\\svn.exe"
+            args = ['info']
+            standardOutput = os
+        }
+        def outputAsString = os.toString()
+        def matchLastChangedRev = outputAsString =~ /Last Changed Rev: (\d+)/
+
+        ext.svnRev = "${matchLastChangedRev[0][1]}".toInteger()
+    }
+    return svnRev
+}
+
+def getTime() {
+    return new Date().format("yyyyMMddHHmm")
+}

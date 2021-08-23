@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_wechat_bind_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2px"
+        android:singleLine="true"
+        android:text="绑定设备"
+        android:textColor="#FFFFFFFF"
+        android:textSize="@dimen/dimen_text_size_wechat_bind_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/list_item_range_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="120px"
+            android:layout_height="120px">
+
+            <ImageView
+                android:id="@+id/iv_wechat_bind_qrcode"
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:id="@+id/iv_wechat_bind_refresh_qrcode"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_gravity="center"
+                android:background="#0F000000"
+                android:src="@drawable/ic_wechat_refresh_qrcode"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_wechat_bind_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9px"
+            android:text="使用微信应用内扫一扫功能\r\n扫描上面二维码绑定设备"
+            android:textColor="#FFFFFFFF"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/dimen_text_size_wechat_bind_tips"/>
+
+    </LinearLayout>
+</LinearLayout>

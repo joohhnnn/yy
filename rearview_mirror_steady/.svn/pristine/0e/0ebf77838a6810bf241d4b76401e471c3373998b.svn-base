@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/fl_car_help_item_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <View
+            android:id="@+id/view_item_focus_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x32"
+            android:layout_marginRight="@dimen/x32"
+            android:background="@drawable/src_help_child_focus_last"/>
+
+    <com.txznet.webchat.ui.common.widget.ThemedTextView
+        android:id="@+id/tv_car_help_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x64"
+        android:layout_marginRight="@dimen/x64"
+        android:layout_marginBottom="@dimen/y10"
+        android:padding="@dimen/y5"
+        android:layout_gravity="center"
+        android:gravity="left"
+        android:text="发微信"
+        android:textColor="@color/color_primary_dark"
+        android:textSize="@dimen/y19"
+        app:theme_color="primary_dark"/>
+
+        <View
+            android:id="@+id/view_car_help_item_divider"
+            style="@style/divider_line_horizontal"
+            android:layout_marginLeft="@dimen/x32"
+            android:layout_marginRight="@dimen/x32"
+            android:layout_gravity="bottom"/>
+</FrameLayout>

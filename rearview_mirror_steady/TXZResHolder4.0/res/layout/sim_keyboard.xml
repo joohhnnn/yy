@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="@dimen/win_layout_card_width"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/xml_bg_sim_keyboard_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn1"
+                android:text="1"
+                style="@style/simKeyboardButtonStyle"/>
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:text="2"
+                style="@style/simKeyboardButtonStyle"/>
+
+            <Button
+                android:id="@+id/btn3"
+                android:text="3"
+                style="@style/simKeyboardButtonStyle"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn4"
+                android:text="4"
+                style="@style/simKeyboardButtonStyle"/>
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:text="5"
+                style="@style/simKeyboardButtonStyle"/>
+
+            <Button
+                android:id="@+id/btn6"
+                android:text="6"
+                style="@style/simKeyboardButtonStyle"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn7"
+                android:text="7"
+                style="@style/simKeyboardButtonStyle"/>
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:text="8"
+                style="@style/simKeyboardButtonStyle"/>
+
+            <Button
+                android:id="@+id/btn9"
+                android:text="9"
+                style="@style/simKeyboardButtonStyle"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/btnDelete"
+                style="@style/simKeyboardButtonStyle">
+
+                <ImageView
+                    android:layout_width="@dimen/mdp40"
+                    android:layout_height="@dimen/mdp40"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_delete"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn0"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:text="0"
+                style="@style/simKeyboardButtonStyle"/>
+
+            <Button
+                android:id="@+id/btnDone"
+                android:text="确认"
+                android:textSize="@dimen/sp24"
+                style="@style/simKeyboardButtonStyle"
+                android:background="@drawable/xml_bg_btn_sim_commit_disable"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

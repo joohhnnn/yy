@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y64">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y64"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x38"
+        android:text="@string/lb_car_main_menu_title"
+        android:textColor="@color/color_accent"
+        android:textSize="@dimen/x20"/>
+
+    <View
+        style="@style/divider_line_horizontal"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

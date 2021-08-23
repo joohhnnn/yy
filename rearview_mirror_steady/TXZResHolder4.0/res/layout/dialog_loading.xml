@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/mdp20"
+        android:paddingRight="@dimen/mdp20"
+        android:paddingTop="@dimen/mdp30"
+        android:paddingBottom="@dimen/mdp30"
+        android:background="@drawable/xml_dialog_bg"
+        android:gravity="center">
+
+        <ProgressBar
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:indeterminateDrawable="@drawable/xml_progressbar"/>
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorPrimary"
+            android:layout_marginTop="@dimen/mdp20"
+            android:gravity="center"
+            android:textSize="@dimen/sp20"
+            android:text="退票中\n请耐心等候..."
+            android:lineSpacingMultiplier="1.2"/>
+
+    </LinearLayout>
+
+</FrameLayout>

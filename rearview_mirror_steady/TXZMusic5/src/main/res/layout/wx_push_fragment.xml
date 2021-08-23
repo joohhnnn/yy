@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_include" />
+
+    <FrameLayout
+        android:id="@+id/fl_header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m56"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加几条推送消息"
+        android:visibility="gone" />
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_error="@layout/view_error"
+        app:scrollbars="none" />
+
+</LinearLayout>

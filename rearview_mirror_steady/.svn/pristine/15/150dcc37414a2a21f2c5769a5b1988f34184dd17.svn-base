@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_red">#FF0000</color>
+    <color name="background_bg">#0A0A0A</color>
+    <color name="background_00">#00000000</color>
+    <color name="text_color_white">#FFFFFF</color>
+    <color name="text_color_white_transparent">#4CFFFFFF</color>
+    <color name="background_setbg">#252525</color>
+    <color name="text_color_blue">#4AA5FA</color>
+    <color name="color_xiantiao">#33FFFFFF</color>
+    <color name="color_text_item">#7FFFFFFF</color>
+</resources>

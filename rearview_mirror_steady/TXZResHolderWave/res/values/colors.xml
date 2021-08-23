@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 按下颜色 -->
+    <color name="widget_color_pressed">#282c2f</color>
+    <color name="widget_color_normal">#32373b</color>
+    <!-- 文字颜色 -->
+    <color name="text_color">#adb6cc</color>
+    
+    <color name="win_nav_home_color_dest_bg">#202326</color>
+    <color name="win_nav_home_color_dest_text_color_hint">#40454b</color>
+    <color name="win_nav_home_color_search_bg_normal">#2a2f33</color>
+    <color name="win_nav_home_color_search_bg_select">#34bfff</color>
+    <color name="win_nav_home_color_search_bg_click">#2697cc</color>
+    
+    <color name="search_text_color_nor">#fff</color>
+    <color name="search_text_color_pre">#8ce3fd</color>
+</resources>

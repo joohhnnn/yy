@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./TXZComm/libs/protobuf-java-2.3.0-nano.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TXZComm/libs/protobuf-java-2.3.0-nano.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

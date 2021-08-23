@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/album_ll"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <!-- android:background="@color/type_select_bg" -->
+
+
+    <!-- <RelativeLayout -->
+    <!-- android:id="@+id/content_rl" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" > -->
+
+    <com.txznet.music.widget.ShadeImageView
+        android:id="@+id/type_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter" />
+
+    <!-- </RelativeLayout> -->
+
+    <TextView
+        android:id="@+id/intro_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/type_filter_pop_bg"
+        android:ellipsize="end"
+        android:maxEms="8"
+        android:gravity="center"
+        android:lines="2"
+        android:text="xxxx"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/y26" />
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/album_des_tv" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+<!--     android:background="@color/album_des_bg" -->
+    <!-- android:ellipsize="end" -->
+    <!-- android:lineSpacingExtra="5dp" -->
+    <!-- android:maxLines="2" -->
+    <!-- android:padding="10dp" -->
+    <!-- android:text="XX你好好" -->
+    <!-- android:textColor="@color/gray" -->
+    <!-- android:textSize="24sp" /> -->
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="left|bottom"
+    android:orientation="vertical" >
+
+    <!-- android:layout_width="@dimen/x448" -->
+    <!-- android:layout_height="@dimen/y252 -->
+    <!-- android:background="@drawable/dialog_none_background" -->
+
+    <RelativeLayout
+        android:id="@+id/llContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+    <!-- android:layout_height="@dimen/y70" -->
+    <!-- android:layout_marginTop="@dimen/y10" -->
+
+    <LinearLayout
+        android:id="@+id/llHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal" >
+
+        <!-- android:layout_width="@dimen/y70" -->
+        <!-- android:layout_height="@dimen/y70" -->
+
+        <RelativeLayout
+            android:id="@+id/rlRecordView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+
+        <!-- android:layout_marginLeft="@dimen/x20" -->
+        <!-- android:layout_marginRight="@dimen/x20" -->
+
+        <FrameLayout
+            android:id="@+id/flTalk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+
+        <!-- android:paddingLeft="@dimen/y15" -->
+        <!-- android:paddingRight="@dimen/y15" -->
+        <!-- android:background="@drawable/help_icon_background_right" -->
+
+        <FrameLayout
+            android:id="@+id/llHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <!-- android:layout_width="@dimen/y35" -->
+            <!-- android:layout_height="@dimen/y35" -->
+            <!-- android:src="@drawable/help_icon" -->
+
+            <!--<ImageView
+                android:id="@+id/ivHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />-->
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

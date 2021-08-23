@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00ff0000" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <!-- 一般窗口绘制区 -->
+
+        <FrameLayout
+            android:id="@+id/allViewContent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <!-- 菜单绘制区 -->
+
+        <FrameLayout
+            android:id="@+id/allMenuContent"
+            android:layout_width="@dimen/win_home_width"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <!-- 全屏置顶绘制区 -->
+
+    <FrameLayout
+        android:id="@+id/allDialogContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#00000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone" >
+    </FrameLayout>
+
+    <!-- 全屏置顶绘制区 -->
+
+    <FrameLayout
+        android:id="@+id/allFullTopContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+    </FrameLayout>
+
+</FrameLayout>

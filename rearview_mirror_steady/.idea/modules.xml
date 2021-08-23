@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rearview_mirror_steady.iml" filepath="$PROJECT_DIR$/.idea/modules/rearview_mirror_steady.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TXZComm/rearview_mirror_steady.TXZComm.iml" filepath="$PROJECT_DIR$/.idea/modules/TXZComm/rearview_mirror_steady.TXZComm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TXZCore/rearview_mirror_steady.TXZCore.iml" filepath="$PROJECT_DIR$/.idea/modules/TXZCore/rearview_mirror_steady.TXZCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TXZRecordLib/rearview_mirror_steady.TXZRecordLib.iml" filepath="$PROJECT_DIR$/.idea/modules/TXZRecordLib/rearview_mirror_steady.TXZRecordLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TXZResHolder3.0/rearview_mirror_steady.TXZResHolder3.0.iml" filepath="$PROJECT_DIR$/.idea/modules/TXZResHolder3.0/rearview_mirror_steady.TXZResHolder3.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TXZResHolder4.0/rearview_mirror_steady.TXZResHolder4.0.iml" filepath="$PROJECT_DIR$/.idea/modules/TXZResHolder4.0/rearview_mirror_steady.TXZResHolder4.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TXZSDKDemo/rearview_mirror_steady.TXZSDKDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/TXZSDKDemo/rearview_mirror_steady.TXZSDKDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rearview_mirror_steady.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/rearview_mirror_steady.buildSrc.iml" />
+    </modules>
+  </component>
+</project>

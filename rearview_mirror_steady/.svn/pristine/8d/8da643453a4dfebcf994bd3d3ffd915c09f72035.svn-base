@@ -1,0 +1,134 @@
+package com.txz.ui.innernet;
+
+enum SubEvent{
+    SUBEVENT_INNERNET_UPDATE_HOST = 1;
+	SUBEVENT_INNERNET_UPLOAD_DATA = 2;	//上传数据 Innernet_UploadData
+	SUBEVENT_INNERNET_UPLOAD_FINISH = 3;	//上传数据完成 Innernet_UploadFinish
+	SUBEVENT_INNERNET_UPLOAD_PROGRESS = 4;	//上传进度 Innernet_UploadProcess
+	SUBEVENT_INNERNET_UPLOAD_DATA_CANCEL = 5; //取消上传，携带str_data_id，按模块和ID查找取消
+	
+	SUBEVENT_INNERNET_HTTP_DOWNLOAD_REQ	= 6;	//http下载操作请求
+	SUBEVENT_INNERNET_HTTP_DOWNLOAD_RESP	= 7;	//http下载操作回调
+	SUBEVENT_INNERNET_HTTP_DOWNLOAD_BCAST_DATA = 8;	//http下载时，广播下载的内容数据
+	SUBEVENT_INNERNET_HTTP_DOWNLOAD_STOP = 9;	//停止下载
+	
+	SUBEVENT_INNERNET_ENVIRONMENT_CHANGE = 10; //环境切换，携带内容：'test':测试环境; 'release':正式环境; "pre-release":预发布环境
+}
+
+message UploadUserFileInfo
+{
+	optional string str_user_file_category = 1; //资源分类
+	optional string str_user_file_name = 2; //文件名 
+}
+
+//上传业务会话信息（做进度时有用）
+message UploadSession
+{
+	optional uint64 uint64_uid = 1;			//设备ID
+	optional uint32 uint32_cmd = 2;			//cmd
+	optional uint32 uint32_subcmd = 3;			//subcmd	
+	optional uint32 uint32_seq = 4;			//业务请求序列化
+	optional uint64 uint64_push_mid = 5;	//推送消息ID
+}
+
+message Innernet_UploadData
+{
+	optional bytes str_data_id = 1;	//数据ID，内部使用
+	optional bytes str_data = 2;	//上传的数据
+	optional bool b_gzip = 3;		//数据是否gzip压缩标志
+	optional bool b_nologin = 4; //数据上传是否不需要使用登录态，默认false需要使用 
+	optional bool b_nowifi = 5; //数据是否只在wifi环境下上传，默认false需要wifi才进行上传
+	optional uint32 uint32_timeout = 6; //超时时间毫秒，默认0(永久)
+	optional bool b_private = 7; //是否为私有数据
+	optional UploadUserFileInfo msg_user_file_info = 8; //用户文件信息，设置该参数后自动存储到用户文件目录下，并且删除资源缓存
+	optional UploadSession msg_session_info = 9;		//上传业务会话信息（做进度时有用）
+}
+
+enum UploadErrorCode
+{
+	UEC_OK = 0;
+	UEC_TIMEOUT = 1; //上传整体发生超时
+	UEC_BACKEND = 2; //后台发生错误
+}
+
+message Innernet_UploadFinish
+{
+	optional uint32 uint32_errorcode = 1; //错误码，参考UploadErrorCode
+	optional bytes str_data_id = 2;	//数据ID，内部使用
+	optional bytes str_data_md5 = 3;	//上传数据的md5
+	optional bytes str_data_uri = 4;	//上传数据完成的唯一标识
+}
+
+message Innernet_UploadProgress
+{
+	optional bytes str_data_id = 1;	//数据ID，内部使用
+	optional bytes str_data_md5 = 2;	//上传数据的md5
+	optional uint32 uint32_progress = 3;	//上传进度（万分比）
+}
+
+
+//////http下载操作///////
+
+enum DOWNLOAD_RESULT_CODE{
+	DRC_DOWNLOAD_OK = 1;		//下载成功
+//	DRC_DOWNLOAD_PAUSE = 2;		//暂停下载(目前不支持)
+	DRC_DOWNLOAD_STOP = 3;		//停止下载
+	DRC_DOWNLOAD_FAIL = 4;		//下载失败
+}
+
+//请求方法
+enum HttpMethod
+{
+	HTTP_METHOD_GET = 0;
+	HTTP_METHOD_POST = 1;
+}
+
+//保存类型
+enum SaveType
+{
+	SAVE_TYPE_MEMORY = 0; //内存临时存储
+	SAVE_TYPE_FILE = 1; //文件存储
+}
+
+
+//请求
+message Innernet_Req_HttpDownload
+{
+	optional string str_url = 1;				//下载URL
+	optional int32 int32_method	= 2;		//请求方法，参考HttpMethod
+	optional int32 int32_save_type = 3;		//存储方式，参考SaveType
+	optional bool b_need_wifi = 4;			//需要在wifi情况下进行下载
+	repeated string rpt_str_header = 5;		//http 头部信息
+	optional string str_define_param = 6;	//回传定义参数
+	optional string str_define_data = 7;	//回传定义数据
+	optional string str_cache_file_name = 8;	//cache文件名称
+	optional bool b_bcast_data = 9;			//广播下载数据内容
+}
+//回应
+message Innernet_Resp_HttpDownload
+{
+	optional int32 int32_result_code = 1;		//下载结果码如上：DOWNLOAD_RESULT_CODE
+	optional int32	int32_statuscode = 2;		//HTTP返回状态码
+	optional int32 int32_save_type = 3;			//存储方式，参考SaveType
+	optional bytes	str_data = 4;				//HTTP内容，SaveType为Memory时有效
+	optional string	str_file = 5;				//下载文件的存储路径，SaveType为File时有效
+	optional string str_url = 6;				//下载的URL
+	optional string str_define_param = 7;	//回传定义参数
+	optional string str_define_data = 8;	//回传定义数据
+}
+
+message File_DownloadCacheRecord
+{
+	optional string str_file_name = 1;		//存储的文件名称
+	optional string str_etag = 2;			//本文件在服务器上的etag
+	optional string str_url = 3;			//文件的下载url
+	optional uint64 uint64_total_size = 4;	//文件总大小
+}
+
+message HttpDownload_BCastData
+{
+	optional bytes str_data = 1;						//数据内容
+	optional uint32 uint32_range_begin = 2;	//数据的偏移位
+	optional uint64 uint64_total_size = 3;		//整体大小
+	optional string str_cache_file_name = 4;	//cache的文件名称
+}

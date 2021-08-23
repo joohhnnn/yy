@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/m112"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginLeft="@dimen/m32"
+    android:layout_marginTop="@dimen/m16"
+    android:layout_marginRight="@dimen/m32"
+    android:orientation="horizontal"
+    app:cardBackgroundColor="@color/base_dialog_bg"
+    app:cardCornerRadius="@dimen/m5"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_first_range"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/base_dialog_btn_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_first_logo"
+                    android:layout_width="@dimen/m32"
+                    android:layout_height="@dimen/m32"
+                    android:layout_marginLeft="@dimen/m24"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/window_default_icon" />
+
+                <TextView
+                    android:id="@+id/tv_first_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/m16"
+                    android:text="正在播放：根据你的收听喜好推荐的内容"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/base_tv_h5" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/iv_playing"
+                    android:layout_width="@dimen/m32"
+                    android:layout_height="@dimen/m32"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="window_playing.json"
+                    app:lottie_loop="true" />
+
+            </LinearLayout>
+
+            <View style="@style/Base_Divider_Horizontal" />
+
+            <LinearLayout
+                android:id="@+id/ll_second_range"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/base_dialog_btn_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_second_logo"
+                    android:layout_width="@dimen/m32"
+                    android:layout_height="@dimen/m32"
+                    android:layout_marginLeft="@dimen/m24"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/window_default_icon" />
+
+                <TextView
+                    android:id="@+id/tv_second_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/m16"
+                    android:text="上次收听：歌单《人间最美五月天》"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/base_tv_h5" />
+
+                <ImageView
+                    android:layout_width="@dimen/m32"
+                    android:layout_height="@dimen/m32"
+                    android:src="@drawable/window_play_icon" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View style="@style/Base_Divider_Vertical" />
+
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="@dimen/m112"
+            android:layout_height="match_parent"
+            android:background="@drawable/base_dialog_btn_bg"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/m10"
+            android:text="取消
+(10s)"
+            android:textSize="@dimen/base_tv_h5" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ChangeColorIconWithText">
+        <attr name="icon" format="reference" />
+        <attr name="icon_while" format="reference" />
+        <attr name="color_nor" format="color" />
+        <attr name="color_sel" format="color" />
+        <attr name="text" format="string" />
+        <attr name="text_size" format="dimension" />
+        <attr name="sel_background" format="color" />
+        <attr name="nor_background" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ViewPagerEx">
+        <attr name="allow_scroll" format="boolean" />
+    </declare-styleable>
+
+</resources>

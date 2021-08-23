@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--出票中-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ydp60">
+<!--出票中没有取消功能-->
+<!--                <ImageView-->
+<!--                    android:id="@+id/ivBack"-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:src="@drawable/back"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_marginLeft="15dp"/>-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出票中"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/sp24"
+                    android:textColor="@color/textColorPrimary"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/cardDividerColor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ydp10"
+                android:text="乘机人"
+                android:textSize="@dimen/sp20"
+                android:textColor="@color/textColorSecondary"
+                android:layout_marginLeft="@dimen/win_layout_card_padding_2x"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/ydp10"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/win_layout_card_padding_2x"
+                android:paddingRight="@dimen/win_layout_card_padding_2x">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/win_layout_card_padding_2x"
+                    android:text="小林"
+                    android:textSize="@dimen/sp24"
+                    android:textColor="@color/textColorPrimary"/>
+
+                <ProgressBar
+                    android:id="@+id/pbName"
+                    android:layout_width="@dimen/ydp30"
+                    android:layout_height="@dimen/ydp30"
+                    android:indeterminateDrawable="@drawable/xml_progressbar"/>
+
+                <ImageView
+                    android:id="@+id/ivStateName"
+                    android:layout_width="@dimen/ydp30"
+                    android:layout_height="@dimen/ydp30"
+                    android:layout_marginLeft="@dimen/win_layout_card_padding"
+                    android:src="@drawable/icon_success_01"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ydp20"
+                android:text="请确认航班信息"
+                android:textSize="@dimen/sp20"
+                android:textColor="@color/textColorSecondary"
+                android:paddingLeft="@dimen/win_layout_card_padding_2x"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/ydp10"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/win_layout_card_padding_2x"
+                android:paddingRight="@dimen/win_layout_card_padding_2x">
+
+                <TextView
+                    android:id="@+id/tvDepartureStation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/win_layout_card_padding_2x"
+                    android:text="T深圳"
+                    android:textSize="@dimen/sp24"
+                    android:textColor="@color/textColorPrimary"/>
+
+                <ImageView
+                    android:id="@+id/ivTrafficIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/ydp30"
+                    android:layout_marginLeft="@dimen/win_layout_card_padding"
+                    android:layout_marginRight="@dimen/win_layout_card_padding"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/airlines_to2"/>
+
+                <TextView
+                    android:id="@+id/tvArrivalStation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="北京T2"
+                    android:textSize="@dimen/sp24"
+                    android:textColor="@color/textColorPrimary"/>
+
+                <ProgressBar
+                    android:id="@+id/pbStation"
+                    android:layout_width="@dimen/ydp30"
+                    android:layout_height="@dimen/ydp30"
+                    android:indeterminateDrawable="@drawable/xml_progressbar"/>
+
+                <ImageView
+                    android:id="@+id/ivStateStation"
+                    android:layout_width="@dimen/ydp30"
+                    android:layout_height="@dimen/ydp30"
+                    android:layout_marginLeft="@dimen/win_layout_card_padding"
+                    android:src="@drawable/icon_success_01"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/win_layout_card_padding_2x"
+                android:paddingRight="@dimen/win_layout_card_padding_2x">
+
+                <TextView
+                    android:id="@+id/tvTicketNum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/win_layout_card_padding_2x"
+                    android:text="CZ7702"
+                    android:textSize="@dimen/sp24"
+                    android:textColor="@color/textColorPrimary"/>
+
+                <ProgressBar
+                    android:id="@+id/pbTicketNum"
+                    android:layout_width="@dimen/ydp30"
+                    android:layout_height="@dimen/ydp30"
+                    android:indeterminateDrawable="@drawable/xml_progressbar"/>
+
+                <ImageView
+                    android:id="@+id/ivStateTicketNum"
+                    android:layout_width="@dimen/ydp30"
+                    android:layout_height="@dimen/ydp30"
+                    android:layout_marginLeft="@dimen/win_layout_card_padding"
+                    android:src="@drawable/icon_success_01"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/ydp10"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/win_layout_card_padding_2x"
+                android:paddingRight="@dimen/win_layout_card_padding_2x">
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/win_layout_card_padding_2x"
+                    android:text="8月19日 20:15"
+                    android:textSize="@dimen/sp24"
+                    android:textColor="@color/textColorPrimary"/>
+
+                <ProgressBar
+                    android:id="@+id/pbTime"
+                    android:layout_width="@dimen/ydp30"
+                    android:layout_height="@dimen/ydp30"
+                    android:indeterminateDrawable="@drawable/xml_progressbar"/>
+
+                <ImageView
+                    android:id="@+id/ivStateTime"
+                    android:layout_width="@dimen/ydp30"
+                    android:layout_height="@dimen/ydp30"
+                    android:layout_marginLeft="@dimen/win_layout_card_padding"
+                    android:src="@drawable/icon_success_01"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/ydp10"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/win_layout_card_padding_2x"
+                android:paddingRight="@dimen/win_layout_card_padding_2x">
+
+                <TextView
+                    android:id="@+id/tvSeatName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/win_layout_card_padding_2x"
+                    android:text="经济舱"
+                    android:textSize="@dimen/sp24"
+                    android:textColor="@color/textColorPrimary"/>
+
+                <ProgressBar
+                    android:id="@+id/pbSeatName"
+                    android:layout_width="@dimen/ydp30"
+                    android:layout_height="@dimen/ydp30"
+                    android:indeterminateDrawable="@drawable/xml_progressbar"
+                    android:indeterminateOnly="true"
+                    android:indeterminateBehavior="repeat"/>
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/ivStateSeatName"-->
+<!--                    android:layout_width="30dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_marginLeft="@dimen/win_layout_card_padding"-->
+<!--                    android:src="@drawable/icon_success_01"/>-->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

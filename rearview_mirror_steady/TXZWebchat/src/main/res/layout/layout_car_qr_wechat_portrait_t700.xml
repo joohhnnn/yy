@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_car_qr_wechat_scan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <android.support.percent.PercentFrameLayout
+            android:id="@+id/fl_car_qr"
+            android:layout_centerHorizontal="true"
+            app:layout_aspectRatio="100%"
+            app:layout_marginTopPercent="26%"
+            app:layout_widthPercent="28.9%">
+
+            <ImageView
+                android:id="@+id/iv_car_qr_wechat_qrcode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/qr_portrait"
+                app:layout_marginPercent="5%"/>
+
+            <com.pnikosis.materialishprogress.ProgressWheel
+                android:id="@+id/pb_car_qr_wechat_progress"
+                android:layout_width="@dimen/y32"
+                android:layout_height="@dimen/y32"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:matProg_barColor="@color/color_accent"
+                app:matProg_barWidth="@dimen/y3"
+                app:matProg_progressIndeterminate="true"/>
+
+            <ImageView
+                android:id="@+id/view_car_qr_wechat_click_hint"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="@drawable/ic_push_login_arrow_down"
+                app:layout_aspectRatio="100%"
+                app:layout_widthPercent="10%"/>
+
+        </android.support.percent.PercentFrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_car_qr_wechat_scan_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fl_car_qr"
+            android:layout_centerHorizontal="true"
+            android:text="@string/lb_login_wechat_tip"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/x20"
+            app:layout_marginTopPercent="2.6%"/>
+
+        <TextView
+            android:id="@+id/tv_car_qr_wechat_qr_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_car_qr_wechat_scan_title"
+            android:layout_centerHorizontal="true"
+            android:text="@string/lb_login_wechat_error"
+            android:textColor="@color/color_wechat_text_error"
+            android:textSize="@dimen/x18"
+            android:visibility="visible"
+            app:layout_marginTopPercent="2.6%"/>
+
+        <FrameLayout
+            android:id="@+id/btn_car_qr_wechat_refresh"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_car_btn_portrait"
+            app:layout_aspectRatio="417%"
+            app:layout_marginBottomPercent="3.1%"
+            app:layout_widthPercent="26%">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/lb_login_wechat_refresh"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/x20"/>
+
+        </FrameLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_car_qr_wechat_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_car_qr_wechat_avatar"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_headimage"
+            android:scaleType="fitXY"
+            app:layout_aspectRatio="100%"
+            app:layout_marginTopPercent="27%"
+            app:layout_widthPercent="26%"
+            app:riv_corner_radius="@dimen/y8"/>
+
+        <TextView
+            android:id="@+id/tv_car_qr_wechat_confirm_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_car_qr_wechat_avatar"
+            android:layout_centerHorizontal="true"
+            android:text="@string/lb_login_wechat_scan_success"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/x20"
+            app:layout_marginTopPercent="5%"/>
+
+        <TextView
+            android:id="@+id/tv_car_qr_wechat_confirm_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_car_qr_wechat_confirm_title"
+            android:layout_centerHorizontal="true"
+            android:text="@string/lb_login_wechat_scan_success2"
+            android:textColor="@color/color_primary_dark"
+            android:textSize="@dimen/x18"
+            app:layout_marginTopPercent="2.3%"/>
+
+        <Button
+            android:id="@+id/btn_car_qr_confirm_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_car_qr_wechat_confirm_subtitle"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparent"
+            android:text="@string/lb_login_wechat_return"
+            android:textColor="@color/color_accent"
+            android:textSize="@dimen/x18"
+            app:layout_marginTopPercent="8%"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_car_qr_wechat_pick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <android.support.percent.PercentFrameLayout
+            android:id="@+id/fl_push_avatar"
+            android:layout_centerHorizontal="true"
+            app:layout_aspectRatio="100%"
+            app:layout_marginTopPercent="26%"
+            app:layout_widthPercent="28.9%">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_car_qr_wechat_picker_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/default_headimage"
+                app:layout_marginPercent="5%"
+                app:riv_corner_radius="@dimen/y8"/>
+
+            <ImageView
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="@drawable/ic_push_login_arrow_down"
+                app:layout_aspectRatio="100%"
+                app:layout_widthPercent="10%"/>
+
+        </android.support.percent.PercentFrameLayout>
+
+        <TextView
+            android:id="@+id/tv_car_qr_wechat_picker_confirm_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fl_push_avatar"
+            android:layout_centerHorizontal="true"
+            android:text="@string/lb_push_login_tip"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/x18"
+            app:layout_marginTopPercent="2.3%"/>
+
+        <FrameLayout
+            android:id="@+id/btn_car_qr_wechat_picker_confirm"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_car_btn_portrait"
+            app:layout_aspectRatio="417%"
+            app:layout_marginBottomPercent="3.1%"
+            app:layout_widthPercent="26%">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/lb_push_login_confirm_btn_text"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/x20"/>
+
+        </FrameLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</FrameLayout>

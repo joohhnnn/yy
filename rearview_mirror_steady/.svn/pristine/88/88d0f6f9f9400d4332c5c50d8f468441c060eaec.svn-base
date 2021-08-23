@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--乘客信息 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp60">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/mdp40"
+            android:layout_height="@dimen/mdp40"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="乘客信息"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/sp24"
+            android:textColor="@color/textColorPrimary"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/cardDividerColor"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/mdp20"
+                android:layout_marginTop="@dimen/ydp20"
+                android:layout_marginRight="@dimen/mdp20"
+                android:background="@drawable/xml_bg_form">
+
+<!--                <android.support.design.widget.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:hintTextAppearance="@style/hintAppearance"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    app:hintEnabled="true"-->
+<!--                    app:hintAnimationEnabled="true">-->
+
+<!--                    <EditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:paddingRight="20dp"-->
+<!--                        android:paddingTop="4dp"-->
+<!--                        android:paddingBottom="10dp"-->
+<!--                        android:hint="身份证的姓名"-->
+<!--                        android:textColorHint="@color/textColorSecondary"-->
+<!--                        android:background="#00000000"-->
+<!--                        android:textSize="24sp"-->
+<!--                        android:inputType="text"-->
+<!--                        android:singleLine="true"-->
+<!--                        android:textColor="@color/textColorPrimary"/>-->
+
+<!--                </android.support.design.widget.TextInputLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1px"-->
+<!--                    android:background="@color/listDividerColor"/>-->
+
+<!--                <android.support.design.widget.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:hintTextAppearance="@style/hintAppearance"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    app:hintEnabled="true"-->
+<!--                    app:hintAnimationEnabled="true">-->
+
+<!--                    <EditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:paddingRight="20dp"-->
+<!--                        android:paddingTop="4dp"-->
+<!--                        android:paddingBottom="10dp"-->
+<!--                        android:hint="身份证号码"-->
+<!--                        android:textColorHint="@color/textColorSecondary"-->
+<!--                        android:background="#00000000"-->
+<!--                        android:textSize="24sp"-->
+<!--                        android:textColor="@color/textColorPrimary"/>-->
+
+<!--                </android.support.design.widget.TextInputLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1px"-->
+<!--                    android:background="@color/listDividerColor"/>-->
+
+<!--                <android.support.design.widget.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:hintTextAppearance="@style/hintAppearance"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    app:hintEnabled="true"-->
+<!--                    app:hintAnimationEnabled="true">-->
+
+<!--                    <EditText-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:paddingRight="20dp"-->
+<!--                        android:paddingTop="4dp"-->
+<!--                        android:paddingBottom="10dp"-->
+<!--                        android:hint="手机号码"-->
+<!--                        android:textColorHint="@color/textColorSecondary"-->
+<!--                        android:background="#00000000"-->
+<!--                        android:textSize="24sp"-->
+<!--                        android:inputType="number"-->
+<!--                        android:textColor="@color/textColorPrimary"/>-->
+
+<!--                </android.support.design.widget.TextInputLayout>-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:paddingLeft="@dimen/mdp20"
+                    android:paddingRight="@dimen/mdp20"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textColorSecondary"
+                            android:text="身份证的姓名"
+                            android:textSize="@dimen/sp18"/>
+
+                        <TextView
+                            android:id="@+id/tvErrorName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="8dp"
+                            android:singleLine="true"
+                            android:ellipsize="start"
+                            android:textColor="#E64545"
+                            android:text=""
+                            android:textSize="@dimen/sp18"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:hint=""
+                        android:singleLine="true"
+                        android:textColor="@color/textColorPrimary"
+                        android:textColorHint="@color/textColorSecondary"
+                        android:textSize="@dimen/sp24" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/listDividerColor"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:paddingLeft="@dimen/mdp20"
+                    android:paddingRight="@dimen/mdp20"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textColorSecondary"
+                            android:text="身份证号码"
+                            android:textSize="@dimen/sp18"/>
+
+                        <TextView
+                            android:id="@+id/tvErrorIdCard"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="8dp"
+                            android:singleLine="true"
+                            android:ellipsize="start"
+                            android:textColor="#E64545"
+                            android:text=""
+                            android:textSize="@dimen/sp18"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvIdCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:hint=""
+                        android:singleLine="true"
+                        android:textColor="@color/textColorPrimary"
+                        android:textColorHint="@color/textColorSecondary"
+                        android:textSize="@dimen/sp24"
+                        android:maxLength="18"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/listDividerColor"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:paddingLeft="@dimen/mdp20"
+                    android:paddingRight="@dimen/mdp20"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textColorSecondary"
+                            android:text="手机号码"
+                            android:textSize="@dimen/sp18"/>
+
+                        <TextView
+                            android:id="@+id/tvErrorPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="8dp"
+                            android:singleLine="true"
+                            android:ellipsize="start"
+                            android:textColor="#FFE64545"
+                            android:text=""
+                            android:textSize="@dimen/sp18"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:hint=""
+                        android:singleLine="true"
+                        android:textColor="@color/textColorPrimary"
+                        android:textColorHint="@color/textColorSecondary"
+                        android:textSize="@dimen/sp24"
+                        android:maxLength="11"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/mdp20"
+                android:layout_marginRight="@dimen/mdp20"
+                android:layout_marginTop="@dimen/win_layout_card_padding">
+
+<!--                <include-->
+<!--                    layout="@layout/pre_train_ticket_user_info_seat_item"/>-->
+
+<!--                <include-->
+<!--                    layout="@layout/pre_train_ticket_user_info_seat_item"/>-->
+
+<!--                <include-->
+<!--                    layout="@layout/pre_train_ticket_user_info_seat_item"/>-->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnCommit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mdp50"
+        android:layout_marginLeft="@dimen/mdp20"
+        android:layout_marginRight="@dimen/mdp20"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="@dimen/mdp20"
+        android:text="提交"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/sp20"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/xml_bg_btn_commit_enable"/>
+
+</LinearLayout>

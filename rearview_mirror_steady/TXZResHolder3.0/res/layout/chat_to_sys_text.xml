@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRecord_Chat_Msg_Content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.txznet.comm.ui.theme.test.widget.PrinterTextView
+        android:id="@+id/txtChat_Msg_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="left|center_vertical"
+        android:lineSpacingMultiplier="1.2"
+        android:text="" />
+
+</LinearLayout>

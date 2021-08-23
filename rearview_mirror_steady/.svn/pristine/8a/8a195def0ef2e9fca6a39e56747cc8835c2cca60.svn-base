@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/list_item_height"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:id="@+id/cb_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/list_item_height"
+        android:layout_alignParentLeft="true"
+        android:paddingRight="@dimen/x16"
+        android:gravity="center">
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/cb_check"
+            android:layout_width="@dimen/m24"
+            android:layout_height="@dimen/m24"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/message_selector"
+            android:button="@null" />
+    </LinearLayout>
+
+    <!--这个收藏按钮-->
+    <ImageView
+        android:id="@+id/iv_favour"
+        android:layout_width="?attr/list_item_height"
+        android:layout_height="?attr/list_item_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="center"
+        android:src="@drawable/ic_not_favorite_small" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/list_text"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/list_item_height"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/iv_favour"
+        android:layout_toRightOf="@id/cb_layout"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/x16"
+        android:text="我和我的小伙伴们都惊呆了我和我的小伙伴们都惊呆了" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_alignParentBottom="true"
+        android:background="#4cFFFFFF" />
+</RelativeLayout>

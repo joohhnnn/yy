@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y67">
+
+    <ImageView
+        android:id="@+id/iv_item_car_session_select_indicator"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y67"
+        android:scaleType="fitXY"
+        android:background="@drawable/shape_car_session_list_bg_selected"/>
+
+    <ImageView
+        android:id="@+id/iv_item_car_session_focus_indicator"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y67"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_nav_indicator_rect"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_item_car_session_avatar"
+        android:layout_width="@dimen/y38"
+        android:layout_height="@dimen/y38"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x12"
+        android:src="@drawable/default_headimage"
+        app:riv_corner_radius="@dimen/y8"/>
+
+    <ImageView
+        android:id="@+id/iv_item_car_session_notify"
+        android:layout_width="@dimen/y38"
+        android:layout_height="@dimen/y67"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/wx_notification_deny"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/tv_item_car_session_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x14"
+        android:layout_toLeftOf="@id/iv_item_car_session_notify"
+        android:layout_toRightOf="@id/iv_item_car_session_avatar"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/x20"
+        tools:text="我擦勒"/>
+
+    <com.txznet.webchat.ui.rearview_mirror.widget.BadgeView
+        android:id="@+id/view_item_car_session_badge"
+        android:layout_width="@dimen/y22"
+        android:layout_height="@dimen/y22"
+        android:layout_alignLeft="@+id/iv_item_car_session_avatar"
+        android:layout_marginLeft="@dimen/y27"
+        android:layout_marginTop="@dimen/y6"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="@dimen/y8"
+        android:textStyle="bold"
+        tools:text="..."/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/iv_item_car_session_notify"
+        android:background="#33ffffff"/>
+</RelativeLayout>

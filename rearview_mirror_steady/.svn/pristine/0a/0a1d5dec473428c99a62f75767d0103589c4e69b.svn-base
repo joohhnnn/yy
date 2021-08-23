@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y98"
+    android:background="@drawable/widget_color"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/txtNum"
+        android:layout_width="@dimen/x46"
+        android:layout_height="@dimen/y46"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/x4"
+        android:background="@drawable/activity_search_tv_circle_bg"        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="1"
+        android:textColor="@color/nav_search_list_num"
+        android:textSize="35px" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:minHeight="@dimen/y84"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtContent"
+            style="@style/text_28"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x6"
+            android:layout_marginRight="@dimen/x6"
+            android:layout_marginTop="@dimen/y8"
+            android:ellipsize="end"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/txtDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x4"
+            android:layout_marginRight="@dimen/x4"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/list_second_text_color"
+            android:textSize="21px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSetOut"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="@dimen/y80"
+            android:layout_gravity="center_vertical"
+            android:background="@color/split_line" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/widget_color"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10" >
+
+            <TextView
+                android:id="@+id/txtSetOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/nav_search_list_set_out"
+                android:textSize="35px" />
+
+            <TextView
+                android:id="@+id/txtDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/nav_search_list_set_out"
+                android:textSize="21px" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

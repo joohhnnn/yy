@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/traffic_float_bg"
+        android:orientation="vertical"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp" >
+
+        <LinearLayout
+            android:id="@+id/float_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/y12"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:paddingTop="@dimen/y10" >
+
+            <ImageView
+                android:id="@+id/hc_icon_iv"
+                android:layout_width="@dimen/y70"
+                android:layout_height="@dimen/y70"
+                android:src="@drawable/traffic_icon_home" />
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/main_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="39分钟到家"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/y24" />
+
+                <TextView
+                    android:id="@+id/desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y2"
+                    android:singleLine="true"
+                    android:text="现在预计60分钟到家，拥堵500米"
+                    android:textColor="#B3FFFFFF"
+                    android:textSize="@dimen/y18" />
+
+                <LinearLayout
+                    android:id="@+id/traffic_ly"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y6"
+                    android:layout_marginTop="@dimen/y4"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/x1"
+                android:layout_height="@dimen/y60"
+                android:layout_marginLeft="@dimen/x20"
+                android:background="#80FFFFFF" />
+
+            <TextView
+                android:id="@+id/start_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:clickable="true"
+                android:drawableLeft="@drawable/tmc_start_nav_sel"
+                android:drawablePadding="@dimen/x5"
+                android:gravity="center"
+                android:text="开始导航"
+                android:textColor="@drawable/tmc_start_txt_sel"
+                android:textSize="@dimen/y22" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/toast_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y10"
+        android:background="@drawable/traffic_toast_bg"
+        android:gravity="center"
+        android:paddingBottom="@dimen/y10"
+        android:paddingLeft="@dimen/y26"
+        android:paddingRight="@dimen/y26"
+        android:paddingTop="@dimen/y10"
+        android:singleLine="true"
+        android:text="导航您可以直接说“开始导航”，退出提醒您可以说”取消“"
+        android:textColor="#FFF"
+        android:textSize="@dimen/y18"
+        android:visibility="gone" />
+
+</LinearLayout>

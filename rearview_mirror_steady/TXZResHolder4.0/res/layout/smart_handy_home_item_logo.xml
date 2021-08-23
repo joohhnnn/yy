@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        style="@style/smartHandyCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:src="@drawable/smart_handy_icon_mic"
+                style="@style/SmartHandyCardHeadIcon"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="形象选择"
+                style="@style/SmartHandyCardHeadTitle"/>
+
+            <ImageButton
+                android:id="@+id/imgBtnMore"
+                style="@style/SmartHandyCardHeadMore"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageButton
+                android:id="@+id/imgBtnPrev"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/smart_handy_icon_prepage_disable"
+                android:scaleType="centerCrop"
+                android:background="@drawable/xml_smart_handy_bg_rect"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo_frame_large_smile_8"/>
+
+            <ImageButton
+                android:id="@+id/imgBtnNext"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/smart_handy_icon_nextpage_able"
+                android:scaleType="centerCrop"
+                android:background="@drawable/xml_smart_handy_bg_rect"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvSkinName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="小T格格"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/sp18" />
+
+                <TextView
+                    android:id="@+id/tvSkinVip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="1dp"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:text="限免"
+                    android:textColor="#653200"
+                    android:textSize="10dp"
+                    android:background="@drawable/xml_smart_handy_bg_gold"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

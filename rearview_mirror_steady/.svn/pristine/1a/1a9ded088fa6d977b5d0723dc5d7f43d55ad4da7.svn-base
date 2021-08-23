@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:background="@drawable/base_bg">
+
+    <ImageView
+        android:layout_width="@dimen/m128"
+        android:layout_height="@dimen/m128"
+        android:src="@drawable/local_not_found_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m16"
+        android:text="当前没有本地音乐"
+        android:textColor="@color/white_50"
+        android:textSize="@dimen/base_tv_h4" />
+
+    <com.txznet.music.widget.AlphaButton
+        android:id="@+id/btn_scan"
+        android:layout_width="@dimen/m160"
+        android:layout_height="@dimen/m48"
+        android:layout_marginTop="@dimen/m16"
+        android:background="@drawable/base_btn_bg"
+        android:text="扫描音乐"
+        android:textSize="@dimen/base_tv_h4" />
+</LinearLayout>

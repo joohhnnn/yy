@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_radio_recommend_layout"
+    android:layout_width="@dimen/x180"
+    android:layout_height="@dimen/y80"
+    android:background="@color/bg_blur_filter"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="新闻早餐"
+        android:textSize="?attr/text_size_h3" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m1"
+        android:background="@color/half_white"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

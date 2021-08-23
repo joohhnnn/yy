@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_sim_recharge_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cc000000"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_sim_recharge_lb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/y30"
+        android:layout_marginTop="@dimen/x30"
+        android:text="请使用微信扫描二维码支付"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/x20" />
+
+    <TextView
+        android:id="@+id/tv_sim_recharge_lb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_toRightOf="@id/tv_sim_recharge_lb1"
+        android:text="当前套餐结束后将为您自动续上"
+        android:textColor="#44a9ff"
+        android:textSize="@dimen/x20"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/iv_sim_recharge_qr"
+            android:layout_width="@dimen/y300"
+            android:layout_height="@dimen/y300"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@drawable/shape_qrcode_back"
+            android:scaleType="centerInside" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_toRightOf="@id/iv_sim_recharge_qr"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_sim_recharge_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="@dimen/y36" />
+
+            <TextView
+                android:id="@+id/tv_sim_recharge_price_raw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:alpha="0.5"
+                android:textColor="#fff"
+                android:textSize="@dimen/y30" />
+
+            <TextView
+                android:id="@+id/tv_sim_recharge_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30"
+                android:textColor="#44a9ff"
+                android:textSize="@dimen/y60" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

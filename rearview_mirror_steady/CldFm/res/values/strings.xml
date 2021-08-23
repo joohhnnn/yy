@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">CLD_FM</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="string_mhz">MHz</string>
+    <string name="string_fm_opened">FM发射已打开</string>
+    <string name="string_fm_closed">FM发射已关闭</string>
+
+</resources>

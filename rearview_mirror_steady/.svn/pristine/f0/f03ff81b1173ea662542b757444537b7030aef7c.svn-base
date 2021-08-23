@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--远程绑定帮助页面文字内容-->
+    <string-array name="arr_bind_reason">
+       <!-- <item>无需扫描二维码，只需要通过公众号即可快速登陆车载微信</item>-->
+        <item>无论距离您的爱车多远，快速定位爱车位置，查看爱车情况</item>
+        <item>好友通过公众号，将位置分享到设备，一键去接送好友</item>
+        <item>便捷地查看您爱车的行驶轨迹，每天都经过了哪里</item>
+    </string-array>
+
+    <string-array name="arr_bind_reason_title">
+        <!--<item>快速登陆</item>-->
+        <item>爱车情况</item>
+        <item>一键接送</item>
+        <item>行驶轨迹</item>
+    </string-array>
+</resources>

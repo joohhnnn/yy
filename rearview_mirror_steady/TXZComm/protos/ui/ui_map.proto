@@ -1,0 +1,106 @@
+//地图相关事件和数据
+
+package com.txz.ui.map;
+
+enum SubEvent
+{
+	SUBEVENT_MAP_NAVIGATE_BY_NAME = 0x1; //通过名称导航，携带目的地NavigateInfo
+	SUBEVENT_MAP_NAVIGATE_BY_GPS = 0x2; //通过GPS位置导航，携带数据NavigateInfo
+	SUBEVENT_MAP_NAVIGATE_HOME = 0x3; //导航回家，选择性携带数据NavigateInfo，携带了表明设置新的地址
+	SUBEVENT_MAP_NAVIGATE_COMPANY = 0x4; //导航到公司，选择性携带数据NavigateInfo，携带了表明设置新的地址
+	SUBEVENT_MAP_NAVIGATE_NEARBY = 0x5; //周边搜索，携带NearbySearchInfo
+	SUBEVENT_MAP_NAVIGATE_BUSSINESS = 0x6; //商圈搜索，携带NearbySearchInfo
+}
+
+
+/////////////////////////////////////////////////////////////////////
+
+enum GpsType
+{
+	GPS_TYPE_WGS84 = 1; //WGS84坐标，设备采集的
+	GPS_TYPE_GCJ02   = 2; //GCJ02坐标，国家安全加密
+	GPS_TYPE_BD09    = 3; //BD09坐标，百度地图私有
+}
+
+//GPS信息
+message GpsInfo
+{
+	optional uint32 uint32_gps_type = 1; //GPS类型，统一转为GPS_TYPE_GCJ02传递给native
+	optional double dbl_lat                = 2; //GPS纬度
+	optional double dbl_lng               = 3; //GPS经度
+	optional float    flt_direction         = 4; //方向
+	optional float    flt_speed             = 5; //速度
+	optional double dbl_altitude         = 6; //高度
+	optional float    flt_radius             = 7; //经度半径
+}
+
+//地理信息
+message GeoInfo
+{
+    optional string str_addr         = 1; //详细地址信息
+	optional string str_provice     = 2; //省份
+	optional string str_city           = 3; //城市名
+	optional string str_city_code  = 4; //城市编码
+	optional string str_district      = 5; //区/县信息
+	optional string str_street        = 6; //街道信息
+	optional string str_street_num = 7; //街道号码
+}
+
+//位置信息
+message LocationInfo
+{
+	optional uint32   uint32_time    = 1; //位置取得的时间
+	optional GpsInfo msg_gps_info = 2; //GPS信息
+	optional GeoInfo msg_geo_info = 3; //地理信息
+}
+
+enum ServerPushNatigationType{
+	NT_NATIGATION = 0;					//普通导航
+	NT_MULTI_NATIGATION = 1;		//多人同行导航
+}
+
+//多车同行信息
+message ServerPushNavigateInfo
+{
+	optional uint64 uint64_from_uid				= 4;	//发起导航的UID
+	optional string str_from_wx_nick 				= 5;	//发起导航的微信昵称
+	optional uint32 uint32_time						= 6;	//发起导航时间
+	optional string str_from_face_url				= 7;	//头像url地址
+	optional uint32 uint32_type						= 8;	//导航类型 ServerPushNatigationType
+	optional uint32 uint32_room_from_type 	= 9;	//uint32_type=NT_MULTI_NATIGATION有效，多车同行来源类型
+	optional uint64 uint64_room_id 				= 10;	//uint32_type=NT_MULTI_NATIGATION有效，多车同行房间ID
+	optional string str_to_wx_nick 					= 11; 	//uint32_type=NT_MULTI_NATIGATION有效，本人的微信昵称
+	optional string str_to_face_url 					= 12; 	//uint32_type=NT_MULTI_NATIGATION有效，本人的微信头像
+}
+
+
+//导航信息
+message NavigateInfo
+{
+	optional string str_target_name  = 1; //目的地名字，交叉路口名称
+	optional string str_target_address = 2; // 目的地址
+	optional GpsInfo msg_gps_info  = 3; //目的地gps信息 
+	optional string str_target_city = 4; //目标城市名
+	optional string str_country = 5; //国家名
+	optional string str_province = 6; //省名
+	optional string str_area = 7; //区镇
+	optional string str_region = 8; //区域，社区
+	optional string str_street = 9; //街道
+	optional ServerPushNavigateInfo msg_server_push_info = 10; //后台push导航信息   
+}
+
+//导航信息列表
+message NavigateInfoList
+{
+	repeated NavigateInfo rpt_msg_item = 1; //导航信息列表
+}
+
+
+//周边搜索信息
+message NearbySearchInfo
+{
+	optional string str_keywords = 1; //关键字
+	optional uint32 uint32_radius = 2; //搜索半径
+	optional string str_center_city = 3; //搜索目标中心城市，如搜索世界之窗附近的咖啡厅
+	optional string str_center_poi = 4; //搜索目标中心关键字，如搜索世界之窗附近的咖啡厅
+}

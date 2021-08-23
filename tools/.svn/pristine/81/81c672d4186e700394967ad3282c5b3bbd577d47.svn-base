@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="txz_sdk_init_app_id">10a35f97df284615ffeae871ab28a7fb</string>
+    <string name="txz_sdk_init_app_token">2f13defe81336877e433f3e408e1e78bd056f479</string>
+    <string-array name="txz_sdk_init_wakeup_keywords">
+        <item>你好衣狗</item>
+    </string-array>
+
+</resources>

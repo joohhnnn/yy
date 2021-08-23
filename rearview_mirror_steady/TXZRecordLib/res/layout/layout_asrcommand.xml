@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1c1f23" 
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y90"
+            android:background="#131519"
+            android:gravity="center_vertical" >
+
+			<TextView
+	            android:id="@+id/imgbnt_backToSetting"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_marginLeft="@dimen/x10"
+	            android:textSize="@dimen/y26"
+	            android:gravity="center_vertical"
+	            android:drawablePadding="@dimen/y8"
+	            android:textColor="#CCFFFFFF"
+	            android:text="@string/label_setting_back"
+	            android:drawableLeft="@drawable/txz_back"/>
+			
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/label_asrcmd_title"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/y28" />
+
+            
+        </RelativeLayout>
+
+        <com.txznet.record.setting.ListViewForScrollView
+            android:id="@+id/lv_command"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/layout_addcommand"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:background="@drawable/bgcolor_change"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/imgbnt_add"
+                android:layout_width="@dimen/y40"
+                android:layout_height="@dimen/y40"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_add" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_toRightOf="@+id/imgbnt_add"
+                android:gravity="center_vertical"
+                android:text="@string/label_asrcmd_add"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/y26" />
+        </RelativeLayout>
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:background="#454545" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">TXZTXZCar</string>
+    <!-- activity_preview -->
+    <string name="activity_preview_rb_recommand_text">推荐</string>
+    <string name="activity_preview_rb_toll_text">少收费</string>
+    <string name="activity_preview_rb_dist_text">少路程</string>
+    <string name="activity_preview_start_nav_text">开始导航</string>
+    <string name="activity_preview_cal_nav_text">正在算路...</string>
+
+</resources>

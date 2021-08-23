@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/y5"
+                android:paddingRight="@dimen/x32"
+                android:paddingTop="@dimen/y5">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_car_chat_msg_usericon"
+        android:layout_width="@dimen/x60"
+        android:layout_height="@dimen/x60"
+        android:layout_marginTop="6px"
+        android:layout_marginBottom="8px"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/default_headimage"
+        app:riv_corner_radius="@dimen/y8"/>
+
+    <com.txznet.webchat.ui.rearview_mirror.widget.BubbleRelativeLayout
+        android:id="@+id/view_car_chat_msg_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/iv_car_chat_msg_usericon"
+        android:layout_marginLeft="@dimen/x50"
+        android:paddingLeft="25px"
+        android:paddingRight="40px"
+        android:paddingTop="6px"
+        android:paddingBottom="6px"
+        app:cbv_top_src="@drawable/src_bubble_right_top"
+        app:cbv_arrow_src="@drawable/src_bubble_right_arrow"
+        app:cbv_bottom_src="@drawable/src_bubble_right_bottom"
+        app:cbv_top_src_pressed="@drawable/src_bubble_right_top_pressed"
+        app:cbv_arrow_src_pressed="@drawable/src_bubble_right_arrow_pressed"
+        app:cbv_bottom_src_pressed="@drawable/src_bubble_right_bottom_pressed"
+        app:cbv_arrow_position="@dimen/x36"
+        app:cbv_arrow_height="14px">
+
+        <TextView
+            android:id="@+id/tv_car_chat_msg_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/x60"
+            android:paddingTop="@dimen/x14"
+            android:paddingBottom="@dimen/x14"
+            android:textColor="@color/color_chat_item_text"
+            android:textSize="@dimen/x20"
+            tools:text="."/>
+
+        <FrameLayout
+            android:id="@+id/fl_car_chat_voice_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x60"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_car_chat_voice_indicator"
+                android:layout_width="@dimen/x21"
+                android:layout_height="@dimen/x21"
+                android:layout_marginLeft="@dimen/x60"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/src_voice_right"/>
+
+        </FrameLayout>
+
+    </com.txznet.webchat.ui.rearview_mirror.widget.BubbleRelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_car_chat_msg_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_car_chat_msg_bg"
+        android:layout_alignRight="@id/view_car_chat_msg_bg"
+        android:layout_marginTop="2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_marginRight="20px"
+        android:background="@drawable/selector_message_action_btn_left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_chat_item_text"
+            android:textSize="@dimen/x14"
+            android:text="导航过去"/>
+    </FrameLayout>
+
+</RelativeLayout>

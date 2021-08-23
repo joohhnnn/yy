@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/y90"
+    android:orientation="horizontal" >
+
+    <com.txznet.nav.ui.widget.CircleImageView
+        android:id="@+id/user_head_civ"
+        android:layout_width="@dimen/x64"
+        android:layout_height="@dimen/y64"
+        android:layout_marginLeft="@dimen/x10"
+        android:src="@drawable/default_headimage" />
+
+    <TextView
+        android:id="@+id/user_name_tv"
+        android:layout_width="@dimen/x120"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x20"
+        android:singleLine="true"
+        android:textColor="#adb6cc"
+        android:textSize="26px" />
+
+    <View
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/distance_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0092ff"
+        android:textSize="32px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KM/大约"
+        android:textColor="#adb6cc"
+        android:textSize="26px" />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0092ff"
+        android:textSize="32px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/x10"
+        android:text="min"
+        android:textColor="#adb6cc"
+        android:textSize="26px" />
+
+</LinearLayout>

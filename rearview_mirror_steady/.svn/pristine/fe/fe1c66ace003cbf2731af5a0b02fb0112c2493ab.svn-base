@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frmMessageBox_Blank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:focusable="true" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/win_messagebox_bg" >
+
+        <LinearLayout
+            android:id="@+id/llMessageBox_shadow"
+            android:layout_width="@dimen/x318"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:divider="@drawable/divider_h"
+            android:showDividers="middle"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtMessageBox_Title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y54"
+                android:gravity="center"
+                android:textColor="@color/win_dialog_text"
+                android:textSize="@dimen/y27"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/y127" >
+
+                <TextView
+                    android:id="@+id/txtMessageBox_Message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxHeight="@dimen/y147"
+                    android:padding="@dimen/y18"
+                    android:textColor="@color/win_dialog_text"
+                    android:textSize="@dimen/y22"
+                    android:visibility="gone" />
+
+                <ListView
+                    android:id="@+id/lvMessageBox_Message"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y150"
+                    android:divider="@null"
+                    android:overScrollMode="never"
+                    android:padding="@dimen/y12"
+                    android:textColor="@color/win_dialog_text"
+                    android:visibility="gone" />
+
+                <ScrollView
+                    android:id="@+id/slMessageBox_Scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y190"
+                    android:overScrollMode="never"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/txtMessageBox_Scroll_Message"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/y10"
+                        android:textColor="@color/win_dialog_text"
+                        android:textSize="@dimen/y24"
+                        android:visibility="gone" />
+                </ScrollView>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/llMessageBox_Buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider_v"
+                android:orientation="horizontal"
+                android:showDividers="middle" >
+
+                <Button
+                    android:id="@+id/btnMessageBox_Button1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/y52"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/comm_win_messagebox_btn_bg_left"
+                    android:gravity="center"
+                    android:textColor="@color/win_messagebox_sure_text_color"
+                    android:textSize="@dimen/y21"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnMessageBox_Button3"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/y52"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/comm_win_messagebox_btn_bg_left"
+                    android:gravity="center"
+                    android:textColor="@color/win_messagebox_sure_text_color"
+                    android:textSize="@dimen/y21"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnMessageBox_Button2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/y52"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/comm_win_messagebox_btn_bg_right"
+                    android:gravity="center"
+                    android:textColor="@color/win_messagebox_cancel_text_color"
+                    android:textSize="@dimen/y21"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

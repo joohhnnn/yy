@@ -1,0 +1,2 @@
+修改了packageid的aapt
+解决皮肤包加载进core里面资源id冲突的问题

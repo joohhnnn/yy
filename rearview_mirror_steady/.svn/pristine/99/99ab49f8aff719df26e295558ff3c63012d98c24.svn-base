@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2px"
+        android:singleLine="true"
+        android:text="Wi-Fi热点"
+        android:textColor="#FFFFFFFF"
+        android:textSize="@dimen/dimen_text_size_settings_ap_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/list_item_range_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/iv_settings_ap_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_settings_ap_on"/>
+
+        <TextView
+            android:id="@+id/tv_settings_ap_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2px"
+            android:gravity="center_horizontal"
+            android:text="已开启"
+            android:textColor="@color/color_settings_ap_status_on"
+            android:textSize="@dimen/dimen_text_size_settings_ap_status"/>
+
+        <TextView
+            android:id="@+id/tv_settings_ap_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13px"
+            android:gravity="center_horizontal"
+            android:text="Personal hot spot"
+            android:textColor="@color/color_settings_ap_name"
+            android:textSize="@dimen/dimen_text_size_settings_ap_name"/>
+
+        <TextView
+            android:id="@+id/tv_settings_ap_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密码：123dj232"
+            android:layout_marginTop="7px"
+            android:gravity="center_horizontal"
+            android:textColor="@color/color_settings_ap_password"
+            android:textSize="@dimen/dimen_text_size_settings_ap_password"
+            />
+    </LinearLayout>
+</LinearLayout>

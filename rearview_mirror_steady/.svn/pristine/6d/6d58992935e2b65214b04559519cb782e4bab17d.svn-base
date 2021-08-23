@@ -1,0 +1,162 @@
+package com.txznet.music.ui.tab;
+
+import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.dinuscxj.itemdecoration.GridOffsetsItemDecoration;
+import com.txznet.music.GlideApp;
+import com.txznet.music.R;
+import com.txznet.music.action.PlayerActionCreator;
+import com.txznet.music.data.entity.Album;
+import com.txznet.music.data.entity.PageItemData;
+import com.txznet.music.data.entity.PageItemDataGroup;
+import com.txznet.music.util.adapter.RecyclerAdapter;
+import com.txznet.rxflux.Operation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 音乐精选页 - 内部分页版本
+ *
+ * @author zackzhou
+ * @date 2019/1/7,10:50
+ */
+
+public class MusicChoiceTab {
+
+    private Context mCtx;
+
+    private RecyclerAdapter<PageItemData> mMusicChoiceAdapter;
+    private RecyclerView mRecyclerView;
+    private GridLayoutManager mLayoutManager;
+    private List<PageItemData> mMusicChoiceList = new ArrayList<>(0);
+    private int mPageIndex = -1;
+    private GridOffsetsItemDecoration mDecoration;
+
+    public MusicChoiceTab(Context ctx) {
+        this.mCtx = ctx;
+        for (int i = 0; i < 8; i++) {
+            mMusicChoiceList.add(null);
+        }
+    }
+
+    /**
+     * 初始化tab页
+     */
+    public void bindTab(@NonNull RecyclerView.ViewHolder holder) {
+        holder.itemView.findViewById(R.id.btn_choice_switch).setOnClickListener(v -> nextPage());
+        mRecyclerView = holder.itemView.findViewById(R.id.rv_choice);
+        if (mLayoutManager == null) {
+            int spanCount = mMusicChoiceList.size() / 2;
+            if (spanCount > 4) {
+                spanCount = 4;
+            }
+            mLayoutManager = new GridLayoutManager(mCtx, spanCount, GridLayoutManager.VERTICAL, false) {
+                @Override
+                public boolean isAutoMeasureEnabled() {
+                    return true;
+                }
+            };
+
+            mRecyclerView.setLayoutManager(mLayoutManager);
+        }
+        if (mMusicChoiceAdapter == null) {
+            mMusicChoiceAdapter = new RecyclerAdapter<PageItemData>(mCtx, getNextPage(), R.layout.home_recycle_item_choice) {
+                @Override
+                public void convert(RecyclerAdapter.ViewHolder holder, int position, PageItemData item) {
+                    if (item != null) {
+                        ImageView iv_logo = (ImageView) holder.getView(R.id.iv_logo);
+                        TextView tv_name = (TextView) holder.getView(R.id.tv_name);
+
+                        GlideApp.with(mCtx).load(item.logo).error(R.drawable.home_default_cover_icon_normal).into(iv_logo);
+                        tv_name.setVisibility(View.VISIBLE);
+                        tv_name.setText(item.name);
+
+                        holder.itemView.setOnClickListener(v -> {
+                            Album album = new Album();
+                            album.name = item.name;
+                            album.sid = item.sid;
+                            album.id = item.id;
+                            album.arrArtistName = item.arrArtistName;
+                            album.albumType = item.albumType;
+                            album.logo = item.logo;
+                            PlayerActionCreator.get().playAlbum(Operation.MANUAL, album);
+                        });
+                    }
+                }
+            };
+            mRecyclerView.setAdapter(mMusicChoiceAdapter);
+        }
+
+        if (mDecoration == null) {
+            mDecoration = new GridOffsetsItemDecoration(GridOffsetsItemDecoration.GRID_OFFSETS_VERTICAL);
+            mDecoration.setOffsetEdge(false);
+            mDecoration.setOffsetLast(false);
+            mDecoration.setHorizontalItemOffsets(mCtx.getResources().getDimensionPixelOffset(R.dimen.m12));
+            mDecoration.setVerticalItemOffsets(mCtx.getResources().getDimensionPixelOffset(R.dimen.m12));
+            mRecyclerView.addItemDecoration(mDecoration);
+        }
+    }
+
+    /**
+     * 刷新数据
+     */
+    public void refreshData(PageItemDataGroup data) {
+        if (data != null && data.arrAlbum != null) {
+            if (data.arrAlbum.size() <= 8) {
+                mMusicChoiceList = data.arrAlbum;
+            } else {
+                mMusicChoiceList = data.arrAlbum.subList(0, data.arrAlbum.size() / 8 * 8);
+            }
+            nextPage();
+        }
+    }
+
+    /**
+     * 下一页
+     */
+    public void nextPage() {
+        if (mMusicChoiceAdapter != null) {
+            mMusicChoiceAdapter.refresh(getNextPage());
+            mMusicChoiceAdapter.notifyDataSetChanged();
+        }
+    }
+
+    private List<PageItemData> getNextPage() {
+        List<PageItemData> subList;
+        if (mMusicChoiceList.size() < 8) {
+            int spanCount = mMusicChoiceList.size() / 2;
+            if (mLayoutManager != null) {
+                mLayoutManager.setSpanCount(spanCount);
+            }
+            subList = mMusicChoiceList.subList(0, mMusicChoiceList.size() / 2 * 2);
+        } else {
+            mPageIndex++;
+            int start = mPageIndex * 2 * 4 % mMusicChoiceList.size();
+            int end = start + 2 * 4;
+            if (end > mMusicChoiceList.size()) {
+                end = mMusicChoiceList.size();
+                mPageIndex = -1;
+            }
+            if (mLayoutManager != null) {
+                mLayoutManager.setSpanCount(4);
+            }
+            subList = mMusicChoiceList.subList(start, end);
+        }
+
+        List<PageItemData> sortList = new ArrayList<>();
+        for (int i = 0; i < subList.size(); i += 2) {
+            sortList.add(subList.get(i));
+        }
+        for (int i = 1; i < subList.size(); i += 2) {
+            sortList.add(subList.get(i));
+        }
+        return sortList;
+    }
+}

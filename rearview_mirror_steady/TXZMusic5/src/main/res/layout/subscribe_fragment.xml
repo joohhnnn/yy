@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_bg"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/base_include" />
+
+    <Button
+        android:id="@+id/btn_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="随机增加几条数据"
+        android:visibility="gone" />
+
+
+    <!--  <android.support.v7.widget.RecyclerView
+          android:id="@+id/rv_data"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"/>-->
+
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/rv_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/m48"
+        android:layout_marginRight="@dimen/m48"
+        app:layout_empty="@layout/subscribe_empty_view"
+        app:layout_error="@layout/view_error"
+        app:scrollbars="none" />
+
+</LinearLayout>

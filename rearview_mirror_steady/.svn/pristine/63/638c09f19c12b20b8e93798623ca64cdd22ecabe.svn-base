@@ -1,0 +1,147 @@
+package com.txz.music_manager;
+
+import "ui_music.proto";
+
+//基础指令枚举
+enum SubCommand
+{
+	SUBCMD_MUSIC_DOWNLOAD_LIST = 1; //获取下载列表，携带xxx_DownloadList
+	SUBCMD_MUSIC_GET_DESC_LIST = 2;		//获取音乐文件的描述信息
+	SUBCMD_MUSIC_SEARCH = 3;		//搜索音乐
+	SUBCMD_MUSIC_GET_CATEGORY_LIST = 4; //获取分类的歌曲列表
+	SUBCMD_MUSIC_GET_SONG_LIST_BY_CATEGORY = 5; //获取分类的歌曲列表
+	
+	SUBCMD_MUSIC_FM_SEARCH = 6;	//FM搜索
+}
+
+
+//错误码
+enum ErrorCode
+{
+	EC_SAVE_ERR 				= 6001;  //...
+	EC_NEED_INSTALL_QQ_MUSIC = 6002;	//需要安装QQ音乐
+	EC_NEED_INSTALL_KAOLA_FM = 6003;	//需要安装考拉FM
+	EC_NEED_INSTALL_FM_OR_MUSIC_APP = 6004;	//需要安装音乐或FM应用
+}
+
+
+
+message MusicSinger{
+	optional uint32 uint32_id = 1;	//歌手ID
+	optional string str_name = 2;	//歌手名称
+}
+
+message MusicRecord{
+	optional uint32 uint32_song_id = 1;			//歌曲ID
+	optional string str_song_name = 2;			//歌曲名称
+	optional uint32 uint32_album_id = 3;		//专辑ID
+	optional string str_album_name = 4;			//专辑名称	
+	repeated MusicSinger rpt_msg_singer = 5;	//歌手列表
+	repeated string rpt_str_tags = 6;			//标签列表
+	optional bool b_local	= 7;				//是否是本地文件（通过服务器下载的不算）
+	optional string str_mmid = 8;				//下载ID
+	optional string str_path = 9;								//本地存储路径
+	optional bool b_favourite = 10;							//音乐收藏标志位
+	optional uint32 uint32_download_type = 11;	//下载方式（0：qqmusic下载; 1：直接下载）
+	optional string str_package_name = 12;					//数据来源的app包名
+	optional string str_url = 13;	//下载url
+}
+
+//音乐分类信息
+message MusicCategory{
+	optional uint32 uint32_id = 1;					//分类
+	optional string str_name = 2;					//名称
+	optional uint32 uint32_song_cnt = 3;		//歌曲数量
+	optional uint32 uint32_update_time = 4;	//更新时间
+}
+
+
+//获取音乐文件的描述信息(请求包)
+message Req_GetDescription
+{
+	repeated com.txz.ui.music.MediaModel rpt_music_list = 1;				//上传本地已下载文件
+}
+//获取音乐文件的描述信息(回应包)  
+message Resp_GetDescription
+{
+	optional bool b_ok = 1;													//成功与否
+	repeated com.txz.ui.music.MediaModel rpt_music_list = 2;				//需要下载的音乐列表()
+}
+ 
+
+//获取音乐下载列表(请求包)
+message Req_DownloadList
+{
+	repeated MusicRecord rpt_music_list = 1;				//上传本地已下载文件
+}
+//获取音乐下载列表(回应包)  
+message Resp_DownloadList
+{
+	optional bool b_ok = 1;									//成功与否
+	repeated MusicRecord rpt_music_list = 2;				//需要下载的音乐列表()
+	repeated MusicRecord rpt_del_list = 3;					//需要删除的音乐列表
+}
+
+//搜索音乐(请求包)
+message Req_Search
+{
+	optional com.txz.ui.music.MediaModel msg_search_filter = 1; //搜索过滤器
+}
+//搜索音乐(回应包)  
+message Resp_Search
+{
+	optional bool b_ok = 1;											//成功与否
+	repeated MusicRecord rpt_music_list = 2;				//搜索结果的音乐列表
+	optional com.txz.ui.music.MediaModel msg_search_filter = 3; 		//搜索过滤器
+}
+
+//搜索音乐(请求包)
+message Req_FMSearch
+{
+	optional com.txz.ui.music.MediaModel msg_search_filter = 1; //搜索过滤器
+	repeated string rpt_str_app_list = 2;		//安装的音乐或电台列表
+}
+//搜索音乐(回应包)  
+message Resp_FMSearch
+{
+	optional bool b_ok = 1;											//成功与否
+	repeated MusicRecord rpt_music_list = 2;				//搜索结果的音乐列表
+	optional com.txz.ui.music.MediaModel msg_search_filter = 3; 		//搜索过滤器
+}
+
+//获取榜单列表
+message Req_GetCategoryList
+{
+	
+}
+message Resp_GetCategoryList
+{
+	repeated MusicCategory rpt_category_list = 1;	//分类列表
+}
+
+//获取分类的歌曲列表
+message Req_GetSongListByCategory
+{
+	optional uint32 uint32_id = 1;						//分类ID
+	optional uint32 uint32_page_no = 2;			//获取第几页的列表
+	optional uint32 uint32_count_of_page = 3;	//每页的歌曲数量
+}
+message Resp_GetSongListByCategory
+{
+	optional uint32 uint32_id = 1;						//分类ID
+	repeated MusicRecord rpt_music_list = 2;		//分类的音乐列表
+	optional uint32 uint32_total_count = 3;									//总歌曲数量
+	optional uint32 uint32_page_no = 4;										//当前页码
+	optional uint32 uint32_count_of_page = 5;								//每页的歌曲数量
+}
+
+
+message File_Category
+{
+	optional MusicCategory msg_category_info = 1;
+	repeated MusicRecord rpt_music_list = 2;
+}
+message File_CategoryList
+{
+	repeated File_Category rpt_category_list = 1;
+}

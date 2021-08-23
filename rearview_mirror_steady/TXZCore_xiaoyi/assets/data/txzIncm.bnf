@@ -1,0 +1,45 @@
+#BNF+IAT 1.0 UTF-8;
+
+!grammar %GRAMMAR_ID%;
+
+!slot <preActive>;
+!slot <prePassive>;
+!slot <prePlease>;
+
+!slot <incmY>;
+!slot <incmN>;
+!slot <incmSec>;
+!slot <incmOff>;
+!slot <incmCmd>;
+!slot <incmSuffix>;
+
+!start <txzStart>;
+
+//////////////////////////////////////命令开始//////////////////////////////////////
+
+<txzStart>:<incmStart>;
+
+//////////////////////////////////////前缀相关//////////////////////////////////////
+
+<preAll>:<preActive>|<preAllPls>;
+<preAllPls>:[<prePlease>]<prePassive>;
+
+<preActive>:我;
+<prePassive>:帮我|替我|给我|帮|帮忙|你给我|你替我|你;
+<prePlease>:请|麻烦;
+
+//////////////////////////////////////来点选择相关//////////////////////////////////////
+
+<incmStart>:[<preAll>]<incmTar>[<incmSuffix>];
+
+<incmTar>:<incmSel>|<incmCmd>|<incmCat>;
+<incmCat>:[<incmSel>]<incmCmd>;
+<incmSel>:<incmY>|<incmN>|<incmSec>|<incmOff>;
+<incmY>:是|确定|好|要|想;
+<incmN>:否|取消|不好|不要|不想|别|不接;
+<incmSec>:私密;
+<incmOff>:拒绝|拒接|挂掉|挂断|掐断|掐掉;
+
+<incmCmd>:接|听|接听|接受;
+<incmSuffix>:电话;
+

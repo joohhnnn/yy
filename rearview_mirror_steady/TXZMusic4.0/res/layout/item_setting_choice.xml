@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_push"
+    style="@style/setting_item">
+
+    <TextView
+        android:id="@+id/tv_left_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="left|center_vertical"
+        android:text="@string/str_close_push_msg_init"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/m22" />
+
+    <ImageView
+        android:id="@+id/iv_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y80"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/setting_switch_on" />
+</RelativeLayout>

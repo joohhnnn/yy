@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_user_picker_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cc000000">
+
+    <com.txznet.webchat.ui.base.widgets.FocusRecyclerView
+        android:id="@+id/rv_user_picker_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y150"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal" />
+
+</RelativeLayout>

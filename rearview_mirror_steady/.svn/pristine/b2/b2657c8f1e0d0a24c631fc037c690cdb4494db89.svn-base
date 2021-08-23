@@ -1,0 +1,123 @@
+package com.txz.ui.music;
+
+import "ui_audio.proto";
+
+enum SubEvent {
+	SUBEVENT_MEDIA_PLAY = 0x1;
+	SUBEVENT_MEDIA_PAUSE = 0x2;
+	SUBEVENT_MEDIA_NEXT = 0x3;
+	SUBEVENT_MEDIA_PREV = 0x4;
+	SUBEVENT_MEDIA_RANDOM = 0x5;
+	SUBEVENT_MEDIA_MODE_LOOP_SINGLE = 0x6;
+	SUBEVENT_MEDIA_MODE_LOOP_ALL = 0x7;
+	SUBEVENT_MEDIA_MODE_RANDOM = 0x8;
+	SUBEVENT_MEDIA_PLAY_ONLY = 0x9;
+	SUBEVENT_MEDIA_DELETE = 0x10;		//删除音乐，携带音乐文件路径字符串
+	SUBEVENT_MEDIA_EXIT = 0x11; //退出
+	
+	SUBEVENT_MEDIA_SYNC_TOTAL_LIST = 0x100; //底层通知底层更新全量音乐列表，携带MediaList
+	SUBEVENT_MEDIA_SYNC_LIST = 0x101; //底层通知UI更新音乐列表，携带MediaList
+	SUBEVENT_MEDIA_PLAY_LIST = 0x102; //底层通知上层播放指定的列表，携带MediaList
+	SUBEVENT_MEDIA_CATEGORY_LIST_UPDATED = 0x103; //分类列表发生更新，携带MediaCategoryList
+	SUBEVENT_MEDIA_NEED_REFRESH_MEDIA_LIST = 0x104; //UI通知native需要刷新音乐列表了，如发生媒体库变化，或者进入了音乐tab
+	SUBEVENT_MEDIA_NEED_REFRESH_DOWNLOAD_LIST = 0x105;			//下载音乐开关触发下载事件给底层，立即进行下载
+	SUBEVENT_MEDIA_SEARCH_MEDIA_ONLINE = 0x106; //在线搜索媒体，携带MediaModel
+	SUBEVENT_MEDIA_SEARCH_MEDIA_ONLINE_RESULT = 0x107; //在线搜索媒体结果，携带MediaList
+	SUBEVENT_MEDIA_SEARCH_AND_PLAY = 0x108; //搜索并播放媒体，携带MediaModel
+	SUBEVENT_MEDIA_NOTIFY_DOWNLOAD_FINISH = 0x109; //下载完成通知UI，携带MediaModel
+	SUBEVENT_MEDIA_SYNC_SYSTEM_MEDIA_LIST = 0x110; //同步系统媒体列表，携带MediaList
+	
+	SUBEVENT_MEDIA_REFRESH_MEDIA_LIST = 0x201; //底层随便听听
+	SUBEVENT_MEDIA_REFRESH_MUSIC_LIST = 0x202; //底层随便听听音乐
+	SUBEVENT_MEDIA_REFRESH_NEWS_LIST = 0x203; //底层随便听听新闻
+	SUBEVENT_MEDIA_PLAY_FAVOURITE_LIST = 0x204; //底层播放收藏列表
+	SUBEVENT_MEDIA_MUSIC_TOOL_REFRESH_MEDIA_LIST = 0x210; //播放器执行随便听听，设置了远程工具则调用远程的
+	SUBEVENT_MEDIA_MUSIC_TOOL_REFRESH_MUSIC_LIST = 0x211; //播放器执行随便听听，设置了远程工具则调用远程的
+	SUBEVENT_MEDIA_MUSIC_TOOL_PLAY_FAVOURITE_LIST = 0x212; //播放器执行收藏列表，设置了远程工具则调用远程的
+	
+	SUBEVENT_MEDIA_SPEAK_MUSIC_INFO = 0x301; //播报音乐信息
+	
+	SUBEVENT_MEDIA_FAVOURITE = 0x401; //ui通知native收藏歌曲，携带MediaModel
+	SUBEVENT_MEDIA_CANCEL_FAVOURITE = 0x402; //ui通知native取消收藏歌曲，携带MediaModel
+	SUBEVENT_MEDIA_FAVOURITE_CUR = 0x403; //通知ui收藏当前播放歌曲，携带为空
+	SUBEVENT_MEDIA_CANCEL_FAVOURITE_CUR = 0x404; //通知ui取消收藏当前播放歌曲，携带为空
+	SUBEVENT_MEDIA_HATE_CUR = 0x405; //通知ui取消收藏当前播放歌曲并切歌，携带为空
+	
+	SUBEVENT_MEDIA_CATEGORY_GET_LIST = 0x501;	//触发拉取服务器分类列表
+	SUBEVENT_MEDIA_CATEGORY_GET_SONG_LIST_BY_CATEGORY = 0x502;	//触发拉取某个分类下的歌曲列表，数据内容为：分类ID字符串
+	
+	SUBEVENT_MEDIA_ONLINE_PLAY_START_DOWNLOAD = 0x601;		//在线播发音乐启动下载,数据内容为：mmid
+	SUBEVENT_MEDIA_ONLINE_PLAY_STOP_DOWNLOAD = 0x602;		//在线播发音乐停止下载,数据内容为：mmid
+	
+	SUBEVENT_MEDIA_NOTIFY_LOCAL_MEDIA_SERVER_PORT = 0x701; //通知本地的媒体服务端口变更，携带服务端口号字符串
+	
+}
+
+
+enum MediaType
+{
+	MEDIA_TYPE_MUSIC = 0; //音乐，默认
+	MEDIA_TYPE_NEWS = 1; //新闻
+}
+
+message MediaModel {
+	optional int32 int32_id = 1; // 数据库id，后台下发的id不填
+	optional string str_title = 2;  // 名字
+	optional string str_album = 3;  // 专辑
+	repeated string rpt_str_artist = 4;  // 歌手
+	optional string str_path = 5;  // 路径，在线音乐使用播放url
+	optional uint32 uint32_duration  = 6; // 时长
+	optional uint32 uint32_size = 7; // 大小
+	optional string str_type = 8; //流派
+	optional string str_file_name = 9; //文件名
+	optional string str_file_ext = 10; //文件扩展名
+	optional int32 int32_album_id = 11; //专辑id，用户获取音乐封面
+	repeated string rpt_str_keywords = 13; //媒体关键字，音乐或新闻的关键字
+	optional uint32 uint32_media_type = 14; //媒体类型，参考MediaType
+	optional bool b_favourite = 19; //是否已经被当前用户收藏
+	//歌曲别名
+	repeated string rpt_str_alias = 20; //歌曲别名，用于去掉括号等
+	//文本搜索
+	optional string str_search_text = 21;	//搜索关键字
+	
+	optional uint32 uint32_app_id = 22;				//数据来源的app id
+	optional uint64 uint64_audio_id = 23;			//音频ID
+}
+
+message MediaItem {
+	optional MediaModel msg_media = 1;
+	repeated MediaModel rpt_msg_reference_media = 14; //关联媒体的媒体，存储时按path存储，后台下发，自动填充完善列表，如放完娱乐新闻后放一首歌
+}
+
+
+message MediaList {
+	repeated MediaItem rpt_media_item = 1; // 列表
+	optional int32 int32_cur_index = 2;  // 当前播放索引
+	optional int32 int32_cur_position = 3; // 当前播放位置
+	optional string str_title = 4; //列表标题，为空时显示默认标题
+	optional MediaModel msg_search_filter = 5; //使用的搜索模型，需要更多结果时使用该模型继续搜索
+	optional string str_err_msg = 6;	//异常的错误信息
+	
+	repeated com.txz.ui.audio.AudioFavourite rpt_msg_favourite_list = 7;		//收藏列表
+}
+
+enum MediaCategoryType {
+	MEDIA_CATEGORY_TYPE_LOCAL_LIST = 0; //本地音乐列表，默认
+	MEDIA_CATEGORY_TYPE_ONLINE_LIST = 1; //在线榜单
+}
+
+message MediaCategory {
+	optional string str_category_name = 1; //分类名称
+	optional MediaList msg_media_list = 2; //分类包含的媒体列表
+	optional uint32 uint32_category_type = 3; //分类类型，参考MediaCategoryType
+	optional uint32 uint32_category_music_cnt = 4;	//分类下的歌曲数量
+	optional uint32 uint32_category_id = 5;		//分类ID
+}
+
+message MediaCategoryList {
+	repeated MediaCategory rpt_msg_category_list = 1; // 列表
+}
+
+
+
+

@@ -1,0 +1,47 @@
+<resources>
+
+    <string name="app_name">导航</string>
+    
+    <!-- activity_home -->
+    <string name="activity_home_str_dest_hint">请输入您的目的地</string>
+    <string name="activity_home_str_check_location_text">查看地图</string>
+    <string name="activity_home_str_nav_history_text">导航历史</string>
+    <string name="activity_home_str_offline_map_text">离线数据包</string>
+    
+    <string name="activity_preview_rb_recommand_text">躲避拥堵</string>
+    <string name="activity_preview_rb_toll_text">少收费</string>
+    <string name="activity_preview_rb_dist_text">少路程</string>
+    <string name="activity_preview_start_nav_text">开始导航</string>
+    <string name="activity_preview_cal_nav_text">正在算路...</string>
+    
+    <!-- activity_check_map -->
+    <color name="activity_check_map_dest_text_color">#646978</color>
+
+    <!-- activity_check_map -->
+    <string name="activity_check_map_start_planing_text">出发</string>
+    <string name="activity_check_map_set_text">设置</string>
+    <string name="activity_check_map_set_up_success_text">设置成功!</string>
+    
+    <!-- activity_history -->
+    <string name="activity_history_title_text">历史记录</string>
+    <string name="activity_history_go_home_text">回家</string>
+    <string name="activity_history_go_company_text">去公司</string>
+    <string name="activity_history_set_text">（已设定）</string>
+    <string name="activity_history_not_set_text">（未设定）</string>
+
+    <!-- activity_set_position -->
+    <string name="activity_set_position_dest_hint">请输入您的目的地</string>
+    <string name="activity_set_position_choose_map_text">地图选点</string>
+    
+    <!-- activity_search -->
+    <string name="activity_search_map_text">切换地图</string>
+    <string name="activity_search_null_text">抱歉，未能找到结果!</string>
+    <string name="activity_searching_text">搜索中</string>
+    <string name="activity_search_start_planing_text">出发</string>
+    <string name="activity_search_set_up_success_text">设置成功!</string>
+    <string name="activity_search_set_text">设置</string>
+    
+    <string name="activity_history_no_record">暂无历史记录</string>
+    <string name="activity_download_no_record">暂无下载记录</string>
+
+</resources>

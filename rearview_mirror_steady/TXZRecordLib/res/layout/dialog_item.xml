@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/x500"
+        android:layout_height="@dimen/y60"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txtDialogItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x20"
+            android:textSize="@dimen/y26"
+            android:textColor="#FFFFFF"
+            android:paddingRight="0dp"
+            android:text="极高（适合嘈杂环境）"
+            style="@drawable/bgcolor_change" />
+
+        <ImageView
+            android:id="@+id/ivDialogItem"
+            android:layout_width="@dimen/x36"
+            android:layout_height="@dimen/y36"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x20"
+            android:background="@drawable/txz_checked" />
+    </RelativeLayout>
+
+</LinearLayout>

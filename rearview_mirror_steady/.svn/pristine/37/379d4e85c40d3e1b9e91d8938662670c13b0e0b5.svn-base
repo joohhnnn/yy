@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/m32"
+    android:background="@color/interest_bg"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/tag_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/m16"
+        android:text="@string/music_interest_title"
+        android:textColor="@color/white"
+        android:textSize="?attr/text_size_h1" />
+
+    <Button
+        android:id="@+id/skip"
+        android:layout_width="@dimen/m80"
+        android:layout_height="@dimen/m48"
+        android:layout_alignBottom="@id/tag_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/m16"
+        android:background="@drawable/shap_interest_normal"
+        android:gravity="center"
+        android:paddingLeft="@dimen/m12"
+        android:paddingRight="@dimen/m12"
+        android:text="跳过"
+        android:textColor="@color/white"
+        android:textSize="?attr/text_size_h2" />
+
+    <com.txznet.music.widget.flowlayout.TagFlowLayout
+        android:id="@+id/flowlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_click"
+        android:layout_below="@+id/tag_title"
+        zhy:max_select="-1"
+        zhy:tag_gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/ll_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/m10"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/select_btn"
+            android:layout_width="@dimen/m240"
+            android:layout_height="@dimen/m48"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/m16"
+            android:background="@drawable/shap_interest_normal"
+            android:gravity="center"
+            android:text="选好了"
+            android:textColor="@color/white"
+            android:textSize="?attr/text_size_h1" />
+
+
+        <Button
+            android:id="@+id/next_tags"
+            android:layout_width="@dimen/m104"
+            android:layout_height="@dimen/m48"
+            android:layout_marginLeft="@dimen/m16"
+            android:layout_toRightOf="@+id/center_view"
+            android:background="@null"
+            android:text="换一批"
+            android:textColor="@color/color_selected"
+            android:textSize="?attr/text_size_h1" />
+    </LinearLayout>
+
+</RelativeLayout>

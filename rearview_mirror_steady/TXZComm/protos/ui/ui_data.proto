@@ -1,0 +1,241 @@
+package com.txz.ui.data;
+
+import "ui_map.proto";
+import "ui_app.proto";
+import "contact_data.proto";
+
+//数据枚举
+enum DataId
+{
+	DATA_ID_VERSION = 1; //外部版本号，由native提供
+	DATA_ID_VERSION_INNER = 2; //内部版本号，由native提供
+	DATA_ID_VERSION_UI_INNER = 3; //UI内部版本号，由ui提供
+	DATA_ID_UI_VERSION_INFO = 4; //UI版本号获取，由ui提供，需要ui填写的版本信息ui填写
+	
+	DATA_ID_TXZ_APP_VERSION_LIST = 6;	//txz app版本列表,携带com.txz.ui.equipment.VersionInfo
+	DATA_ID_APP_INFO= 7;			//apk安装包的路径，参数为包名,返回路径字符串
+	
+	DATA_ID_SYSTEM_ENV = 10; //系统环境，由ui提供，返回SystemEnv
+	DATA_ID_SYSTEM_MEM_INFO_STR = 11; //获取内存信息，返回内存信息字符串
+	
+	DATA_ID_UID = 12;	//获取设备ID
+	DATA_ID_GET_APP_ID = 13;//获取txz app id
+	
+	DATA_ID_GET_RES_STR	= 0x1001;	//获取字符串资源，由native提供，携带Req_GetResString
+	DATA_ID_GET_RES_RANDOM_STR = 0x1002; //获取随机的字符串资源，由native提供，携带字符串ID
+	
+	DATA_ID_CONFIG_APP = 0x2001; //获取应用配置，由native提供
+	DATA_ID_CONFIG_USER = 0x2002; //获取指定用户配置，由native提供
+	
+	DATA_ID_MOBILE_CONTACT_INFO_BY_NUMBER = 0x3001; //通过号码查找联系人信息，携带电话号码，返回com.txz.ui.contact.MobileContacts
+	
+	DATA_ID_PHONE_TYPE = 0x4000; //获取号码类型，由native提供，携带号码字符串，返回整形字符，1为短号，2为手机号，3为座机号，其他
+	DATA_ID_PHONE_AREA	= 0x4001;	//获取手机号码归属地，由native提供，携带Req_PhoneArea
+	DATA_ID_LUNAR_DATE	= 0x4002;	//获取农历信息，由native提供，携带Req_LunarDate
+	DATA_ID_WEATHER = 0x4003;		//获取天气信息，请求数据Req_Weather，返回数据Resp_Weather
+	
+	DATA_ID_LOCATION_INFO = 0x5001; //最后的位置信息，又native提供最后一次保存的位置信息
+	
+	DATA_ID_BT_CONNECTION = 0x8000; // 蓝牙连接数据
+	
+	DATA_ID_VOICE_GRAMMAR_INFO = 0x9000; //识别场景用的语法语法信息，场景定义见voice_data.proto中的GrammarSence
+	DATA_ID_VOICE_CANCEL_PARSE = 0x9001; //取消识别
+	
+	DATA_ID_MUSIC_CATEGORY_LIST = 0x10000; //UI从native音乐分类列表，返回ui_music.proto中的MediaCategoryList
+	
+	DATA_ID_APP_INFO_LIST = 0x20000; //native从ui拉取应用信息列表，携带ui_app.proto的AppInfoList
+	
+	DATA_ID_CONVER_MEDIA_URL = 0x30000; //ui通过native转换媒体地址
+	
+	DATA_ID_CHECK_APP_EXIST = 0x40000; //判断某个包应用是否存在，携带包名
+	DATA_ID_CHECK_SENCE_DISABLE_REASON = 0x40001; //获取场景功能不可用的原因，可用时得到为空
+	DATA_ID_REMOTE_PROC_TOOL = 0x40002; //获取是否设置了远程处理工具，携带数据为场景字符串：call/music/nav，返回非空表示设置了，如果设置了则底层不处理识别结果，发给远程处理
+	
+	DATA_ID_ENABLE_WAKEUP = 0x50000; //是否允许唤醒，由ui提供
+	DATA_ID_ENABLE_CHANGE_WAKEUP_KEYWORDS = 0x50001; //是否允许修改唤醒词，由ui提供
+	DATA_ID_ENABLE_SERVICE_CONTACTS = 0x50002; //是否使用黄页联系人
+	
+	//远程场景处理，携带json，返回true表示交给远程处理过了，否则表示没有设置远程工具，由TXZ处理该场景
+	DATA_ID_REMOTE_SENCE_WAKEUP = 0x100001;
+	DATA_ID_REMOTE_SENCE_SET_USER_WAKEUP_KEYWORDS = 0x100002;
+	DATA_ID_REMOTE_SENCE_COMMAND = 0x100003;
+	DATA_ID_REMOTE_SENCE_APP = 0x100004;
+	DATA_ID_REMOTE_SENCE_CALL = 0x100005;
+	DATA_ID_REMOTE_SENCE_NAV = 0x100006;
+	DATA_ID_REMOTE_SENCE_POI_CHOICE = 0x100007;
+	DATA_ID_REMOTE_SENCE_MUSIC = 0x100008;
+	DATA_ID_REMOTE_SENCE_WEATHER = 0x100009;
+	DATA_ID_REMOTE_SENCE_STOCK = 0x100010;
+	DATA_ID_REMOTE_SENCE_LOCATION = 0x100011;
+	DATA_ID_REMOTE_SENCE_TRAFFIC = 0x100012;
+	DATA_ID_REMOTE_SENCE_LIMITE_NUMBER = 0x100013;
+	DATA_ID_REMOTE_SENCE_UNKNOW = 0x100014;
+	DATA_ID_REMOTE_SENCE_UNSUPPORT = 0x100015;
+	DATA_ID_REMOTE_SENCE_EMPTY = 0x100016;
+}
+
+////////////////////系统环境数据////////////////////
+enum NetworkStatus {
+	NETWORK_STATUS_UNKNOW = 0; //未知
+	NETWORK_STATUS_FLY = 1; //飞行模式
+	NETWORK_STATUS_NONE = 2; //无网络连接
+	NETWORK_STATUS_2G = 3; //2G网络连接
+	NETWORK_STATUS_3G = 4; //3G网络连接
+	NETWORK_STATUS_4G = 5; //4G网络连接
+	NETWORK_STATUS_WIFI = 6; //WIFI网络连接
+}
+
+message AppInfo{
+	optional string str_source_path = 1;
+	optional string str_version = 2;
+}
+
+message SDCard{
+	optional string str_path = 1;				//路径
+	optional uint64 uint64_total_size = 2;		//总共大小
+	optional uint64 uint64_available_size = 3;	//可用大小
+}
+
+message SystemEnv {
+	optional string   str_imei = 1; //IMEI串号
+	optional string   str_imsi1 = 2; //第一个SIM卡IMSI串号
+	optional string   str_imsi2 = 3; //第二个SIM卡IMSI串号
+	optional uint32 uint32_network_status = 4; //网络状态，参考NetworkStatus
+	optional string  str_private_path = 5; //app私有环境路径
+	optional string  str_data_path = 6; //app私有环境数据路径，保存资源数据，支持网络更新等模式
+	optional string  str_config_path = 7; //app私有环境配置路径
+	optional string  str_sdcard_path = 8; //app的SD卡路径
+	optional string  str_user_path = 9; //用户数据路径，可选，不填时由private_path拼装
+	optional string  str_app_path = 10; //应用程序sd卡目录，可选，不填时由str_sdcard_path拼装
+	repeated SDCard	 rpt_sdcard_list = 11;	//所有sdcard列表
+	optional string str_apk_source_path = 12; //安装包apk路径
+	optional string str_device_sn = 13; //设备唯一序列号
+	optional string str_vendor = 14; //制造商
+	optional string str_model = 15; //手机型号
+	optional string str_cpu_serial = 16;	        //cpu serial
+	optional string str_wifi_mac_addr = 17;	    //mac addr
+	optional string str_bluetooth_mac_addr = 18;	//bluetooth mac addr
+	optional string str_build_serial = 19;	    //build serial
+	optional string str_android_id = 20;	        //android id
+    optional string str_connected_wifi_addr = 21;		//设备连接wifi的mac地址
+    optional string str_connected_wifi_ssid = 22;		//设备连接wifi的名称(ssid)
+    optional string str_uuid = 23;							//用户定义ID 
+    optional string str_no_format_path = 24;			//不会格式化的目录路径，存储一些重要的信息
+}
+
+////////////////////应用配置数据////////////////////
+
+message AppConfig {
+	optional bool   bool_inited            = 1; //是否已经初始化过了
+	optional uint32 uint32_voice_volume    = 4; //语音提示的音量
+	optional uint32 uint32_music_volume    = 5; //音乐的音量
+	optional string str_txz_server_addr = 6; //同行者后台服务地址
+	optional uint32 uint32_txz_server_port = 7; //同行者后台服务端口
+	repeated string rpt_str_wakeup_keywords = 8; //唤醒词
+}
+
+//////////////////////用户数据///////////////////////////////////
+message UserConfig{
+	
+	optional com.txz.ui.contact.UserNetConfigInfo msg_net_cfg_info = 9; //网络需要同步的配置信息
+}
+
+/////////天气预报////////////
+//请求
+message Req_Weather
+{
+	optional string str_city_name = 1;	//城市名称,不填写为默认当前城市
+}
+//响应
+message Resp_Weather
+{
+	optional string str_city_name = 1;			//城市名称
+	optional int32 int32_temp_cur = 2;			//当前温度
+	optional int32 int32_temp_low = 3;			//今天最低温（单位℃）
+	optional int32 int32_temp_high = 4;			//今天最高温（单位℃）
+	optional string str_weather_desc = 5;		//天气描述
+	optional string str_img_path = 6;			//天气图片本地路径
+}
+
+
+//////DATA_ID_PHONE_AREA/////
+//请求
+message Req_PhoneArea {
+	optional string str_phone	= 1;		//电话号码
+}
+//回应
+message Resp_PhoneArea {
+	optional bool 	b_result	= 1;	//true:有归属地，false:没有归属地
+	optional string str_province = 2;
+	optional string str_city	= 3;
+	optional string str_isp		= 4;		
+}
+
+
+/////////////DATA_ID_LUNAR_DATE///////////////////
+//请求（不填写，默认当天）
+message Req_LunarDate {
+	optional int32 int32_year	= 1;		//年
+	optional int32 int32_month	= 2;		//月
+	optional int32 int32_day	= 3;		//日
+}
+//回应
+message Resp_LunarDate {
+	optional int32 int32_solar_year	= 1;		//公历年
+	optional int32 int32_solar_month = 2;	//公历月
+	optional int32 int32_solar_day = 3;		//公历日
+	optional int32 int32_lunar_year	= 4;		//农历年
+	optional int32 int32_lunar_month = 5;	//农历月
+	optional int32 int32_lunar_day = 6;		//农历日
+	optional string str_lunar_day = 7;		//农历日字符串（如：初一）
+	optional string str_lunar_month = 8;	//农历月字符串（如：二月）
+	optional string str_lunar_shuxiang = 9;	//农历属相
+	optional string str_lunar_tiangan = 10;	//农历天干
+	optional string str_lunar_dizhi = 11;	//农历地支
+	optional bool b_lunar_leap	= 12;		//农历闰年标志位
+}
+
+///////////////DATA_ID_GET_RES_STR////////////////
+//请求
+message Req_GetResString{
+	optional string str_key	= 1;		//资源key
+	optional int32  int32_index = 2 [default=-1]; //数组资源索引
+}
+//回应
+message Resp_GetResString{
+	optional string str_value = 1;		//资源字符串
+}
+
+
+//好友排序类型
+enum FriendSortType
+{
+//    option allow_alias = true;
+//	FST_DEFAULT = 0; //默认排序，按照获取的昵称排序，有手机通讯录名的或昵称的按字母顺序排前面，没有的按号码排后面
+	FST_BY_NAME = 0; //同上
+	FST_BY_CONTACTED_TIME = 1; //按联系时间，最近联系的往前排
+}
+
+/////////蓝牙管理数据////////////
+//响应
+message Resp_BT_Connect_State
+{
+	optional uint32 uint32_adapter_state = 1;	//adapter连接情况
+	optional uint32 uint32_spp_state = 2;	//spp连接情况
+	optional bool b_txz_connected = 3;	//同行者连接情况
+}
+
+///////dns数据///////
+message DNSIpInfo{
+	optional string str_ip	= 1;					//ip
+	optional uint32 uint32_fail_cnt = 2;
+    optional uint32 uint32_last_fail_time = 3;
+}
+message DNSInfo{
+	optional string str_domain = 1;
+	repeated DNSIpInfo rpt_msg_ip_list = 2;	
+}
+message Config_DNS{
+	repeated DNSInfo rpt_msg_dns_list = 1;
+}
+

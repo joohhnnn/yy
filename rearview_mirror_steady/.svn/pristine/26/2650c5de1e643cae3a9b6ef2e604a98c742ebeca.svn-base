@@ -1,0 +1,20 @@
+include ':TXZComm'
+include ':TXZRecordLib'
+// TXZCore:
+include ':TXZCore'
+// 为保证Multi_Products项目正确打包, 需要include, 确保与Core使用了相同的根项目基础依赖和配置
+//include ':TXZCore_Multi_Products'
+// TXZMusic:
+//include ':TXZMediaPlayer'
+//include ':TXZMediaProxy'
+//include ':TXZMusic5'
+// TXZWebchat:
+//include ':TXZWebchatComm'
+//include ':WechatLogicPlugin'
+//include ':TXZWebchat'
+// TXZLauncher
+//include ':TXZLauncherKSD'
+//include ':TXZLauncherYT'
+include ':TXZSDKDemo'
+include ':TXZResHolder3.0'
+include ':TXZResHolder4.0'

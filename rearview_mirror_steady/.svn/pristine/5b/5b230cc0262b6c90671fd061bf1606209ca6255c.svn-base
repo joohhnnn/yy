@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 应用程序名 -->
+    <string name="app_name">同听</string>
+    <string name="app_version">4.2.0</string>
+    <!-- 版本描述 -->
+    <string name="app_desc"></string>
+
+</resources>

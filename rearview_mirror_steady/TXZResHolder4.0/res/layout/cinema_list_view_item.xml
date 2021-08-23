@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.txznet.comm.ui.view.RippleView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height_large"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/xdp20"
+            android:paddingRight="@dimen/xdp20">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/xdp10"
+                android:layout_marginRight="@dimen/xdp10"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left|center_vertical"
+                    android:text="1. 月亮人"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp26"
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/ivStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/mdp20"
+                        android:src="@drawable/dz_icon_star9"
+                        android:adjustViewBounds="true"/>
+
+                    <TextView
+                        android:id="@+id/tvScorePre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/xdp10"
+                        android:gravity="left|center_vertical"
+                        android:text="8"
+                        android:textColor="#FA952F"
+                        android:textSize="@dimen/sp28"
+                        android:maxLines="2"
+                        android:ellipsize="end" />
+
+                    <TextView
+                        android:id="@+id/tvScoreAft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="left|center_vertical"
+                        android:text=".5"
+                        android:textColor="#FA952F"
+                        android:textSize="@dimen/sp20"
+                        android:maxLines="2"
+                        android:ellipsize="end" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivPost"
+                android:layout_width="90dp"
+                android:layout_height="135dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/def_moive" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/listDividerColor"/>
+
+    </LinearLayout>
+
+</com.txznet.comm.ui.view.RippleView>

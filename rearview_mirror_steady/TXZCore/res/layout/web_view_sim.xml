@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <WebView
+        android:id="@+id/web_view_sim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:layerType="software" />
+
+    <ImageView
+        android:id="@+id/iv_web_sim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        android:src="@drawable/loading_anim" >
+    </ImageView>
+
+    <RelativeLayout
+        android:id="@+id/rl_web_sim_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:background="#000000" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@+id/iv_web_sim_error_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/error_404_main" />
+
+            <TextView
+                android:id="@+id/tv_web_sim_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_web_sim_error_main"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/y10"
+                android:text="似乎网络开了小差！"
+                android:textSize="@dimen/y20" />
+
+            <LinearLayout
+                android:layout_width="@dimen/y316"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_web_sim_tips"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/y26"
+                android:weightSum="79" >
+
+                <TextView
+                    android:id="@+id/tv_web_sim_refresh"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:background="@drawable/selector_web_sim_btn_bg"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/y5"
+                    android:paddingLeft="@dimen/y20"
+                    android:paddingRight="@dimen/y20"
+                    android:paddingTop="@dimen/y5"
+                    android:text="刷新"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/y24" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="19" />
+
+                <TextView
+                    android:id="@+id/tv_web_sim_back"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:background="@drawable/selector_web_sim_btn_bg"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/y5"
+                    android:paddingLeft="@dimen/y20"
+                    android:paddingRight="@dimen/y20"
+                    android:paddingTop="@dimen/y5"
+                    android:text="返回"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/y24" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

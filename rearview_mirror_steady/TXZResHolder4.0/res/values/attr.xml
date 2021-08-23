@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="bg_color" format="color" />
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ChangeColorIconWithText">
+        <attr name="icon_normal" format="reference" />
+        <attr name="icon_while" format="reference" />
+        <attr name="color_nor" format="color" />
+        <attr name="color_sel" format="color" />
+        <attr name="icon_text" format="string" />
+        <attr name="text_size" format="dimension" />
+        <attr name="head_size" format="dimension" />
+        <attr name="sel_background" format="color" />
+        <attr name="nor_background" format="color" />
+    </declare-styleable>
+    <declare-styleable name="WaveformViewDefImpl">
+        <attr name="wvIcon" format="reference" />
+        <attr name="wvIconWidth" format="dimension" />
+        <attr name="wvIconHeight" format="dimension" />
+        <attr name="wvRange" format="integer" />
+        <attr name="wvRealVal" format="reference" />
+        <attr name="wvEmptyVal" format="reference" />
+        <attr name="wvIconOffset" format="dimension" />
+        <attr name="wvValOffset" format="dimension" />
+        <attr name="wvIsDrawVoice" format="boolean"/>
+        <attr name="wvAnimationStatus" format="boolean"/>
+    </declare-styleable>
+	<declare-styleable name="RippleView">
+        <attr name="rv_alpha" format="integer" />
+        <attr name="rv_framerate" format="integer"/>
+        <attr name="rv_rippleDuration" format="integer"/>
+        <attr name="rv_zoomDuration" format="integer" />
+        <attr name="rv_color" format="color" />
+        <attr name="rv_centered" format="boolean" />
+        <attr name="rv_type" format="enum">
+            <enum name="simpleRipple" value="0"/>
+            <enum name="doubleRipple" value="1"/>
+            <enum name="rectangle" value="2" />
+        </attr>
+        <attr name="rv_ripplePadding" format="dimension" />
+        <attr name="rv_zoom" format="boolean" />
+        <attr name="rv_zoomScale" format="float" />
+
+    </declare-styleable>
+
+	<attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+
+    <declare-styleable name="BoundedView">
+    	<attr name="bounded_width" format="dimension" />
+    	<attr name="bounded_height" format="dimension" />
+	</declare-styleable>
+
+    <declare-styleable name="screen_style">
+	    <attr name="list_item_txtNum_marginLeft" format="dimension"/>
+	    <attr name="list_item_txtNum_width" format="dimension"/>
+	    <attr name="list_item_txtNum_height" format="dimension"/>
+	    <attr name="list_item_txtNum_textSize" format="dimension"/>
+	    <attr name="list_item_txtContent_textSize" format="dimension"/>
+	    <attr name="list_item_txtDesc_textSize" format="dimension"/>
+	    <attr name="list_item_wx_head_width" format="dimension"/>
+	    <attr name="list_item_wx_head_height" format="dimension"/>
+
+	    <!-- poi -->
+	    <attr name="list_item_content_marginTop" format="dimension"/>
+	    <attr name="list_item_content_marginBottom" format="dimension"/>
+	    <attr name="list_item_divider_height" format="dimension"/>
+	    <attr name="list_item_layout_content_marginLeft" format="dimension"/>
+	    <attr name="list_item_txtContent_marginLeft" format="dimension"/>
+
+	    <!-- help -->
+	    <attr name="list_item_help_icon_width" format="dimension"/>
+	    <attr name="list_item_help_icon_height" format="dimension"/>
+	    <attr name="help_icon_width" format="dimension"/>
+	    <attr name="help_icon_height" format="dimension"/>
+
+	    <!-- chat -->
+	    <attr name="list_item_txtChat_minHeight" format="dimension"/>
+	    <attr name="list_item_txtChat_textSize" format="dimension"/>
+
+	    <!-- stock -->
+	    <attr name="stock_pic_width" format="dimension"/>
+	    <attr name="stock_pic_height" format="dimension"/>
+	    <attr name="stock_info_ly_width" format="dimension"/>
+	    <attr name="stock_maxWidth" format="dimension"/>
+
+	    <!-- weather -->
+	    <attr name="weather_maxWidth" format="dimension"/>
+
+    </declare-styleable>
+    <declare-styleable name="layout_orientation_style">
+        <attr name="record_win_circle_ly_width" format="dimension"/>
+        <attr name="record_win_circle_ly_height" format="dimension"/>
+        <attr name="record_win_voice_view_width" format="dimension"/>
+        <attr name="record_win_voice_view_height" format="dimension"/>
+
+    </declare-styleable>
+
+
+    <!-- 带翻页进度的滑动布局 -->
+    <declare-styleable name="ProgressBarScrollView">
+        <!--颜色-->
+        <attr name="bar_color" format="color">#30FFFFFF</attr>
+        <!--圆角-->
+        <attr name="bar_radius" format="dimension">1dp</attr>
+        <!--宽度-->
+        <attr name="bar_width" format="dimension">4dp</attr>
+
+        <!--边距-->
+        <attr name="bar_margin_right" format="dimension">8dp</attr>
+        <attr name="bar_margin_top" format="dimension">4dp</attr>
+        <attr name="bar_margin_bottom" format="dimension">4dp</attr>
+    </declare-styleable>
+
+    <!--自定义View 圆角图片-->
+    <declare-styleable name="CircleRectView">
+        <attr name="circleRadius" format="dimension"/>
+    </declare-styleable>
+
+</resources>

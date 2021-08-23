@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_chat_bg">
+
+    <TextView
+        android:id="@+id/tv_chat_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y64"
+        android:background="@color/color_chat_tab_bg"
+        android:gravity="center"
+        android:textColor="@color/color_chat_tab_text"
+        android:textSize="@dimen/y26"
+        android:maxLines="2"
+        android:ellipsize="end"
+        tools:text="一个特别特别长的名字-------特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长特别长"/>
+
+    <ImageButton
+        android:id="@+id/btn_chat_back"
+        android:layout_width="@dimen/x200"
+        android:layout_height="@dimen/y60"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/y10"
+        android:layout_marginLeft="@dimen/x16"
+        android:background="@drawable/selector_chat_btn_back"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_chat_back"/>
+
+    <FrameLayout
+        android:id="@+id/btn_chat_reply"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/y10"
+        android:layout_marginLeft="@dimen/x16"
+        android:layout_toRightOf="@id/btn_chat_back"
+        android:background="@drawable/selector_chat_btn_reply">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/x10"
+                android:src="@drawable/ic_wechat_say"
+                android:id="@+id/imageView"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lb_chat_reply"
+                android:textColor="@color/color_chat_reply_text"
+                android:textSize="@dimen/y26"/>
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <com.txznet.webchat.ui.base.widgets.FocusRecyclerView
+        android:id="@+id/rv_chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_chat_back"
+        android:layout_below="@id/tv_chat_title"
+        android:layout_marginBottom="@dimen/y10"
+        android:background="@color/color_chat_bg"/>
+
+    <View
+        android:id="@+id/view_chat_mask"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_chat_view_bg"/>
+
+</RelativeLayout>

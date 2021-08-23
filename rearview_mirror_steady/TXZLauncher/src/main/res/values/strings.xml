@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TXZLauncher</string>
+    <string name="amap_apikey">5ef15f99288b1a3128dc1e46ca6d435c</string>
+    
+    <string name="tip_nav">说“<b>开始导航</b>”可进入导航状态，“<b>取消</b>”关闭</string>
+    <string name="ota_upgrade_notify_dialog_wakeup_tips">你可以说确定或取消</string>
+</resources>

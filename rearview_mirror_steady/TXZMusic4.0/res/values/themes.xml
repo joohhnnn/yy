@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="myStyle" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:yesNoPreferenceStyle">@style/myStyle.yesno</item>
+        <item name="android:background">@drawable/fm_bg</item>
+    </style>
+
+    <style name="myStyle.yesno">
+        <item name="android:positiveButtonText">@android:string/ok</item>
+        <item name="android:negativeButtonText">@android:string/cancel</item>
+    </style>
+
+    <style name="gt_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置title -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 设置边框 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 设置半透明 -->
+        <item name="android:windowFullscreen">true</item>
+        <!-- 设置全屏 -->
+    </style>
+
+    <!--java.lang.IllegalStateException: You need to use a Theme.AppCompat theme (or descendant) with this activity.-->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+    </style>
+
+    <style name="AppThemeCheji" parent="AppThemeNotFullscreen">
+
+        <item name="fg_music_title_height">@dimen/y43</item>
+        <item name="setting_item_height">@dimen/y100</item>
+        <item name="list_item_height">@dimen/y58</item>
+        <item name="local_top_margin">0dp</item>
+        <item name="local_header_height">@dimen/y48</item>
+
+        <item name="album_item_content_size_width">@dimen/m120</item>
+        <item name="album_item_content_size_height">@dimen/m174</item>
+        <item name="album_item_content_icon_height">@dimen/m120</item>
+        <item name="album_item_content_play_icon_padding_right">@dimen/m6</item>
+        <item name="album_item_content_play_icon_padding_bottom">@dimen/m6</item>
+        <item name="album_item_content_tv_padding_top">@dimen/m10</item>
+        <item name="album_item_content_tv_padding_left">2dp</item>
+        <item name="album_item_content_tv_padding_right">2dp</item>
+        <item name="album_item_content_margin_top">@dimen/m26</item>
+        <item name="album_item_content_margin_bottom">@dimen/m22</item>
+        <item name="album_item_content_tv_height">@dimen/m43</item>
+        <item name="album_item_gap">@dimen/m28</item>
+        <item name="album_item_horizontal_gap">@dimen/y120</item>
+        <item name="album_item_icon_with_text_top">@dimen/y9</item>
+        <item name="album_item_content_loading_icon_size">@dimen/m120</item>
+        <item name="album_item_content_loading_center_icon_size">@dimen/m30</item>
+
+        <item name="text_size_h1">@dimen/m19</item>
+        <item name="text_size_h2">@dimen/m18</item>
+        <item name="text_size_h3">@dimen/m16</item>
+        <item name="text_size_h4">@dimen/m14</item>
+        <item name="menu_text_size">@dimen/m20</item>
+
+
+
+        <item name="bar_player_view_padding">@dimen/m48</item>
+        <item name="bar_player_view_cd_margin">@dimen/m32</item>
+        <item name="bar_player_view_icon_size">@dimen/m58</item>
+        <item name="bar_player_view_cd_size">@dimen/m87</item>
+        <item name="bar_title_width_size">match_parent</item>
+        <item name="bar_title_height_size">wrap_content</item>
+
+
+        <item name="cover_player_view_icon_size">@dimen/m58</item>
+        <item name="cover_player_view_icon_margin">@dimen/x19</item>
+        <item name="cover_player_view_margin_bottom">@dimen/y24</item>
+        <item name="cover_player_view_margin_horizontal">3.1%</item>
+
+        <item name="cover_player_view_width_percent">50%</item>
+        <item name="cover_player_view_height_percent">25%</item>
+
+        <item name="list_margin_left">5.9%</item>
+        <item name="list_margin_right">5.9%</item>
+        <item name="bar_player_view_height_percent">25%</item>
+        <item name="list_margin_bottom">0%</item>
+        <item name="list_margin_top">0%</item>
+
+        <item name="head_height">16.7%</item>
+
+
+        <item name="head_category_height_percent">13%</item>
+    </style>
+
+    <style name="APPPhone" parent="AppThemeNotFullscreen">
+        <item name="fg_music_title_height">@dimen/m30</item>
+        <item name="setting_item_height">@dimen/x62</item>
+        <item name="list_item_height">@dimen/y75</item>
+        <item name="local_top_margin">@dimen/x38</item>
+        <item name="local_header_height">@dimen/y48</item>
+
+        <item name="album_item_content_size_width">@dimen/m150</item>
+        <item name="album_item_content_size_height">@dimen/m174</item>
+        <item name="album_item_content_icon_height">@dimen/m28</item>
+        <item name="album_item_content_play_icon_padding_right">@dimen/m6</item>
+        <item name="album_item_content_play_icon_padding_bottom">@dimen/m6</item>
+
+
+        <item name="album_item_content_tv_padding_top">@dimen/m6</item>
+        <item name="album_item_content_tv_padding_left">0dp</item>
+        <item name="album_item_content_tv_padding_right">0dp</item>
+        <item name="album_item_content_margin_top">@dimen/m26</item>
+        <item name="album_item_content_margin_bottom">@dimen/m22</item>
+        <item name="album_item_content_tv_height">@dimen/m43</item>
+        <item name="album_item_gap">@dimen/m28</item>
+        <item name="album_item_horizontal_gap">@dimen/y38</item>
+        <item name="album_item_icon_with_text_top">@dimen/y9</item>
+        <item name="album_item_content_loading_icon_size">@dimen/m120</item>
+        <item name="album_item_content_loading_center_icon_size">@dimen/m30</item>
+
+        <!--<item name="text_size_h1">@dimen/m36</item>-->
+        <!--<item name="text_size_h2">@dimen/m32</item>-->
+        <!--<item name="text_size_h3">@dimen/m28</item>-->
+        <!--<item name="text_size_h4">@dimen/m24</item>-->
+        <item name="text_size_h1">@dimen/m22</item>
+        <item name="text_size_h2">@dimen/m20</item>
+        <item name="text_size_h3">@dimen/m18</item>
+        <item name="text_size_h4">@dimen/m16</item>
+        <item name="menu_text_size">@dimen/m16</item>
+
+        <item name="bar_player_view_padding">@dimen/y18</item>
+        <item name="bar_player_view_cd_margin">@dimen/y32</item>
+        <item name="bar_player_view_icon_size">@dimen/m58</item>
+        <item name="bar_player_view_cd_size">@dimen/m87</item>
+        <item name="bar_title_width_size">@dimen/y126</item>
+        <item name="bar_title_height_size">match_parent</item>
+
+
+        <item name="cover_player_view_icon_size">@dimen/m58</item>
+        <item name="cover_player_view_icon_margin">@dimen/x19</item>
+        <item name="cover_player_view_margin_bottom">@dimen/y24</item>
+        <item name="cover_player_view_margin_horizontal">3.1%</item>
+
+        <item name="cover_player_view_width_percent">50%</item>
+        <item name="cover_player_view_height_percent">25%</item>
+
+        <item name="list_margin_left">5.9%</item>
+        <item name="list_margin_right">5.9%</item>
+        <item name="bar_player_view_height_percent">16%</item>
+        <item name="list_margin_bottom">0%</item>
+        <item name="list_margin_top">0%</item>
+
+        <item name="head_height">16.7%</item>
+
+
+        <item name="head_category_height_percent">8%</item>
+    </style>
+
+
+    <style name="AppThemeHoushijing" parent="AppThemeNotFullscreen">
+        <item name="fg_music_title_height">@dimen/y70</item>
+        <item name="setting_item_height">@dimen/y100</item>
+        <item name="list_item_height">@dimen/y80</item>
+        <item name="local_top_margin">@dimen/y30</item>
+        <item name="local_header_height">@dimen/y90</item>
+
+        <item name="album_item_content_size_width">@dimen/m160</item>
+        <item name="album_item_content_size_height">@dimen/m236</item>
+        <item name="album_item_content_icon_height">@dimen/m160</item>
+        <item name="album_item_content_play_icon_padding_right">@dimen/m6</item>
+        <item name="album_item_content_play_icon_padding_bottom">@dimen/m6</item>
+        <item name="album_item_content_tv_padding_top">@dimen/m12</item>
+        <item name="album_item_content_tv_padding_left">2dp</item>
+        <item name="album_item_content_tv_padding_right">2dp</item>
+        <item name="album_item_content_margin_top">@dimen/m20</item>
+        <item name="album_item_content_margin_bottom">@dimen/m10</item>
+        <item name="album_item_content_tv_height">@dimen/m76</item>
+        <item name="album_item_gap">@dimen/m30</item>
+        <item name="album_item_icon_with_text_top">@dimen/m11</item>
+        <item name="album_item_content_loading_icon_size">@dimen/m160</item>
+        <item name="album_item_content_loading_center_icon_size">@dimen/m50</item>
+
+        <item name="text_size_h1">@dimen/m26</item>
+        <item name="text_size_h2">@dimen/m24</item>
+        <item name="text_size_h3">@dimen/m22</item>
+        <item name="text_size_h4">@dimen/m20</item>
+        <item name="menu_text_size">@dimen/m20</item>
+
+
+        <item name="bar_player_view_padding">@dimen/m40</item>
+        <item name="bar_player_view_cd_margin">@dimen/y9</item>
+        <item name="bar_player_view_icon_size">@dimen/m72</item>
+        <item name="bar_player_view_cd_size">@dimen/m120</item>
+        <item name="bar_title_width_size">match_parent</item>
+        <item name="bar_title_height_size">wrap_content</item>
+
+        <item name="cover_player_view_icon_size">@dimen/m72</item>
+        <item name="cover_player_view_icon_margin">@dimen/x48</item>
+        <item name="cover_player_view_margin_bottom">@dimen/y13</item>
+        <item name="cover_player_view_margin_horizontal">6.2%</item>
+
+        <item name="cover_player_view_width_percent">50%</item>
+        <item name="cover_player_view_height_percent">30%</item>
+
+        <item name="list_margin_left">3.1%</item>
+        <item name="list_margin_right">3.1%</item>
+        <item name="list_margin_bottom">0%</item>
+        <item name="list_margin_top">0%</item>
+        <item name="head_height">14.6%</item>
+    </style>
+
+
+    <style name="AppThemeShortHoushijing" parent="AppThemeHoushijing">
+        <item name="cover_player_view_icon_size">@dimen/m72</item>
+        <item name="cover_player_view_icon_margin">@dimen/x24</item>
+        <item name="cover_player_view_margin_bottom">@dimen/y13</item>
+        <item name="cover_player_view_margin_horizontal">2.3%</item>
+
+        <item name="cover_player_view_width_percent">50%</item>
+    </style>
+
+
+    <style name="AppThemeVertical" parent="AppThemeCheji">
+        <item name="album_item_content_margin_top">@dimen/m10</item>
+        <item name="album_item_content_margin_bottom">@dimen/m1</item>
+        <item name="album_item_content_size_width">@dimen/m120</item>
+        <item name="bar_player_view_padding">@dimen/m16</item>
+
+        <item name="bar_player_view_height_percent">20%</item>
+        <item name="album_item_gap">@dimen/m10</item>
+        <item name="album_item_horizontal_gap">@dimen/y75</item>
+        <item name="list_item_height">@dimen/y34</item>
+        <item name="head_category_height_percent">5%</item>
+        <item name="album_item_icon_with_text_top">@dimen/m9</item>
+    </style>
+
+    <!--四种不同的主题《全部代表》透明，应方案商要求去除透明主题-->
+
+    <style name="AppThemeCheji.Translucent">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppThemeVertical.Translucent">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="head_category_height_percent">6%</item>
+        <!-- <item name="text_size_h1">@dimen/m20</item>
+         <item name="text_size_h2">@dimen/m18</item>
+         <item name="text_size_h3">@dimen/m16</item>
+         <item name="text_size_h4">@dimen/m14</item>-->
+    </style>
+
+    <style name="AppThemeShortHoushijing.Translucent">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppThemeHoushijing.Translucent">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <!--四种不同的主题《全部代表》透明，应方案商要求去除透明主题-->
+
+    <style name="AppThemeCheji.fullScreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="APPPhone.phone_Portrait">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppThemeVertical.fullScreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppThemeShortHoushijing.fullScreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppThemeHoushijing.fullScreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+</resources>

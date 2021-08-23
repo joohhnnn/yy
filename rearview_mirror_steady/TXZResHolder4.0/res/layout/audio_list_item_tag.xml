@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.txznet.comm.ui.view.RippleView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_large"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp24"
+                android:textColor="@color/textColorPrimary"
+                android:layout_marginLeft="@dimen/xdp20"
+                android:layout_marginRight="@dimen/xdp20"
+                android:text="1. 染羽生经典武侠小说大唐"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="@dimen/xdp20"
+                android:layout_marginRight="@dimen/xdp20"
+                android:textSize="@dimen/sp18"
+                android:textColor="@color/textColorSecondary"
+                android:text="收听历史：第0期：《摸金天师》第00章 白辟刀"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1.2"/>
+
+            <LinearLayout
+                android:id="@+id/tagWrap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/xdp20"
+                android:layout_marginRight="@dimen/xdp20"
+                android:layout_marginTop="3dp">
+
+                <ImageView
+                    android:id="@+id/ivTagLast"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginRight="4dp"
+                    android:src="@drawable/music_tag_last"/>
+
+                <ImageView
+                    android:id="@+id/ivTagLatest"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginRight="4dp"
+                    android:src="@drawable/music_tag_latest" />
+
+                <ImageView
+                    android:id="@+id/ivTagPaid"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginRight="4dp"
+                    android:src="@drawable/music_tag_paid"/>
+
+                <!--[连] 或 [完]-->
+                <ImageView
+                    android:id="@+id/ivTagStatus"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginRight="4dp"
+                    android:src="@drawable/music_tag_status1"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/listDividerColor"/>
+
+    </LinearLayout>
+
+</com.txznet.comm.ui.view.RippleView>

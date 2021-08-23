@@ -1,0 +1,9 @@
+//呼叫相关事件和数据
+
+package com.txz.ui.makewechatssesion;
+
+enum SubEvent
+{
+	SUBEVENT_MAKE_SESSION_DIRECT = 0x1; //高匹配，携带的数据为WeChatContact，即将为您呼叫xx，挂掉请说取消(n秒后自动拨出，确定后直接拨出)
+    SUBEVENT_MAKE_SESSION_INDIRECT = 0x2;
+}

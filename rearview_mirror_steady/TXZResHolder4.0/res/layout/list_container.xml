@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/win_layout_card_width"
+    android:layout_height="wrap_content">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="@dimen/win_layout_card_width"
+        android:layout_height="match_parent"
+        app:srlEnablePreviewInEditMode="true"
+        app:srlEnableAutoLoadMore="false">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlAccentColor="@color/white"
+            app:srlTextPulling="下拉可以上一页"
+            app:srlTextRelease="释放立即上一页"
+            app:srlEnableLastTime="false"
+            app:srlTextSizeTitle="@dimen/sp18"
+            app:srlTextSizeTime="@dimen/sp18"
+            app:srlDrawableArrowSize="@dimen/mdp20"
+            app:srlDrawableSize="@dimen/mdp20"
+            app:srlDrawableProgressSize="@dimen/mdp20" />
+
+        <com.txznet.comm.ui.theme.test.widget.ProgressBarScrollView
+            android:id="@+id/progressBarScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:bar_margin_right="8dp"
+            app:bar_margin_top="4dp"
+            app:bar_margin_bottom="4dp"
+            app:bar_width="4dp"
+            app:bar_radius="2dp">
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </com.txznet.comm.ui.theme.test.widget.ProgressBarScrollView>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlAccentColor="@color/white"
+            app:srlTextPulling="上拉可以下一页"
+            app:srlTextRelease="释放立即下一页"
+            app:srlTextSizeTitle="@dimen/sp18"
+            app:srlDrawableSize="@dimen/mdp20"
+            app:srlDrawableProgressSize="@dimen/mdp20"
+            app:srlDrawableArrowSize="@dimen/mdp20"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</FrameLayout>

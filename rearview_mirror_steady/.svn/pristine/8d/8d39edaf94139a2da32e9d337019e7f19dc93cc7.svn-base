@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    style="@style/sms_detail_wheelview_ly" >
+
+    <com.txznet.cldfm.ui.widget.wheel.WheelView
+        android:id="@+id/left_degress_wv"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="@dimen/x48"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/y88" />
+
+    <com.txznet.cldfm.ui.widget.wheel.WheelView
+        android:id="@+id/right_degress_wv"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>

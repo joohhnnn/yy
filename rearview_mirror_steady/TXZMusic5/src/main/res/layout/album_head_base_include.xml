@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><!--因为UI给的是1024*600所以需要将数据进行换算,因为我们的适配基于是800*480的-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Base_Title_Range"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    tools:background="@drawable/base_bg">
+
+    <com.txznet.music.widget.AlphaRelativeLayout
+        android:id="@+id/ll_back"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/m10"
+            android:layout_height="@dimen/m24"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/m40"
+            android:src="@drawable/base_back_btn" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/m12"
+            android:layout_toRightOf="@id/iv_back"
+            android:includeFontPadding="true"
+            android:textColor="@color/base_title_tv_color"
+            android:textSize="@dimen/base_tv_h1"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/tv_sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_title"
+            android:layout_marginLeft="@dimen/m8"
+            android:layout_toRightOf="@id/tv_title"
+            android:includeFontPadding="true"
+            android:textColor="@color/base_sub_title_tv_color"
+            android:textSize="@dimen/base_tv_h5"
+            tools:text="ttt" />
+
+    </com.txznet.music.widget.AlphaRelativeLayout>
+
+    <com.txznet.music.widget.AlphaLinearLayout
+        android:id="@+id/ll_more_category"
+        android:layout_width="@dimen/m102"
+        android:layout_height="@dimen/m32"
+        android:layout_marginRight="@dimen/m24"
+        android:background="@drawable/base_round_rectange_btn_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/m14"
+            android:layout_height="@dimen/m14"
+            android:src="@drawable/album_category_more_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/m8"
+            android:text="更多分类"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_tv_h6" />
+    </com.txznet.music.widget.AlphaLinearLayout>
+
+
+    <com.txznet.music.widget.AlphaImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/m40"
+        android:layout_height="@dimen/m40"
+        android:layout_marginRight="@dimen/m46"
+        android:src="@drawable/base_close_btn" />
+</LinearLayout>

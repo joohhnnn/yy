@@ -1,0 +1,346 @@
+<com.txznet.record.view.BoundedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attrValue="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:bounded_width="?attr/weather_maxWidth" >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/y60"
+    android:paddingTop="@dimen/y30" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/x10"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/y24" />
+
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            
+            android:textColor="#FFFFFFFF"
+            android:visibility="gone"
+            android:textSize="@dimen/y24" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/y24" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y20"
+        android:background="@drawable/white_range_layout"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginRight="@dimen/x30"
+            android:paddingTop="@dimen/y20" >
+
+            <LinearLayout
+                android:id="@+id/current_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/minus"
+                    android:layout_width="@dimen/y36"
+                    android:layout_height="@dimen/y90"
+                    android:src="@drawable/weather_number_minus"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/tempDecade"
+                    android:layout_width="@dimen/y60"
+                    android:layout_height="@dimen/y90"
+                    android:src="@drawable/weather_number_0" />
+
+                <ImageView
+                    android:id="@+id/tempUnits"
+                    android:layout_width="@dimen/y60"
+                    android:layout_height="@dimen/y90"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:src="@drawable/weather_number_0" />
+
+                <ImageView
+                    android:id="@+id/tempDegree"
+                    android:layout_width="@dimen/m37"
+                    android:layout_height="@dimen/m56"
+                    android:layout_marginLeft="@dimen/m10"
+                    android:src="@drawable/weather_number_degree" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bigTempRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:visibility="invisible" >
+
+                <ImageView
+                    android:id="@+id/bigLowMinus"
+                    android:layout_width="@dimen/y36"
+                    android:layout_height="@dimen/y90"
+                    android:src="@drawable/weather_number_minus"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/bigLowTempDecade"
+                    android:layout_width="@dimen/y60"
+                    android:layout_height="@dimen/y90"
+                    android:src="@drawable/weather_number_0" />
+
+                <ImageView
+                    android:id="@+id/bigLowTempUnits"
+                    android:layout_width="@dimen/y60"
+                    android:layout_height="@dimen/y90"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:src="@drawable/weather_number_0" />
+
+                <ImageView
+                    android:id="@+id/bigSlash"
+                    android:layout_width="@dimen/y28"
+                    android:layout_height="@dimen/y90"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:src="@drawable/weather_slash" />
+
+                <ImageView
+                    android:id="@+id/bigHighMinus"
+                    android:layout_width="@dimen/y36"
+                    android:layout_height="@dimen/y90"
+                    android:src="@drawable/weather_number_minus"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/bigHighTempDecade"
+                    android:layout_width="@dimen/y60"
+                    android:layout_height="@dimen/y90"
+                    android:src="@drawable/weather_number_0" />
+
+                <ImageView
+                    android:id="@+id/bigHighTempUnits"
+                    android:layout_width="@dimen/y60"
+                    android:layout_height="@dimen/y90"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:src="@drawable/weather_number_0" />
+
+                <ImageView
+                    android:id="@+id/bigTempDegree"
+                    android:layout_width="@dimen/m37"
+                    android:layout_height="@dimen/m56"
+                    android:layout_marginLeft="@dimen/m10"
+                    android:src="@drawable/weather_number_degree" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/bigTempRange"
+                android:layout_marginTop="@dimen/y20"
+                android:layout_toRightOf="@id/current_temp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:includeFontPadding="false"
+                    android:id="@+id/tempRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="26/30"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/y36" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_marginTop="@dimen/y20"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/todayWeather"
+                    android:layout_width="@dimen/x90"
+                    android:layout_height="@dimen/y90"
+                    android:src="@drawable/weather_qing" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginTop="@dimen/y13"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="多云"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="@dimen/y23" />
+
+                <TextView
+                    android:id="@+id/wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_toRightOf="@id/weather"
+                    android:text="微风"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="@dimen/y23" />
+
+                <TextView
+                    android:id="@+id/airDegree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:text="优"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="@dimen/y23" />
+
+                <TextView
+                    android:id="@+id/airQuality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x15"
+                    android:layout_toLeftOf="@id/airDegree"
+                    android:text="16"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="@dimen/y23" />
+
+                <TextView
+                    android:id="@+id/airQualityText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/airQuality"
+                    android:text="@string/label_weather_air_quality"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="@dimen/y23" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/y23" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y10"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#4DFFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.txznet.record.view.IconTextView
+                    android:id="@+id/today"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    attrValue:color_nor="@android:color/white"
+                    attrValue:color_sel="@android:color/white"
+                    attrValue:icon_normal="@drawable/weather_na"
+                    attrValue:icon_text="@string/label_weather_today"
+                    attrValue:icon_while="@drawable/weather_na"
+                    attrValue:nor_background="#00000000"
+                    attrValue:sel_background="#00000000"
+                    attrValue:text_size="@dimen/y23"
+                    attrValue:head_size="@dimen/y21" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="#4DFFFFFF" />
+
+                <com.txznet.record.view.IconTextView
+                    android:id="@+id/tomorrow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    attrValue:color_nor="@android:color/white"
+                    attrValue:color_sel="@android:color/white"
+                    attrValue:icon_normal="@drawable/weather_na"
+                    attrValue:icon_text="@string/label_weather_tommorow"
+                    attrValue:icon_while="@drawable/weather_na"
+                    attrValue:nor_background="#00000000"
+                    attrValue:sel_background="#00000000"
+                    attrValue:text_size="@dimen/y23"
+                    attrValue:head_size="@dimen/y21"/>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="#4DFFFFFF" />
+
+                <!-- android:layout_height="@dimen/y126" -->
+
+                <com.txznet.record.view.IconTextView
+                    android:id="@+id/theDayAfterTomorrow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    attrValue:color_nor="@android:color/white"
+                    attrValue:color_sel="@android:color/white"
+                    attrValue:icon_normal="@drawable/weather_na"
+                    attrValue:icon_text="@string/label_weather_day_after_tommorow"
+                    attrValue:icon_while="@drawable/weather_na"
+                    attrValue:nor_background="#00000000"
+                    attrValue:sel_background="#00000000"
+                    attrValue:text_size="@dimen/y23"
+                    attrValue:head_size="@dimen/y21" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+</com.txznet.record.view.BoundedLinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/album_item_content_ll"
+    android:orientation="vertical">
+
+
+    <FrameLayout style="@style/album_item_content_icon">
+
+        <ImageView
+            android:id="@+id/iv_loading"
+            android:layout_width="?attr/album_item_content_loading_icon_size"
+            android:layout_height="?attr/album_item_content_loading_icon_size"
+            android:layout_gravity="center"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/iv_loading_center_icon"
+            android:layout_width="?attr/album_item_content_loading_center_icon_size"
+            android:layout_height="?attr/album_item_content_loading_center_icon_size"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/intro_tv"
+        style="@style/album_item_content_des_tv"
+        android:text="正在加载" />
+
+</LinearLayout>

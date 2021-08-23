@@ -1,0 +1,42 @@
+{
+  // 版本号
+  "ver": 1,
+  // 皮肤名字
+  "skinName": "UI3.0",
+  // 作者
+  "author": "同行者",
+  // 创作时间, 只有日期
+  "time": "2020-11-20",
+  // 动画集合
+  "animList": [
+    {
+      "name": "bobao",
+      // 每一帧的时间(毫秒)
+      "duration": 60,
+      "pictures": [
+        "logo_frame_bobao1","logo_frame_bobao2","logo_frame_bobao3","logo_frame_bobao4","logo_frame_bobao5","logo_frame_bobao6","logo_frame_bobao7","logo_frame_bobao8","logo_frame_bobao9","logo_frame_bobao10","logo_frame_bobao11","logo_frame_bobao12","logo_frame_bobao13","logo_frame_bobao14"
+      ]
+    },
+    {
+      "name": "sikao",
+      "duration": 42,
+      "pictures": [
+        "logo_frame_sikao1","logo_frame_sikao2","logo_frame_sikao3","logo_frame_sikao4","logo_frame_sikao5","logo_frame_sikao6","logo_frame_sikao7","logo_frame_sikao8","logo_frame_sikao9","logo_frame_sikao10","logo_frame_sikao11","logo_frame_sikao12","logo_frame_sikao13","logo_frame_sikao14","logo_frame_sikao15","logo_frame_sikao16"
+      ]
+    },
+    {
+      "name": "ting",
+      "duration": 60,
+      "pictures": [
+        "logo_frame_ting1","logo_frame_ting2","logo_frame_ting3","logo_frame_ting4","logo_frame_ting5","logo_frame_ting6","logo_frame_ting7","logo_frame_ting8","logo_frame_ting9","logo_frame_ting10","logo_frame_ting11","logo_frame_ting12","logo_frame_ting13","logo_frame_ting14","logo_frame_ting15","logo_frame_ting16","logo_frame_ting17","logo_frame_ting18","logo_frame_ting19","logo_frame_ting20","logo_frame_ting21","logo_frame_ting22","logo_frame_ting23","logo_frame_ting24","logo_frame_ting25"
+      ]
+    },
+    {
+      "name": "wait",
+      "duration": 42,
+      "pictures": [
+        "logo_frame_wait1","logo_frame_wait2","logo_frame_wait3","logo_frame_wait4","logo_frame_wait5","logo_frame_wait6","logo_frame_wait7","logo_frame_wait8","logo_frame_wait9","logo_frame_wait10","logo_frame_wait11","logo_frame_wait12","logo_frame_wait13","logo_frame_wait14","logo_frame_wait15","logo_frame_wait16","logo_frame_wait17","logo_frame_wait18","logo_frame_wait19","logo_frame_wait20","logo_frame_wait21","logo_frame_wait22","logo_frame_wait23","logo_frame_wait24","logo_frame_wait25","logo_frame_wait26","logo_frame_wait27","logo_frame_wait28","logo_frame_wait29","logo_frame_wait30","logo_frame_wait31","logo_frame_wait32","logo_frame_wait33","logo_frame_wait34","logo_frame_wait35","logo_frame_wait36","logo_frame_wait37","logo_frame_wait38","logo_frame_wait39","logo_frame_wait40","logo_frame_wait41","logo_frame_wait42","logo_frame_wait43","logo_frame_wait44","logo_frame_wait45","logo_frame_wait46","logo_frame_wait47","logo_frame_wait48"
+      ]
+    }
+  ]
+}

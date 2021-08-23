@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_color"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y70"
+            android:background="@color/activity_search_title_bar_bg"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/activity_search_title_text_color"
+                android:textSize="35px" />
+
+            <Button
+                android:id="@+id/btnOpenMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:background="@null"
+                android:text="@string/activity_search_map_text"
+                android:textColor="@color/activity_search_open_map_text_color"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/split_line"
+            android:dividerHeight="@dimen/y1" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/flMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" >
+
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.amap.api.maps.SupportMapFragment" />
+
+        <ImageButton
+            android:id="@+id/btnMoveToMyLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/y10"
+            android:layout_marginEnd="@dimen/x10"
+            android:layout_marginStart="@dimen/x10"
+            android:background="@drawable/activity_search_ic_bg"
+            android:padding="0dp"
+            android:src="@drawable/activity_search_ic_point" />
+
+        <ImageButton
+            android:id="@+id/btnOpenSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_margin="@dimen/x16"
+            android:background="@null"
+            android:padding="0dp"
+            android:src="@drawable/activity_search_ic_back" />
+
+        <LinearLayout
+            android:id="@+id/flNav"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y70"
+            android:layout_gravity="bottom"
+            android:background="@drawable/widget_color"
+            android:orientation="horizontal" >
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scrollbars="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        style="@style/text_25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/x4" />
+
+                    <TextView
+                        android:id="@+id/txtDes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/y4"
+                        android:layout_marginLeft="@dimen/x4"
+                        android:layout_marginRight="@dimen/x4"
+                        android:textColor="@color/list_second_text_color"
+                        android:textSize="18px" />
+                </LinearLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/btnStartNav"
+                android:layout_width="@dimen/x80"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:background="@drawable/activity_search_start_button_bg"
+                android:text="@string/activity_search_start_planing_text"
+                android:textColor="@android:color/white"
+                android:textSize="28px" />
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

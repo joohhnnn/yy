@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/player_list_bg_v41"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_playlist_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_marginLeftPercent="4.8%">
+
+        <ImageView
+            android:id="@+id/iv_play_list"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40"
+            android:src="@drawable/ic_playlist_v41" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_weight="1"
+            android:text="播放列表"
+            android:textColor="@color/white"
+            android:textSize="?attr/text_size_h3" />
+
+
+        <LinearLayout
+            android:id="@+id/layout_subscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x30"
+            android:background="@drawable/rounded_corner_bg"
+            android:gravity="center_vertical"
+            android:padding="10px">
+
+
+            <com.txznet.music.widget.NotToggleCheckBox
+                android:id="@+id/cb_subscribe"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/subscribe_selector_small"
+                android:button="@null" />
+
+
+            <TextView
+                android:id="@+id/tv_subscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x4"
+                android:text="未订阅"
+                android:textSize="@dimen/m16" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.txznet.music.widget.LoadingView
+        android:id="@+id/layout_library_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_playlist_top"
+        app:layout_marginLeftPercent="5.8%"
+        app:layout_marginRightPercent="4.4%">
+
+
+        <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+            android:id="@+id/swipeToLoadLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_playlist_top">
+
+            <include
+                android:id="@id/swipe_refresh_header"
+                layout="@layout/layout_refresh_header" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@id/swipe_target"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingRight="@dimen/m28"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbarThumbVertical="@drawable/playlist_scrollbar_thumb"
+                android:scrollbarTrackVertical="@drawable/playlist_scrollbar_bg"
+                android:scrollbars="vertical"></android.support.v7.widget.RecyclerView>
+
+
+            <include
+                android:id="@id/swipe_load_more_footer"
+                layout="@layout/layout_loadmore_footer" />
+
+        </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+    </com.txznet.music.widget.LoadingView>
+</android.support.percent.PercentRelativeLayout>

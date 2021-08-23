@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingEnd="@dimen/x10"
+    android:paddingLeft="@dimen/x10"
+    android:paddingRight="@dimen/x10"
+    android:paddingStart="@dimen/x10" >
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingRight="@dimen/x20"
+        android:paddingEnd="@dimen/x20"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/prefix_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="为您找到"
+            android:textColor="#aaa"
+            android:textSize="@dimen/y20" />
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y40" >
+        <TextView
+            android:id="@+id/title_city"
+            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+            android:clickable="true"
+            android:background="@drawable/title_bg"
+            android:ellipsize="end"
+            android:gravity="center"
+	            android:maxEms="7"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginRight="@dimen/x5"
+            android:paddingEnd="@dimen/x14"
+            android:paddingLeft="@dimen/x14"
+            android:paddingStart="@dimen/x14"
+            android:singleLine="true"
+            android:text="深圳"
+            android:textColor="#44a9ff"
+            android:textSize="@dimen/y24" />
+            <ImageView 
+                android:id="@+id/img_city"
+                android:scaleType="fitCenter"
+	            android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+       <TextView
+            android:id="@+id/midfix_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="的"
+            android:textColor="#aaa"
+            android:textSize="@dimen/y20" />
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y40"
+            android:clickable="true"
+            android:background="@drawable/title_bg"
+            android:drawablePadding="@dimen/x8"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="8"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginRight="@dimen/x5"
+            android:paddingEnd="@dimen/x14"
+            android:paddingLeft="@dimen/x14"
+            android:paddingStart="@dimen/x14"
+            android:singleLine="true"
+            android:text="世界之窗"
+            android:textColor="#44a9ff"
+            android:textSize="@dimen/y24" />
+
+        <TextView
+            android:id="@+id/aftfix_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="#aaa"
+            android:textSize="@dimen/y20" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pager_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_gravity="end"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/pre_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:paddingLeft="@dimen/x5"
+            android:paddingRight="@dimen/x5"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:text="上一页"
+            android:textSize="@dimen/y20" />
+
+        <TextView
+            android:id="@+id/curPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="1/2"
+            android:textSize="@dimen/y20" />
+
+        <TextView
+            android:id="@+id/next_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x10"
+            android:paddingLeft="@dimen/x5"
+            android:paddingRight="@dimen/x5"
+            android:singleLine="true"
+            android:text="下一页"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/y20" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<resources>
+
+    <color name="search_text_color_nor">#fff</color>
+    <color name="search_text_color_pre">#8ce3fd</color>
+
+    <color name="list_item_bg_normal">#00000000</color>
+    <color name="list_item_bg_pressed">#4AA5FA</color>
+
+    <!-- 颜色 -->
+    <!-- 主色调，突出颜色，可点击选色 -->
+    <color name="color_main_select">#16CFFF</color>
+    <!-- 主标题颜色 -->
+    <color name="color_main_title">#FFFFFF</color>
+    <!-- 提示语颜色 -->
+    <color name="color_remind">#B2FFFFFF</color>
+    <!-- 副标题颜色 -->
+    <color name="color_vice_title">#99000000</color>
+    <!-- 航班价格颜色 -->
+    <color name="color_flight_price">#FF8205</color>
+    <!-- 股票上涨颜色 -->
+    <color name="color_shock_up">#F54545</color>
+    <!-- 股票下跌颜色 -->
+    <color name="color_shock_down">#00CF4A</color>
+    <!-- 列表背景颜色 -->
+    <color name="color_item_bg">#21FFFFFF</color>
+    <!-- 电影列表背景颜色 -->
+    <color name="color_movie_bg">#0CFFFFFF</color>
+    <!-- 修改poi查询地址页面背景 -->
+    <color name="color_search_bg">#FF000000</color>
+    <!-- 修改poi查询地址页面编辑框边框线颜色 -->
+    <color name="color_search_edit_stroke">#80FFFFFF</color>
+    <!-- 修改城市列表标题背景颜色 -->
+    <color name="color_city_list_title">#4D4D53</color>
+    <!-- 修改城市列表内容背景颜色 -->
+    <color name="color_city_list_content">#43444A</color>
+
+
+    <!--列表分隔线颜色-->
+    <color name="listDividerColor">#19FFFFFF</color>
+    <!--卡片中引导语与内容分隔线颜色-->
+    <color name="cardDividerColor">#20FFFFFF</color>
+    <!--文字颜色-->
+    <color name="textColorPrimary">#FFFFFFFF</color>
+    <!--副标题颜色 60%透明度-->
+    <color name="textColorSecondary">#99FFFFFF</color>
+    <!--文字、控件突出的颜色-->
+    <color name="colorAccent">#FF8205</color>
+
+</resources>

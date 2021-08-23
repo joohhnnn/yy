@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_weather_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="#FFFFFFFF"
+        android:textSize="@dimen/dimen_text_size_weather_title"
+        tools:text="深圳／今日天气"/>
+
+    <com.txznet.launcher.widget.CornerFrameLayout
+        android:id="@+id/vg_weather_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:layout_marginTop="8px">
+
+        <LinearLayout
+            android:id="@+id/ll_weather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_weather_cur_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15px"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="-8px"
+                android:singleLine="true"
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/dimen_text_size_weather_cur_temp"
+                tools:text="23°"/>
+
+            <TextView
+                android:id="@+id/tv_weather_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/dimen_text_size_weather_msg"
+                tools:text="大雨 "/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3px"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_weather_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="9px"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="@dimen/dimen_text_size_weather_temp"
+                    tools:text="19° ~ 23°"/>
+
+                <TextView
+                    android:id="@+id/tv_weather_pm25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="@dimen/dimen_text_size_weather_pm25"
+                    tools:text="空气优"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.txznet.launcher.widget.CornerFrameLayout>
+</LinearLayout>

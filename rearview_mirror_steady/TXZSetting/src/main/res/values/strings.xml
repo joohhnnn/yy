@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">语音设置</string>
+    <string name="actionbar_return">返回</string>
+    <string name="actionbar_text">设置</string>
+    <string name="actionbar_text_zdy_welcome">自定义欢迎语</string>
+    <string name="actionbar_text_zdy_wakeup">自定义唤醒词</string>
+    <string name="actionbar_text_wakeup_setting">语音唤醒</string>
+    <string name="actionbar_text_poi_map_mode">地图显示模式</string>
+    <string name="setting_wakup">语音唤醒</string>
+    <string name="setting_wakup_command">快捷免唤醒指令</string>
+    <string name="setting_threshhold">唤醒灵敏度</string>
+    <string name="setting_ttsrole">语音主题</string>
+    <string name="setting_floattool">悬浮图标</string>
+    <string name="setting_welcome">欢迎语</string>
+    <string name="setting_default">默认</string>
+    <string name="txzversion">软件版本</string>
+    <string name="shebeihao">设备号</string>
+    <string name="qqwelcome">欢迎您加入语音助手QQ交流群:624424047,与我们一起打造最酷的交互体验</string>
+    <string name="setting_wakup_example">(当前唤醒词为“你好同行者”)</string>
+    <string name="threshhold_high_very">极高</string>
+    <string name="threshhold_high">高</string>
+    <string name="threshhold_normal">正常</string>
+    <string name="threshhold_low">低</string>
+    <string name="threshhold_low_very">极低</string>
+
+    <string name="ttsrole_default">标准女声</string>
+    <string name="ttsrole_10003">甜美女声</string>
+    <string name="ttsrole_10006">情感男声</string>
+
+
+    <string name="threshhold_high_very_example">(适合嘈杂环境,极容易被唤醒)</string>
+    <string name="threshhold_high_example">(适合噪音环境,容易误唤醒)</string>
+    <string name="threshhold_normal_example">(适合普通环境,推荐)</string>
+    <string name="threshhold_low_example">(适合安静环境,较难被唤醒)</string>
+    <string name="threshhold_low_very_example">(适合安静环境,极难被唤醒)</string>
+
+
+    <string name="welcome_text_btn">启用</string>
+    <string name="welcome_text_explain">支持中文、英文或中英混合，长度不超过20个字符</string>
+    <string name="wakeup_text_explain">支持中文，字数4-8个字，不能携带标点符号哦！</string>
+    <string name="welcome_text_please_input">请输入欢迎语</string>
+    <string name="wakeup_text_please_input">请输入唤醒词</string>
+    <string name="setting_welcome_show">默认</string>
+    <string name="setting_welcome_default">恢复默认欢迎语</string>
+    <string name="setting_welcome_not_custom">没有输入欢迎语，请重新输入</string>
+    <string name="setting_welcome_first_illegal">首字母不能为标点符号，请重新输入</string>
+    <string name="setting_welcome_has_illegal">输入含非法字符，请重新输入</string>
+    <string name="setting_welcome_set_success">欢迎语设置成功</string>
+    <string name="setting_welcome_error">欢迎语输入不正确，请输入中文、英文或中英结合</string>
+
+
+    <string name="setting_wakeup_not_custom">你还没有给我取新名字哦，请重新输入</string>
+
+    <string name="setting_wakeup_name_edit">编辑</string>
+    <string name="setting_wakeup_name_delete">删除</string>
+    <string name="setting_wakeup_name_not_edit">默认，不可修改</string>
+    <string name="show_now_wakeup_name">当前唤醒语</string>
+    <string name="setting_new_wakeup">创建新的唤醒词</string>
+    <string name="setting_new_wakeup_text_explain">唤醒词请设置在4-8个字之间</string>
+    <string name="error1">语音助手出现异常，无法使用设置功能</string>
+    <string name="error2_no_init_txzsdk">语音引擎尚未初始化成功</string>
+    <string name="error3">您的语音版本过低，请更新版本才能使用</string>
+    <string name="show_wakeup_name_remind">请输入4-8个汉字，且不能携带标点符号</string>
+
+    <string name="setting_poi_map_mode_list">列表模式</string>
+    <string name="setting_poi_map_mode_blend">地图模式</string>
+
+    <string name="hidden_door_open_log">强开日志</string>
+    <string name="hidden_door_open_log_show">开启成功后需要手动重启设备或杀TXZ进程</string>
+    <string name="hidden_door_open_log_ok">检测已开启日志，请确保已经重启过进程</string>
+    <string name="hidden_door_open_voice">强开录音</string>
+    <string name="hidden_door_delete_files">删除强开配置</string>
+    <string name="yes">确定</string>
+    <string name="no">取消</string>
+
+    <string name="logo_1">语音服务由</string>
+    <string name="logo_2">联合</string>
+    <string name="logo_3">共同提供。</string>
+
+
+</resources>

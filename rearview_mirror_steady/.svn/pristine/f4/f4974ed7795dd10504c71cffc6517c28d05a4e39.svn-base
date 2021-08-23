@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/white_15"/>
+
+
+    <!-- 形状的填充色 -->
+
+    <corners
+        android:bottomLeftRadius="@dimen/m50"
+        android:bottomRightRadius="@dimen/m50"
+        android:radius="@dimen/m50"
+        android:topLeftRadius="@dimen/m50"
+        android:topRightRadius="@dimen/m50"/>
+</shape>

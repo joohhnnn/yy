@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 横屏布局 -->
+    <dimen name="style_horizontal_record_win_circle_ly_width">@dimen/y120</dimen>
+    <dimen name="style_horizontal_record_win_circle_ly_height">@dimen/y120</dimen>
+    <dimen name="style_horizontal_record_win_voice_view_width">@dimen/y42</dimen>
+    <dimen name="style_horizontal_record_win_voice_view_height">@dimen/y60</dimen>
+
+    <!-- 竖屏布局 -->
+    <dimen name="style_vertical_record_win_circle_ly_width">@dimen/y80</dimen>
+    <dimen name="style_vertical_record_win_circle_ly_height">@dimen/y80</dimen>
+    <dimen name="style_vertical_record_win_voice_view_width">@dimen/y35</dimen>
+    <dimen name="style_vertical_record_win_voice_view_height">@dimen/y50</dimen>
+
+    <!-- car 车机 -->
+    <dimen name="style_car_list_item_txtNum_marginLeft">@dimen/x10</dimen>
+    <dimen name="style_car_list_item_txtNum_width">@dimen/y44</dimen>
+    <dimen name="style_car_list_item_txtNum_height">@dimen/y44</dimen>
+    <dimen name="style_car_list_item_txtNum_textSize">@dimen/y28</dimen>
+    <dimen name="style_car_list_item_txtContent_textSize">@dimen/y20</dimen>
+    <dimen name="style_car_list_item_txtDesc_textSize">@dimen/y16</dimen>
+    <dimen name="style_car_list_item_wx_head_width">@dimen/x56</dimen>
+    <dimen name="style_car_list_item_wx_head_height">@dimen/y56</dimen>
+
+    <!-- poi -->
+    <dimen name="style_car_list_item_content_marginTop">@dimen/y2</dimen>
+    <dimen name="style_car_list_item_content_marginBottom">@dimen/y2</dimen>
+    <dimen name="style_car_list_item_divider_height">@dimen/y1</dimen>
+    <dimen name="style_car_list_item_layout_content_marginLeft">@dimen/x16</dimen>
+    <dimen name="style_car_list_item_txtContent_marginLeft">@dimen/x6</dimen>
+
+    <!-- help -->
+    <dimen name="style_car_list_item_help_icon_width">@dimen/y44</dimen>
+    <dimen name="style_car_list_item_help_icon_height">@dimen/y44</dimen>
+    <dimen name="style_car_help_icon_width">@dimen/x48</dimen>
+    <dimen name="style_car_help_icon_height">@dimen/y48</dimen>
+
+    <!-- chat -->
+    <dimen name="style_car_list_item_txtChat_minHeight">@dimen/y56</dimen>
+    <dimen name="style_car_list_item_txtChat_textSize">@dimen/y20</dimen>
+
+    <!-- stock -->
+    <dimen name="style_car_stock_pic_width">@dimen/x352</dimen>
+    <dimen name="style_car_stock_pic_height">@dimen/y220</dimen>
+    <dimen name="style_car_stock_info_ly_width">@dimen/x187</dimen>
+    <dimen name="style_car_stock_maxWidth">1000px</dimen>
+    <dimen name="style_car_weather_maxWidth">1000px</dimen>
+
+    <!-- little 短屏 -->
+    <dimen name="style_little_list_item_txtNum_marginLeft">@dimen/x10</dimen>
+    <dimen name="style_little_list_item_txtNum_width">@dimen/y48</dimen>
+    <dimen name="style_little_list_item_txtNum_height">@dimen/y48</dimen>
+    <dimen name="style_little_list_item_txtNum_textSize">@dimen/y30</dimen>
+    <dimen name="style_little_list_item_txtContent_textSize">@dimen/y24</dimen>
+    <dimen name="style_little_list_item_txtDesc_textSize">@dimen/y20</dimen>
+    <dimen name="style_little_list_item_wx_head_width">@dimen/x56</dimen>
+    <dimen name="style_little_list_item_wx_head_height">@dimen/y56</dimen>
+
+    <!-- poi -->
+    <dimen name="style_little_list_item_content_marginTop">@dimen/y2</dimen>
+    <dimen name="style_little_list_item_content_marginBottom">@dimen/y2</dimen>
+    <dimen name="style_little_list_item_divider_height">@dimen/y1</dimen>
+    <dimen name="style_little_list_item_layout_content_marginLeft">@dimen/x16</dimen>
+    <dimen name="style_little_list_item_txtContent_marginLeft">@dimen/x6</dimen>
+
+    <!-- help -->
+    <dimen name="style_little_list_item_help_icon_width">@dimen/y56</dimen>
+    <dimen name="style_little_list_item_help_icon_height">@dimen/y56</dimen>
+    <dimen name="style_little_help_icon_width">@dimen/x48</dimen>
+    <dimen name="style_little_help_icon_height">@dimen/y48</dimen>
+
+    <!-- chat -->
+    <dimen name="style_little_list_item_txtChat_minHeight">@dimen/y56</dimen>
+    <dimen name="style_little_list_item_txtChat_textSize">@dimen/y24</dimen>
+
+    <!-- stock -->
+    <dimen name="style_little_stock_pic_width">@dimen/x210</dimen>
+    <dimen name="style_little_stock_pic_height">@dimen/y210</dimen>
+    <dimen name="style_little_stock_info_ly_width">@dimen/x130</dimen>
+    <dimen name="style_little_stock_maxWidth">800px</dimen>
+    <dimen name="style_little_weather_maxWidth">800px</dimen>
+
+    <!-- large  长屏 -->
+    <dimen name="style_large_list_item_txtNum_marginLeft">@dimen/x10</dimen>
+    <dimen name="style_large_list_item_txtNum_width">@dimen/y44</dimen>
+    <dimen name="style_large_list_item_txtNum_height">@dimen/y44</dimen>
+    <dimen name="style_large_list_item_txtNum_textSize">@dimen/y28</dimen>
+    <dimen name="style_large_list_item_txtContent_textSize">@dimen/y20</dimen>
+    <dimen name="style_large_list_item_txtDesc_textSize">@dimen/y16</dimen>
+    <dimen name="style_large_list_item_wx_head_width">@dimen/x56</dimen>
+    <dimen name="style_large_list_item_wx_head_height">@dimen/y56</dimen>
+
+    <!-- poi -->
+    <dimen name="style_large_list_item_content_marginTop">@dimen/y2</dimen>
+    <dimen name="style_large_list_item_content_marginBottom">@dimen/y2</dimen>
+    <dimen name="style_large_list_item_divider_height">@dimen/y1</dimen>
+    <dimen name="style_large_list_item_layout_content_marginLeft">@dimen/x16</dimen>
+    <dimen name="style_large_list_item_txtContent_marginLeft">@dimen/x6</dimen>
+
+    <!-- help -->
+    <dimen name="style_large_list_item_help_icon_width">@dimen/y56</dimen>
+    <dimen name="style_large_list_item_help_icon_height">@dimen/y56</dimen>
+    <dimen name="style_large_help_icon_width">@dimen/x48</dimen>
+    <dimen name="style_large_help_icon_height">@dimen/y48</dimen>
+
+    <!-- chat -->
+    <dimen name="style_large_list_item_txtChat_minHeight">@dimen/y56</dimen>
+    <dimen name="style_large_list_item_txtChat_textSize">@dimen/y20</dimen>
+
+    <!-- stock -->
+    <dimen name="style_large_stock_pic_width">@dimen/x332</dimen>
+    <dimen name="style_large_stock_pic_height">@dimen/y230</dimen>
+    <dimen name="style_large_stock_info_ly_width">@dimen/x187</dimen>
+    <dimen name="style_large_stock_maxWidth">1000px</dimen>
+    <dimen name="style_large_weather_maxWidth">800px</dimen>
+
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imgDigital_Clock_Number1"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/y90"
+            android:src="@drawable/number_0" />
+
+        <ImageView
+            android:id="@+id/imgDigital_Clock_Number2"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/y90"
+            android:layout_marginLeft="@dimen/x6"
+            android:src="@drawable/number_0" />
+
+        <ImageView
+            android:layout_width="@dimen/x14"
+            android:layout_height="@dimen/y90"
+            android:layout_marginLeft="@dimen/x6"
+            android:src="@drawable/number_colon" />
+
+        <ImageView
+            android:id="@+id/imgDigital_Clock_Number3"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/y90"
+            android:layout_marginLeft="@dimen/x6"
+            android:src="@drawable/number_0" />
+
+        <ImageView
+            android:id="@+id/imgDigital_Clock_Number4"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/y90"
+            android:layout_marginLeft="@dimen/x6"
+            android:src="@drawable/number_0" />
+    </LinearLayout>

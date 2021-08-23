@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./TXZSDKDemo/libs/TXZ_SDK.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TXZSDKDemo/libs/TXZ_SDK.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

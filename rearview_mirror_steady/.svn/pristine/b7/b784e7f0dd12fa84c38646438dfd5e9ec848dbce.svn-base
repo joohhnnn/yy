@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- activity_home -->
+    <color name="activity_home_color_dest_bg">#202326</color>
+    <color name="activity_home_color_dest_text_color_hint">#40454b</color>
+    <color name="activity_home_color_search_bg_normal">#2a2f33</color>
+    <color name="activity_home_color_search_bg_select">#34bfff</color>
+    <color name="activity_home_color_search_bg_click">#2697cc</color>
+
+    <!-- activity_check_map -->
+    <color name="activity_check_map_dest_text_color">#646978</color>
+
+    <!-- activity_history -->
+    <color name="activity_history_title_bar_bg">#272930</color>
+    <color name="activity_history_title_text_color">#676b78</color>
+
+    <!-- activity_set_position -->
+    <color name="activity_set_position_dest_bg">#202326</color>
+    <color name="activity_set_position_dest_text_color_hint">#40454b</color>
+
+    <!-- activity_preview -->
+    <color name="activity_preview_start_button_bg_press">#007099</color>
+    <color name="activity_preview_start_button_bg_normal">#00baff</color>
+    <color name="activity_preview_rb_select_path_text_color_selected">#34bfff</color>
+    <color name="activity_preview_rb_select_path_bg_color">#31383b</color>
+
+</resources>

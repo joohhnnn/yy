@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_root"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@drawable/shape_activity_background_login">
+
+    <com.txznet.webchat.ui.rearview_mirror.widget.TabViewGroup
+        android:id="@+id/view_app_start_tab"
+        android:focusable="false"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"/>
+
+    <com.txznet.webchat.ui.rearview_mirror.widget.ViewPagerEx
+        android:id="@+id/view_app_start_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

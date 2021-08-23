@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    android:id="@+id/rl_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_activity_background_main">
+
+    <!--标题栏-->
+    <LinearLayout
+        android:id="@+id/ll_car_main_title"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        app:layout_heightPercent="13.3%">
+
+        <com.txznet.webchat.ui.car.widget.ResourceButton
+            android:id="@+id/view_car_main_menu_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x40"
+            android:layout_gravity="center_vertical"
+            app:resbtn_size_icon="@dimen/y29"
+            app:resbtn_size_text="@dimen/y24"
+            app:resbtn_str_text="@string/lb_main_setting"
+            app:resbtn_src_icon_normal="@drawable/src_car_main_setting"
+            app:resbtn_src_icon_pressed="@drawable/src_car_main_setting_pressed"
+            app:resbtn_padding_horizontal="15px"/>
+
+    </LinearLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_car_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+        <!--联系人列表-->
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/rl_car_main_contact"
+            android:layout_height="match_parent"
+            app:layout_widthPercent="38%"
+            app:layout_marginTopPercent="13.3%">
+
+            <com.txznet.webchat.ui.base.widgets.FocusRecyclerView
+                android:id="@+id/prv_car_main_session"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadeScrollbars="false"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarStyle="outsideInset"
+                android:scrollbars="vertical"
+                app:layout_marginLeftPercent="5.3%"
+                app:layout_marginRightPercent="5.3%"/>
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <!--消息列表-->
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/rl_car_main_chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/rl_car_main_contact"
+            android:visibility="gone">
+
+            <android.support.percent.PercentFrameLayout
+                android:id="@+id/fl_car_main_chat_title"
+                android:layout_width="match_parent"
+                android:background="@drawable/shape_activity_background_main_title"
+                app:layout_heightPercent="13.3%">
+
+                <com.txznet.webchat.ui.common.widget.ThemedTextView
+                    android:id="@+id/tv_car_main_chat_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/y22"
+                    tools:text="你大爷的"
+                    app:layout_marginLeftPercent="6.5%"
+                    app:theme_color="primary"/>
+
+            </android.support.percent.PercentFrameLayout>
+
+            <View
+                android:id="@+id/view_car_chat_msg_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/fl_car_main_chat_title"
+                android:background="@drawable/shape_activity_background_main_accent"/>
+
+            <FrameLayout
+                android:id="@+id/btn_car_chat_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/selector_car_btn"
+                app:layout_marginLeftPercent="6.5%"
+                app:layout_marginRightPercent="6.5%"
+                app:layout_marginBottomPercent="3.3%">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_car_chat_reply_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/y24"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/x10"
+                        android:src="@drawable/ic_car_wechat_say"/>
+
+                    <com.txznet.webchat.ui.common.widget.ThemedTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/y6"
+                        android:paddingBottom="@dimen/y6"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/lb_chat_reply"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/y20"
+                        app:theme_color="primary"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <com.txznet.webchat.ui.base.widgets.FocusRecyclerView
+                android:id="@+id/rv_car_main_chat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/btn_car_chat_reply"
+                android:layout_below="@+id/fl_car_main_chat_title"/>
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <!--微信图标-->
+        <android.support.percent.PercentFrameLayout
+            android:id="@+id/rl_car_main_icon_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#14ffffff"
+            app:layout_marginLeftPercent="38%">
+
+            <com.txznet.webchat.ui.common.widget.ThemedImageView
+                android:src="@drawable/src_car_main_content_back"
+                android:layout_gravity="center_horizontal"
+                app:layout_widthPercent="35.5%"
+                app:layout_aspectRatio="122%"
+                app:layout_marginTopPercent="34.2%"
+                app:theme_src="@drawable/src_car_main_content_back"/>
+
+        </android.support.percent.PercentFrameLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <!--设置界面-->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_car_main_setting"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.txznet.webchat.ui.base.widgets.FocusRecyclerView
+            android:id="@+id/rv_car_main_menu"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/x32"
+            android:paddingRight="@dimen/x16"
+            app:layout_widthPercent="38%"
+            app:layout_marginTopPercent="13.3%"/>
+
+
+        <!--帮助-->
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/rl_car_main_help"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/rv_car_main_menu"
+            android:background="#05ffffff">
+
+
+            <android.support.percent.PercentFrameLayout
+                android:id="@+id/fl_car_main_help_title"
+                android:layout_width="match_parent"
+                app:layout_heightPercent="13.3%"
+                app:layout_marginTopPercent="13.3%">
+
+                <com.txznet.webchat.ui.car.widget.ResourceButton
+                    android:id="@+id/view_car_main_help_expand"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    app:layout_marginRightPercent="5%"
+                    app:resbtn_boolean_icon_visible="false"
+                    app:resbtn_str_text="@string/lb_setting_help_expand_all"
+                    app:resbtn_size_text="@dimen/y20"
+                    app:resbtn_color_text_normal="@color/color_accent"
+                    app:resbtn_color_text_pressed="@color/color_primary"
+                    app:resbtn_padding_horizontal="15px"/>
+
+                <com.txznet.webchat.ui.common.widget.ThemedTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/lb_main_help"
+                    android:textSize="@dimen/y24"
+                    android:textColor="#ffffff"
+                    android:gravity="center_vertical"
+                    app:layout_marginLeftPercent="6.5%"
+                    app:theme_color="primary"/>
+
+            </android.support.percent.PercentFrameLayout>
+
+            <View
+                android:id="@+id/view_car_main_help_divider"
+                style="@style/divider_line_horizontal"
+                android:layout_below="@id/fl_car_main_help_title"/>
+
+            <com.txznet.webchat.ui.car.widget.CarHelpExpandableListView
+                android:id="@+id/elv_car_main_help"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/view_car_main_help_divider"/>
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <!--绑定页面-->
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/rl_car_main_bind"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/rv_car_main_menu"
+            android:background="#05ffffff">
+
+            <android.support.percent.PercentFrameLayout
+                android:id="@+id/fl_car_qr"
+                android:layout_centerHorizontal="true"
+                app:layout_heightPercent="37.5%"
+                app:layout_aspectRatio="100%"
+                app:layout_marginTopPercent="20%">
+
+                <ImageView
+                    android:id="@+id/iv_car_main_bind_qrcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/qr_landscape"
+                    tools:src="#a1a1a1"/>
+
+                <com.pnikosis.materialishprogress.ProgressWheel
+                    android:id="@+id/pb_car_main_bind_progress"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    app:matProg_barColor="@color/color_accent"
+                    app:matProg_progressIndeterminate="true"
+                    app:matProg_barWidth="@dimen/y3"
+                    app:layout_heightPercent="18.8%"
+                    app:layout_aspectRatio="100%"/>
+            </android.support.percent.PercentFrameLayout>
+
+
+            <com.txznet.webchat.ui.common.widget.ThemedTextView
+                android:id="@+id/tv_car_main_bind_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/fl_car_qr"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/y19"
+                android:text="@string/lb_login_control_unbind"
+                app:layout_marginTopPercent="3.3%"
+                app:layout_marginLeftPercent="10%"
+                app:layout_marginRightPercent="10%"
+                app:theme_color="primary"/>
+
+            <FrameLayout
+                android:id="@+id/btn_car_main_bind_refresh"
+                android:layout_width="@dimen/x156"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_car_main_bind_title"
+                android:background="@drawable/selector_car_btn"
+                app:layout_marginTopPercent="3.3%">
+
+                <com.txznet.webchat.ui.common.widget.ThemedTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/y16"
+                    android:paddingTop="@dimen/y6"
+                    android:paddingBottom="@dimen/y6"
+                    android:text="@string/lb_login_wechat_refresh"
+                    app:theme_color="primary"/>
+
+            </FrameLayout>
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <!--微信图标-->
+        <android.support.percent.PercentFrameLayout
+            android:id="@+id/rl_car_main_icon_setting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/rv_car_main_menu"
+            android:layout_toEndOf="@+id/rv_car_main_menu"
+            android:layout_toRightOf="@+id/rv_car_main_menu">
+
+            <com.txznet.webchat.ui.common.widget.ThemedImageView
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/src_car_main_content_back"
+                app:layout_aspectRatio="122%"
+                app:layout_marginTopPercent="34.2%"
+                app:layout_widthPercent="35.5%"
+                app:theme_src="@drawable/src_car_main_content_back"/>
+
+        </android.support.percent.PercentFrameLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

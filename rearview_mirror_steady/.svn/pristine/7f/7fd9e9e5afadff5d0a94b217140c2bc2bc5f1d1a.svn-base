@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="nav_tab_bg_select">#202020</drawable>
+    <drawable name="nav_tab_bg">#797979</drawable>
+    <drawable name="transparent_background">#00000000</drawable>
+    <drawable name="nav_button_back_pressed">#0e0f11</drawable>
+    <drawable name="nav_button_back_normal">#272930</drawable>
+    <drawable name="progress_color">#213966</drawable>
+    <drawable name="list_click">#1b1c25</drawable>
+    <drawable name="call_list_normal">#32373b</drawable>
+    <drawable name="nav_home_click">#1b1c25</drawable>
+    <drawable name="music_catogory_bg_click">#1b1c25</drawable>
+    <drawable name="music_catogory_bg_normal">#0f1019</drawable>
+    <drawable name="msg_list_click">#1b1c25</drawable>
+
+    <color name="register_hint_strong">#ff0000</color>
+    <color name="text_color_select">#0888d1</color>
+    <color name="cat_select_color">#0f1019</color>
+
+    <drawable name="tick_btn">#e0000000</drawable>
+    <drawable name="cato_bg_down">#0888d1</drawable>
+    <drawable name="title_back_bt_bg_normal">#1b1c25</drawable>
+    <drawable name="friend_tab_click">#1e202e</drawable>
+
+    <color name="map_border_mine">#ff6000</color>
+    <color name="map_border_theirs">#0090ff</color>
+
+    <drawable name="new_bg_normal">#32373b</drawable>
+    <drawable name="new_bg_down">#0c0d0e</drawable>
+
+    <color name="txz_bg">#32373b</color>
+    <color name="call_cancel_click">#1f5d7b</color>
+    <color name="call_cancel_normal">#34bfff</color>
+
+    <!-- 导航 -->
+    <color name="nav_home_dest_bg">#202326</color>
+    <color name="nav_home_dest_text_color_hint">#40454b</color>
+    <color name="nav_home_search_bg_normal">#2a2f33</color>
+    <color name="nav_home_search_bg_select">#34bfff</color>
+    <color name="nav_home_search_bg_click">#2697cc</color>
+    <color name="nav_start_button_bg_normal">#00baff</color>
+    <color name="nav_start_button_bg_press">#007099</color>
+    <color name="nav_search_list_num">#32373b</color>
+    <color name="nav_search_list_set_out">#00b4ff</color>
+    <color name="nav_preview_rb_select_path_text_color_selected">#34bfff</color>
+    <color name="nav_preview_rb_select_path_bg_color">#31383b</color>
+    <color name="nav_set_position_back_pressed">#0e0f11</color>
+    <color name="nav_set_position_back_normal">#272930</color>
+    <!-- 音乐播放 -->
+    <color name="music_time">#ffffffff</color>
+    <color name="music_category_item_text">#ffffffff</color>
+    <!-- 音乐 -->
+    <color name="music_title">#7d8292</color>
+    <color name="textSelected">#ffffff</color>
+    <color name="music_move">#34bfff</color>
+    <color name="music_item_pressed_bg">#1a8ec4</color>
+
+    <drawable name="title_bar_bg">#272930</drawable>
+
+    <!-- 重构 -->
+    <!-- win_menu -->
+    <color name="win_menu_color_bg">#1b1d23</color>
+
+    <!-- win_nav_home -->
+    <color name="win_nav_home_color_dest_bg">#202326</color>
+    <color name="win_nav_home_color_dest_text_color_hint">#40454b</color>
+    <color name="win_nav_home_color_search_bg_normal">#2a2f33</color>
+    <color name="win_nav_home_color_search_bg_select">#34bfff</color>
+    <color name="win_nav_home_color_search_bg_click">#2697cc</color>
+
+    <!-- win_nav_check_map -->
+    <color name="win_nav_check_map_dest_text_color">#646978</color>
+
+    <!-- 文字颜色 -->
+    <color name="text_color">#adb6cc</color>
+    <!-- 分割线 -->
+    <color name="split_line">#000000</color>
+    <!-- 光标线 -->
+    <color name="text_cursor_color">#ffffff</color>
+    <!-- 按下颜色 -->
+    <color name="widget_color_pressed">#282c2f</color>
+    <color name="widget_color_normal">#32373b</color>
+    <!-- 列表第二行文字颜色 -->
+    <color name="list_second_text_color">#707070</color>
+
+    <!-- win_nav_search -->
+    <color name="win_nav_search_title_text_color">#676b78</color>
+    <color name="win_nav_search_open_map_text_color">#00b4ff</color>
+    <color name="win_nav_search_title_bar_bg">#272930</color>
+    <color name="win_nav_search_start_button_bg_normal">#00baff</color>
+    <color name="win_nav_search_start_button_bg_press">#007099</color>
+
+    <!-- win_nav_history -->
+    <color name="win_nav_history_title_bar_bg">#272930</color>
+    <color name="win_nav_history_title_text_color">#676b78</color>
+
+    <!-- win_nav_set_position -->
+    <color name="win_nav_set_position_dest_bg">#202326</color>
+    <color name="win_nav_set_position_dest_text_color_hint">#40454b</color>
+
+    <!-- win_nav_preview -->
+    <color name="win_nav_preview_start_button_bg_press">#007099</color>
+    <color name="win_nav_preview_start_button_bg_normal">#00baff</color>
+    <color name="win_nav_preview_rb_select_path_text_color_selected">#34bfff</color>
+    <color name="win_nav_preview_rb_select_path_bg_color">#31383b</color>
+
+    <!-- win_music -->
+    <color name="win_music_category_color_1_normal">#4693bf</color>
+    <color name="win_music_category_color_1_pressed">#31678f</color>
+    <color name="win_music_category_color_2_normal">#4ea38f</color>
+    <color name="win_music_category_color_2_pressed">#367165</color>
+    <color name="win_music_category_color_3_normal">#6e9943</color>
+    <color name="win_music_category_color_3_pressed">#4c6c2d</color>
+    <color name="win_music_category_color_4_normal">#b19c46</color>
+    <color name="win_music_category_color_4_pressed">#7c6d3e</color>
+    <color name="win_music_item_pressed_bg">#1a8ec4</color>
+
+    <!-- win_messagebox -->
+    <color name="transparent">#00000000</color>
+    <color name="win_dialog_text">#eeeeee</color>
+    <color name="win_dialog_bg">#454a50</color>
+    <color name="win_dialog_title">#353a40</color>
+    <color name="win_messagebox_sure_normal">#00000000</color>
+    <color name="win_messagebox_sure_focus">#00000000</color>
+    <color name="win_messagebox_sure_pressed">#2787ed</color>
+    <color name="win_messagebox_cancel_normal">#00000000</color>
+    <color name="win_messagebox_cancel_focus">#00000000</color>
+    <color name="win_messagebox_cancel_pressed">#2787ed</color>
+    <color name="win_messagebox_sure_text_normal">#10AEFF</color>
+    <color name="win_messagebox_sure_text_pressed">#FFFFFF</color>
+    <color name="win_messagebox_cancel_text_normal">#FFFFFF</color>
+    <color name="win_messagebox_cancel_text_pressed">#FFFFFF</color>
+    <color name="win_messagebox_focused">#4AA5FA</color>
+
+    <!-- 齐悟机票和火车票待支付界面 -->
+    <color name="qiwu_ticket_pending_cancel_btn_bg_normal">#FF4D5668</color>
+    <color name="qiwu_ticket_pending_cancel_btn_bg_press">#FF1B7FFF</color>
+</resources>

@@ -1,0 +1,52 @@
+{
+	"all":
+	{
+		"li:yu":0.7,
+		"xi:xv":0.7,
+		
+		"rou:lou" : 0.95,
+		"rong:long":0.95,
+		"rou:nou" : 0.95,
+		"rong:nong" : 0.95,
+		"nou:lou" : 0.85,
+		"nong:long" : 0.8,
+		
+		"nuo:luo" : 0.8,
+		"nuo:ruo" : 0.8,
+		"ruo:luo" : 0.85,
+		
+		"zou:zhou" : 0.95,
+		"cou:chou" : 0.95,
+		"sou:shou" : 0.95,
+		"zhang:jiang":0.8,
+		
+		"" : 0.0
+	}, 
+	
+	"part":
+	{
+		"zh:z" : 0.8, 
+		"sh:s" : 0.8, 
+		"ch:c" : 0.8, 
+		"r:l" : 0.8, 
+		"r:n" : 0.7, 
+		"l:n" : 0.7, 
+		"f:h" : 0.7, 
+		"k:g" : 0.5, 
+		"in:ing" : 0.8, 
+		"an:ang" : 0.7, 
+		"en:eng" : 0.7, 
+		"ian:iang" : 0.7, 
+		"uan:uang" : 0.7, 
+		"ie:ue" : 0.7, 
+		"ou:ong" : 0.7, 
+		"i:v" : 0.7, 
+		"j:q" : 0.5, 
+		"ang:iang":0.7,
+		
+		"" : 0.0
+	}
+}
+
+
+

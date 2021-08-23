@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<com.txznet.music.widget.recyclerView.MyPullToLeftView-->
+    <!--android:id="@+id/pull_group"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_album"
+        style="@style/album_item_content_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="visible" />
+
+    <!--<View-->
+    <!--android:id="@+id/test"-->
+    <!--android:layout_width="@dimen/m200"-->
+    <!--android:layout_height="@dimen/m200"-->
+    <!--android:background="@color/color_selected" />-->
+    <!--</com.txznet.music.widget.recyclerView.MyPullToLeftView>-->
+
+</merge>

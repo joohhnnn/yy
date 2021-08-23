@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/win_callout_process_list_click_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y70" >
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y4"
+            android:background="@null"
+            android:clickable="false"
+            android:max="100" 
+            android:progress="0"
+            android:progressDrawable="@drawable/win_callout_process_color_progressbar"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="0dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/num"
+                android:layout_width="@dimen/x33"
+                android:layout_height="@dimen/y33"
+                android:background="@drawable/win_callout_process_tv_circle_bg"
+                android:gravity="center"
+                android:padding="0dp"
+                android:includeFontPadding="false"
+                android:text="1"
+                android:layout_gravity="center"
+                android:textColor="#31383b"
+                android:textSize="@dimen/y25" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x10"
+                style="@style/text_35"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                style="@style/text_35"
+                android:text=""
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/area"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/x35"
+                android:scrollHorizontally="true"
+                android:text="中国移动"
+                style="@style/text_25"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:background="@color/split_line" />
+
+</LinearLayout>

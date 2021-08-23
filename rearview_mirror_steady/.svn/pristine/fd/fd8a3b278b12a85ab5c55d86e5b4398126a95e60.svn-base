@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/local_scan1" android:duration="40"></item>
+    <item android:drawable="@drawable/local_scan2" android:duration="40"></item>
+    <item android:drawable="@drawable/local_scan3" android:duration="40"></item>
+    <item android:drawable="@drawable/local_scan4" android:duration="40"></item>
+    <item android:drawable="@drawable/local_scan5" android:duration="40"></item>
+    <item android:drawable="@drawable/local_scan6" android:duration="40"></item>
+    <item android:drawable="@drawable/local_scan7" android:duration="40"></item>
+    <item android:drawable="@drawable/local_scan8" android:duration="40"></item>
+    <item android:drawable="@drawable/local_scan9" android:duration="40"></item>
+    <item android:drawable="@drawable/local_scan10" android:duration="40"></item>
+    <item android:drawable="@drawable/local_scan11" android:duration="40"></item>
+</animation-list>

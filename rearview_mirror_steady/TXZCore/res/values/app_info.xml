@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 应用程序名 -->
+    <string name="app_name">TXZ</string>
+    <string name="app_version">3.6.46</string>
+    <!-- 版本描述 -->
+    <string name="app_desc"></string>
+    <!-- 版权信息 -->
+    <string name="copyright">深圳市同行者科技有限公司 版权所有（语音引擎由北京云知声信息技术有限公司提供）</string>
+
+</resources>

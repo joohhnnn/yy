@@ -1,0 +1,53 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.4'
+        //classpath 'com.github.jcandksolutions.gradle:android-unit-test:2.1.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.1' // GreenDao support
+        classpath 'me.tatarka:gradle-retrolambda:3.7.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.google.com' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+
+    project.ext {
+        compileSdkVersion = 27
+        buildToolsVersion = "27.0.3"
+        minSdkVersion = 16
+
+        // Android6.0(api23)以上的版本中会有权限申请的问题, 所以将targetSdkVersion指定到19
+        targetSdkVersion = 19
+
+        supportLibraryVersion = "27.1.1"
+
+        butterKnifeVersion = "7.0.1"
+
+        RxJavaVersion = "2.1.7"
+        RxAndroidVersion = "2.0.1"
+
+        GsonVersion = "2.8.0"
+    }
+}

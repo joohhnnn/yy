@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_help_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y80">
+
+        <!--<ImageView
+            android:layout_width="@dimen/y80"
+            android:layout_height="@dimen/y50"
+            android:layout_centerVertical="true"
+            android:src="@drawable/win_weixin_reason_back"
+            android:scaleType="centerInside"/>-->
+
+        <ImageButton
+            android:id="@+id/btn_help_back"
+            android:layout_width="@dimen/y80"
+            android:layout_height="@dimen/y80"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/src_arrow_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/y34"
+            android:textColor="@color/color_help_tab_text"
+            android:text="@string/lb_main_help"/>
+
+    </RelativeLayout>
+
+    <com.txznet.webchat.ui.rearview_mirror.widget.HelpExpandableListView
+        android:id="@+id/elv_help_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/y80" />
+
+
+
+</RelativeLayout>

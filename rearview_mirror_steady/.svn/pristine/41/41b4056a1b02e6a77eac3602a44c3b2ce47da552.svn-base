@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arr_help_tip_title">
+        <item>发送语音消息</item>
+        <item>发送与取消发送</item>
+        <item>发送表情</item>
+        <item>连续发送消息</item>
+        <item>分享当前位置</item>
+        <item>回复微信</item>
+        <item>位置导航</item>
+        <item>屏蔽消息/解除屏蔽</item>
+        <item>关闭/打开自动播报</item>
+        <item>查看历史消息</item>
+        <item>退出微信</item>
+        <item>关于微信</item>
+    </string-array>
+
+    <string-array name="arr_help_subtitle_1">
+        <item>打开语音界面，您可以说“发微信”、“发微信给xxx”等命令发送语音消息给好友。</item>
+    </string-array>
+
+    <string-array name="arr_help_subtitle_2">
+        <item>录音时，您可以说“取消取消”终止发送，也可以在说完内容后喊“完毕完毕”快速发送。如果说完内容后3s内未说话，系统将自动结束录音并发送该消息。</item>
+    </string-array>
+
+    <string-array name="arr_help_subtitle_3">
+        <item>打开语音界面，您可以说“发一个微笑表情给xxx”以发送表情消息。</item>
+    </string-array>
+
+    <string-array name="arr_help_subtitle_4">
+        <item>在听到语音播报消息发送成功时，您可以在6s内说“继续发送”给该好友再发1条消息。</item>
+    </string-array>
+
+    <string-array name="arr_help_subtitle_5">
+        <item>打开语音界面，您可以说“分享位置”、“分享位置给xxx”等命令进行分享。在收到好友发来的消息后，也可以在6s内说“分享位置”进行分享。</item>
+    </string-array>
+
+    <string-array name="arr_help_subtitle_6">
+        <item>在收到好友发来的消息后，您可以在6s内说“回复微信”进行回复。</item>
+    </string-array>
+
+    <string-array name="arr_help_subtitle_7">
+        <item>在语音播报完好友发来的位置消息时，您可以在6s内说“导航过去”导航到该位置。</item>
+    </string-array>
+
+    <string-array name="arr_help_subtitle_8">
+        <item>您在手机微信设为免打扰的好友或群的消息将会自动忽略不进行播报。</item>
+        <item>在语音播报完消息后，您还可以说“屏蔽屏蔽”以屏蔽该好友或群的消息。</item>
+        <item>在屏蔽好友或群后，您可以打开语音界面，说“解除屏蔽”以解除对好友或群的屏蔽。</item>
+    </string-array>
+
+    <string-array name="arr_help_subtitle_9">
+        <item>打开语音界面，您可以说“关闭自动播报”以关闭自动播报消息功能。</item>
+    </string-array>
+
+    <string-array name="arr_help_subtitle_10">
+        <item>打开语音界面，您可以说“查看微信历史消息”、“查看微信消息”以查看好友或群的历史消息。</item>
+    </string-array>
+
+    <string-array name="arr_help_subtitle_11">
+        <item>打开语音界面，您可以说“退出微信”以退出。</item>
+    </string-array>
+
+    <!--远程绑定帮助页面文字内容-->
+    <string-array name="arr_bind_reason">
+       <!-- <item>无需扫描二维码，只需要通过公众号即可快速登陆车载微信</item>-->
+        <item>无论距离您的爱车多远，快速定位爱车位置，查看爱车情况</item>
+        <item>好友通过公众号，将位置分享到设备，一键去接送好友</item>
+        <item>便捷地查看您爱车的行驶轨迹，每天都经过了哪里</item>
+    </string-array>
+
+    <string-array name="arr_bind_reason_title">
+        <!--<item>快速登陆</item>-->
+        <item>爱车情况</item>
+        <item>一键接送</item>
+        <item>行驶轨迹</item>
+    </string-array>
+</resources>

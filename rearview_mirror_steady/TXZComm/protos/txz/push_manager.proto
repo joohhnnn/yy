@@ -1,0 +1,152 @@
+package com.txz.push_manager;
+
+import "ui_equipment.proto";
+
+//基础指令枚举
+enum SubCommand
+{
+	SUBCMD_USER_MESSAGE= 1; //服务器推送消息, 携带Push_UserMessage
+	SUBCMD_CONFIRM_PUSH= 2; //收到push协议确认, 携带xxx_ConfirmPush
+}
+
+
+//错误码
+enum ErrorCode
+{
+	EC_START 				= 10000;  //
+
+}
+
+enum PushCmd{
+	PUSH_CMD_TEST = 1;										//test
+	PUSH_CMD_BIND_WX_SUCCESS = 2;				//绑定微信成功,携带PushCmd_BindWXSuccess,
+	PUSH_CMD_NOTIFY_UPLOAD_PIC = 3;			//触发上传最新图片,携带PushCmd_NotifyUploadPic
+	PUSH_CMD_NAVIGATION = 4;						//导航,携带PushCmd_Navigation
+	PUSH_CMD_UNBIND_WX_SUCCESS = 5;			//解绑微信成功,携带PushCmd_UnbindWXSuccess,
+	PUSH_CMD_NOTIFY_UPLOAD_LOG	= 6;			//触发上传日志信息
+	PUSH_CMD_IM_ROOM	=	7;							//多车同行推送消息，携带data内容由多车同行模块处理			
+	PUSH_CMD_NOTIFY_UPGRADE = 8;				//通知升级,携带PushCmd_NotifyUpgrade
+	PUSH_CMD_NOTIFY_UPDATE_LICENSE = 9;	//通知更新license
+	PUSH_CMD_CAR_TEAM	 = 10;						//车队push信息
+	PUSH_CMD_NOTIFY_GET_LOG_INDEX = 11;	//获取日志索引信息
+	PUSH_CMD_NOTIFY_UPLOAD_VOICE_FILE  = 12;	//上传声控音频文件,携带PushCmd_NotifyGetVoiceFile
+}
+
+
+message MessageInfo
+{
+	optional uint64 uint64_from_uid = 1;	//发送方uid
+	optional uint64 uint64_push_mid = 2;	//推送消息ID
+	optional uint32 uint32_push_cmd = 3;	//推送协议
+	optional bytes  str_push_data = 	  4;	//推送的数据
+}
+
+enum NotifyUpdateLicense_Type
+{
+	NULT_UPDATE = 1;	//update license
+	NULT_FORBID  = 2; //禁用当前license，并更新license
+}
+
+message PushCmd_NotifyUpdateLicense
+{
+	optional uint32 uint32_type = 1;	//NotifyUpdateLicense_Type
+	
+}
+
+message PushCmd_NotifyUpgrade
+{
+	optional string str_package_name = 1;			//包名
+	optional string str_target_version = 2;			//升级目标版本号
+	optional string str_old_md5 = 3; 					//当前版本安装包校验，校验本地包决定是否进行全量下载
+	optional string str_new_md5 = 4; 					//新版本安装包校验
+	optional string str_full_download_url = 5; 		//全量包下载路径
+	optional string str_inc_download_url = 6; 		//增量包下载路径
+	optional string str_install_tips = 7;					//安装提示内容（如：更新内容）
+	optional uint32 uint32_flag = 8;					//扩展标志位
+}
+
+message PushCmd_Navigation
+{
+	//GPS信息
+	optional double dbl_lat                				= 	1; 	//GPS纬度
+	optional double dbl_lng               				= 	2; 	//GPS经度
+	optional string str_target_name				= 3;	//位置名称(目的地名字)
+	optional string str_target_address 			= 13; //目的地址
+	optional uint64 uint64_from_uid				= 4;	//发起导航的UID
+	optional string str_from_wx_nick 				= 5;	//发起导航的微信昵称
+	optional uint32 uint32_time						= 6;	//发起导航时间
+	optional string str_from_face_url				= 7;	//头像url地址
+	optional uint32 uint32_type						= 8;	//导航类型 com.txz.ui.map.ServerPushNatigationType
+	optional uint32 uint32_room_from_type 	= 9;	//uint32_type=NT_MULTI_NATIGATION有效，多车同行来源类型
+	optional uint64 uint64_room_id 				= 10;	//uint32_type=NT_MULTI_NATIGATION有效，多车同行房间ID
+	optional string str_to_wx_nick 					= 11; 	//uint32_type=NT_MULTI_NATIGATION有效，本人的微信昵称
+	optional string str_to_face_url 					= 12; 	//uint32_type=NT_MULTI_NATIGATION有效，本人的微信头像
+
+}
+
+message PushCmd_CarTeam
+{
+	optional uint32 uint32_type = 1; 	//消息类型com.txz.ui.equipment.CarTeamPushType
+	optional string str_car_info = 2;	//绑定类型时 有效（uint32_type=CTPT_BIND）
+	optional string str_url	= 3;						////解绑类型时 有效（uint32_type=CTPT_UNBIND）
+}
+
+message PushCmd_BindWXSuccess
+{
+	optional com.txz.ui.equipment.WXUserInfo msg_wx = 1;
+}
+
+message PushCmd_UnbindWXSuccess
+{
+	optional string str_bind_wx_url = 3;	//绑定微信URL
+}
+
+message PushCmd_NotifyUploadPic
+{
+} 
+
+message PushCmd_NotifyUploadVoiceFile
+{
+	optional uint64 uint64_voice_file_id = 1;
+} 
+
+
+message PushCmd_NotifyUploadLog{
+	optional uint32 uint32_level		= 1;				//拉取日志的级别（1：debug，2：info，4：error，8：fail）
+	optional uint32 uint32_begin_time = 2;		//开始时间
+	optional uint32 uint32_end_time = 3;			//结束时间
+	optional uint64 uint64_begin_seq = 4;			//日志起始的文件ID
+	optional uint64 uint64_end_seq = 5;				//日志结束的文件ID
+	optional uint32 uint32_index_type = 6;			//查询类型，0：时间查询，1: 序号查询
+}
+
+message PushCmd_NotifyGetLogIndex
+{
+} 
+
+//服务器推送消息协议
+message Push_UserMessage
+{
+	repeated MessageInfo rpt_msg_info_list = 1;
+}
+message Echo_UserMessage
+{
+	repeated uint64 rpt_uint64_mid = 1;
+}
+
+
+//收到push协议确认协议（请求包）
+message Req_ConfirmPush
+{
+	repeated uint64 rpt_push_mid_list = 1;	//推送消息ID
+
+}
+
+//收到push协议确认协议（回应包）
+message Resp_ConfirmPush
+{
+	repeated uint64 rpt_push_mid_list = 1;	//推送消息ID
+}
+
+
+

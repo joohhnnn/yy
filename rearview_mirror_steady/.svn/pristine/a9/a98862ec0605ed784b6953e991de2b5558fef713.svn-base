@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/album_ll"
+    android:layout_width="?attr/album_item_content_size_width"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_album"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_album"
+            style="@style/album_item_content_icon">
+
+            <include layout="@layout/merge_album_image_view" />
+
+            <ImageView
+                android:id="@+id/iv_playing"
+                android:layout_width="?attr/album_item_content_icon_height"
+                android:layout_height="?attr/album_item_content_icon_height"
+                style="@style/album_item_content_icon_playing"
+                android:layout_marginBottom="@dimen/m5"
+                android:layout_marginRight="@dimen/m5"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/intro_tv"
+            style="@style/album_item_content_des_tv" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_focus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="@drawable/album_focus"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_novel_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/m8"
+        android:src="@drawable/novel_ended"
+        android:scaleType="center"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_novel_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="center"
+        android:src="@drawable/icon_novel_new"
+        android:visibility="gone" />
+
+</RelativeLayout>

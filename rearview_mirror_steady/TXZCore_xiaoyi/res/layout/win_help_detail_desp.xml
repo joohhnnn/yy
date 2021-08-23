@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/help_detail_desp_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#282828" >
+
+    <TextView
+        android:id="@+id/help_detail_desp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/y10"
+        android:layout_marginLeft="@dimen/x104"
+        android:layout_marginRight="@dimen/x104"
+        android:layout_marginTop="@dimen/y10"
+        android:gravity="left|center_vertical"
+        android:text="发微信"
+        android:textColor="#ffffff"
+        android:textSize="30px" />
+
+</FrameLayout>

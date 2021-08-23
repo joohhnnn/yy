@@ -1,0 +1,31 @@
+传输外部音频给同行者Core进行识别的实现步骤
+
+1、需要在适配程序中设置开启使用外部音频源，并且设置好音频源的类型。
+	InitParam param = new InitParam("your appid", "your apptoken");
+	param.useExternalAudioSource(true);//使用外部音频源
+	param.setExtAudioSourceType(TXZConfigManager.EXT_AUDIOSOURCE_TYPE_TXZ);//设置使用外部音频源的类型，为使用TXZ提供的aidl接口。
+	TXZConfigManager.getInstance().initialize(this, param, new InitListener();
+2、发送音频数据的App中需要实现一个Service,TXZCore内部会通过以下方式来bind服务，并且取得远程binder对象。
+        Intent intent = new Intent();
+		intent.setAction("com.txznet.txz.intent.action.REMOTERECORD");
+		try {
+			//必須先start然後bind, 不然客戶端進程掛掉后，會另起一個Service對象。
+			AppLogic.getApp().startService(intent);
+			AppLogic.getApp().bindService(intent, mSvrConn,
+					Context.BIND_AUTO_CREATE);
+		} catch (Exception e) {
+			JNIHelper.logd("connect exception");
+		}
+	}
+	因此，实现的Service需要在manifest中配置以下两个关键参数：
+	 android:exported="true"//允许第三方远程调用
+     <intent-filter >
+                <action  android:name="com.txznet.txz.intent.action.REMOTERECORD"/>//TXZCore会通过该action来bind服务
+     </intent-filter>
+	 
+3、引擎识别时每次read的数据大小是1200个字节，为了更好地保持同步，避免延时，建议发送音频数据的APP每次read录音的时候，read个数也为1200字节。
+
+具体实现可参考MicService的实现类。
+使用到的jar为TXZAudioRecord.jar。
+
+本示例仅供参考，很多异常情况，需要开发者自行处理。

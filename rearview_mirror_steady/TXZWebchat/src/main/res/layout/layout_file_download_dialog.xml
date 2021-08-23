@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/x668"
+        android:layout_height="@dimen/y248"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/src_file_download_dialog_bg">
+
+        <TextView
+            android:id="@+id/tv_file_download_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/y59"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/y30"
+            tools:text="文件下载成功, 确定现在打开吗?"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv_file_download_title"
+            android:layout_marginTop="@dimen/y61"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/fl_file_download_confirm"
+                android:layout_width="142px"
+                android:layout_height="53px"
+                android:background="@drawable/selector_file_download_dialog_button">
+
+                <TextView
+                    android:id="@+id/tv_file_download_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/y24"
+                    android:text="确定"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_file_download_cancel"
+                android:layout_width="142px"
+                android:layout_height="53px"
+                android:layout_marginLeft="@dimen/x81"
+                android:background="@drawable/selector_file_download_dialog_button">
+
+                <TextView
+                    android:id="@+id/tv_file_download_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/y24"
+                    android:text="取消"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

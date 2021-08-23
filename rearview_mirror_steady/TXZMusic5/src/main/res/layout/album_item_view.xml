@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/m160"
+    android:background="@drawable/base_range_select_bg"
+    tools:background="@drawable/base_bg">
+
+    <ImageView
+        android:id="@+id/iv_album_logo"
+        android:layout_width="@dimen/m112"
+        android:layout_height="@dimen/m112"
+        android:layout_marginLeft="@dimen/m24"
+        android:layout_marginTop="@dimen/m24"
+        android:layout_marginBottom="@dimen/m24"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@color/white" />
+
+    <com.txznet.music.widget.PlayingStateView
+        android:id="@+id/animation_view"
+        android:layout_width="@dimen/m18"
+        android:layout_height="@dimen/m18"
+        android:layout_marginTop="@dimen/m5"
+        android:layout_marginRight="@dimen/m5"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@id/iv_album_logo"
+        app:layout_constraintTop_toTopOf="@id/iv_album_logo" />
+
+    <TextView
+        android:id="@+id/tv_album_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/m16"
+        android:layout_marginTop="@dimen/m32"
+        android:layout_marginRight="@dimen/m24"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/base_tv_h3"
+        app:layout_constraintBottom_toTopOf="@id/tv_album_played"
+        app:layout_constraintLeft_toRightOf="@id/iv_album_logo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_album_played"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m16"
+        android:layout_marginRight="@dimen/m24"
+        android:layout_marginBottom="@dimen/m5"
+        android:ellipsize="end"
+        android:gravity="bottom"
+        android:singleLine="true"
+        android:textColor="@color/white_40"
+        android:textSize="@dimen/base_tv_h4"
+        app:layout_constraintBottom_toTopOf="@id/tv_album_update"
+        app:layout_constraintLeft_toLeftOf="@id/tv_album_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_album_title"
+        tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_album_update"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/m24"
+        android:layout_marginBottom="@dimen/m32"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/white_40"
+        android:textSize="@dimen/base_tv_h4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_album_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_album_played"
+        tools:text="TextView" />
+</android.support.constraint.ConstraintLayout>

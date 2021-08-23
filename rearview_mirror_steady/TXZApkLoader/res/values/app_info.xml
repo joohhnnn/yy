@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 应用程序名 -->
+    <string name="app_name">TXZ</string>
+    <string name="app_version">1.0.6</string>
+    <!-- 版本描述 -->
+    <string name="app_desc">同行者核心服务</string>
+
+</resources>

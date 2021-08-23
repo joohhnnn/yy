@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y44"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/x20"
+        android:paddingLeft="@dimen/x20"
+        android:paddingRight="@dimen/x20"
+        android:paddingStart="@dimen/x20" >
+
+        <TextView
+            android:id="@+id/prefix_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="为您找到"
+            android:textColor="#aaa"
+            android:textSize="@dimen/y20" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawableRight="@drawable/icon_edit_new"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="8"
+            android:paddingEnd="14px"
+            android:paddingLeft="14px"
+            android:paddingStart="14px"
+            android:singleLine="true"
+            android:text="世界之窗"
+            android:textColor="#44a9ff"
+            android:textSize="@dimen/y24" />
+
+        <TextView
+            android:id="@+id/aftfix_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#aaa"
+            android:singleLine="true"
+            android:textSize="@dimen/y20" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/list_ly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/x20"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:paddingStart="@dimen/x20" >
+
+            <com.txznet.record.poi.ListViewExRef
+                android:id="@+id/list_ex"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none" />
+
+            <com.txznet.record.view.IndexView
+                android:id="@+id/index_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x6" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

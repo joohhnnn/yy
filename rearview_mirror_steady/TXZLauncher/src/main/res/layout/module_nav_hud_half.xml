@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="310px"
+    android:layout_height="108px"
+    android:background="@drawable/hud_half_bg"
+    android:paddingBottom="24px"
+    android:paddingLeft="15px"
+    android:paddingRight="15px">
+
+    <TextView
+        android:id="@+id/dest_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:drawableLeft="@drawable/icon_nav_state_loc"
+        android:drawablePadding="4px"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/iv_nav_icon"
+        android:gravity="center_vertical"
+        android:text="高德导航"
+        android:ellipsize="marquee"
+        android:focusableInTouchMode="true"
+        tools:text="高德导航高德导航高德导航高德导航高德导航高德导航"
+        android:singleLine="true"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/dimen_text_size_nav_dest" />
+
+    <ImageView
+        android:id="@+id/iv_nav_icon"
+        android:layout_width="11px"
+        android:layout_height="11px"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15px"
+        android:src="@drawable/icon_nav" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/remain_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="剩余24.5km 大约25分钟后到达"
+            android:textColor="#B3FFFFFF"
+            android:textSize="@dimen/dimen_text_size_nav_remain" />
+
+        <LinearLayout
+            android:id="@+id/traffic_bar"
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_marginTop="7px"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+</RelativeLayout>

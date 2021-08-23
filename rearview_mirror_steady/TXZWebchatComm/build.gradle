@@ -1,0 +1,31 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    /*
+    * WechatComm只对TXZComm进行编译依赖, 微信客户端需要单独添加TXZComm的依赖,
+    * 微信插件单独添加采用微信客户端混淆规则打包的TXZComm jar包, 通过这种方式
+    * 规避微信插件引用了TXZComm中被混淆的类导致装载时出错的情况
+    */
+    compileOnly project(':TXZComm')
+    api 'org.greenrobot:greendao:3.2.0'
+}

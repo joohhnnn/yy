@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/mdp20"
+        android:paddingTop="@dimen/mdp20"
+        android:paddingRight="@dimen/mdp20"
+        android:paddingBottom="@dimen/mdp20">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#苹果"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp26"/>
+
+            <TextView
+                android:id="@+id/tvCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#AAPL"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/sp26"
+                android:layout_marginLeft="@dimen/mdp10"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/mdp10">
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#226.41"
+                android:textStyle="bold"
+                android:textSize="@dimen/mdp40"
+                android:textColor="#00C873"/>
+
+            <ImageView
+                android:id="@+id/ivUpAndDown"
+                android:layout_width="@dimen/mdp30"
+                android:layout_height="@dimen/mdp30"
+                android:src="@drawable/stock_down_icon"
+                android:layout_marginLeft="@dimen/mdp10"/>
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mdp10"
+            android:stretchColumns="1,3">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tvChangePriceLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="涨值"
+                    style="@style/shares_label"/>
+
+                <TextView
+                    android:id="@+id/tvChangeAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#+5.34"
+                    style="@style/shares_value"/>
+
+                <TextView
+                    android:id="@+id/tvChangePercentLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="涨幅"
+                    style="@style/shares_label"/>
+
+                <TextView
+                    android:id="@+id/tvChangeRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#+2.42%"
+                    style="@style/shares_value"/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="昨收"
+                    style="@style/shares_label"/>
+
+                <TextView
+                    android:id="@+id/tvYestodayClosePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#221.07"
+                    android:textColor="@color/white"
+                    style="@style/shares_value"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最高"
+                    style="@style/shares_label"/>
+
+                <TextView
+                    android:id="@+id/tvHighestPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#118.02"
+                    style="@style/shares_value"/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="今开"
+                    style="@style/shares_label"/>
+
+                <TextView
+                    android:id="@+id/tvTodayOpenPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#223.5"
+                    style="@style/shares_value"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最低"
+                    style="@style/shares_label"/>
+
+                <TextView
+                    android:id="@+id/tvLowestPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#116.20"
+                    android:textColor="#F54545"
+                    style="@style/shares_value"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</ScrollView>

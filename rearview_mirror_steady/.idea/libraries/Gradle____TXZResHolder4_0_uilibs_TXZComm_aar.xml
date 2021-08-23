@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="Gradle: ./TXZResHolder4.0/uilibs/TXZComm.aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/TXZComm.aar/a5b8dbf89a9728ff44e5f6f49ef84d68/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/TXZComm.aar/a5b8dbf89a9728ff44e5f6f49ef84d68/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/TXZComm.aar/a5b8dbf89a9728ff44e5f6f49ef84d68/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/TXZComm.aar/a5b8dbf89a9728ff44e5f6f49ef84d68/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/TXZComm.aar/a5b8dbf89a9728ff44e5f6f49ef84d68/jars/libs/Event.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/TXZComm.aar/a5b8dbf89a9728ff44e5f6f49ef84d68/jars/libs/fastjson-1.1.34.android.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/TXZComm.aar/a5b8dbf89a9728ff44e5f6f49ef84d68/jars/libs/jcc-bate-0.7.3.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/TXZComm.aar/a5b8dbf89a9728ff44e5f6f49ef84d68/jars/libs/protobuf-java-2.3.0-nano.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/TXZComm.aar/a5b8dbf89a9728ff44e5f6f49ef84d68/jars/libs/zxing.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

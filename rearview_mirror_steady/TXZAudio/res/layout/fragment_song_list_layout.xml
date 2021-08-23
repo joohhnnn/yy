@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingLeft="@dimen/x10"
+    android:paddingRight="@dimen/x10" >
+
+    <LinearLayout
+        android:id="@+id/search_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/search_iv"
+            android:layout_width="@dimen/x130"
+            android:layout_height="@dimen/x130"
+            android:layout_gravity="center"
+            android:background="@drawable/fm_scan" />
+
+        <TextView
+            android:id="@+id/search_local_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x32"
+            android:text="扫描本地歌曲0%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/y36" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/ll_local_title"
+            layout="@layout/ll_song_local_scan" />
+
+        <ListView
+            android:id="@+id/lv_song_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_local_title"
+            android:layout_weight="1"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="6dp"
+            android:listSelector="@android:color/transparent"
+            android:visibility="visible" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/ll_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_local_title"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nolist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:drawableTop="@drawable/fm_me_no_result"
+                android:gravity="center"
+                android:text="当前没有收听记录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/y30" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

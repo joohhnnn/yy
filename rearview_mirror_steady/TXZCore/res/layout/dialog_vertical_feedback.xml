@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#CC1A1D23"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/ll_feedback"
+        android:orientation="vertical"
+        android:background="@drawable/shape_feedback"
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/x282"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_time_tip"
+            android:text="反馈中，请描述您的问题"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/m19"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y48" />
+
+        <com.txznet.comm.ui.view.VoiceWaveView
+            android:id="@+id/view_voice"
+            android:layout_marginTop="@dimen/y34"
+            android:layout_marginBottom="@dimen/y24"
+            android:layout_width="@dimen/x280"
+            android:layout_height="@dimen/y112"
+            app:voice_line_color="#FFFFFF"
+            app:voice_line_interval="@dimen/x20"
+            app:voice_line_max_length="@dimen/y72"
+            app:voice_line_min_length="@dimen/y32"
+            app:voice_line_width="@dimen/x6"
+            app:voice_lines="7" />
+
+        <View
+            android:background="@drawable/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"/>
+        <TextView
+            android:id="@+id/tv_feedback"
+            android:gravity="center"
+            android:textSize="@dimen/m19"
+            android:text="发送反馈(3s)"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y64" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_below="@id/ll_feedback"
+        android:layout_toRightOf="@id/ll_feedback"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_centerVertical="true"
+        android:src="@drawable/space_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

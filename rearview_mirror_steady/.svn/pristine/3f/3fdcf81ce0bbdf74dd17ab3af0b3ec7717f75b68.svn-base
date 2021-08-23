@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="ResidentAppNameNavi">navi</string>
+    <string name="ResidentAppNamePhone">phone</string>
+    <string name="ResidentAppNameMusic">muisc</string>
+    <string name="ResidentAppNameFM">fm</string>
+    <string name="ResidentAppNameDrivingRecord">driving_record</string>
+    <string name="ResidentAppNameVedio">vedio</string>
+    <string name="ResidentAppNameWechatHelper">wechat helper</string>
+    <string name="ResidentAppNameApps">apps</string>
+    <string name="ResidentAppNameSettings">settings</string>
+
+</resources>

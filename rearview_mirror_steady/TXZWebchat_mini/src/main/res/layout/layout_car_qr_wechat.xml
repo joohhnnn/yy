@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.txznet.webchat.ui.common.widget.ThemedTextView
+        android:id="@+id/tv_control_close_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/x24"
+        android:layout_marginRight="@dimen/x24"
+        android:text="@string/lb_login_wechat_ban"
+        android:textColor="@color/color_primary"
+        android:textSize="@dimen/y19"
+        app:theme_color="primary" />
+
+</FrameLayout>

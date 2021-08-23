@@ -1,0 +1,62 @@
+#JSGF V1.0 utf-8 cn;
+
+grammar txzIncm;
+public <txzIncm> = ( "<s>" (
+([<preActive>|<prePassive>|<prePlease>](<incmY>|<incmN>|<incmSec>|<incmOff>|<incmCmd>)[<incmSuffix>])
+| ([<Nav>]<Option>)
+) "</s>" );
+
+<Nav> = (
+导航到
+);
+
+//////////////////////////////////////前缀相关//////////////////////////////////////
+<preActive>=(
+"<preActive_>"(
+我 要 | 我 想 | 我 想 要
+)"</preActive_>"
+);
+<prePassive>=(
+"<prePassive_>"(
+帮我 | 替我 | 给 我 | 帮 | 帮 忙 | 你 给 我 | 你 替 我 | 你
+)"</prePassive_>"
+);
+<prePlease>=(
+"<prePlease_>"(
+请 | 麻 烦
+)"</prePlease_>"
+);
+
+<incmY> = (
+"<incmY_>"(
+是|确定|好|要|想
+)"</incmY_>"
+);
+<incmN> = (
+"<incmN_>"(
+否|取消|不好|不要|不想|别|不接
+)"</incmN_>"
+);
+<incmSec> = (
+"<incmSec_>"(
+私密
+)"</incmSec_>"
+);
+<incmOff> = (
+"<incmOff_>"(
+拒绝|拒接|挂掉|挂断|掐断|掐掉
+)"</incmOff_>"
+);
+
+<incmCmd>= (
+"<incmCmd_>"(
+接|听|接听|接受
+)"</incmCmd_>"
+);
+<incmSuffix> = (
+"<incmSuffix_>"(
+电话
+)"</incmSuffix_>"
+);
+
+

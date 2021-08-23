@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_action_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/m56"
+    android:orientation="horizontal"
+    android:visibility="gone"
+    tools:background="@drawable/base_bg"
+    tools:visibility="visible">
+
+    <com.txznet.music.widget.TextImageView
+        android:id="@+id/tiv_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/m46"
+        android:background="@null"
+        android:drawableLeft="@drawable/local_scan_icon_btn"
+        android:drawablePadding="@dimen/m7"
+        android:text="@string/local_start_scan"
+        android:textSize="@dimen/base_tv_h4"
+        app:clickEffect="true"
+        app:drawableLeftHeight="@dimen/m32"
+        app:drawableLeftWidth="@dimen/m32" />
+
+    <com.txznet.music.widget.TextImageView
+        android:id="@+id/tiv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/m22"
+        android:layout_marginRight="@dimen/m46"
+        android:gravity="center_vertical"
+        android:background="@null"
+        android:drawableLeft="@drawable/base_delete_mgr_btn"
+        android:drawablePadding="@dimen/m7"
+        android:text="@string/local_delete_mgr"
+        android:textSize="@dimen/base_tv_h4"
+        app:clickEffect="true"
+        app:drawableLeftHeight="@dimen/m32"
+        app:drawableLeftWidth="@dimen/m32" />
+
+    <com.txznet.music.widget.TextImageView
+        android:id="@+id/tiv_sort_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/tiv_delete"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/local_sort_icon_btn"
+        android:drawablePadding="@dimen/m7"
+        android:text="@string/local_sort_type"
+        android:textSize="@dimen/base_tv_h4"
+        app:clickEffect="true"
+        app:drawableLeftHeight="@dimen/m32"
+        app:drawableLeftWidth="@dimen/m32" />
+
+    <View
+        style="@style/Base_Divider_Horizontal_With_Margin"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

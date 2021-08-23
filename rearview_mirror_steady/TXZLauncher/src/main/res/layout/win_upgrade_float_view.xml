@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_upgrade"
+    android:layout_width="45px"
+    android:layout_height="45px"
+    android:background="@drawable/shape_upgrade_circle_bg"
+    android:orientation="vertical">
+
+    <com.txznet.launcher.widget.CircleProgressView
+        android:id="@+id/v_upgrade_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="2px"
+        app:max="100"
+        app:progress="0"
+        app:backgroundColor="#FF565656"
+        app:frontgroundColor="#FF635FDE"
+        app:strokeWidth="2px"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_upgrade_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#FF635FDE"
+                android:gravity="bottom"
+                android:textSize="18px"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="%"
+                android:textColor="#FF635FDE"
+                android:textSize="9px"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="-4px"
+            android:id="@+id/tv_upgrade_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="升级中"
+            android:textColor="#FF666666"
+            android:textSize="9px"/>
+    </LinearLayout>
+</FrameLayout>

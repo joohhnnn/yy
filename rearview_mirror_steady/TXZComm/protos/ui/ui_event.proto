@@ -1,0 +1,135 @@
+package com.txz.ui.event;
+
+
+//事件通知
+enum EventId
+{	
+	//系统事件
+	//EVENT_SYSTEM_BEGIN = 0x0001;
+	
+	EVENT_INIT = 0x0001; //系统初始化
+	EVENT_UNINIT = 0x0002; //系统反初始化
+	EVENT_OPEN_TEST_USER_INTERFACE = 0x0003; //打开用户测试页面
+	EVENT_FRAMEWORK_INNER = 0x0004; //框架内部事件，只允许框架使用，不会分发出去
+	
+	EVENT_NETWORK_DISCONNECT = 0x0100; //网络断开
+	EVENT_NETWORK_RECONNECT = 0x0101; //网络重连
+	EVENT_NETWORK_FLY = 0x0102; //飞行模式
+	EVENT_NETWORK_CHANGE = 0x0103; //网络发生变化，如wifi切换
+	EVENT_LOCATION_CHANGE = 0x110; //位置发生变化，携带ui.map.LocationInfo
+	EVENT_DEVICE_CHANGE = 0x111; //配对的设备状态发生变更，携带新的设备str_device_sn(断开配对为空)
+	
+	//EVENT_SYSTEM_END = 0xffff;
+	
+	//蓝牙发送接收事件
+	EVENT_BT_SEND_CMD = 0x3000;
+	EVENT_BT_SEND_CB = 0x3001;
+	EVENT_BT_RECEIVE_CMD = 0x3002;
+	EVENT_BT_RECEIVE_CB = 0x3003;
+	EVENT_BT_CONNECT = 0x3004;
+	EVENT_BLUETOOTH = 0x3005; //蓝牙模块事件
+	
+	//数据事件，UI侧数据变化或协议栈数据变化时通知
+	EVENT_FRIENDSHIP = 0x10001; //关系链事件
+	
+	//操作事件，用户操作下发
+	EVENT_ACTION_BEGIN  	= 0x20000;
+
+	EVENT_ACTION_REPORT_LOG_REQ = 0x21001;			//上报日志（请求）
+	EVENT_ACTION_REPORT_LOG_RESP = 0x21002;			//上报日志（返回）
+	
+	EVENT_ACTION_USER = 0x22000; //用户类操作
+	EVENT_ACTION_IM = 0x23000;						//即时通信相关操作
+	EVENT_ACTION_EQUIPMENT = 0x24000;	//设备类操作
+	
+	EVENT_ACTION_AUDIO = 0x25000;	//audio类操作
+	
+	//
+	EVENT_VOICE = 0x30000; //语音模块事件
+	
+	EVENT_CONFIG = 0x31000; //根据ui_data.proto定义的DATA_ID来更新native的设置数据
+	
+	//底层内部事件通知
+	EVENT_INNER_NET = 0x400000;
+	EVENT_INNER_MODULE_TIMER = 0x400001; //模块内定时器，使用设置模块内定时器设置和删除模块定时器，到期后会触发该事件，只有本模块会收到该事件，子事件ID为定时器ID
+
+	EVENT_INNER_LOG 	  = 0x400008;	//日志
+
+	//系统控制指令
+	EVENT_SYSTEM_PLATFORM = 0x500000; //设备平台事件
+	EVENT_SYSTEM_CALL = 0x500001; //呼叫相关
+	EVENT_UI_CUSTOM_EVENT = 0x500002; //UI自定义事件
+	EVENT_SYSTEM_MAP = 0x500003; //地图相关
+	EVENT_SYSTEM_MUSIC = 0x500004; //音乐相关
+	EVENT_SYSTEM_APP = 0x500005; //应用相关
+	EVENT_UI_BACK_GROUD_COMMAND = 0x500006; //后台全局指令，数据携带指令资源字符串ID
+	EVENT_SYSTEM_IDLE = 0x500007; //系统处于空闲态
+	EVENT_SYSTEM_MUSIC_SENCE = 0x500008; //音乐场景，供命令字转换使用
+	
+	//远程场景指令
+	
+	EVENT_REMOTE_THIRDPARTY_COMM = 0x600004;//第三方app注册远程命令字
+	EVENT_REMOTE_PROC_PLAY_MUSIC = 0x600010; //调用远程工具播放音乐
+	
+	//微信指令
+	EVENT_WECHAT_MAKESESSION = 0x700001; //发起微信会话
+	EVENT_WECHAT_FRIENDSHIP = 0x700002; //微信联系人关系
+	
+	//调频和调幅
+	EVENT_CUSTOM_FM = 0x700010; //调频
+	EVENT_CUSTOM_AM = 0x700011; //调幅
+	
+	//电台
+	EVENT_CUSTOM_RADIO = 0x700030;
+}
+
+
+enum UICustomEventDataType
+{
+	UI_CUSTOM_EVENT_DATA_TYPE_CTRL = 0;
+	UI_CUSTOM_EVENT_DATA_TYPE_LIST = 1;
+}
+
+message UICustomEventData
+{
+	optional uint32 uint32_type = 1; //数据类型 
+	optional uint32 uint32_ctrl_id = 2; //控件ID
+	optional uint32 uint32_param = 3; //整形参数
+	optional bytes   bytes_data = 4; //携带数据
+}
+
+
+////////////上报日志////////////////
+//请求
+message Action_Req_ReportLog
+{
+	optional uint64 uint64_begin_time = 1;	//日志的起始时间
+	optional uint64 uint64_end_time = 2;	//日志的结束时间
+}
+//回应
+message Action_Resp_ReportLog
+{
+	optional bool	b_ok = 1;						//返回成功与否(true:ok, false:fail)
+	optional bool 	b_finish = 2;					//完成标志位
+	optional uint32 uint32_progress_percent = 3;		//进度百分百
+	optional uint64 uint64_file_size = 4;			//文件大小
+	optional string	str_reason = 5;					//返回失败信息ID
+}
+
+
+
+////////////版本信息////////////////
+message VersionInfo
+{
+	optional string str_platform_info = 1; //平台信息
+	optional string str_user_version = 2; //用户版本号
+	optional uint32 uint32_release_time = 3; //发布时间
+	optional string str_desc = 4; //版本描述
+	optional string str_url = 5; //本地安装路径
+	optional bool bool_force = 6; //是否强制要求更新后才能使用
+	optional string str_project_name = 7; //项目名
+	optional string str_package_name = 8; //包名，支持多包升级
+}
+
+
+

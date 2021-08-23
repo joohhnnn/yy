@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_color" >
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageButton
+        android:id="@+id/btnMoveToMyLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/y10"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginRight="@dimen/x10"
+        android:layout_marginTop="@dimen/y10"
+        android:background="@drawable/activity_check_map_ic_bg"
+        android:padding="0dp"
+        android:src="@drawable/activity_check_map_ic_follow" />
+
+    <LinearLayout
+        android:id="@+id/flNavIntoBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/widget_color"
+        android:orientation="horizontal"
+        android:paddingEnd="0px"
+        android:paddingLeft="@dimen/x24"
+        android:paddingRight="0px"
+        android:paddingStart="@dimen/x24" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/y12"
+            android:paddingTop="@dimen/y12" >
+
+            <TextView
+                android:id="@+id/txtName"
+                style="@style/text_25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/txtDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y2"
+                android:singleLine="true"
+                android:textColor="@color/activity_check_map_dest_text_color"
+                android:textSize="22px" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnStartNav"
+            android:layout_width="@dimen/x120"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#adb6cc"
+            android:gravity="center"
+            android:text="@string/activity_search_start_planing_text"
+            android:textColor="@android:color/white"
+            android:textSize="28px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="@dimen/x10"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/zoom_out_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/nav_view_zoom_in" />
+
+        <ImageButton
+            android:id="@+id/zoom_in_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/nav_view_zoom_out" />
+    </LinearLayout>
+
+</FrameLayout>

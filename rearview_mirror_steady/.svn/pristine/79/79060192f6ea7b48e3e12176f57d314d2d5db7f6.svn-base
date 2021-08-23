@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_tab_view_left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_tab_view_text_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/y24"
+            android:textColor="@color/color_primary_dark"
+            android:text="@string/lb_login_wechat_title" />
+
+        <ImageView
+            android:id="@+id/iv_tab_view_indicator_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerInside"
+            tools:src="@drawable/shape_tabhost_indicator_dot"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tab_view_right"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_tab_view_text_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/y24"
+            android:textColor="@color/color_primary_dark"
+            android:text="@string/lb_login_control_title" />
+
+        <ImageView
+            android:id="@+id/iv_tab_view_indicator_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerInside"
+            tools:src="@drawable/shape_tabhost_indicator_dot"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

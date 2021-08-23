@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y16"
+        android:layout_marginLeft="@dimen/x38"
+        android:layout_marginTop="@dimen/y1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/y22"
+            android:layout_gravity="bottom"
+            android:src="@drawable/chat_list_horn" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-1px"
+            android:background="@drawable/bg_chat_list"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtChat_List_Title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y50"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_chat_list_title"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxWidth="@dimen/x395"
+                android:paddingLeft="@dimen/x18"
+                android:paddingRight="@dimen/x18"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#adb6cc"
+                android:textSize="@dimen/y28" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.txznet.record.view.MyListView
+                    android:id="@+id/lvChat_Msg_List"
+                    android:layout_width="@dimen/x395"
+                    android:layout_height="@dimen/y108"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y1"
+                    android:layout_below="@id/lvChat_Msg_List"
+                    android:src="#000" />
+
+                <TextView
+                    android:id="@+id/txtChat_List_Cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y44"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textColor="@color/color_chat_list_cancel"
+                    android:textSize="@dimen/y28" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_color"
+    android:keepScreenOn="true" >
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+
+    <ImageButton
+        android:id="@+id/btnMoveToMyLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/y10"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginRight="@dimen/x10"
+        android:layout_marginTop="@dimen/y10"
+        android:background="@drawable/activity_check_map_ic_bg"
+        android:padding="0dp"
+        android:src="@drawable/activity_check_map_ic_follow" />
+
+    <FrameLayout
+        android:id="@+id/flNavIntoBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y70"
+        android:layout_gravity="bottom"
+        android:background="@drawable/widget_color"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10" >
+
+            <TextView
+                android:id="@+id/txtName"
+                style="@style/text_25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y2"
+                android:textColor="@color/activity_check_map_dest_text_color"
+                android:textSize="21px" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnStartNav"
+            android:layout_width="@dimen/x80"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@drawable/activity_check_map_button_start_bg"
+            android:text="@string/activity_check_map_start_planing_text"
+            android:textColor="@android:color/white"
+            android:textSize="25px" />
+    </FrameLayout>
+
+</FrameLayout>

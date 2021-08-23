@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/inner_Content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true" >
+
+    <RelativeLayout
+        android:id="@+id/rlRecord_Wave_Panel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y110"
+        android:layout_alignParentBottom="true" >
+
+        <!-- <FrameLayout
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/x100"
+            android:layout_centerInParent="true" >
+
+            <ProgressBar
+                android:id="@+id/prgRecord_ProgressBar"
+                style="@style/Record_Loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/prgRecord_ProgressBar_Full_Mask"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/record_wait_loading_full" />
+
+            <ImageView
+                android:id="@+id/imgRecord_Icon"
+                android:layout_width="@dimen/y28"
+                android:layout_height="@dimen/y40"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <com.txznet.record.view.WaveformViewDefImpl
+            android:id="@+id/viewRecord_Wave"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            attr:wvEmptyVal="@drawable/record_voice_val_empty"
+            attr:wvIcon="@drawable/ic_voice_blue"
+            attr:wvIconHeight="@dimen/y40"
+            attr:wvIconOffset="@dimen/x20"
+            attr:wvIconWidth="@dimen/y28"
+            attr:wvRange="6"
+            attr:wvRealVal="@drawable/record_voice_val"
+            attr:wvValOffset="@dimen/x10" />-->
+        <ImageView
+            android:id="@+id/record_shade"
+            android:layout_width="@dimen/y78"
+            android:layout_height="@dimen/y78"
+            android:layout_centerInParent="true"
+            android:src="@drawable/mic_bg"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <ImageView
+            android:id="@+id/record_back"
+            android:layout_width="@dimen/y54"
+            android:layout_height="@dimen/y54"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            android:src="@drawable/mic"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <ImageView
+            android:id="@+id/record_module"
+            android:layout_width="@dimen/y16"
+            android:layout_height="@dimen/y23"
+            android:layout_centerInParent="true"
+            android:src="@drawable/mic5"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+    
+        <ImageView
+            android:layout_marginLeft="30px"
+            android:id="@+id/imgRecord_Close"
+            android:layout_width="?attr/help_icon_width"
+           android:layout_height="?attr/help_icon_height"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_close" />
+        <ImageView 
+           android:layout_marginLeft="30px"
+           android:visibility="gone"
+           android:layout_centerVertical="true"
+           android:id="@+id/imgSettingTop"
+           android:layout_width="?attr/help_icon_width"
+           android:layout_height="?attr/help_icon_height"
+           android:src="@drawable/ic_setting"
+           />
+        <RelativeLayout
+            android:id="@+id/rlHelp"
+            android:layout_width="?attr/help_icon_width"
+            android:layout_height="?attr/help_icon_height"
+            android:layout_marginRight="30px"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true">
+            <ImageView
+               android:id="@+id/imgHelp"
+               android:layout_width="?attr/help_icon_width"
+               android:layout_height="?attr/help_icon_height"
+               android:src="@drawable/question_mark"
+               />
+             <ImageView
+                android:id="@+id/imgHelpNewTag"
+                android:layout_width="?attr/help_new_tag_width"
+                android:layout_height="?attr/help_new_tag_height"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/ic_help_new_tag" />
+        </RelativeLayout>
+        <ImageView 
+            android:layout_marginRight="10px"
+           android:visibility="gone"
+           android:id="@+id/imgSetting"
+           android:layout_width="?attr/help_icon_width"
+           android:layout_height="?attr/help_icon_height"
+			android:layout_toLeftOf="@id/rlHelp"
+			android:layout_centerVertical="true"
+           android:src="@drawable/ic_setting"
+           />
+         
+    </RelativeLayout>
+
+    <com.txznet.record.view.ChatListView
+        android:paddingLeft="@dimen/x15"
+    android:paddingRight="@dimen/x15"
+        android:id="@+id/lvRecord_ChatContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rlRecord_Wave_Panel"
+        android:divider="@null"
+        android:listSelector="@drawable/transparent_background"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <com.txznet.record.view.DisplayLvRef
+        android:paddingLeft="@dimen/x15"
+    android:paddingRight="@dimen/x15"
+        android:id="@+id/lvRecord_dll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rlRecord_Wave_Panel"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" />
+    
+    <LinearLayout
+        android:paddingLeft="@dimen/x15"
+    android:paddingRight="@dimen/x15"
+        android:id="@+id/plugin_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rlRecord_Wave_Panel"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_advertising"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+</RelativeLayout>

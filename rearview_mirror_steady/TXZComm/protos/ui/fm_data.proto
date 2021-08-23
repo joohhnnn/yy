@@ -1,0 +1,19 @@
+package com.txz.ui.fm;
+
+enum SubEventId
+{
+	SUBEVENT_FM_SETTING = 0x00001; //设置离线频段
+	SUBEVENT_FM_TOFREQ = 0x00002; //调频到指定FM频率
+}
+
+//设置数据
+message FMSettingData{
+	optional uint32 uint32_min_value = 1; //上限
+	optional uint32 uint32_max_value = 2; //下限
+}
+
+//调频数据
+message FMResultData{
+	optional string  str_freq = 1;
+	optional uint32 uint32_unit = 2;//单位：0-HZ 1-KHZ 2-MHZ
+}

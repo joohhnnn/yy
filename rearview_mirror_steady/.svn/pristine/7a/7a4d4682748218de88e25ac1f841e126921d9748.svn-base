@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/win_layout_card_margin_ver_screen"
+    android:paddingBottom="@dimen/win_layout_card_margin_ver_screen"
+    android:paddingLeft="@dimen/win_layout_card_margin_hor_screen"
+    android:paddingRight="@dimen/win_layout_card_margin_hor_screen">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="@dimen/win_layout_card_width"
+        android:layout_height="match_parent"
+        android:background="@drawable/xml_bg_card"/>
+
+
+</RelativeLayout>

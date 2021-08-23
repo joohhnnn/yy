@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/merge_bg" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:id="@+id/fl_cover"
+            android:layout_height="match_parent"
+            app:layout_widthPercent="?attr/cover_player_view_width_percent">
+
+
+            <com.txznet.music.widget.CoverPlayerView
+                android:id="@+id/cover_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include
+                layout="@layout/layout_top" />
+
+        </FrameLayout>
+
+        <!--<com.txznet.music.widget.LoadingView-->
+        <!--android:id="@+id/layout_library_loading_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_toRightOf="@+id/fl_cover">-->
+
+        <fragment
+            android:id="@+id/fragment_play_list"
+            android:name="com.txznet.music.playerModule.ui.PlayListFragmentV41"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/fl_cover" />
+        <!--</com.txznet.music.widget.LoadingView>-->
+    </android.support.percent.PercentRelativeLayout>
+</FrameLayout>

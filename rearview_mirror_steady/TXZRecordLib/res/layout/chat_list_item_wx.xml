@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y62"
+        android:background="@drawable/bg_chat_list_item"
+        android:gravity="center_vertical"
+        android:minWidth="@dimen/x395"
+        android:paddingLeft="@dimen/x16"
+        android:paddingRight="@dimen/x16">
+
+        <TextView
+            android:id="@+id/txtChat_List_Item_Index"
+            android:layout_width="@dimen/x32"
+            android:layout_height="@dimen/x32"
+            android:background="@drawable/chat_list_item_index"
+            android:gravity="center"
+            android:paddingBottom="@dimen/y2"
+            android:text="1"
+            android:textColor="#FFF"
+            android:textSize="@dimen/y20" />
+
+        <com.txznet.record.view.RoundImageView
+            android:id="@+id/imgChat_Item_Wx_Head"
+            android:layout_width="@dimen/x54"
+            android:layout_height="@dimen/y54"
+            android:layout_marginLeft="@dimen/x18" />
+
+        <TextView
+            android:id="@+id/txtChat_List_Item_Main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#FFF"
+            android:textSize="@dimen/y30" />
+    </LinearLayout>
+
+</FrameLayout>

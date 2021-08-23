@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="254px"
+        android:layout_height="wrap_content"
+        android:minHeight="140px"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_master_clear_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="22px"
+        android:paddingTop="22px">
+
+        <ImageView
+            android:id="@+id/iv_sys_dialog_icon"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_marginBottom="12px"
+            tools:src="@drawable/ic_master_clear" />
+
+        <TextView
+            android:id="@+id/iv_sys_dialog_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15px"
+            tools:text="您确定要恢复出厂设置吗？" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnMessageBox_Button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnMessageBox_Button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnMessageBox_Button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

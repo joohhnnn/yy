@@ -1,0 +1,273 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1c1f23"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_setting"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:background="#1c1e22" >
+
+        <TextView
+            android:id="@+id/imgbnt_backToRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x10"
+            android:textSize="@dimen/y26"
+            android:gravity="center_vertical"
+            android:drawablePadding="0dp"
+            android:textColor="#FFFFFF"
+            android:text="@string/label_setting_back"
+            android:drawableLeft="@drawable/txz_back"/>
+
+        <TextView
+            android:id="@+id/txtHint_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/label_setting_title"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/y28" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/layout_settingItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/layout_wakeSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:background="@drawable/bgcolor_change"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/bntHint_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="@drawable/bgcolor_change"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x32"
+                    android:paddingRight="@dimen/x32"
+                    android:text="@string/label_setting_tts_wakeup"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/y26" />
+
+                <com.txznet.comm.ui.view.CheckedImageView
+                    android:id="@+id/iv_wakeSwitch"
+                    android:layout_width="@dimen/x74"
+                    android:layout_height="@dimen/y42"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_marginTop="@dimen/x20"
+                    android:src="@drawable/asr_switch_on" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="#454545" />
+
+            <RelativeLayout
+                android:id="@+id/layout_windowSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:background="@drawable/bgcolor_change"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/textHint_window"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y90"
+                    android:background="@drawable/bgcolor_change"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x32"
+                    android:paddingRight="@dimen/x32"
+                    android:text="@string/label_setting_floating_button"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/y26" />
+
+                <com.txznet.comm.ui.view.CheckedImageView
+                    android:id="@+id/iv_windowSwitch"
+                    android:layout_width="@dimen/x74"
+                    android:layout_height="@dimen/y42"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_marginTop="@dimen/x20"
+                    android:src="@drawable/asr_switch_on" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="#454545" />
+
+            <RelativeLayout
+                android:id="@+id/layout_arsCommand"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:id="@+id/bntHint_command"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y90"
+                    android:background="@drawable/bgcolor_change"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x32"
+                    android:paddingRight="@dimen/x32"
+                    android:text="@string/label_setting_wakeup_command"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/y26" />
+
+                <ImageView
+                    android:id="@+id/iv_addCommand"
+                    android:layout_width="@dimen/y24"
+                    android:layout_height="@dimen/y24"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/x20"
+                    android:background="@drawable/txz_forward" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="#454545" />
+
+            <RelativeLayout
+                android:id="@+id/layout_recogdB"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:id="@+id/bntHint_recogdB"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y90"
+                    android:background="@drawable/bgcolor_change"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x32"
+                    android:paddingRight="@dimen/x32"
+                    android:text="@string/label_setting_wakeup_sensitivity"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/y26" />
+
+                <TextView
+                    android:id="@+id/txt_recogValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_toLeftOf="@+id/iv_changeRecogValue"
+                    android:gravity="center_vertical"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/y24" />
+
+                <ImageView
+                    android:id="@+id/iv_changeRecogValue"
+                   android:layout_width="@dimen/y24"
+                    android:layout_height="@dimen/y24"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_marginTop="@dimen/x20"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/txz_forward" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="#454545" />
+
+            <RelativeLayout
+                android:id="@+id/layout_ttsdB"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:id="@+id/bntHint_TtsdB"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y90"
+                    android:background="@drawable/bgcolor_change"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x32"
+                    android:paddingRight="@dimen/x32"
+                    android:text="@string/label_setting_tts_speed"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/y26" />
+
+                <TextView
+                    android:id="@+id/txt_ttsValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_toLeftOf="@+id/iv_changeTtsValue"
+                    android:gravity="center_vertical"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/y24" />
+
+                <ImageView
+                    android:id="@+id/iv_changeTtsValue"
+                    android:layout_width="@dimen/y24"
+                    android:layout_height="@dimen/y24"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_marginTop="@dimen/x20"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/txz_forward" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="#454545" />
+
+            <RelativeLayout
+                android:id="@+id/layout_reset"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:id="@+id/bntHint_reset"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y90"
+                    android:background="@drawable/bgcolor_change"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x32"
+                    android:paddingRight="@dimen/x32"
+                    android:text="@string/label_setting_reset"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/y26" />
+
+                <ImageView
+                    android:id="@+id/iv_resetConfig"
+                    android:layout_width="@dimen/y24"
+                    android:layout_height="@dimen/y24"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_marginTop="@dimen/x20"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/txz_forward" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:background="#454545" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

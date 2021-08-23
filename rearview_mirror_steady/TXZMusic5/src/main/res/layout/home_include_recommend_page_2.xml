@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="horizontal"
+    android:paddingRight="@dimen/m40">
+
+    <include
+        android:id="@+id/rec_1"
+        layout="@layout/home_recycle_item_rec_large"
+        android:layout_width="?attr/rec_page_large_item_width"
+        android:layout_height="?attr/rec_page_large_item_height"
+        android:layout_marginTop="@dimen/m12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/rec_2"
+        layout="@layout/home_recycle_item_rec_large"
+        android:layout_width="?attr/rec_page_large_item_width"
+        android:layout_height="?attr/rec_page_large_item_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <include
+        android:id="@+id/user_radio"
+        layout="@layout/home_recycle_item_rec"
+        android:layout_width="?attr/rec_page_item_size"
+        android:layout_height="?attr/rec_page_item_size"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rec_1" />
+
+    <include
+        android:id="@+id/user_music"
+        layout="@layout/home_recycle_item_rec"
+        android:layout_width="?attr/rec_page_item_size"
+        android:layout_height="?attr/rec_page_item_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <include
+        layout="@layout/home_include_listen_list_wrap"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/m12"
+        android:layout_marginTop="@dimen/m12"
+        android:layout_marginRight="@dimen/m12"
+        app:layout_constraintLeft_toRightOf="@id/rec_1"
+        app:layout_constraintRight_toLeftOf="@id/user_radio"
+        app:layout_constraintTop_toTopOf="@id/rec_1" />
+</android.support.constraint.ConstraintLayout>

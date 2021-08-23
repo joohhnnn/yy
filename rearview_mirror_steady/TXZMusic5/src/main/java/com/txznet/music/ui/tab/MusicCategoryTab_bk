@@ -1,0 +1,119 @@
+package com.txznet.music.ui.tab;
+
+import android.content.Context;
+import android.graphics.Color;
+import android.support.annotation.NonNull;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.txznet.music.GlideApp;
+import com.txznet.music.R;
+import com.txznet.music.action.PlayerActionCreator;
+import com.txznet.music.data.entity.Album;
+import com.txznet.music.data.entity.PageItemData;
+import com.txznet.music.data.entity.PageItemDataGroup;
+import com.txznet.music.util.adapter.RecyclerAdapter;
+import com.txznet.music.widget.GridDividerItemDecoration;
+import com.txznet.rxflux.Operation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 音乐分类tab - 内部分页版本
+ *
+ * @author zackzhou
+ * @date 2019/1/7,12:09
+ */
+
+public class MusicCategoryTab {
+    private Context mCtx;
+
+    private RecyclerAdapter<PageItemData> mMusicCategoryAdapter;
+    private RecyclerView mRecyclerView;
+    private GridLayoutManager mLayoutManager;
+    private List<PageItemData> mMusicCategoryList = new ArrayList<>(0);
+    private int mPageIndex = -1;
+
+    public MusicCategoryTab(Context ctx) {
+        this.mCtx = ctx;
+        for (int i = 0; i < 15; i++) {
+            mMusicCategoryList.add(null);
+        }
+    }
+
+    /**
+     * 初始化tab页
+     */
+    public void bindTab(@NonNull RecyclerView.ViewHolder holder) {
+        holder.itemView.findViewById(R.id.btn_category_switch).setOnClickListener(v -> nextPage());
+        RecyclerView recyclerView = holder.itemView.findViewById(R.id.rv_category);
+        if (mMusicCategoryAdapter == null) {
+            GridLayoutManager layoutManager = new GridLayoutManager(mCtx, 5);
+            recyclerView.setLayoutManager(layoutManager);
+            mMusicCategoryAdapter = new RecyclerAdapter<PageItemData>(mCtx, getNextPage(), R.layout.home_recycle_item_category) {
+                @Override
+                public void convert(RecyclerAdapter.ViewHolder holder, int position, PageItemData item) {
+                    if (item == null) {
+                        return;
+                    }
+                    ImageView iv_logo = (ImageView) holder.getView(R.id.iv_logo);
+                    TextView tv_name = (TextView) holder.getView(R.id.tv_name);
+                    GlideApp.with(mCtx).load(item.logo).error(R.drawable.home_default_cover_icon_strip_normal).into(iv_logo);
+                    tv_name.setText(item.name);
+
+                    holder.itemView.setOnClickListener(v -> {
+                        Album album = new Album();
+                        album.name = item.name;
+                        album.sid = item.sid;
+                        album.id = item.id;
+                        album.arrArtistName = item.arrArtistName;
+                        album.albumType = item.albumType;
+                        album.logo = item.logo;
+                        PlayerActionCreator.get().playAlbum(Operation.MANUAL, album);
+                    });
+                }
+            };
+            recyclerView.setAdapter(mMusicCategoryAdapter);
+        }
+        if (mDecoration == null) {
+            mDecoration = new GridDividerItemDecoration(mCtx.getResources().getDimensionPixelOffset(R.dimen.m12), Color.TRANSPARENT);
+            recyclerView.addItemDecoration(mDecoration);
+        }
+    }
+
+    private GridDividerItemDecoration mDecoration;
+
+    /**
+     * 刷新数据
+     */
+    public void refreshData(PageItemDataGroup data) {
+        if (data != null && data.arrAlbum != null) {
+            mMusicCategoryList = data.arrAlbum;
+            mPageIndex = -1;
+            nextPage();
+        }
+    }
+
+    /**
+     * 换一批
+     */
+    public void nextPage() {
+        if (mMusicCategoryAdapter != null) {
+            mMusicCategoryAdapter.refresh(getNextPage());
+        }
+    }
+
+    private List<PageItemData> getNextPage() {
+        mPageIndex++;
+        int start = mPageIndex * 15;
+        int end = start + 15;
+        if (end > mMusicCategoryList.size()) {
+            end = mMusicCategoryList.size();
+            mPageIndex = -1;
+        }
+        return mMusicCategoryList.subList(start, end);
+    }
+}

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/help_float_ly"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/float_detail_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/icon_float_detail_bg" >
+
+        <LinearLayout
+            android:id="@+id/layout_tips"
+            android:layout_width="@dimen/x220"
+            android:layout_height="@dimen/y260"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/y18"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="@dimen/x40"
+            android:paddingTop="@dimen/y18">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_help_float_cmd_tip"
+                android:textColor="@color/float_help_detail_tip"
+                android:textSize="@dimen/y18"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/cmd_one_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:maxLines="1"
+                android:text="导航您可以说导航去龙岗"
+                android:textColor="@color/float_help_detail_cmd"
+                android:textSize="@dimen/y22" />
+
+            <TextView
+                android:id="@+id/cmd_two_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:maxLines="1"
+                android:text="音乐您可以说我要听歌"
+                android:textColor="@color/float_help_detail_cmd"
+                android:textSize="@dimen/y22" />
+
+            <TextView
+                android:id="@+id/cmd_three_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:maxLines="1"
+                android:text="音乐您可以说我要听歌"
+                android:textColor="@color/float_help_detail_cmd"
+                android:textSize="@dimen/y22"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/cmd_four_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:maxLines="1"
+                android:text="音乐您可以说我要听歌"
+                android:textColor="@color/float_help_detail_cmd"
+                android:textSize="@dimen/y22"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/cmd_five_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:maxLines="1"
+                android:text="音乐您可以说我要听歌"
+                android:textColor="@color/float_help_detail_cmd"
+                android:textSize="@dimen/y22"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/cmd_six_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:maxLines="1"
+                android:text="音乐您可以说我要听歌"
+                android:textColor="@color/float_help_detail_cmd"
+                android:textSize="@dimen/y22"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/wp_tip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_help_float_wp_tip"
+                android:textColor="@color/float_help_detail_tip"
+                android:textSize="@dimen/m18" />
+
+            <TextView
+                android:id="@+id/wp_one_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:text="放大地图"
+                android:textColor="@color/float_help_detail_wp"
+                android:textSize="@dimen/m20" />
+
+            <TextView
+                android:id="@+id/wp_two_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:text="打开路况"
+                android:textColor="@color/float_help_detail_wp"
+                android:textSize="@dimen/m20" />
+
+            <TextView
+                android:id="@+id/wp_three_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:text="查看全程"
+                android:textColor="@color/float_help_detail_wp"
+                android:textSize="@dimen/m20" />
+
+            <TextView
+                android:id="@+id/wp_four_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:text="躲避拥堵"
+                android:textColor="@color/float_help_detail_wp"
+                android:textSize="@dimen/m20" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/detail_hide_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginEnd="@dimen/x8"
+            android:layout_marginRight="@dimen/x8"
+            android:src="@drawable/icon_detail_hide" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/float_bar_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/float_bar_ts"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y82"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/icon_bar_bg"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingEnd="@dimen/x15"
+            android:paddingLeft="@dimen/y80"
+            android:paddingRight="@dimen/x15"
+            android:paddingStart="@dimen/y80"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:text="您可以说“你好，小踢”唤醒我哦！"
+            android:textColor="@color/float_help_bar_color"
+            android:textSize="@dimen/y20" />
+
+        <ImageView
+            android:id="@+id/float_btn_iv"
+            android:layout_width="@dimen/y70"
+            android:layout_height="@dimen/y70"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/y6"
+            android:layout_marginStart="@dimen/y6"
+            android:background="@drawable/icon_float_btn"
+            android:clickable="false" />
+    </FrameLayout>
+
+</FrameLayout>

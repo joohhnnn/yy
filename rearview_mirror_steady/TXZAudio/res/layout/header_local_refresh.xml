@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y90"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/x20"
+    android:paddingRight="@dimen/x20" >
+
+    <TextView
+        android:id="@+id/refresh_total_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="已同步0首歌曲"
+        android:textSize="@dimen/y24" />
+
+    <TextView
+        android:id="@+id/refreshTv"
+        android:layout_width="@dimen/x160"
+        android:layout_height="@dimen/y60"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="同步歌曲"
+        android:textColor="@color/press_tv"
+        android:textSize="@dimen/y30" />
+
+</RelativeLayout>

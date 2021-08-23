@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresh_header"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y90"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/x20"
+    android:paddingRight="@dimen/x20"
+    android:visibility="visible" >
+
+<!--
+    <TextView
+        android:id="@+id/refresh_total_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="@string/total_song"
+        android:textSize="@dimen/header_refresh_total_text_size" />
+-->
+
+
+    <Button
+        android:id="@+id/refresh_scan_btn"
+        android:layout_width="@dimen/x155"
+        android:layout_height="@dimen/y60"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="?attr/text_size_h2"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_rescan"
+        android:text="重新扫描"/>
+
+</RelativeLayout>

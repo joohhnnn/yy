@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/m154"
+    android:layout_height="@dimen/m154">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/m154"
+        android:layout_height="@dimen/m154"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/home_default_cover_icon_normal" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m24"
+        android:layout_gravity="bottom"
+        android:background="@drawable/home_page_item_text_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/m8"
+        android:paddingRight="@dimen/m8"
+        android:singleLine="true"
+        android:textSize="@dimen/base_tv_h6"
+        android:visibility="invisible"
+        tools:text="电子浪潮" />
+
+    <com.txznet.music.widget.PlayingStateView
+        android:id="@+id/iv_playing"
+        android:layout_width="@dimen/m22"
+        android:layout_height="@dimen/m22"
+        android:layout_gravity="right"
+        android:layout_marginTop="@dimen/m5"
+        android:layout_marginRight="@dimen/m5"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/m24"
+        android:layout_marginLeft="@dimen/m8"
+        android:layout_marginTop="@dimen/m8"
+        android:background="@drawable/user_tag_bg"
+        android:gravity="center"
+        android:paddingLeft="@dimen/m2"
+        android:paddingRight="@dimen/m2"
+        android:textSize="@dimen/base_tv_h7"
+        android:visibility="gone"
+        tools:text="常听电台" />
+</FrameLayout>

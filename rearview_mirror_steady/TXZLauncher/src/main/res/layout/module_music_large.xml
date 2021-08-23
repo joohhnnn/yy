@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="310px"
+    android:layout_height="196px"
+    android:orientation="vertical"
+    tools:background="#FFFFFF">
+
+
+    <TextView
+        android:id="@+id/tv_music_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="音乐"
+        android:textSize="@dimen/dimen_text_size_h4" />
+
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10px"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/bg"
+            android:src="@drawable/shape_music_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:background="#66000000"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/layout_control"
+            app:layout_heightPercent="57%"
+            app:layout_marginTopPercent="8.6%"
+            app:layout_widthPercent="100%">
+
+
+            <ImageView
+                android:padding="1px"
+                android:id="@+id/iv_cover"
+                android:layout_centerInParent="true"
+                app:layout_aspectRatio="100%"
+                app:layout_heightPercent="100%" />
+
+            <com.txznet.launcher.widget.CircleProgressView
+                android:id="@+id/pb_progress"
+                android:layout_centerInParent="true"
+                app:backgroundColor="#4CFFFFFF"
+                app:frontgroundColor="#FFE53F40"
+                app:layout_aspectRatio="100%"
+                app:layout_heightPercent="100%"
+                app:strokeWidth="2.5px" />
+
+
+            <Button
+                android:id="@+id/btn_prev"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_music_prev"
+                app:layout_aspectRatio="100%"
+                app:layout_heightPercent="13%"
+                app:layout_marginLeftPercent="17%" />
+
+            <Button
+                android:id="@+id/btn_play"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_music_play"
+                app:layout_aspectRatio="100%"
+                app:layout_heightPercent="35%" />
+
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_music_next"
+                app:layout_aspectRatio="100%"
+                app:layout_heightPercent="13%"
+                app:layout_marginRightPercent="17%" />
+
+        </android.support.percent.PercentRelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_control"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/dimen_text_size_music_large_title"
+            android:singleLine="true"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            app:layout_marginTopPercent="6.1%"
+            tools:text="她来听我的演唱会" />
+
+        <com.txznet.launcher.widget.RandomWave
+            android:id="@+id/wave_anim"
+            android:layout_below="@id/tv_title"
+            android:layout_alignParentRight="true"
+            app:layout_marginRightPercent="0.5%"
+            app:layout_marginBottomPercent="0.5%"
+            android:layout_width="32px"
+            android:layout_height="24px"/>
+
+        <View
+            android:id="@+id/v_hold"
+            android:layout_width="32px"
+            app:layout_marginLeftPercent="0.5%"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true" />
+
+        <TextView
+            android:id="@+id/tv_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/tv_title"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/dimen_text_size_music_large_artist"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:layout_toRightOf="@id/v_hold"
+            android:layout_toLeftOf="@id/wave_anim"
+            app:layout_marginTopPercent="0.5%"
+            android:layout_marginLeft="@dimen/x4"
+            android:layout_marginRight="@dimen/x4"
+            tools:text="张学友张学友张学友张学友张学友张学友张学友" />
+
+
+        <TextView
+            android:id="@+id/tv_loading"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_control"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/dimen_text_size_music_large_title"
+            android:singleLine="true"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            app:layout_marginTopPercent="6.1%"
+            android:text="加载中" />
+
+    </android.support.percent.PercentRelativeLayout>
+</LinearLayout>

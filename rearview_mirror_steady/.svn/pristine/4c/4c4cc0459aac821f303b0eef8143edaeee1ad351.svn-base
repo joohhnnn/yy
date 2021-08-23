@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_bg"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/vg_header"
+        layout="@layout/player_include_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivCover"
+        android:layout_width="@dimen/m208"
+        android:layout_height="@dimen/m208"
+        android:src="@drawable/player_default_cover_icon_large"
+        android:visibility="invisible"
+        app:civ_border_color="@color/white_20"
+        app:civ_border_width="@dimen/m5"
+        app:layout_constraintBottom_toTopOf="@id/tv_source_from"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vg_header"
+        tools:visibility="visible" />
+
+    <FrameLayout
+        android:id="@+id/flRadioCover"
+        android:layout_width="@dimen/m187"
+        android:layout_height="@dimen/m187"
+        android:layout_gravity="center"
+        android:background="@color/white_20"
+        app:layout_constraintBottom_toTopOf="@id/tv_source_from"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vg_header">
+
+        <ImageView
+            android:id="@+id/ivRadioCover"
+            android:layout_width="@dimen/m176"
+            android:layout_height="@dimen/m176"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/player_default_cover_icon_large" />
+
+    </FrameLayout>
+
+    <com.txznet.music.widget.LoadingView
+        android:id="@+id/lyric_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:contentsView="@layout/lyric_view"
+        app:emptyView="@layout/lyric_empty_view"
+        app:errorView="@layout/lyric_error_view"
+        app:layout_constraintBottom_toTopOf="@id/tv_source_from"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vg_header"
+        app:loadingView="@layout/lyric_loading_view" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ll_control"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m96"
+        app:layout_constraintBottom_toTopOf="@id/tv_source_from"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vg_header">
+
+        <com.txznet.music.widget.AlphaButton
+            android:id="@+id/btn_prev"
+            android:layout_width="@dimen/m96"
+            android:layout_height="@dimen/m96"
+            android:background="@drawable/player_prev_btn"
+            app:layout_constraintBottom_toBottomOf="@id/btn_play_or_pause"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn_play_or_pause"
+            app:layout_constraintTop_toTopOf="@id/btn_play_or_pause" />
+
+        <com.txznet.music.widget.AlphaButton
+            android:id="@+id/btn_play_or_pause"
+            android:layout_width="@dimen/m96"
+            android:layout_height="@dimen/m96"
+            android:layout_marginLeft="@dimen/m140"
+            android:layout_marginRight="@dimen/m140"
+            android:background="@drawable/player_play_btn"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/btn_prev"
+            app:layout_constraintRight_toLeftOf="@id/btn_next"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/img_logo_loading"
+            android:layout_width="@dimen/m96"
+            android:layout_height="@dimen/m96"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/btn_play_or_pause"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_play_or_pause"
+            app:lottie_autoPlay="false"
+            app:lottie_fileName="play_loading2.json"
+            app:lottie_loop="true"
+            tools:layout_height="@dimen/m200"
+            tools:layout_width="@dimen/m200"
+            tools:visibility="visible" />
+
+        <com.txznet.music.widget.AlphaButton
+            android:id="@+id/btn_next"
+            android:layout_width="@dimen/m96"
+            android:layout_height="@dimen/m96"
+            android:background="@drawable/player_next_btn"
+            app:layout_constraintBottom_toBottomOf="@id/btn_play_or_pause"
+            app:layout_constraintLeft_toRightOf="@id/btn_play_or_pause"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_play_or_pause" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/tv_source_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/m20"
+        android:textColor="@color/white_40"
+        android:textSize="@dimen/base_tv_h6"
+        app:layout_constraintBottom_toTopOf="@id/sb_player_progress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="来源：QQ音乐" />
+
+    <TextView
+        android:id="@+id/tv_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/m39"
+        android:layout_marginRight="@dimen/m11"
+        android:text="00:00"
+        android:textSize="@dimen/base_tv_h6"
+        app:layout_constraintBottom_toBottomOf="@id/sb_player_progress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/sb_player_progress"
+        app:layout_constraintTop_toTopOf="@id/sb_player_progress" />
+
+    <com.txznet.music.widget.CustomSeekBar
+        android:id="@+id/sb_player_progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/m19"
+        android:layout_marginLeft="@dimen/m11"
+        android:layout_marginRight="@dimen/m11"
+        android:paddingTop="@dimen/m11"
+        android:paddingBottom="@dimen/m11"
+        app:layout_constraintBottom_toTopOf="@id/bar_music"
+        app:layout_constraintLeft_toRightOf="@id/tv_position"
+        app:layout_constraintRight_toLeftOf="@id/tv_duration" />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/m11"
+        android:layout_marginRight="@dimen/m39"
+        android:text="00:00"
+        android:textSize="@dimen/base_tv_h6"
+        app:layout_constraintBottom_toBottomOf="@id/sb_player_progress"
+        app:layout_constraintBottom_toTopOf="@id/bar_music"
+        app:layout_constraintLeft_toRightOf="@id/sb_player_progress"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sb_player_progress" />
+
+    <include
+        android:id="@+id/bar_music"
+        layout="@layout/player_include_action_bar_music"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/m96"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:visibility="visible" />
+
+    <include
+        android:id="@+id/bar_music_ai"
+        layout="@layout/player_include_action_bar_music_ai"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/m96"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <include
+        android:id="@+id/bar_radio"
+        layout="@layout/player_include_action_bar_radio"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/m96"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <include
+        android:id="@+id/bar_radio_ai"
+        layout="@layout/player_include_action_bar_radio_ai"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/m96"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

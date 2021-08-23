@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="indicator_selected">#ffffff</color>
+    <color name="indicator_selected_nor">#7fff</color>
+    <color name="green">#1cc859</color>
+    <color name="item_music_type_bg">#282828</color>
+    <color name="item_bg_selected">#1e1e1e</color>
+    <color name="item_bg_selected_nor">#991e1e1e</color>
+    <color name="type_filter_pop_bg">#B2000000</color>
+    <color name="type_filter_pop_item_normal_bg">#484947</color>
+    <color name="white">#fff</color>
+    <color name="singer_name">#7fffffff</color>
+    <color name="media_player_time">#a0a0a0</color>
+    <color name="progress_color">#B2393939</color>
+    <color name="finished_progress_color">#1cc859</color>
+    <color name="buffered_progress_color">#5d5a5a</color>
+    <color name="player_list_item_bg">#050505</color>
+    <color name="player_list_bg">#1e1e1e</color>
+    <color name="gray">#707070</color>
+    <color name="album_des_bg">#282828</color>
+    <color name="song_selected">#383838</color>
+    <color name="song_selected_nor">#1b1a1c</color>
+    <color name="song_delete_selected_nor">#444a50</color>
+    <color name="song_delete_selected">#282828</color>
+    <color name="dialog_bg">#24262d</color>
+    <color name="dialog_line_bg">#1f2225</color>
+    <color name="dialog_bg_press">#181818</color>
+    <color name="dialog_sure_text_color">#fb4c49</color>
+    <color name="song_fliter_bg">#99000000</color>
+    <color name="type_filter_bg">#ccffffff</color>
+    <color name="press_local_music">#13863c</color>
+
+</resources>

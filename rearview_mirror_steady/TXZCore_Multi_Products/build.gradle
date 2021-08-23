@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    useLibrary 'org.apache.http.legacy'
+
+	defaultConfig {
+        applicationId "com.txznet.txz"
+        minSdkVersion 16
+        targetSdkVersion rootProject.ext.targetSdkVersion
+      //versionCode 22
+      //versionName "2.2.0"
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+	
+	sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+	
+	dexOptions {
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+	
+    signingConfigs {
+        release {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('../../tools/txz.keystore')
+            storePassword 'android'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles 'proguard-project.txt'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':TXZRecordLib')
+    provided files('txz_libs/txz_gen.jar')
+}
+
+android.applicationVariants.all {
+    variant -> variant.javaCompile.classpath += files('txz_libs/txz_gen.jar')
+}
+
+
+task txzClean(type:Exec) {
+	//println "${workingDir}";
+	commandLine "python", "./tools/compile/clean_java.py"
+	ext.output = {
+		return standardOutput.toString()
+	}
+}
+
+task txzPreBuild(type:Exec) {
+    //println "${workingDir}";
+    commandLine "python", "./tools/compile/pre_java.py"
+    ext.output = {
+        return standardOutput.toString()
+    }
+}
+
+project.afterEvaluate {
+    preBuild.dependsOn("txzPreBuild")
+	clean.dependsOn("txzClean")
+}
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/head_title" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_album_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_weight="1" >
+
+            <com.txznet.music.widget.NavRecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scrollbars="vertical" >
+            </com.txznet.music.widget.NavRecyclerView>
+        </LinearLayout>
+
+        <include
+            android:id="@+id/ll_error"
+            layout="@layout/error_layout"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/ll_loading"
+            layout="@layout/dialog_loading"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

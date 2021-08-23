@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--二维码样式-->
+    <style name="qr_landscape">
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">#ffffff</item>
+        <item name="android:padding">@dimen/y10</item>
+    </style>
+</resources>

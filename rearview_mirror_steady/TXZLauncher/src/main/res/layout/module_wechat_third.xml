@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/list_item_range_bg"
+    android:layout_width="310px"
+    android:layout_height="70px">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_wechat_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_wechat_user_icon"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_centerVertical="true"
+            app:layout_marginLeftPercent="4.6%"/>
+
+        <TextView
+
+            android:id="@+id/tv_wechat_user_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#FFFFFFFF"
+            android:singleLine="true"
+            app:layout_marginRightPercent="7%"
+            android:textSize="@dimen/dimen_text_size_third_wechat_user_nick"
+            app:layout_marginLeftPercent="22.6%"
+            tools:text="张三丰来了"/>
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_wechat_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_wechat"
+        app:layout_marginRightPercent="4.7%"
+        app:layout_marginTopPercent="10%"/>
+
+    <FrameLayout
+        android:id="@+id/fl_msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/layout_wechat_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_range_layout"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/cinema_bill_rl"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" >
+
+        <com.txznet.comm.ui.view.ScaleImageView
+            android:id="@+id/cinema_bill_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/cinema_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="@dimen/y5"
+        android:paddingEnd="@dimen/y10"
+        android:paddingLeft="@dimen/y10"
+        android:paddingRight="@dimen/y10"
+        android:paddingStart="@dimen/y10"
+        android:paddingTop="@dimen/y10"
+        android:singleLine="true"
+        android:textColor="@color/cinema_title_color"
+        android:textSize="@dimen/y24" />
+
+    <LinearLayout
+        android:id="@+id/cinema_score_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/y10"
+        android:paddingEnd="@dimen/x1"
+        android:paddingLeft="@dimen/x1"
+        android:paddingRight="@dimen/x1"
+        android:paddingStart="@dimen/x1"
+        android:paddingTop="@dimen/y10" >
+
+        <ImageView
+            android:id="@+id/cinema_score_iv"
+            android:layout_width="0dp"
+            android:layout_weight="0.65"
+            android:layout_height="@dimen/y20"
+            android:layout_marginEnd="@dimen/x2"
+            android:layout_marginRight="@dimen/x2"
+            android:src="@drawable/dz_icon_star0" />
+
+        <RelativeLayout
+            android:layout_weight="0.35"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/cinema_score_tv_pref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="@color/cinema_score_color"
+                android:textSize="@dimen/y30" />
+
+            <TextView
+                android:id="@+id/cinema_score_tv_aft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cinema_score_tv_pref"
+                android:singleLine="true"
+                android:textColor="@color/cinema_score_color"
+                android:textSize="@dimen/y18" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cinema_no_score_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingEnd="@dimen/x1"
+        android:paddingLeft="@dimen/x1"
+        android:paddingRight="@dimen/x1"
+        android:paddingStart="@dimen/x1"
+        android:paddingTop="@dimen/y10"
+        android:paddingBottom="@dimen/y10"/>
+
+</LinearLayout>

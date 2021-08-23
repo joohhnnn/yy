@@ -1,0 +1,134 @@
+<resources>
+
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+
+        <!-- 自定义样式 -->
+        <item name="base_page_height">@dimen/m332</item>
+
+        <item name="rec_page_large_item_width">@dimen/m312</item>
+        <item name="rec_page_large_item_height">@dimen/m154</item>
+
+        <item name="rec_page_item_size">@dimen/m154</item>
+        <item name="base_page_item_size">@dimen/m144</item>
+
+        <item name="page_item_offset_1_1">@dimen/m12</item>
+        <item name="page_item_offset_1_1_1">@dimen/m12</item>
+
+        <item name="player_bar_cover_size">@dimen/m46</item>
+        <item name="player_bar_logo_size">@dimen/m39</item>
+        <item name="player_bar_control_size">@dimen/m24</item>
+        <item name="radio_listen_list_width">@dimen/m234</item>
+        <item name="radio_listen_list_max_width">@dimen/m234</item>
+
+        <!-- base_page_item_size * 4 + 12 * 3 -->
+        <!--<item name="choice_page_width">@dimen/m612</item>-->
+    </style>
+
+    <style name="AppThemeNotFullscreen" parent="AppTheme" />
+
+    <style name="AppTheme.CheJi">
+        <item name="base_page_height">@dimen/m344</item>
+        <item name="page_item_offset_1_1">@dimen/m24</item>
+        <item name="page_item_offset_1_1_1">@dimen/m17</item>
+        <item name="player_bar_cover_size">@dimen/m63</item>
+        <item name="player_bar_logo_size">@dimen/m52</item>
+        <item name="player_bar_control_size">@dimen/m32</item>
+        <item name="radio_listen_list_max_width">@dimen/m234</item>
+    </style>
+
+    <style name="AppTheme.ShortHouShiJing">
+        <item name="radio_listen_list_max_width">@dimen/m234</item>
+    </style>
+
+    <style name="AppTheme.LongHouShiJing">
+        <item name="radio_listen_list_width">0dp</item>
+        <item name="radio_listen_list_max_width">9999px</item>
+    </style>
+
+    <style name="Dialog.FullScreen" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Base_Divider_Horizontal">
+        <item name="android:background">#19FFFFFF</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+    </style>
+
+    <style name="Base_Divider_Vertical">
+        <item name="android:background">#19FFFFFF</item>
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="Base_TabLayoutTextStyle">
+        <item name="android:textSize">@dimen/base_tv_h1</item>
+    </style>
+
+    <style name="Base_Divider_Horizontal_With_Margin" parent="Base_Divider_Horizontal">
+        <item name="android:layout_marginLeft">@dimen/m39</item>
+        <item name="android:layout_marginRight">@dimen/m39</item>
+    </style>
+
+    <style name="Base_Padding_LEFT_RIGHT">
+        <item name="android:paddingLeft">@dimen/m40</item>
+        <item name="android:paddingRight">@dimen/m40</item>
+    </style>
+
+    <style name="Base_GRID_Padding_LEFT_RIGHT">
+        <item name="android:paddingLeft">@dimen/m52</item>
+        <item name="android:paddingRight">@dimen/m52</item>
+    </style>
+
+    <style name="Base_Default_Page_icon">
+        <item name="android:layout_width">@dimen/m128</item>
+        <item name="android:layout_height">@dimen/m128</item>
+    </style>
+
+    <style name="Setting_CheckBox_Size">
+        <item name="android:layout_width">@dimen/m46</item>
+        <item name="android:layout_height">@dimen/m24</item>
+    </style>
+
+    <style name="TextView_Marquee">
+        <item name="android:focusable">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Setting_Item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/m108</item>
+        <item name="android:background">@drawable/base_range_select_bg</item>
+    </style>
+
+    <style name="Base_Small_Icon_Size">
+        <item name="android:layout_width">@dimen/m32</item>
+        <item name="android:layout_height">@dimen/m32</item>
+    </style>
+
+    <style name="Base_Title_Range">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/m68</item>
+    </style>
+
+    <style name="Setting_Item_Padding">
+        <item name="android:paddingLeft">@dimen/m64</item>
+        <item name="android:paddingRight">@dimen/m64</item>
+    </style>
+</resources>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layout_head_music"
+              android:layout_width="match_parent"
+              android:layout_height="?attr/fg_music_title_height"
+              android:layout_gravity="center_vertical"
+              android:visibility="gone"
+              android:orientation="horizontal">
+
+    <View
+        android:id="@+id/view_left_space"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/transparent"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_category_1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_content_category_1"
+            android:layout_width="@dimen/x92"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/music_title_btn_bg">
+
+            <TextView
+                android:id="@+id/tv_content_category_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="流行"
+                style="@style/title_text"/>
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_content_select_1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:scaleType="center"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:src="@drawable/type_select"/>-->
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_category_2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:id="@+id/rl_content_category_2"
+            android:layout_width="@dimen/x92"
+            android:layout_height="?attr/fg_music_title_height"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/music_title_btn_bg">
+
+            <TextView
+                android:id="@+id/tv_content_category_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="排行榜"
+                style="@style/title_text"/>
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_content_select_2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:scaleType="center"-->
+                <!--android:src="@drawable/type_select"/>-->
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_category_3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:id="@+id/rl_content_category_3"
+            android:layout_width="@dimen/x92"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/music_title_btn_bg">
+
+            <TextView
+                android:id="@+id/tv_content_category_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                style="@style/title_text"/>
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_content_select_3"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:src="@drawable/type_select"-->
+                <!--android:scaleType="center"/>-->
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_category_4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clipChildren="false">
+
+        <RelativeLayout
+            android:id="@+id/rl_content_category_4"
+            android:layout_width="@dimen/x92"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/music_title_btn_bg">
+
+            <TextView
+                android:id="@+id/tv_content_category_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="分类"
+                style="@style/title_text"/>
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_content_select_4"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:scaleType="center"-->
+                <!--android:src="@drawable/type_select"/>-->
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_right_space"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/transparent"/>
+
+</LinearLayout>

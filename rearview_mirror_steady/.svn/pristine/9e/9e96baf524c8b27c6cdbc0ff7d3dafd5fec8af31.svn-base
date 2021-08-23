@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true"><shape android:shape="rectangle">
+            <corners android:radius="@dimen/x10" />
+
+            <solid android:color="@color/press_local_music" />
+        </shape></item>
+    <item><shape android:shape="rectangle">
+            <corners android:radius="@dimen/x10" />
+
+            <solid android:color="@color/green" />
+        </shape></item>
+
+</selector>

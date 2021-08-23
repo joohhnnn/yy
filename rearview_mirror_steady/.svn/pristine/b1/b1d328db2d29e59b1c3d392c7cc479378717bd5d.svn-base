@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/mdp20"
+        android:paddingRight="@dimen/mdp20"
+        android:paddingTop="@dimen/mdp20"
+        android:paddingBottom="@dimen/mdp30">
+
+        <LinearLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivName1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp" />
+
+                <TextView
+                    android:id="@+id/tvName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="星座1"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/sp20"
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="匹配度"
+                    android:textSize="@dimen/sp18"
+                    android:textColor="@color/textColorSecondary"/>
+
+                <TextView
+                    android:id="@+id/tvLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00%"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#FFCA00"
+                    android:textSize="32dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivName2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp" />
+
+                <TextView
+                    android:id="@+id/tvName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="星座2"
+                    android:textColor="#99FFFFFF"
+                    android:textSize="@dimen/sp20"
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/mdp10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18"
+            android:layout_below="@+id/head"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_alignRight="@id/head"
+            android:visibility="gone"
+            android:text="Test-与人合作容易出现意见分歧，而你又有着很强烈的个人主见，很可能会僵持着没有结果。所以尽量避免合作，也不要组织活动，容易暴露你的短板。你会有比较多的时间进行一些浪漫或是有仪式感的安排，可以好好感受生活的气息。"/>
+
+    </RelativeLayout>
+
+</ScrollView>

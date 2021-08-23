@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                               xmlns:app="http://schemas.android.com/apk/res-auto"
+                                               xmlns:tools="http://schemas.android.com/tools"
+                                               android:layout_width="310px"
+                                               android:layout_height="108px"
+                                               android:background="@android:color/transparent">
+
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/shape_music_bg"
+        android:scaleType="centerCrop"/>
+
+    <View
+        android:background="#66000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/layout_plate"
+        android:layout_width="0dp"
+        app:layout_aspectRatio="100%"
+        app:layout_heightPercent="100%">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_cd_plate"/>
+
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_launcher"
+            app:layout_heightPercent="50%"
+            app:layout_widthPercent="50%"/>
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_music_sign"
+        app:layout_marginRightPercent="5%"
+        app:layout_marginTopPercent="14%"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/layout_plate"
+        android:layout_toRightOf="@id/layout_plate"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_toLeftOf="@id/iv_sign"
+        app:layout_marginRightPercent="3%"
+        android:singleLine="true"
+        android:textSize="@dimen/dimen_text_size_music_middle_title"
+        app:layout_marginTopPercent="15%"
+        tools:text="他来听我的演唱会他来听我的演唱会"/>
+
+
+    <TextView
+        android:id="@+id/tv_artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_toEndOf="@+id/layout_plate"
+        android:layout_toRightOf="@+id/layout_plate"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:textSize="@dimen/dimen_text_size_music_middle_artist"
+        app:layout_marginTopPercent="6%"
+        app:layout_marginRightPercent="6%"
+        tools:text="张学友张学友张学友"/>
+
+    <Button
+        android:id="@+id/btn_prev"
+        android:layout_below="@id/tv_artist"
+        android:layout_toEndOf="@id/layout_plate"
+        android:layout_toRightOf="@id/layout_plate"
+        android:background="@drawable/ic_music_prev"
+        app:layout_aspectRatio="100%"
+        app:layout_marginTopPercent="15.7%"
+        app:layout_widthPercent="5%"/>
+
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_below="@id/tv_artist"
+        android:layout_toEndOf="@id/btn_prev"
+        android:layout_toRightOf="@id/btn_prev"
+        android:background="@drawable/ic_music_play"
+        app:layout_aspectRatio="100%"
+        app:layout_marginLeftPercent="8%"
+        app:layout_marginTopPercent="9%"
+        app:layout_widthPercent="9.6%"/>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_below="@id/tv_artist"
+        android:layout_toEndOf="@id/btn_play"
+        android:layout_toRightOf="@id/btn_play"
+        android:background="@drawable/ic_music_next"
+        app:layout_aspectRatio="100%"
+        app:layout_marginLeftPercent="8%"
+        app:layout_marginTopPercent="15.7%"
+        app:layout_widthPercent="5%"/>
+
+    <com.txznet.launcher.widget.RandomWave
+        android:id="@+id/wave_anim"
+        android:layout_alignBottom="@id/btn_play"
+        android:layout_alignParentRight="true"
+        app:layout_marginRightPercent="0.5%"
+        android:layout_width="32px"
+        android:layout_height="24px"/>
+
+    <TextView
+        android:id="@+id/tv_loading"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_control"
+        android:layout_above="@id/btn_play"
+        android:layout_toRightOf="@id/layout_plate"
+        android:textSize="16px"
+        android:textColor="#FFFFFF"
+        android:singleLine="true"
+        app:layout_marginTopPercent="6.1%"
+        android:text="加载中" />
+
+</android.support.percent.PercentRelativeLayout>

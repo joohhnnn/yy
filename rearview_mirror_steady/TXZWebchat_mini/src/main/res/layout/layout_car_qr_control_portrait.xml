@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                               android:layout_width="match_parent"
+                                               android:layout_height="match_parent"
+                                               xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--与登录微信页面结构保持一致, 多嵌套一层FrameLayout,
+     方便与登录微信页面各元素保持对齐, 避免计算得出的百分比带来细微误差, 出现元素偏移问题-->
+    <android.support.percent.PercentFrameLayout
+        android:id="@+id/fl_car_qr_wrapper"
+        android:layout_centerHorizontal="true"
+        app:layout_aspectRatio="100%"
+        app:layout_marginTopPercent="26%"
+        app:layout_widthPercent="28.9%">
+
+        <FrameLayout
+            android:id="@+id/fl_car_qr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_marginPercent="5%">
+
+            <ImageView
+                android:id="@+id/iv_car_qr_control_qrcode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/qr_portrait"/>
+
+            <com.pnikosis.materialishprogress.ProgressWheel
+                android:id="@+id/pb_car_qr_control_progress"
+                android:visibility="gone"
+                android:layout_width="@dimen/y32"
+                android:layout_height="@dimen/y32"
+                android:layout_gravity="center"
+                app:matProg_barColor="@color/color_accent"
+                app:matProg_progressIndeterminate="true"
+                app:matProg_barWidth="@dimen/y3"/>
+        </FrameLayout>
+
+    </android.support.percent.PercentFrameLayout>
+
+    <TextView
+        android:id="@+id/tv_car_qr_control_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/fl_car_qr_wrapper"
+        android:textColor="@color/color_primary"
+        android:textSize="@dimen/x18"
+        android:text="@string/lb_login_control_unbind"
+        app:layout_marginTopPercent="2.6%"/>
+
+    <TextView
+        android:id="@+id/tv_car_qr_control_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/y6"
+        android:paddingBottom="@dimen/y6"
+        android:paddingLeft="@dimen/y12"
+        android:paddingRight="@dimen/y12"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_car_qr_control_title"
+        android:textSize="@dimen/x16"
+        android:textColor="@color/color_accent"
+        android:text="@string/lb_login_control_help"
+        android:background="@drawable/transparent_background"
+        app:layout_marginTopPercent="6%"/>
+
+    <FrameLayout
+        android:id="@+id/btn_car_qr_control_refresh"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/selector_car_btn_portrait"
+        app:layout_aspectRatio="417%"
+        app:layout_widthPercent="26%"
+        android:layout_alignParentBottom="true"
+        app:layout_marginBottomPercent="3.1%">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/x20"
+            android:text="@string/lb_login_wechat_refresh"/>
+
+    </FrameLayout>
+
+</android.support.percent.PercentRelativeLayout>

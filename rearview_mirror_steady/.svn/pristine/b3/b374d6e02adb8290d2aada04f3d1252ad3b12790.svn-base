@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_range_layout"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/list_help_detail"
+        android:divider="@null"
+        android:childDivider="@null"
+        android:groupIndicator="@null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:background="@drawable/white_help_tip_layout"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/tvToast"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15px"
+        android:paddingRight="15px"
+        android:layout_marginLeft="15px"
+        android:layout_marginRight="15px"/>
+</FrameLayout>

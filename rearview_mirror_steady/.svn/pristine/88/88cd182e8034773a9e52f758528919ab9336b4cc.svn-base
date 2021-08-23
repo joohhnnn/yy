@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/merge_bg" />
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/head_title_back"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:layout_heightPercent="?attr/head_height" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_radio_recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head"
+        android:layout_above="@+id/bar_player_view"
+        android:paddingLeft="?attr/bar_player_view_padding"
+        android:visibility="visible"
+        android:scrollbars="vertical"
+        />
+    <com.txznet.music.widget.BarPlayerView
+        android:id="@+id/bar_player_view"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        app:layout_heightPercent="30%" />
+
+    <com.txznet.music.widget.LoadingView
+        android:id="@+id/layout_library_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/recycler_radio_recommend"
+        android:layout_above="@+id/bar_player_view"
+        android:layout_below="@+id/head">
+        <fragment
+            android:id="@+id/fragment_play_list"
+            android:name="com.txznet.music.albumModule.ui.RadioListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x60"
+            />
+    </com.txznet.music.widget.LoadingView>
+
+</android.support.percent.PercentRelativeLayout>

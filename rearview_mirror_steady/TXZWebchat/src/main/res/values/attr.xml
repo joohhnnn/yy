@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ViewPagerEx">
+        <attr name="allow_scroll" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ChangeColorIconWithText">
+        <attr name="itv_icon" format="reference" />
+        <attr name="icon_while" format="reference" />
+        <attr name="color_nor" format="color" />
+        <attr name="color_sel" format="color" />
+        <attr name="text" format="string" />
+        <attr name="text_size" format="dimension" />
+        <attr name="sel_background" format="color" />
+        <attr name="nor_background" format="color" />
+        <attr name="itv_strip_height" format="dimension" />
+        <attr name="sel_strip_background" format="color" />
+        <attr name="nor_strip_background" format="color" />
+    </declare-styleable>
+
+    <!--styles for IconTextStateBtn-->
+    <declare-styleable name="IconTextStateBtn">
+        <attr name="itsb_icon" format="reference"/>
+        <attr name="itsb_icon_disabled" format="reference" />
+        <attr name="itsb_text" format="string" />
+        <attr name="itsb_text_disabled" format="string" />
+        <attr name="itsb_clickable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PagedRecyclerView">
+        <attr name="prv_desired_item_height" format="dimension"/>
+        <attr name="prv_desired_item_gap" format="dimension" />
+        <attr name="prv_page_turning_threshold" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="ResourceButton">
+        <attr name="resbtn_padding_vertical" format="dimension" />
+        <attr name="resbtn_padding_horizontal" format="dimension" />
+        <attr name="resbtn_padding_icon" format="dimension" />
+        <attr name="resbtn_size_icon" format="dimension" />
+        <attr name="resbtn_src_icon_normal" format="reference" />
+        <attr name="resbtn_src_icon_pressed" format="reference" />
+        <attr name="resbtn_size_text" format="dimension" />
+        <attr name="resbtn_color_text_normal" format="reference"/>
+        <attr name="resbtn_color_text_pressed" format="reference"/>
+        <attr name="resbtn_str_text" format="string" />
+        <attr name="resbtn_boolean_icon_visible" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="soundWaveView">
+        <attr name="itemDrawable" format="reference" />
+        <attr name="count" format="integer" />
+        <attr name="minHeight" format="dimension"/>
+        <attr name="maxHeight" format="dimension"/>
+        <attr name="itemMargin" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="BubbleRelativeLayout">
+        <attr name="cbv_top_src" format="reference"/>
+        <attr name="cbv_arrow_src" format="reference"/>
+        <attr name="cbv_bottom_src" format="reference"/>
+        <attr name="cbv_top_src_pressed" format="reference"/>
+        <attr name="cbv_arrow_src_pressed" format="reference"/>
+        <attr name="cbv_bottom_src_pressed" format="reference"/>
+        <attr name="cbv_arrow_height" format="dimension"/>
+        <attr name="cbv_arrow_position" format="dimension"/>
+        <attr name="cbv_extra_padding_top" format="dimension"/>
+        <attr name="cbv_extra_padding_bottom" format="dimension"/>
+        <attr name="cbv_extra_padding_left" format="dimension"/>
+        <attr name="cbv_extra_padding_right" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="VoiceView">
+        <attr name="vv_bar_src" format="reference"/>
+        <attr name="vv_bar_count" format="integer"/>
+        <attr name="vv_bar_width" format="dimension"/>
+        <attr name="vv_bar_height_min" format="dimension"/>
+        <attr name="vv_bar_height_max" format="dimension"/>
+        <attr name="vv_anim_duration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ThemedTextView">
+        <attr name="theme_color" format="enum">
+            <enum name="primary" value="1"/>
+            <enum name="accent" value="2"/>
+            <enum name="primary_dark" value="3"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ThemedImageView">
+        <attr name="theme_src" format="reference"/>
+    </declare-styleable>
+</resources>

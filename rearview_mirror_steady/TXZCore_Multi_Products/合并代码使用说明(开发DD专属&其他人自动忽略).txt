@@ -1,0 +1,10 @@
+1、更新TXZCore代码。
+2、进入TXZCore_Mutli_Products工程目录。
+3、执行cloneCore脚本，拷贝最新的TXZCore的稳定版本。
+4、进入favorProducts目录的特定项目的目录。
+  (arm_v3_debug(仅供测试SDK使用)、arm_v3_release这两个项目的代码必须同步代码，其他的后续会逐渐增加)
+5、合并自己修改的代码。
+   (强烈建议安装Becompare， 执行copyMergedSource.bat、比较该项目代码和TXZCore代码的差异，同步自己修改的部分即可)
+6、执行mergeCore脚本，合并项目的代码。
+7、执行主目录的release脚本。
+8、编译成功才能提交代码。

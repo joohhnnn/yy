@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_tab_text_nor">#adb6cc</color>
+    <color name="color_tab_text_sel">#00d700</color>
+    <color name="color_tab_bg_nor">#1f1e21</color>
+    <color name="color_tab_bg_sel">#000000</color>
+    <color name="color_tab_strip_nor">#00ffffff</color>
+    <color name="color_tab_strip_sel">#ff00d700</color>
+    <color name="color_tab_divider">#000000</color>
+
+    <color name="color_start_pager_bg_start">#ff000000</color>
+    <color name="color_start_pager_bg_end">#ff2e2f34</color>
+
+    <color name="color_bind_pager_bg">#32373b</color>
+
+    <color name="color_chat_bg">#1e1e1e</color>
+    <color name="color_chat_tab_bg">#0c0c0c</color>
+    <color name="color_chat_tab_text">#FFFFFF</color>
+    <color name="color_chat_back_btn_nor">#353535</color>
+    <color name="color_chat_back_btn_press">#656565</color>
+    <color name="color_chat_reply_btn_nor">#03341e</color>
+    <color name="color_chat_reply_btn_press">#33644e</color>
+    <color name="color_chat_reply_text">#00d700</color>
+    <color name="color_chat_view_bg">#9f000000</color>
+
+    <color name="color_help_bg">#000000</color>
+    <color name="color_help_tab_text">#ffffff</color>
+
+    <color name="color_main_bg">#000000</color>
+    <color name="color_main_text_name">#FFFFFF</color>
+    <color name="color_main_btn_nor">#1e1e1e</color>
+    <color name="color_main_btn_press">#5e5e5e</color>
+
+
+    <color name="color_session_tab_text">#ffffff</color>
+
+    <color name="color_bind_item_bg">#000000</color>
+    <color name="color_bind_item_sub_text">#707070</color>
+    <color name="color_bind_item_text">#ffffff</color>
+
+
+    <color name="color_chat_item_text">#000000</color>
+
+    <color name="color_session_item_text">#ffffff</color>
+    <color name="color_session_item_bg_press">#3e3e3e</color>
+    <color name="color_session_item_bg_nol">#1e1e1e</color>
+    <color name="color_session_car_sel">#3351c332</color>
+
+    <color name="color_control_text_hint">#ffffff</color>
+    <color name="color_control_text_help">#00d700</color>
+    <color name="color_control_text_bg_nol">#00000000</color>
+    <color name="color_control_text_bg_press">#101020</color>
+
+    <color name="color_wechat_text_hint">#ffffff</color>
+    <color name="color_wechat_btn_refresh_text">#ffffff</color>
+    <color name="color_wechat_text_error">#ff0000</color>
+    <color name="color_wechat_img_border">#FF000000</color>
+    <color name="color_wechat_text_return">#00d500</color>
+    <color name="color_wechat_text_sub_hint">#707070</color>
+    <color name="color_wechat_btn_refresh_nol">#3c3c3c</color>
+    <color name="color_wechat_btn_refresh_press">#686868</color>
+
+    <color name="color_dot_nor">#6f6f6f</color>
+    <color name="color_dot_sel">#1edb9b</color>
+
+    <color name="color_dialog_care_reason">#00d500</color>
+    <color name="color_dialog_care_tip">#ffffff</color>
+
+    <color name="color_dialog_exit_bg">#24262d</color>
+    <color name="color_dialog_exit_text_content">#ffffff</color>
+    <color name="color_dialog_exit_divider">#000000</color>
+    <color name="color_dialog_exit_commit">#fb4c49</color>
+    <color name="color_dialog_exit_cancel">#ffffff</color>
+    <color name="color_dialog_exit_btn_press">#1e1e1e</color>
+
+    <color name="color_help_group_bg">#1e1e1e</color>
+    <color name="color_help_group_bg_last">#282828</color>
+    <color name="color_help_group_bg_expanded">#282828</color>
+    <color name="color_help_group_text_index">#ffffff</color>
+    <color name="color_help_group_index_bg">#343434</color>
+    <color name="color_help_group_text_content">#ffffff</color>
+    <color name="color_help_group_divider">#4c4c4c</color>
+
+    <color name="color_help_item_text_content">#ffffff</color>
+    <color name="color_help_item_bg">#282828</color>
+
+    <color name="color_main_btn_text">#ffffff</color>
+
+    <color name="color_dialog_help_text_content">#ffffff</color>
+    <color name="color_dialog_help_divider">#000000</color>
+    <color name="color_dialog_help_text_commit">#00d500</color>
+    <color name="color_dialog_help_btn_press">#1e1e1e</color>
+
+
+    <color name="color_record_view_bg">#aa000000</color>
+    <color name="color_record_bg">#cc000000</color>
+    <color name="color_record_text_send">#FFFFFF</color>
+    <color name="color_record_text_send_pressed">@color/color_accent</color>
+    <color name="color_record_text_time">#FFFFFF</color>
+    <color name="color_record_text_send_bg">#33c0ff</color>
+    <color name="color_record_text_sending_bg">#515252</color>
+
+    <color name="color_notification_text_send">#ffffff</color>
+    <color name="color_notification_text_send_pressed">@color/color_accent</color>
+
+    <color name="color_qrcode_bg">#fff</color>
+
+    <!--文件下载相关-->
+    <color name="color_file_notification_pb_finished">#00c5ff</color>
+    <color name="color_file_notification_pb_unfinished">#00000000</color>
+
+
+    <!-- base_color -->
+    <color name="transparent">#00000000</color>
+    <color name="color_text_primary">#ffffff</color>
+    <color name="color_text_accent">#00d500</color>
+    <color name="color_text_primary_dark">#8d919d</color>
+
+    <color name="color_activity_bg_black">#000000</color>
+    <color name="color_activity_bg_primary">#f7f7f7</color>
+    <color name="color_activity_bg_primary_dark">#d8d8d8</color>
+
+    <!--base color for car version-->
+    <color name="color_accent">#51c332</color>
+    <color name="color_primary">#ffffff</color>
+    <color name="color_primary_dark">#8d919d</color>
+
+    <color name="color_car_btn_refresh_qr_background">#11ffffff</color>
+    <color name="color_car_btn_refresh_qr_background_pressed">#66ffffff</color>
+</resources>

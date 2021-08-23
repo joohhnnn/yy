@@ -1,0 +1,116 @@
+#JSGF V1.0 utf-8 cn;
+
+grammar txzCallSel;
+public <txzCallSel> = ( "<s>" (
+([<preActive>|<prePassive>|<prePlease>]<cnclOk>)
+|([<preActive>|<prePassive>|<prePlease>]<cnclCancel>)
+|([<selCmd>]<selPrefix>(<selIdx1>|<selIdx2>|<selIdx3>|<selIdx4>|<selIdx5>|<selIdx6>|<selIdx7>|<selIdx8>|<selIdx9>|<selIdx10>)<selSuffix>)
+|([<preActive>|<prePassive>|<prePlease>]([<selCmd>]<Option>))
+) "</s>" );
+
+//////////////////////////////////////前缀相关///////////////////////////////////
+<preActive>=(
+"<preActive_>"(
+我要 | 我想 | 我想要
+)"</preActive_>"
+);
+<prePassive>=(
+"<prePassive_>"(
+帮我 | 替我 | 给我 | 帮 | 帮忙 | 你给我 | 你替我 | 你
+)"</prePassive_>"
+);
+<prePlease>=(
+"<prePlease_>"(
+请 | 麻烦
+)"</prePlease_>"
+);
+
+<cnclOk> = (
+"<cnclOk_>"(
+确定|确定呼叫|确定拨打
+)"</cnclOk_>"
+);
+<cnclCancel> = (
+"<cnclCancel_>"(
+取消|取消呼叫|取消拨打|挂掉|挂断|掐断|掐掉
+)"</cnclCancel_>"
+);
+
+<selCmd> = (
+"<selCmd_>"(
+选|选择|打电话给|打个电话给|拨号给|呼叫|打给|电话给|联系
+)"</selCmd_>"
+);
+
+<selPrefix> = (
+"<selPrefix_>"(
+第
+)"</selPrefix_>"
+);
+
+<selSuffix> = (
+"<selSuffix_>"(
+个|条
+)"</selSuffix_>"
+);
+
+<selIdx1> = (
+"<selIdx1_>"(
+一
+)"</selIdx1_>"
+);
+
+<selIdx2> = (
+"<selIdx2_>"(
+二
+)"</selIdx2_>"
+);
+
+<selIdx3> = (
+"<selIdx3_>"(
+三
+)"</selIdx3_>"
+);
+
+<selIdx4> = (
+"<selIdx4_>"(
+四
+)"</selIdx4_>"
+);
+
+<selIdx5> = (
+"<selIdx5_>"(
+五
+)"</selIdx5_>"
+);
+
+<selIdx6> = (
+"<selIdx6_>"(
+六
+)"</selIdx6_>"
+);
+
+<selIdx7> = (
+"<selIdx7_>"(
+七
+)"</selIdx7_>"
+);
+
+<selIdx8> = (
+"<selIdx8_>"(
+八
+)"</selIdx8_>"
+);
+
+<selIdx9> = (
+"<selIdx9_>"(
+九
+)"</selIdx9_>"
+);
+
+<selIdx10> = (
+"<selIdx10_>"(
+十
+)"</selIdx10_>"
+);
+

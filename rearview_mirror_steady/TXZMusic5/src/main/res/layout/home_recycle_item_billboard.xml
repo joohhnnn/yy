@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_list_item_bg"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/m15"
+    android:paddingRight="@dimen/m15"
+    tools:background="@drawable/base_bg">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/m59"
+        android:layout_height="@dimen/m59"
+        android:src="@drawable/home_default_cover_icon_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.txznet.music.widget.PlayingStateView
+        android:id="@+id/iv_playing"
+        android:layout_width="@dimen/m12"
+        android:layout_height="@dimen/m12"
+        android:layout_marginTop="@dimen/m3"
+        android:layout_marginRight="@dimen/m3"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@id/iv_logo"
+        app:layout_constraintTop_toTopOf="@id/iv_logo" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/m15"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="@dimen/base_tv_h6"
+        app:layout_constraintLeft_toRightOf="@id/iv_logo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_logo"
+        tools:text="晓说" />
+
+    <TextView
+        android:id="@+id/tv_describe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m11"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textColor="@color/white_50"
+        android:textSize="@dimen/base_tv_h7"
+        app:layout_constraintBottom_toBottomOf="@id/iv_logo"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="用力过猛时代 奥斯卡 \n颁奖大预测" />
+</android.support.constraint.ConstraintLayout>

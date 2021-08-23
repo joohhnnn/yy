@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<dimen name="base_tv_h0">@dimen/m40</dimen>-->
+    <!--<dimen name="base_tv_h1">@dimen/m30</dimen>-->
+    <!--<dimen name="base_tv_h2">@dimen/m28</dimen>-->
+    <!--<dimen name="base_tv_h3">@dimen/m24</dimen>-->
+    <!--<dimen name="base_tv_h4">@dimen/m22</dimen>-->
+    <!--<dimen name="base_tv_h5">@dimen/m20</dimen>-->
+    <!--<dimen name="base_tv_h6">@dimen/m18</dimen>-->
+    <!--<dimen name="base_tv_h7">@dimen/m16</dimen>-->
+
+    <dimen name="base_tv_h0">@dimen/m32</dimen>
+    <dimen name="base_tv_h1">@dimen/m24</dimen>
+    <dimen name="base_tv_h2">@dimen/m22</dimen>
+    <dimen name="base_tv_h3">@dimen/m19</dimen>
+    <dimen name="base_tv_h4">@dimen/m18</dimen>
+    <dimen name="base_tv_h5">@dimen/m16</dimen>
+    <dimen name="base_tv_h6">@dimen/m14</dimen>
+    <dimen name="base_tv_h7">@dimen/m13</dimen>
+
+
+    <dimen name="base_divider_margin">@dimen/m40</dimen>
+
+    <dimen name="group_height">58dp</dimen>
+    <dimen name="group_parent_height">158dp</dimen>
+
+</resources>

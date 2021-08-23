@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y82"
+    android:minHeight="@dimen/y82"
+    android:background="#32373b"
+    android:drawableRight="@drawable/arrow_check"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/x30"
+    android:paddingRight="@dimen/x30"
+    android:singleLine="true"
+    android:text="问题列表"
+    android:textSize="30px" />

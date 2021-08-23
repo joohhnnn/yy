@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y64"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/y22"
+        android:layout_height="@dimen/y22"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x13"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_setting_auto_login"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y64"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x60"
+        android:text="@string/lb_car_main_menu_auto_login"
+        android:textColor="@color/color_primary"
+        android:textSize="@dimen/x20"/>
+
+    <com.txznet.webchat.ui.rearview_mirror.widget.IconTextStateBtn
+        android:id="@+id/view_switch"
+        android:layout_width="@dimen/x40"
+        android:layout_height="@dimen/y20"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x13"
+        app:itsb_clickable="false"
+        app:itsb_icon="@drawable/src_car_main_menu_switch_enabled"
+        app:itsb_icon_disabled="@drawable/src_car_main_menu_switch_disabled"/>
+
+    <View
+        android:id="@+id/view_focus_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y64"
+        android:background="@drawable/ic_nav_indicator_rect"/>
+
+    <View
+        style="@style/divider_line_horizontal"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

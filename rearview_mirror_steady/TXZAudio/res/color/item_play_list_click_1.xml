@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- android:state_selected选中 -->
+
+
+    <!-- android:state_focused获得焦点 -->
+
+
+    <!-- android:state_pressed点击 -->
+
+
+    <!-- android:state_enabled设置是否响应事件,指所有事件 -->
+    <item android:state_pressed="true" android:color="@color/drak_green"/>
+<!--     <item android:state_checkable="true" android:state_focused="true" android:state_pressed="true" android:color="@color/green"/> -->
+<!--     <item android:state_focused="true" android:color="@color/green"/> -->
+    <item android:state_selected="true" android:color="@color/drak_green"/>
+<!--     <item android:state_enabled="true" android:color="@color/green"/> -->
+    <item android:color="@color/white"/>
+
+</selector>

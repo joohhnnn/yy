@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MusicMoveView">
+        <attr name="MusicMoveColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ButtonImageText">
+        <attr name="text" format="reference|string" />
+        <attr name="textColor" format="reference|color" />
+        <attr name="textSize" format="reference|integer" />
+        <attr name="drawablePadding" format="reference|integer" />
+        <attr name="drawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ResourceButton">
+        <attr name="resbtn_padding_vertical" format="dimension" />
+        <attr name="resbtn_padding_horizontal" format="dimension" />
+        <attr name="resbtn_padding_icon" format="dimension" />
+        <attr name="resbtn_size_icon" format="dimension" />
+        <attr name="resbtn_src_icon_normal" format="reference" />
+        <attr name="resbtn_src_icon_pressed" format="reference" />
+        <attr name="resbtn_size_text" format="dimension" />
+        <attr name="resbtn_color_text_normal" format="color" />
+        <attr name="resbtn_color_text_pressed" format="color" />
+        <attr name="resbtn_str_text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="TypeItemLayout">
+        <attr name="itemNormal" format="reference|color" />
+        <attr name="itemFocused" format="reference|color" />
+        <attr name="itemSelected" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="LoadingView">
+        <attr name="loadingView" format="reference" />
+        <attr name="errorView" format="reference" />
+        <attr name="retryView" format="reference" />
+        <attr name="emptyView" format="reference" />
+        <attr name="contentsView" format="reference" />
+        <attr name="animation" format="reference" />
+    </declare-styleable>
+    <attr name="head_category_height_percent" format="fraction" />
+    <attr name="fg_music_title_height" format="dimension" />
+    <attr name="list_item_height" format="dimension" />
+    <attr name="local_header_height" format="dimension" />
+    <attr name="local_top_margin" format="dimension" />
+    <attr name="album_item_content_size_width" format="dimension" />
+    <attr name="album_item_content_size_height" format="dimension" />
+    <attr name="album_item_content_icon_height" format="dimension" />
+    <attr name="album_item_content_loading_icon_size" format="dimension" />
+    <attr name="album_item_content_loading_center_icon_size" format="dimension" />
+    <attr name="album_item_content_tv_padding_top" format="dimension" />
+    <attr name="album_item_content_tv_height" format="dimension" />
+    <attr name="album_item_content_tv_padding_left" format="dimension" />
+    <attr name="album_item_content_tv_padding_right" format="dimension" />
+    <attr name="album_item_content_margin_top" format="dimension" />
+    <attr name="album_item_content_margin_bottom" format="dimension" />
+    <attr name="album_item_icon_with_text_top" format="dimension" />
+    <attr name="album_item_gap" format="dimension" />
+    <!--字体大小-->
+    <attr name="text_size_h1" format="dimension" />
+    <attr name="text_size_h2" format="dimension" />
+    <attr name="text_size_h3" format="dimension" />
+    <attr name="text_size_h4" format="dimension" />
+
+    <!--BarPlayerView-->
+    <attr name="bar_player_view_padding" format="dimension" />
+    <attr name="bar_player_view_cd_margin" format="dimension" />
+    <attr name="bar_player_view_icon_size" format="dimension" />
+    <attr name="bar_player_view_cd_size" format="dimension" />
+    <attr name="bar_player_view_height_percent" format="fraction"/>
+
+    <!--CoverPlayerView-->
+    <attr name="cover_player_view_icon_size" format="dimension" />
+    <attr name="cover_player_view_icon_margin" format="dimension" />
+    <attr name="cover_player_view_margin_bottom" format="dimension" />
+    <attr name="cover_player_view_margin_horizontal" format="fraction" />
+
+    <attr name="cover_player_view_width_percent" format="fraction" />
+    <attr name="cover_player_view_height_percent" format="fraction" />
+
+    <!--列表,包含专辑界面,本地列表,历史列表,收藏列表-->
+    <attr name="list_margin_left" format="fraction" />
+    <attr name="list_margin_right" format="fraction" />
+    <attr name="list_margin_bottom" format="fraction" />
+    <attr name="list_margin_top" format="fraction" />
+
+    <!--头部高度-->
+    <attr name="head_height" format="fraction" />
+
+</resources>

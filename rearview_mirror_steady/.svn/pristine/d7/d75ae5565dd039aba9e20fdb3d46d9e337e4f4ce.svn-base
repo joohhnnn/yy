@@ -1,0 +1,405 @@
+package com.txz.ui.bluetooth;
+
+//事件通知
+enum SubEvent
+{	
+	//////////////////////////////////////////////////////////////////////////////////////// 连接子事件
+	EVENT_BT_ADAPTER_CONNECT = 0x1000;
+	EVENT_BT_SPP_CONNECT = 0x2000;									
+	EVENT_BT_TXZ_CONNECT = 0x3000;
+	//////////////////////////////////////////////////////////////////////////////////////// 发送子事件
+	// 设置指令事件
+	EVENT_SEND_CMD_GET_INFO = 0x30A1;
+	EVENT_SEND_CMD_GET_OBD = 0x30A2;
+	EVENT_SEND_CMD_GET_KEY = 0x30A3;
+	EVENT_SEND_CMD_GET_DATA = 0x30A4;
+	
+	// 控制指令事件
+	EVENT_SEND_CMD_CONTROL_MIC = 0x30B1;
+	EVENT_SEND_CMD_SEND_VOICE = 0x30B2;
+	EVENT_SEND_CMD_CONTROL_VOLUME = 0x30B3;
+	EVENT_SEND_CMD_SHOW_SCREEN = 0x30B4;
+	EVENT_SEND_CMD_CONTROL_FM = 0x30B5;
+	EVENT_SEND_CMD_CONTROL_MOTOR = 0x30B6;
+	EVENT_SEND_CMD_CONTROL_SCO = 0x30B7;
+	EVENT_SEND_CMD_CONTROL_RADIO = 0x30B8;
+	EVENT_SEND_CMD_CONTROL_CHANNEL = 0x30B9;
+	EVENT_SEND_CMD_CONTROL_ANSWER_PHONE = 0x30BA;
+	
+	// 设置指令事件
+	EVENT_SEND_CMD_SET_ACTIVE = 0x30C1;
+	EVENT_SEND_CMD_SET_KEY = 0x30C2;
+	EVENT_SEND_CMD_SET_BT_NAME = 0x30C3;
+	EVENT_SEND_CMD_SET_DATA = 0x30C4;
+	
+	// 触发通知事件
+	EVENT_SEND_CMD_BTN_NOTIFY = 0x30D1;
+	EVENT_SEND_CMD_MIC_NOTIFY = 0x30D2;
+	EVENT_SEND_CMD_ANSWER_PHONE_NOTIFY = 0x30D3;
+	
+	//////////////////////////////////////////////////////////////////////////////////////// 回调接收子事件
+	// 设置指令事件
+	EVENT_RECEIVE_CB_GET_INFO = 0x40A1;
+	EVENT_RECEIVE_CB_GET_OBD = 0x40A2;
+	EVENT_RECEIVE_CB_GET_KEY = 0x40A3;
+	EVENT_RECEIVE_CB_GET_DATA = 0x40A4;
+	
+	// 控制指令事件
+	EVENT_RECEIVE_CB_CONTROL_MIC = 0x40B1;
+	EVENT_RECEIVE_CB_SEND_VOICE = 0x40B2;
+	EVENT_RECEIVE_CB_CONTROL_VOLUME = 0x40B3;
+	EVENT_RECEIVE_CB_SHOW_SCREEN = 0x40B4;
+	EVENT_RECEIVE_CB_CONTROL_FM = 0x40B5;
+	EVENT_RECEIVE_CB_CONTROL_MOTOR = 0x40B6;
+	EVENT_RECEIVE_CB_CONTROL_SCO = 0x40B7;
+	EVENT_RECEIVE_CB_CONTROL_RADIO = 0x40B8;
+	EVENT_RECEIVE_CB_CONTROL_CHANNEL = 0x40B9;
+	EVENT_RECEIVE_CB_CONTROL_ANSWER_PHONE = 0x40BA;
+	
+	// 设置指令事件
+	EVENT_RECEIVE_CB_SET_ACTIVE = 0x40C1;
+	EVENT_RECEIVE_CB_SET_KEY = 0x40C2;
+	EVENT_RECEIVE_CB_SET_BT_NAME = 0x40C3;
+	EVENT_RECEIVE_CB_SET_DATA = 0x40C4;
+	
+	// 触发通知事件
+	EVENT_RECEIVE_CB_BTN_NOTIFY = 0x40D1;
+	EVENT_RECEIVE_CB_MIC_NOTIFY = 0x40D2;
+	EVENT_RECEIVE_CB_ANSWER_PHONE_NOTIFY = 0x40D3;
+	// DEBUG
+	EVENT_RECEIVE_CB_DEBUG_INFO = 0x40E0;
+	
+	
+	//蓝牙连接事件
+	SUBEVENT_BLUETOOTH_HEADSET_DISCONNECTING = 0x100001;
+	SUBEVENT_BLUETOOTH_HEADSET_DISCONNECTED = 0x100002;
+	SUBEVENT_BLUETOOTH_HEADSET_CONNECTING = 0x100003;
+	SUBEVENT_BLUETOOTH_HEADSET_CONNECTED = 0x100004;
+	SUBEVENT_BLUETOOTH_A2DP_DISCONNECTING = 0x100011;
+	SUBEVENT_BLUETOOTH_A2DP_DISCONNECTED = 0x100012;
+	SUBEVENT_BLUETOOTH_A2DP_CONNECTING = 0x100013;
+	SUBEVENT_BLUETOOTH_A2DP_CONNECTED = 0x100014;
+	SUBEVENT_BLUETOOTH_SCO_DISCONNECTING = 0x100021;
+	SUBEVENT_BLUETOOTH_SCO_DISCONNECTED = 0x100022;
+	SUBEVENT_BLUETOOTH_SCO_CONNECTING = 0x100023;
+	SUBEVENT_BLUETOOTH_SCO_CONNECTED = 0x100024;
+}
+
+//////////////////////////////////////////EVENT_BT_CONNECT结构体状态定义///////////////////////////////////////////////
+// 状态结构体
+message ConnectStruct
+{
+	optional uint32 state = 1; //状态
+}
+enum  State {
+	STATE_DISCONNECTED = 0;
+	STATE_CONNECTING = 1;
+	STATE_CONNECTED = 2;
+	STATE_DISCONNECTING = 3;
+}
+
+
+///////////////////////////////////////////////结构体定义/////////////////////////////////////////////////////
+// 协议头
+message Head
+{
+	optional uint32 seq = 1; //请求序列号
+    optional uint32 result = 2; //错误码
+	optional uint32 reserve = 3; //保留字段
+}
+
+///////////////////////////////////////////////查询指令/////////////////////////////////////////////////////
+// 公共（请求包）
+message Req_BT_COMMON
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+}
+
+// 查询主机信息（请求包）
+message Req_BT_GET_INFO
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+}
+
+// 查询主机信息（响应包）
+message Resp_BT_GET_INFO
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+	optional uint32 stand_state = 2; //支架状态
+	optional bool phone_state = 3; //手机是否在支架上
+	optional bool fm_state = 4; //fm开启状态
+	optional bool voice_is_active = 5; //声控激活状态
+	optional uint32 volume = 6; //声音大小
+}
+
+// OBD数据获取（请求包）
+message Req_BT_GET_OBD
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+}
+
+// OBD数据获取（响应包）
+message Resp_BT_GET_OBD
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+	optional string odb_data = 2; //支架状态
+}
+
+// 获取用户信息（请求包）
+message Req_BT_GET_KEY
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+}
+
+// 获取用户信息（响应包）
+message Resp_BT_GET_KEY
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+	optional string key = 2; //当前使用的key
+}
+
+// 获取存储数据（请求包）
+message Req_BT_GET_DATA
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+}
+
+// 获取存储数据（响应包）
+message Resp_BT_GET_DATA
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+	optional string data = 2; //支架状态
+}
+
+///////////////////////////////////////////////控制指令/////////////////////////////////////////////////////
+// 声控激活控制（请求包）
+message Req_BT_CONTROL_MIC
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional bool mic_on = 2;
+}
+
+// 声控激活控制（响应包）
+message Resp_BT_CONTROL_MIC
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+// 声音推送（请求包）
+message Req_BT_SEND_VOICE
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional uint32 wContentLen = 2;
+	optional bytes szContent = 3;
+}
+
+// 声音推送（响应包）
+message Resp_BT_SEND_VOICE
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+// 控制音量大小（请求包）
+message Req_BT_CONTROL_VOLUME
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional uint32 volume = 2;
+}
+
+// 控制音量大小（响应包）
+message Resp_BT_CONTROL_VOLUME
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+// 屏幕显示（请求包）
+message Req_BT_SHOW_SCREEN
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional uint32 wContentLen = 2;
+	optional bytes szContent = 3;
+}
+
+// 屏幕显示（响应包）
+message Resp_BT_SHOW_SCREEN
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+// FM控制（请求包）
+message Req_BT_CONTROL_FM
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional bool open = 2;
+}
+
+// FM控制（响应包）
+message Resp_BT_CONTROL_FM
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+// 马达控制（请求包）
+message Req_BT_CONTROL_MOTOR
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional bool up = 2;
+}
+
+// 马达控制（响应包）
+message Resp_BT_CONTROL_MOTOR
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+// 控制SCO（请求包）
+message Req_BT_CONTROL_SCO
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional bool sco_on = 2;
+}
+
+// 控制SCO（响应包）
+message Resp_BT_CONTROL_SCO
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+// 控制RADIO（请求包）
+message Req_BT_CONTROL_RADIO
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional bool radio_on = 2;
+}
+
+// 控制RADIO（响应包）
+message Resp_BT_CONTROL_RADIO
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+// 控制CHANNEL（请求包）
+message Req_BT_CONTROL_CHANNEL
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional uint32 channel = 2;
+}
+
+// 控制CHANNEL（响应包）
+message Resp_BT_CONTROL_CHANNEL
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+// 控制ANSWER_PHONE（请求包）
+message Req_BT_CONTROL_ANSWER_PHONE
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional bool answer = 2;
+}
+
+// 控制RADIO（响应包）
+message Resp_BT_CONTROL_ANSWER_PHONE
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+///////////////////////////////////////////////设置指令/////////////////////////////////////////////////////
+// 设置激活状态（请求包）
+message Req_BT_SET_ACTIVE
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional bool active = 2;
+}
+
+// 设置激活状态（响应包）
+message Resp_BT_SET_ACTIVE
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+// 设置key（请求包）
+message Req_BT_SET_KEY
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional uint32 wContentLen = 2;
+	optional bytes szContent = 3;
+}
+
+// 设置key（响应包）
+message Resp_BT_SET_KEY
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+// 设置蓝牙名称（请求包）
+message Req_BT_SET_NAME
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional uint32 wContentLen = 2;
+	optional bytes szContent = 3;
+}
+
+// 设置蓝牙名称（响应包）
+message Resp_BT_SET_NAME
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+// 设置存储数据（请求包）
+message Req_BT_SET_DATA
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional uint32 wContentLen = 2;
+	optional bytes szContent = 3;
+}
+
+// 设置存储数据（响应包）
+message Resp_BT_SET_DATA
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+///////////////////////////////////////////////触发指令/////////////////////////////////////////////////////
+// 按键触发通知（请求包）
+message Req_BT_BTN_NOTIFY
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional uint32 btn_code = 2;
+}
+
+// 按键触发通知（响应包）
+message Resp_BT_BTN_NOTIFY
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+// 声控激活通知（请求包）
+message Req_BT_MIC_NOTIFY
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+}
+
+// 声控激活通知（响应包）
+message Resp_BT_MIC_NOTIFY
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+// 接听电话激活通知（请求包）
+message Req_BT_ANSWER_PHONE_NOTIFY
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+}
+
+// 接听电话激活通知（响应包）
+message Resp_BT_ANSWER_PHONE_NOTIFY
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1; //包头
+}
+
+//DEBUG（响应包）
+message Resp_BT_DEBUG_INFO
+{
+	optional com.txz.ui.bluetooth.Head msg_bt_head = 1;
+	optional string data = 2; 
+}

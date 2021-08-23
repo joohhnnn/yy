@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                               android:layout_width="match_parent"
+                                               android:layout_height="match_parent"
+                                               xmlns:app="http://schemas.android.com/apk/res-auto"
+                                               android:background="#b3000000">
+
+    <LinearLayout
+        android:id="@+id/ll_dialog_container"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_car_dialog_bg"
+        android:orientation="vertical"
+        app:layout_aspectRatio="129%"
+        app:layout_widthPercent="45.6%">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="12">
+
+            <com.txznet.webchat.ui.common.widget.ThemedTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x15"
+                android:layout_marginRight="@dimen/x15"
+                android:layout_gravity="center"
+                android:text="@string/lb_main_help_dialog_content"
+                android:textColor="@color/color_dialog_exit_text_content"
+                android:textSize="@dimen/x24"
+                app:theme_color="primary"/>
+
+        </FrameLayout>
+
+        <View
+            style="@style/divider_line_horizontal"/>
+
+        <com.txznet.webchat.ui.common.widget.ThemedTextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@drawable/selector_car_dialog_button_bg_left"
+            android:gravity="center"
+            android:text="@string/lb_main_help_dialog_commit"
+            android:textColor="@color/color_accent"
+            android:textSize="@dimen/x24"
+            app:theme_color="accent"/>
+
+    </LinearLayout>
+
+
+</android.support.percent.PercentRelativeLayout>
